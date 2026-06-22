@@ -1,0 +1,3 @@
+date,candidate,bits,p,a,b,r,bound,x_values_selected,x_fraction,factor_base_size,factor_base_fraction,size_over_sqrt_p,ordered_triples_per_target,reachable_targets_m3,reachable_target_fraction_m3,mean_canonical_height,max_canonical_height,max_height_convergence_delta,height_iterations,membership_method,membership_polylog_certified,elapsed_s
+2026-06-22,rational_height,16,65519,20289,54970,65537,255,65499,0.999694745036,65522,0.999771121656,255.978514992,4292149878.95,not-enumerated-base-too-large,not-enumerated-base-too-large,,,,,explicit ratio-image table; O(p) build,0,0.015100500
+2026-06-22,integral_lift_proxy,16,65519,20289,54970,65537,255,0,0,0,0,0,0,0,0,,,,7,unique centered x lift plus integer-square check,1,0.000074200

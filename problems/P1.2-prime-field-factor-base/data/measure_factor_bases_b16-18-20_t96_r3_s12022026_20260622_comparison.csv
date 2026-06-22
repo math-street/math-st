@@ -1,0 +1,4 @@
+bits,p,candidate_kind,baseline_kind,candidate_size,baseline_size,normalized_count_ratio,normalized_count_ratio_ci_low,normalized_count_ratio_ci_high,pair_checks_ratio,pair_checks_ratio_ci_low,pair_checks_ratio_ci_high,bootstrap_samples
+16,65519,integer_x,random_matched,242,242,1.03037079,0.963211277,1.11753498,0.937904925,0.729331017,1.19654986,2000
+18,262139,integer_x,random_matched,506,506,1.00183647,0.969751254,1.03491995,1.04963487,0.799748486,1.35126876,2000
+20,1048571,integer_x,random_matched,1072,1072,1.00417979,0.985665256,1.0225238,0.865996086,0.661513141,1.10402944,2000

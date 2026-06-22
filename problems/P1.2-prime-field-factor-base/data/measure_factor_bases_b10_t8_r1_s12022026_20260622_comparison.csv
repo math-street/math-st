@@ -1,0 +1,2 @@
+bits,p,candidate_kind,baseline_kind,candidate_size,baseline_size,normalized_count_ratio,normalized_count_ratio_ci_low,normalized_count_ratio_ci_high,pair_checks_ratio,pair_checks_ratio_ci_low,pair_checks_ratio_ci_high,bootstrap_samples
+10,1019,integer_x,random_matched,30,30,0.611650485,0.412122199,0.915848007,0.480314961,0.164946182,1.84439133,200

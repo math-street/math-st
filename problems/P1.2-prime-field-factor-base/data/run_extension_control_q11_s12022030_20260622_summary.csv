@@ -1,0 +1,2 @@
+date,seed,q,extension_degree,field_order,modulus,curve_a,curve_b,curve_order,curve_attempts,factor_base_size,factor_base,expected_ordered_triples_per_target,pair_sum_targets,planted_secret,recovered_secret,relations_used,attempts_used,decomposable_attempts,decomposition_success_rate,full_rank,elapsed_s
+2026-06-22,12022030,11,3,1331,1:0:4:1,2:3:3,3:6:4,1367,25,8,(0:0:0;4:0:7)|(0:0:0;7:0:4)|(5:0:0;1:4:8)|(5:0:0;10:7:3)|(6:0:0;4:10:1)|(6:0:0;7:1:10)|(8:0:0;5:5:8)|(8:0:0;6:6:3),0.37454279444,33,123,123,9,149,9,0.0604026845638,1,2.254088400
