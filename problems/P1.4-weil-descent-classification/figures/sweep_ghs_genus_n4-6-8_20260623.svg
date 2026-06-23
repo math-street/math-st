@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="920" height="520" viewBox="0 0 920 520">
+<rect width="100%" height="100%" fill="#f7f3e8"/>
+<text x="80" y="32" font-family="Georgia,serif" font-size="22" fill="#18212b">Classical binary GHS genus distribution</text>
+<line x1="80" y1="420" x2="860" y2="420" stroke="#18212b"/>
+<line x1="80" y1="60" x2="80" y2="420" stroke="#18212b"/>
+<rect x="89.75" y="417.19" width="15.99" height="2.81" fill="#255f85"/>
+<text x="97.75" y="412.19" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">1</text>
+<rect x="109.25" y="417.19" width="15.99" height="2.81" fill="#d26a35"/>
+<text x="117.25" y="412.19" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">1</text>
+<rect x="128.75" y="417.19" width="15.99" height="2.81" fill="#588157"/>
+<text x="136.75" y="412.19" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">1</text>
+<text x="119.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=1</text>
+<rect x="167.75" y="414.38" width="15.99" height="5.62" fill="#255f85"/>
+<text x="175.75" y="409.38" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">2</text>
+<rect x="187.25" y="414.38" width="15.99" height="5.62" fill="#d26a35"/>
+<text x="195.25" y="409.38" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">2</text>
+<rect x="206.75" y="414.38" width="15.99" height="5.62" fill="#588157"/>
+<text x="214.75" y="409.38" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">2</text>
+<text x="197.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=2</text>
+<rect x="245.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="265.25" y="411.56" width="15.99" height="8.44" fill="#d26a35"/>
+<text x="273.25" y="406.56" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">3</text>
+<rect x="284.75" y="420.00" width="15.99" height="0.00" fill="#588157"/>
+<text x="275.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=3</text>
+<rect x="323.75" y="408.75" width="15.99" height="11.25" fill="#255f85"/>
+<text x="331.75" y="403.75" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">4</text>
+<rect x="343.25" y="411.56" width="15.99" height="8.44" fill="#d26a35"/>
+<text x="351.25" y="406.56" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">3</text>
+<rect x="362.75" y="408.75" width="15.99" height="11.25" fill="#588157"/>
+<text x="370.75" y="403.75" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">4</text>
+<text x="353.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=4</text>
+<rect x="401.75" y="397.50" width="15.99" height="22.50" fill="#255f85"/>
+<text x="409.75" y="392.50" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">8</text>
+<rect x="421.25" y="403.12" width="15.99" height="16.88" fill="#d26a35"/>
+<text x="429.25" y="398.12" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">6</text>
+<rect x="440.75" y="397.50" width="15.99" height="22.50" fill="#588157"/>
+<text x="448.75" y="392.50" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">8</text>
+<text x="431.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=8</text>
+<rect x="479.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="499.25" y="386.25" width="15.99" height="33.75" fill="#d26a35"/>
+<text x="507.25" y="381.25" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">12</text>
+<rect x="518.75" y="420.00" width="15.99" height="0.00" fill="#588157"/>
+<text x="509.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=15</text>
+<rect x="557.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="577.25" y="386.25" width="15.99" height="33.75" fill="#d26a35"/>
+<text x="585.25" y="381.25" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">12</text>
+<rect x="596.75" y="375.00" width="15.99" height="45.00" fill="#588157"/>
+<text x="604.75" y="370.00" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">16</text>
+<text x="587.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=16</text>
+<rect x="635.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="655.25" y="352.50" width="15.99" height="67.50" fill="#d26a35"/>
+<text x="663.25" y="347.50" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">24</text>
+<rect x="674.75" y="330.00" width="15.99" height="90.00" fill="#588157"/>
+<text x="682.75" y="325.00" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">32</text>
+<text x="665.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=32</text>
+<rect x="713.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="733.25" y="420.00" width="15.99" height="0.00" fill="#d26a35"/>
+<rect x="752.75" y="240.00" width="15.99" height="180.00" fill="#588157"/>
+<text x="760.75" y="235.00" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">64</text>
+<text x="743.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=64</text>
+<rect x="791.75" y="420.00" width="15.99" height="0.00" fill="#255f85"/>
+<rect x="811.25" y="420.00" width="15.99" height="0.00" fill="#d26a35"/>
+<rect x="830.75" y="60.00" width="15.99" height="360.00" fill="#588157"/>
+<text x="838.75" y="72.00" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" fill="#18212b">128</text>
+<text x="821.00" y="444" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" fill="#18212b">g=128</text>
+<rect x="80" y="470" width="16" height="16" fill="#255f85"/>
+<text x="104" y="483" font-family="Arial,sans-serif" font-size="14" fill="#18212b">n=4</text>
+<rect x="250" y="470" width="16" height="16" fill="#d26a35"/>
+<text x="274" y="483" font-family="Arial,sans-serif" font-size="14" fill="#18212b">n=6</text>
+<rect x="420" y="470" width="16" height="16" fill="#588157"/>
+<text x="444" y="483" font-family="Arial,sans-serif" font-size="14" fill="#18212b">n=8</text>
+</svg>
