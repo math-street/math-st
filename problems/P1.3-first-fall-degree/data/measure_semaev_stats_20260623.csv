@@ -1,0 +1,5 @@
+index,status,term_count,total_degree,x_variable_degrees,elapsed_seconds,term_limit,wall_timeout_seconds
+3,complete,13,4,2;2;2,0.000405,250000,30.0
+4,complete,540,12,4;4;4;4,0.012488,250000,30.0
+5,complete,130705,32,8;8;8;8;8,19.138675,250000,30.0
+6,censored: wall clock exceeded 30s,,,,30.0,250000,30.0
