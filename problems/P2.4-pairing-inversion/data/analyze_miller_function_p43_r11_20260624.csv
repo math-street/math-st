@@ -1,0 +1,13 @@
+row_type,p,order_r,point_x,point_y,numerator_factor_degree,denominator_factor_degree,numerator_A_x_degree,numerator_B_x_degree,denominator_A_x_degree,denominator_B_x_degree,numerator_term_count,denominator_term_count,numerator_factorization_A_plus_B_y,denominator_factorization_A_plus_B_y,numerator_A_coefficients_ascending,numerator_B_coefficients_ascending,denominator_A_coefficients_ascending,denominator_B_coefficients_ascending,validated_G2_points,trials,seed
+exact_fixed_P,43,11,23,8,9,8,13,12,8,-1,26,9,"[{""A"":[14,14],""B"":[1],""exponent"":2},{""A"":[20,39],""B"":[1],""exponent"":2},{""A"":[24,36],""B"":[1],""exponent"":1},{""A"":[28,19],""B"":[1],""exponent"":4}]","[{""A"":[12,1],""B"":[0],""exponent"":2},{""A"":[29,1],""B"":[0],""exponent"":4},{""A"":[30,1],""B"":[0],""exponent"":2}]","[41,9,42,5,41,39,23,39,17,17,25,12,38,3]","[23,39,22,15,16,8,24,17,0,15,13,35,1]","[9,37,23,9,2,14,31,28,1]",[0],10,1,2404
+generic_degree_growth,,3,,,1,0,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,5,,,3,2,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,7,,,5,4,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,11,,,9,8,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,13,,,11,10,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,17,,,15,14,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,19,,,17,16,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,23,,,21,20,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,29,,,27,26,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,31,,,29,28,,,,,,,,,,,,,,1,2404
+generic_degree_growth,,41,,,39,38,,,,,,,,,,,,,,1,2404
