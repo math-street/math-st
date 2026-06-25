@@ -1,0 +1,2 @@
+bits,smoothness_exponent,order_bound,discriminant_bound,primes,explicit_successes,explicit_rate,explicit_wilson_95_low,explicit_wilson_95_high,bounded_cm_successes,bounded_cm_rate,bounded_cm_wilson_95_low,bounded_cm_wilson_95_high,median_min_discriminant,max_min_discriminant,median_class_number,max_class_number,mean_measurement_ms,total_measurement_s,full_runtime_s
+60,3,216000,3600,4096,445,0.108642578125,0.09947665538262804,0.11854188699237508,3635,0.887451171875,0.8774073028811354,0.8967689748798565,187,3579,4,76,52.5557516116919,215.26835860149004,28.50340090005193

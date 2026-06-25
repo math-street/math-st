@@ -1,0 +1,7 @@
+bits,prime_index,prime,prime_mod_12,smoothness_exponent,order_bound,discriminant_exponent,discriminant_bound,explicit_order_count,explicit_success,explicit_smooth_count,explicit_best_order,explicit_best_lpf,explicit_first_smooth_order,bounded_cm_success,cm_discriminant,cm_class_number,cm_conductor,cm_trace,cm_order,cm_lpf,measurement_ms
+10,1,1021,1,2,100,3,1000,10,1,8,1000,5,961,1,-3,1,36,-14,1036,37,0.1300000585615635
+10,2,1019,11,2,100,3,1000,1,1,1,1020,17,1020,1,-7,1,14,-52,1072,67,0.054699950851500034
+10,3,1013,5,2,100,3,1000,5,1,5,968,11,968,1,-4,1,23,-44,1058,23,0.055299955420196056
+12,1,4093,1,2,144,3,1728,10,1,7,3978,17,3978,1,-3,1,9,-127,4221,67,0.09659992065280676
+12,2,4091,11,2,144,3,1728,1,1,1,4092,31,4092,1,-19,1,25,67,4025,23,0.05410006269812584
+12,3,4079,11,2,144,3,1728,1,1,1,4080,17,4080,1,-11,1,34,-60,4140,23,0.032800016924738884
