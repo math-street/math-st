@@ -73,3 +73,131 @@ found decompositions.
 
 **Next:** Implement SG-02 over a tiny cubic extension and recover a known
 discrete logarithm end to end.
+
+## Session 2 — 2026-06-25
+
+**Goal:** Complete the remaining sub-goal ladder: first the cubic-extension
+positive control, then Candidates B–D, and finally the SG-07 synthesis.
+
+**Prediction (written before running session-2 experiments):**
+
+- [HEURISTIC] Over a tiny $\mathbb F_{q^3}$, the subfield-$x$ factor base will
+  have size on the order of $q$, and three-term decompositions will occur often
+  enough to recover a planted discrete logarithm within 5,000 sampled
+  relations. Failure to reach full rank or recovery of the wrong secret
+  falsifies the end-to-end prediction.
+- [HEURISTIC] With numerator and denominator bounds
+  $|a|,|b|<\lfloor\sqrt p\rfloor$, Candidate B will cover a positive fraction
+  of all $x\in\mathbb F_p$ and therefore produce a factor base far larger than
+  the square-root diagnostic base. Coverage below 25% at all three recorded
+  primes falsifies this session-level prediction.
+- [HEURISTIC] The integral-point proxy for Candidate D with
+  $|x|<\lfloor\sqrt p\rfloor$ will be too sparse for non-negligible
+  three-term decomposition. A reachable-target fraction above 1% at any
+  recorded prime falsifies this prediction.
+
+**Did:**
+
+- Added cubic polynomial-basis finite fields and elliptic-curve arithmetic over
+  $\mathbb F_{q^3}$ with exhaustive inverse and Frobenius tests.
+- Ran the SG-02 control at $q=5,7,11$, collected genuine three-term relations,
+  and solved for planted target logarithms without using scalar labels during
+  the solve.
+- Enumerated the exact bounded-rational image for Candidate B and the exact
+  integral-lift proxy for Candidate D on all three A001 curves.
+- Derived the Candidate C obstruction from rational-map extension,
+  inseparable factorization, Riemann–Hurwitz, and Bézout.
+
+**Found:**
+
+- [EMPIRICAL: q=5,7,11] The extension controls recovered secrets 37, 83, and
+  123 in prime-order groups of orders 139, 347, and 1367. Each solve used nine
+  relations and required 15, 34, and 149 sampled targets.
+- [EMPIRICAL: p=65519,262139,1048571] Candidate B selected 99.9771%,
+  99.9904%, and 99.9984% of the curve groups and therefore collapsed to an
+  almost-full-group factor base.
+- [EMPIRICAL: the same curves] Candidate D's integral-lift proxy had base sizes
+  0, 0, and 2; the exact three-term success probabilities were 0, 0, and
+  $3.82\times10^{-6}$.
+- [EMPIRICAL: surviving 20-bit integral lift] The rational point above
+  $x=-563$ has estimated canonical height 4.72408 with seven-step convergence
+  delta $5.42\times10^{-5}$; its two signs are the only proxy points.
+- [PROVED] Every rational map $\mathbb P^1\dashrightarrow E$ is constant, and
+  a distinct degree-$d$ plane auxiliary curve supplies at most $3d$ points.
+- [PROVED] None of the tested prime-field candidates supplies all three formal
+  requirements; the successful SG-02 control is outside the prime-field regime.
+
+**Prediction vs. outcome:** [EMPIRICAL: session-2 registered tests] Matched.
+The extension relation systems reached full rank well before 5,000 attempts,
+Candidate B coverage was far above 25%, and the Candidate D-proxy success rate
+stayed far below 1%.
+
+**Did not work:** The first standalone 2×2 linear-solver fixture used a matrix
+whose determinant was zero modulo 5 and correctly raised an inconsistency. The
+fixture was replaced with a nonsingular known-answer system; the end-to-end
+extension control had already passed. The full canonical-height Candidate D
+could not be measured because its lift/preimage membership predicate is not
+specified; A005 measures a strict denominator-one proxy and Q002 records the
+gap.
+
+**Changed my mind about:**
+
+- [EMPIRICAL: tested range] Symmetric numerator/denominator bounds at
+  square-root scale are not a modest refinement of the integer interval: they
+  are almost universal. Candidate B fails by being too dense, while the cheap
+  lift proxy fails by being too sparse.
+
+**Next:** For further work, test asymmetric rational bounds below product
+$p$, and resolve Q001 or Q002 with an explicit algorithmic model rather than
+additional density-only measurements.
+
+## Correction to Session 2 — 2026-06-25
+
+**Reason for correction:** The preceding “formal problem remains open”
+assessment overlooked a direct cardinality incompatibility between conditions
+(1) and (3). This was discovered after the candidate-by-candidate synthesis;
+it was not a preregistered prediction.
+
+**Did:**
+
+- Quarantined the observation in `CLAIM.md` for adversarial checking before
+  relying on it.
+- Checked standard generalized L-notation against Lenstra 2017 and Hasse's
+  bound against Sutherland's MIT 18.783 point-counting slides.
+- Attacked exact versus variable length, ordering, repetitions, signs,
+  randomized and nonuniform decoders, randomized factor bases, target
+  dependence, and uniform-point oracle access.
+- [EMPIRICAL: cyclic group of order 19] Exhaustively enumerated reachable sets
+  for base sizes one through five and lengths zero through four; all 20
+  base/length cases obeyed the support bound.
+
+**Found:**
+
+- [PROVED] A fixed-$m$ sum of a base of size
+  $L_p[1/2,c]=p^{o(1)}$ reaches at most $p^{o(1)}$ targets.
+- [PROVED] Hasse's bound makes the group size $p^{1+o(1)}$, so uniform-target
+  success is at most $p^{-1+o(1)}$, below every inverse polynomial in
+  $\log p$.
+- [PROVED] Fixed $m$ requires a base of size at least
+  $p^{1/m-o(1)}$ for inverse-polylogarithmic success; retaining an
+  $L_p[1/2,c]$ base requires
+  $m\ge(1/c+o(1))\sqrt{\log p/\log\log p}$.
+
+**Changed my mind about:** [PROVED] The formal statement is not merely missing
+a known structured predicate; under the standard notation it is
+information-theoretically impossible. The square-root experiments address a
+different, potentially intended problem.
+
+**Next:** Stop for the statement as written. Resume only after explicitly
+replacing the size bound or allowing $m$ to grow; P1.2/Q003 records the notation
+ambiguity.
+
+## Validation addendum — 2026-06-25
+
+- [EMPIRICAL: local CPython 3.13.4] All 34 shared-library unit tests and all 10
+  P1.2 unit tests passed after the formal-resolution changes.
+- [EMPIRICAL: smoke configurations] The SG-01/Candidate-A driver, SG-02 cubic-
+  extension control, and Candidates-B/D driver all completed successfully.
+- [EMPIRICAL: cyclic group of order 19] The two new formal-support tests cover
+  20 base-size/length cases and a collision case with support strictly below
+  the ordered-tuple count.
