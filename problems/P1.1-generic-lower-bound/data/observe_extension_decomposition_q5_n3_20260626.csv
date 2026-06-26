@@ -1,0 +1,2 @@
+q,extension_degree,field_modulus_ascending,curve_a_basis,curve_b_basis,factor_base_points,factor_base_x_candidates,target_x_basis,target_y_basis,basis_coefficient_equations,f3_evaluations,polynomial_zero_pairs,point_sign_candidates,group_relation_checks,verified_ordered_decompositions,polynomial_system_solves,subfield_structure_uses,pairing_evaluations,p_adic_lifts
+5,3,"(1, 0, 1, 1)","(0, 3, 4)","(4, 3, 1)",6,5,"(1, 1, 1)","(4, 4, 4)",3,25,1,4,4,1,1,1,0,0

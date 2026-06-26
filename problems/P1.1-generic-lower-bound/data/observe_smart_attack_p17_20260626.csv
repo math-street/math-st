@@ -1,0 +1,2 @@
+p,curve_a,curve_b,generator,target,secret,recovered,p_adic_lifts,lifted_group_operations,coordinate_arithmetic_events,formal_group_ratios,pairing_evaluations,polynomial_system_solves
+17,1,3,"(2, 8)","(11, 6)",7,7,2,12,14,1,0,0

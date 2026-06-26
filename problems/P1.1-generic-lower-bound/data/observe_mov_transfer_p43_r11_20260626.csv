@@ -1,0 +1,2 @@
+p,extension_degree,curve,subgroup_order,embedding_degree,secret,recovered,raw_pairing_base,raw_pairing_target,reduced_pairing_base,reduced_pairing_target,pairing_evaluations,miller_line_evaluations,target_group_equality_tests,extension_group_scalar_multiplications,auxiliary_dlp_solves,p_adic_lifts,polynomial_system_solves
+43,2,y^2=x^3+x,11,2,2,2,"[9,11]","[31,32]","[11,3]","[26,23]",2,10,3,1,1,0,0

@@ -1,0 +1,2 @@
+p,curve_a,curve_b,target_scalar,target,factor_base_points,factor_base_x_values,polynomial_evaluations,polynomial_zero_pairs,lifted_sign_candidates,verified_ordered_decompositions,first_decomposition
+17,2,2,7,"(0, 6)",10,5,25,2,8,2,"((6, 14), (7, 6))"

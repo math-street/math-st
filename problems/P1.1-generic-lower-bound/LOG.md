@@ -113,3 +113,57 @@ registers into a charged group oracle.
 new lower-bound attempt must explicitly charge or bound coordinate circuits;
 an independent validation project may close Q002/Q003 with a genuine GHS
 Jacobian transfer.
+
+## Session 3 — 2026-06-26
+
+**Goal:** Close the remaining GHS validation debt by constructing the smallest
+non-circular source-to-auxiliary-group transfer that directly preserves an
+ECDLP scalar, or prove a sharper implementation obstruction after exhausting
+the available pure-Python and installed-CAS routes.
+
+**Prediction (written before new literature reconstruction or experiments):**
+The most tractable end-to-end fixture will be a genus-one degenerate/basic GHS
+case, where the descended Jacobian is itself an elliptic curve and divisor
+arithmetic reduces to an explicit curve law. If the published construction
+does not provide a computable point map in that case, the next viable target
+will require implementing a genus-two Mumford Jacobian plus the cover map.
+
+**Did:**
+
+- Recovered the fixed-field equation and conorm/norm map from the primary HP
+  Labs report and Florian Hess's original KASH implementation.
+- Derived the odd-degree magic-number-one specialization as an explicit
+  Artin--Schreier shear followed by a Frobenius trace on curve points.
+- Added ordinary binary elliptic-curve arithmetic and the genus-one transfer
+  to the shared library, with exhaustive group-law and transfer tests.
+- Instantiated a fixed $\mathbb F_{2^{10}}/\mathbb F_{2^2}$ source subgroup,
+  checked all its scalars, solved the auxiliary DLP, and recorded the CSV.
+
+**Found:**
+
+- [PROVED] If $A=\operatorname{Tr}_{K/k}(a)$ and $s^2+s=a+A$, the shear
+  $(x,y)\mapsto(x,y+sx)$ maps the source binary curve to the base-defined
+  genus-one fixed curve.
+- [PROVED] Summing the $k$-Frobenius conjugates of the sheared point is the
+  genus-one conorm/norm specialization, is a homomorphism, and lands in the
+  base-field rational group.
+- [EMPIRICAL: one $\mathbb F_{2^{10}}/\mathbb F_{2^2}$ fixture] A genuinely
+  non-base source point of order 3 maps to a base-field point of order 3;
+  all three scalar relations hold and auxiliary DLP recovers secret 2.
+
+**Prediction vs. outcome:** Confirmed. The genus-one specialization made the
+descended Jacobian an elliptic curve and avoided implementing a genus-two
+Mumford Jacobian while retaining a genuine source-to-auxiliary-group map.
+
+**Did not work:** The original A003 route tried to jump directly from the
+higher-genus invariant to a general descended function field. That remained
+too large for the available library. The successful route uses the published
+$m=1$ boundary case and makes no higher-genus performance claim.
+
+**Changed my mind about:** The earlier obstruction was not categorical for all
+GHS cases. It was specific to a genuinely higher-genus target; the genus-one
+fixed field supplies a complete, non-circular executable validation layer.
+
+**Next:** No required P1.1 validation remains. Optional future work may target
+a genuinely higher-genus Jacobian and measured speedup, or define a separately
+priced coordinate-circuit model.
