@@ -1,0 +1,86 @@
+{
+  "date": "20260722",
+  "extrapolation": {
+    "csv": "optimization_extrapolated_20260715.csv",
+    "growth_profiles": {
+      "BLS12": {
+        "embedding_degree": 12,
+        "family": "BLS12",
+        "miller_seed_multiplier": 1,
+        "p_degree": 6,
+        "p_leading_coefficient": 0.3333333333333333,
+        "r_degree": 4,
+        "r_leading_coefficient": 1.0
+      },
+      "BLS24": {
+        "embedding_degree": 24,
+        "family": "BLS24",
+        "miller_seed_multiplier": 1,
+        "p_degree": 10,
+        "p_leading_coefficient": 0.3333333333333333,
+        "r_degree": 8,
+        "r_leading_coefficient": 1.0
+      },
+      "BN": {
+        "embedding_degree": 12,
+        "family": "BN",
+        "miller_seed_multiplier": 6,
+        "p_degree": 4,
+        "p_leading_coefficient": 36.0,
+        "r_degree": 4,
+        "r_leading_coefficient": 36.0
+      },
+      "KSS16": {
+        "embedding_degree": 16,
+        "family": "KSS16",
+        "miller_seed_multiplier": 1,
+        "p_degree": 10,
+        "p_leading_coefficient": 0.0010204081632653062,
+        "r_degree": 8,
+        "r_leading_coefficient": 1.6326530612244897e-05
+      }
+    },
+    "models": [
+      "bn254-calibrated",
+      "sextnfs-o1less",
+      "extnfs-composite"
+    ],
+    "objective": "minimum estimated rho, pairing proxy used only as a tie-breaker",
+    "row_count": 36,
+    "status": "HEURISTIC MODEL EXTRAPOLATION; no concrete prime seeds generated"
+  },
+  "mode": "all",
+  "rng_seed": 20260722,
+  "targets": [
+    128,
+    192,
+    256
+  ],
+  "toy": {
+    "accepted_counts": {
+      "BLS12": 24,
+      "BLS24": 5,
+      "BN": 273,
+      "KSS16": 0
+    },
+    "candidate_count": 302,
+    "csv": "search_families_m10000_10000_20260626.csv",
+    "families": [
+      "BN",
+      "BLS12",
+      "BLS24",
+      "KSS16"
+    ],
+    "optima": {
+      "128": null,
+      "192": null,
+      "256": null
+    },
+    "proof_scope": "Exhaustive over every integer seed in the interval; acceptance requires integral family polynomials, deterministic p/r primality below 2^60, r | p+1-t, and least multiplicative order k.",
+    "seed_interval_inclusive": [
+      -10000,
+      10000
+    ]
+  },
+  "toy_ceiling_p_bits": 60
+}
