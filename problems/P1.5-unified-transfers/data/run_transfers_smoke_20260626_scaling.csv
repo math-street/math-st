@@ -1,0 +1,7 @@
+model,p,subgroup_order,predictor,observed_ns,fitted_ns,log2_residual,fitted_exponent,log2_intercept
+additive_transfer,101,101,10,7757.92,7757.92,0.0,0.542434,11.119526
+additive_transfer,211,211,12,8564.38,8564.38,0.0,0.542434,11.119526
+pairing_transfer,43,11,30,601960.0,601960.0,0.0,0.90483,14.759407
+pairing_transfer,211,53,64,1194840.0,1194840.0,0.0,0.90483,14.759407
+target_bsgs,43,11,4,32320.0,32320.0,0.0,0.659766,13.660607
+target_bsgs,211,53,8,51060.0,51060.0,0.0,0.659766,13.660607

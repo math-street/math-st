@@ -1,0 +1,5 @@
+transfer,p,subgroup_order,embedding_degree,curve_a,curve_b,generator_x,generator_y,secret,recovered,image_a,image_b,construction_attempts,construction_ns,transfer_ns,target_dlog_ns,core_steps,transfer_work,dlog_work,seed
+additive,101,101,,56,48,1,99,37,37,85,0,15,204300,7757.92,102.04,10,10,1,15072026
+additive,211,211,,52,46,0,62,37,37,109,0,5,152700,8564.38,126.86,12,12,1,15072026
+multiplicative,43,11,2,1,0,31,18,10,10,7,34,1,0,601960.0,32320.0,5,30,4,15072026
+multiplicative,211,53,2,1,0,11,169,37,37,74,125,1,0,1194840.0,51060.0,8,64,8,15072026
