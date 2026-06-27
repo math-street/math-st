@@ -55,3 +55,20 @@
 The global question IDs changed concurrently: the next decisions are Q006 (Satoh orientation transfer) and Q007 (oracle-model scope). Q005 belongs to P2.1.
 [2026-06-24] [NOTE] Session 2 goal: reproduce Satoh's even-embedding-degree Miller-inversion algorithm on the published p=139 example, derive and exhaustively test the distortion-map transfer from the fixed-base FAPI-1 orientation to Satoh's fixed-extension-point orientation, and either formalize or reject the candidate generic oracle separation.
 [2026-06-24] [NOTE] Session 2 prediction: the published example and the j=1728 transfer will validate with a normalization constant determined by the local parameter at infinity; this will remove the Miller-inversion bottleneck on the supersingular toy family, while the oracle result will remain explicitly limited to a generic bilinear-group interface rather than a lower bound for concrete finite-field representations.
+
+## Session 2 outcome — 2026-06-27
+
+- [EMPIRICAL: Satoh Example 4.4] The new implementation reproduced \(u=131\), x-candidates \(59,75\), solution \((59,-54)\), and raw target \(25\theta+109\) for \(p=139,\ell=35,d=140\).
+- [PROVED] The shared Miller loop now handles addition chains that pass through the identity by using \(g_{\mathcal O,T}=g_{T,\mathcal O}=1\); the composite-scalar published example is its regression test.
+- [PROVED] With \(\tau=x/y\) and \(\psi(x,y)=(-x,iy)\), normalized functions satisfy \(f_{r,P}(\psi(R))=i^{-r}f_{r,\psi^{-1}P}(R)\). Multiplication by \(i^r\) therefore transfers a raw FAPI-1 target to Satoh's orientation.
+- [EMPIRICAL: six curves, all 82 nonidentity raw targets] The pullback identity and Satoh-based raw inverse passed exhaustively, testing no more than four candidate points per inverse.
+- [EMPIRICAL: same 82 reduced targets] The canonical root in \(\mu_r\) was Miller-compatible 0 times. Fast raw MI therefore left the final-fibre representative-selection obstruction intact for this selector.
+- [PROVED] With a \(\mathbb G_2\)-DLP oracle, FAPI-1 is polynomial-time equivalent to target-group DLP, not automatically to source-group DLP.
+- [UNVERIFIED] A002 now specifies an elliptic-curve-backed generic oracle with free \(\mathbb G_2\)-DLP and proves candidate FAPI-1 success bound \(O(q^2/r)\), including a probability-one fixed-oracle selection. The claim is frozen for independent review in Q019.
+- [EMPIRICAL: Python 3.13.4] All 63 shared-library tests, all 5 P2.4 experiment tests, and compile checks passed. The standalone six-curve Satoh run took 3.0 seconds and wrote the dated CSV.
+
+**Prediction vs. outcome:** [PROVED] The normalization constant was \(i^{-r}\), Satoh removed raw-MI search on the supersingular degree-two family, and FAPI-1 plus source DLP is exactly target DLP. [EMPIRICAL: six curves] The transfer succeeded on every tested raw target. The prediction that the oracle result would remain scoped to generic typed encodings was correct.
+
+**Self-attack outcome:** [PROVED] Adaptive branching on target-label bits is covered by lazy sampling; blind source-label guesses are negligible; Markov plus Borel–Cantelli supplies a fixed oracle; and a \(j=1728\) torsion/Weil-pairing construction supplies an underlying elliptic curve. [PROVED] Exposing concrete target-field addition invalidates the affine-transcript proof and is explicitly outside the claim.
+
+**Next:** Obtain an independent audit of `CLAIM.md` under Q019. No additional toy experiment is needed to evaluate that proof-quantifier question.

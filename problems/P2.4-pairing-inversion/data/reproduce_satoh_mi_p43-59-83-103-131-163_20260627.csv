@@ -1,0 +1,7 @@
+satoh_example_p,satoh_example_point_order,satoh_example_miller_scalar,satoh_example_u,satoh_example_x_candidates,satoh_example_solution,satoh_example_reproduced,p,p_bits,embedding_degree,subgroup_order_r,base_point_x,base_point_y,raw_targets_exhaustively_inverted,pullback_identity_checks,maximum_candidates_tested,maximum_undefined_candidates,candidate_bound,final_exponent_d,canonical_final_roots_compatible,canonical_final_roots_tested,timing_trials,seed,raw_mi_mean_ns,raw_mi_median_ns,raw_mi_ci95_halfwidth_ns,raw_mi_mean_candidates
+139,35,140,131,59;75,"(59,85)",True,43,6,2,11,23,8,10,10,4,0,4,168,0,10,50,2404,5066258.0,4978850.0,504906.209,1.9
+139,35,140,131,59;75,"(59,85)",True,59,6,2,5,35,31,4,4,4,0,4,696,0,4,50,2404,3376846.0,3183900.0,352702.55,2.6
+139,35,140,131,59;75,"(59,85)",True,83,7,2,7,69,8,6,6,4,0,4,984,0,6,50,2404,4397138.0,4415250.0,385164.087,2.98
+139,35,140,131,59;75,"(59,85)",True,103,7,2,13,49,22,12,12,4,0,4,816,0,12,50,2404,4807380.0,4764500.0,438513.299,1.96
+139,35,140,131,59;75,"(59,85)",True,131,8,2,11,121,13,10,10,4,0,4,1560,0,10,50,2404,4743522.0,4748250.0,434846.661,2.02
+139,35,140,131,59;75,"(59,85)",True,163,8,2,41,88,63,40,40,4,0,4,648,0,40,50,2404,7926156.0,7506800.0,794705.518,2.18
