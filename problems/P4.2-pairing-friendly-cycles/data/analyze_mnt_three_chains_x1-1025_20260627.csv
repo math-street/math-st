@@ -1,0 +1,5 @@
+parameter_x,field_a,field_b,field_c,degree_a_to_b,degree_b_to_c,degree_c_to_a,degree_a_to_c,degree_c_to_b,degree_b_to_a,forward_closes_at_most_12,reverse_closes_at_most_12
+3,31,37,43,4,6,30,21,4,6,False,False
+45,8011,8101,8191,4,6,445,78,4,6,False,False
+480,920641,921601,922561,4,6,2055,115320,4,6,False,False
+987,3894703,3896677,3898651,4,6,556386,1949325,4,6,False,False
