@@ -135,3 +135,69 @@ strategy, but the same result does not support a worst-case asymptotic claim.
 small-CM/smooth-order correlation, or replace CM by a structured family with
 proved coverage.  Do not extend the same finite scan past the 60-bit scaffold
 ceiling.
+
+## Session 3 - 2026-06-29
+
+**Goal:** Attack Q005 directly by exhausting current smooth-interval/auxiliary-
+group routes and replacing the informal blind-search obstruction by the
+strongest rigorous oracle-model lower bound available from the same data.
+
+**Prediction (written before the Session 3 audit):** [CONJECTURE] No checked
+primary source will give an every-prime, polylogarithmic-smooth auxiliary group
+that is uniformly constructible in $\operatorname{poly}(\log r)$ time; the
+alternative-group papers will remain parameter-specific or conditional.  This
+is refuted by a source with an explicit algorithm, worst-case coverage theorem,
+and polynomial bit-complexity.  [PROVED] Independently of that literature
+outcome, an idealized random-order oracle should admit an exact adaptive query
+lower bound in terms of the smooth-order fraction of the Hasse interval.
+
+**Did:**
+- Initialized A003 and reopened Q005 after the completed finite experiments.
+- Checked the current multiplicative-group reduction of
+  Bollauf--Parisella--Siim 2025, Li's 2025 shifted-prime theorem, and Younis's
+  2024 smooth-short-interval theorems in primary sources.
+- Proved the exact optimal adaptive success probability in an explicitly iid
+  Hasse-order oracle.
+- Wrote failing tests first, implemented `random_order_lower_bound.py`, and
+  generated exact $L^2$ and $L^3$ query-budget tables through 40 bits.
+- Updated the source notes, stable notes, attempt record, sub-goals, code
+  instructions, state, and handoff.
+
+**Found:**
+- [CITED] The den Boer multiplicative route is polynomial when
+  $P^+(r-1)=(\log r)^{O(1)}$ (Bollauf--Parisella--Siim 2025).
+- [CITED] Infinitely many primes satisfy $P^+(r-1)>r^{0.679}$ (Li 2025).
+- [PROVED] Hence no fixed polylogarithmic bound makes the full
+  $\mathbb F_r^*$ auxiliary group work for every prime; full
+  $\mathbb F_{r^n}^*$ remains obstructed because $r-1\mid r^n-1$.
+- [CITED] Under RH, Younis 2024 reaches polylogarithmic smoothness only for
+  fixed short-interval exponent $\theta>1/2$, not the Hasse endpoint.
+- [PROVED] In the iid Hasse-order oracle, any adaptive $q$-query algorithm has
+  success at most $1-(1-\alpha)^q$, and querying fresh labels attains it.
+- [EMPIRICAL: exact 40-bit Hasse interval] The 50%/95% budgets were 91/391 for
+  $B=L^2$ and 6/25 for $B=L^3$.
+- [EMPIRICAL: 65 shared tests and 9 P2.1 tests] The final full regression suite
+  passed on Python 3.13.4.
+
+**Prediction vs. outcome:** [EMPIRICAL: primary-source audit through
+2026-06-29] The literature prediction was not falsified: no checked result
+simultaneously gave every-prime coverage, polylogarithmic smoothness, and
+polynomial construction.  The oracle formula matched exhaustive finite answer
+spaces exactly, as its proof predicted.
+
+**Did not work:** [PROVED] The multiplicative route fails on an infinite prime
+family, and current short-interval theorems miss the required endpoint.
+[PROVED] The iid lower bound cannot be transferred to structured curve-order
+maps without an additional theorem controlling those maps and adaptive
+coefficient choice.
+
+**Changed my mind about:** [PROVED] There is now a genuine unconditional
+infinite-family obstruction, but only for the full multiplicative auxiliary
+group and full extension multiplicative groups.  It would be incorrect to
+report an obstruction for selected subgroups, tori, elliptic curves, or all
+strongly algebraically defined groups.
+
+**Next:** Q005 remains: establish or refute uniform $\mathsf{SCM}_{C,K}$, or
+find a selected subgroup/tori/other constant-rank family with an every-prime
+smooth-order and efficient-embedding theorem.  Further iid sampling or scans
+at the 60-bit ceiling will not close this proof gap.
