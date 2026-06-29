@@ -44,3 +44,53 @@
 - [EMPIRICAL: $p\le2^{17}$] The asymptotic $x/(\log x)^2$ expression is too biased for a useful toy-range comparison; the refined prime sum is not merely cosmetic at this scale.
 
 **Next:** Implement the corrected quotient constant $C_{E,3}$ for the 3-torsion curve, then compare it with the already recorded 661 prime quotient orders.
+
+## Session 2 — 2026-06-29
+
+**Goal:** Finish SG-08 with a certified quotient-order constant, then finish SG-05 with a CM-specific constant, split-prime convention, measurement, and convergence comparison.
+
+**Prediction (written before new computations):**
+
+- [HEURISTIC] A correctly certified $C_{E,3}$ for the rational 3-torsion curve will agree with the existing quotient-prime data to within a Poisson-style 95% interval at $p\le2^{17}$; this is refuted if the interval excludes the predicted constant after independent finite-level validation.
+- [HEURISTIC] For a CM curve, pooling split and inert rational primes into the non-CM predictor will fail visibly; this is refuted if the CM-specific and pooled predictors are statistically indistinguishable at the largest cutoff.
+- [CITED] The CM local factors depend on splitting in the CM field and therefore differ from the full-$\mathrm{GL}_2$ product. (Koblitz 1988, Section 4; Zywina 2011, Section 2.3.)
+
+**Environment preflight:**
+
+- [EMPIRICAL: Python 3.13.4 on Windows 11] SageMath, PARI/GP, Singular, and msolve remain unavailable.
+- [EMPIRICAL: 59 tests] `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 59/59 tests in 1.35 seconds.
+
+**Did:**
+
+- Retrieved LMFDB's exact level-30 adelic generators for 540.f2 and implemented deterministic subgroup generation plus exhaustive level-90 lifting.
+- Derived the non-CM quotient correction from Zywina's finite-level formula without fitting any constant to the existing quotient counts.
+- Implemented Zywina's accelerated CM Euler product, the $p\equiv1\pmod4$ split-prime filter, a full-$\mathrm{GL}_2$ negative-control benchmark, CSV output, and a convergence figure.
+- Added four regression tests covering the finite group, the published CM constant, CM point-count structure, and the end-to-end measurement.
+
+**Found:**
+
+- [CITED] LMFDB records 540.f2 with equation $y^2=x^3+3x-11$, torsion order 3, adelic level 30, index 16, group order 8640 at level 30, and seven published generators. (LMFDB, curve 540.f2, accessed 2026-06-29.)
+- [CONDITIONAL: LMFDB's level and generator data for 540.f2 are correct] Exact enumeration gives $|G(90)|=699840$, $|G(90)\cap\Psi_3(90)|=98280$, $\delta_{E,3}(90)=91/648$, and $C_{E,3}=(5824/5913)C$.
+- [EMPIRICAL: Euler factors $\ell\le10^6$] The truncated 540.f2 quotient constant is $0.497562652330215$.
+- [EMPIRICAL: all good primes $5\le p\le2^{17}$] The 540.f2 quotient count is 661 versus 650.592 predicted, ratio $1.015998$; its measured-constant interval $[0.466985,0.544060]$ contains the prediction.
+- [EMPIRICAL: Euler factors $\ell\le10^6$] The accelerated CM product is $1.067350966817026$, within $7.3\mathbin{\cdot}10^{-8}$ of Zywina's published $1.067350894$.
+- [EMPIRICAL: split good primes $5\le p\le2^{17}$] The CM count is 765 among 6094 split primes versus 779.701 predicted, ratio $0.981145$; its measured-constant interval $[0.973017,1.121435]$ contains the prediction.
+- [EMPIRICAL: all good rational primes $5\le p\le2^{17}$] The deliberately invalid pooled full-$\mathrm{GL}_2$ predictor gives 243.653 versus 987 observed, ratio $4.0508$.
+- [EMPIRICAL: 70 tests] The complete P5.1 and shared suite passed 70/70 tests in 1.97 seconds.
+
+**Prediction vs. outcome:** matched. [EMPIRICAL: $p\le2^{17}$] Both corrected predictors lie inside their heuristic intervals, and the invalid pooled CM benchmark fails by a factor of $4.05$.
+
+**Did not work:**
+
+- [EMPIRICAL: $p=7,t=8$] The first smoke run exposed a zero denominator in the refined weight at the finite endpoint $p+1=t$; the implementation now assigns no asymptotic baseline weight to $p+1\le t$.
+- [EMPIRICAL: small CM primes] Hasse-interval point-order congruences sometimes did not isolate the curve order; the declared exhaustive exact fallback handled four cases in the full CM sweep.
+
+**Changed my mind about:**
+
+- [EMPIRICAL: $p\le2^{17}$] The CM split restriction is already visible at toy scale: it is not a presentation detail, because the pooled full-image model misses by a factor exceeding four.
+
+**Next:** All stated empirical and theory deliverables are complete; an optional next experiment is to reproduce Zywina's published $x=2\mathbin{\cdot}10^7$ CM table row with the integral predictor and a faster point-count backend.
+
+### Correction to Session 2
+
+- [EMPIRICAL: 71 tests] The final post-documentation run of `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 71/71 tests in 1.93 seconds; this supersedes the earlier 70-test intermediate count.
