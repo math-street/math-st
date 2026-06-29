@@ -1,0 +1,23 @@
+# Subgoals - P3.1
+
+- [x] **SG-01a:** Identify the exact paper/version proving the equivalence and record complete bibliographic metadata.
+- [x] **SG-01b:** Extract every theorem, proposition, lemma, and subroutine whose statement or proof invokes GRH.
+- [x] **SG-01c:** For each use, identify the number field/order, the bounded objects, the numerical bound, and the complexity consequence.
+- [x] **SG-01d:** Trace each GRH input to its external analytic-number-theory theorem and record the strongest checked unconditional replacement.
+- [x] **SG-01e:** Separate direct GRH uses from downstream dependencies and publish a dependency graph plus audit table.
+- [x] **SG-02a:** Test whether each checked unconditional replacement remains polynomial in the input length.
+- [x] **SG-02b:** Audit whether the fixed-form prime sampler D2 can be weakened from pointwise density to a distributional statement after the Brandt randomization already present in Algorithm 2.
+- [x] **SG-02c:** Determine whether the unconditional Assing--Blomer--Li modulus range can be combined with a different norm-equation parameterization that avoids setting \(b=p\).
+- [x] **SG-02d:** Test and prove a direct rank-four replacement for Proposition 3.8 that bypasses the failed Brandt-to-binary pushforward.
+- [x] **SG-02e:** Test whether the same quaternary representation input constructively solves the fixed-target equation in Algorithm 2, Step 9.
+- [x] **SG-02f:** Test whether the flexible-model and local-dictionary machinery removes D1 from the old smooth-equivalent-ideal route.
+- [x] **SG-03a:** Specify a canonical toy-scale representation for maximal orders and the \(E\leftrightarrow E^{(p)}\) acceptance rule before implementing the Deuring round trip.
+- [x] **SG-03b:** Implement and validate canonical \(\mathbb F_{p^2}\) field, curve-class, and Frobenius-orbit keys.
+- [x] **SG-03c:** Implement one \(\mathbb F_{p^2}\) Velu step and validate the `deuring_key` endpoint rule before attempting ideal-to-isogeny round trips.
+- [x] **SG-03d:** Extend the local ideal--kernel--ideal fixture to an embedded-right-order--curve-key lookup and validate at least 20 independently seeded instances.
+- [x] **SG-03e:** Validate the dual two-step ideal/isogeny chain, terminal source class, and degree product on at least 20 independent seeds.
+- [ ] **SG-03f:** Propagate the explicit dictionary across a non-backtracking second ideal and identify the terminal right order without an exhaustive curve-key lookup.
+- [x] **SG-04a:** Define the reduction-cost counters and experimental parameter grid independently of SG-01.
+- [x] **SG-04b:** Instrument the first complete toy reduction path with the SG-04 counters and store at least five-size residuals before fitting a cost exponent.
+- [x] **SG-05a:** Decide whether the first toy timing fit identifies the bit-loss proxy and document the exact missing measurements.
+- [ ] **SG-05b:** Instrument one complete oracle reduction with at least 200 seeds, separate oracle and reduction time, and evaluate the three summands of \(\Delta(p)\).
