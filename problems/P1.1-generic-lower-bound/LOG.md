@@ -167,3 +167,31 @@ fixed field supplies a complete, non-circular executable validation layer.
 **Next:** No required P1.1 validation remains. Optional future work may target
 a genuinely higher-genus Jacobian and measured speedup, or define a separately
 priced coordinate-circuit model.
+
+## Session 4 — 2026-06-29
+
+**Goal:** Continue past the genus-one boundary to a genuinely higher-genus GHS
+Jacobian transfer and auxiliary-DLP comparison.
+
+**Prediction:** A quadratic-extension, magic-number-two source should reduce
+to a genus-two characteristic-two curve, after which generalized Cantor
+arithmetic can make the conorm/norm image executable.
+
+**Did:** Re-read the original falsifier, reopened the GHS validation row,
+reconstructed the quadratic fixed-field invariants, and enumerated the missing
+Jacobian and divisor-map layers. No new implementation was completed.
+
+**Found:** The A004 genus-one fixture is exact but insufficient as the terminal
+validation of the actual higher-genus GHS attack row.
+
+**Prediction vs. outcome:** Not reached. The proposed genus-two route remained
+at the derivation stage.
+
+**Did not work:** No independently tested characteristic-two Mumford group law,
+place transfer, or auxiliary DLP comparison was produced.
+
+**Changed my mind about:** The genus-one boundary case must be treated as
+partial GHS evidence, not as closure of the full validation row.
+
+**Next:** None. At the user's direction, the overall task is closed and marked
+failed. A005 records the exact restart boundary.
