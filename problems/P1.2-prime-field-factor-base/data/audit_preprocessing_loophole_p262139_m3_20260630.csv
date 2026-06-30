@@ -1,0 +1,2 @@
+date,p,a,b,r,m,radix,radix_power,factor_base_size,factor_base_upper_bound,sqrt_p_baseline,base_over_sqrt_p,target_table_entries,stored_point_references,coverage_targets,coverage_fraction,invalid_memberships,invalid_sums,preprocessing_target_steps,preprocessing_s,online_lookups,online_lookup_mean_ns
+2026-06-30,262139,162850,139881,261431,3,64,262144,190,192,511,0.371819960861,261431,1045724,261431,1,0,0,261431,1.101763600,261431,1590.396

@@ -201,3 +201,84 @@ ambiguity.
 - [EMPIRICAL: cyclic group of order 19] The two new formal-support tests cover
   20 base-size/length cases and a collision case with support strictly below
   the ordered-tuple count.
+
+## Session 3 — 2026-06-30
+
+**Goal:** Continue beyond the resolved standard-L statement by auditing the
+likely intended $p^{1/2+o(1)}$ variant, especially whether an unbounded
+input-specific preprocessing table makes its online decomposition requirement
+vacuous.
+
+**Prediction (written before running the experiment):**
+
+- [HEURISTIC] On the recorded 16-bit prime-order curve, a three-position radix
+  construction will cover every group element with a factor base of size at
+  most $3\lceil r^{1/3}\rceil$, and a full target-to-decomposition table will
+  give constant-number dictionary operations online. Failure to cover one
+  target or one invalid returned sum falsifies the construction prediction.
+- [HEURISTIC] The factor base will be smaller than the recorded
+  $\lfloor\sqrt p\rfloor$ baseline but the preprocessing table will have
+  exactly $r$ target entries, demonstrating a linear-in-$p$ hidden resource.
+  A base at least as large as the square-root baseline, or a sublinear table,
+  falsifies the measured resource prediction.
+
+**Plan:** Implement the construction separately from Candidate A, validate all
+targets exhaustively at 16 bits, and state which construction-time,
+description-size, preprocessing, and storage bounds a non-vacuous corrected
+problem must add.
+
+**Did:**
+
+- Added `code/audit_preprocessing_loophole.py` and two unit tests covering
+  exact integer roots and full radix-table decomposition on the order-19
+  fixture.
+- Exhaustively built and queried the table on all three recorded prime-order
+  curves, not only the preregistered 16-bit curve.
+- Proved the general cyclic-group radix construction and wrote two explicit
+  resource-bounded alternatives in `CORRECTED_VARIANTS.md`.
+
+**Found:**
+
+- [EMPIRICAL: p=65519,262139,1048571] Base sizes were 120, 190, and 304,
+  strictly below the square-root diagnostics 255, 511, and 1,023.
+- [EMPIRICAL: all 1,373,865 targets] Coverage was 100%; no returned term was
+  outside the base and no returned sum was invalid.
+- [EMPIRICAL: same curves] Target-table sizes were exactly 65,537, 261,431,
+  and 1,046,897, with four stored point references per target for $m=3$.
+- [PROVED] For any cyclic order-$r$ group, the positional construction has
+  size at most $m\lceil r^{1/m}\rceil$ and covers every target with exactly
+  $m$ terms.
+- [CONDITIONAL: unbounded input-specific description and preprocessing]
+  Balanced lookup structures satisfy polylogarithmic online membership and
+  decomposition time, but use $\Theta(rm\log p)$ bits and $\Omega(r)$
+  preprocessing.
+
+**Prediction vs. outcome:** [EMPIRICAL: preregistered 16-bit audit] Matched.
+The base had 120 points, below 255; every one of 65,537 targets was valid; and
+the decoder stored exactly 65,537 target entries. The extension to 18 and 20
+bits showed the same exact behavior.
+
+**Did not work:** The first launch called `Curve.is_on_curve`, while the shared
+API names that method `Curve.contains`. Tests stopped before construction; the
+call was corrected and all launches then passed. A later combined validation
+passed the literal `*.py` string to `py_compile` because PowerShell did not
+expand that wildcard; a file-by-file loop then compiled every P1.2 Python file
+successfully.
+
+**Changed my mind about:** [PROVED] A square-root substitution alone does not
+produce a clean open problem. Without uniformity and offline-resource bounds,
+nonuniform advice makes it trivial; with the bounds in Variant S, Candidate A
+again becomes a genuine finder question.
+
+**Next:** Treat the standard-L statement as resolved and the literal
+online-only square-root version as specification-audited. Continue Q001 only
+under an explicitly selected Variant-S resource model.
+
+**Final validation:**
+
+- [EMPIRICAL: local CPython 3.13.4] All 62 currently present shared-library
+  tests and all 12 P1.2 tests passed.
+- [EMPIRICAL: four smoke configurations] SG-01/Candidate A, the SG-02 cubic
+  extension, Candidates B/D, and A008 all completed successfully.
+- [EMPIRICAL: syntax audit] Every Python file directly under P1.2 `code/`
+  passed `py_compile` in the corrected file-by-file invocation.
