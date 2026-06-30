@@ -1,0 +1,30 @@
+{
+  "base_spacetime_qubit_seconds": 45207843404156.84,
+  "method": "one parameter at a time over explicitly configured endpoints",
+  "metric": "physical qubit-seconds",
+  "ranking": [
+    {
+      "endpoints": [
+        {
+          "code_distance": 31,
+          "log2_change_from_base": -2.321928094887362,
+          "physical_qubits": 11666540.0,
+          "runtime_seconds": 775000.0155,
+          "spacetime_qubit_seconds": 9041568680831.37,
+          "value": 2e-07
+        },
+        {
+          "code_distance": 31,
+          "log2_change_from_base": 1.0,
+          "physical_qubits": 11666540.0,
+          "runtime_seconds": 7750000.154999999,
+          "spacetime_qubit_seconds": 90415686808313.69,
+          "value": 2e-06
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 2.321928094887362,
+      "parameter": "surface_code.code_cycle_seconds"
+    }
+  ],
+  "schema_version": 1
+}

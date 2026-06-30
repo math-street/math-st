@@ -1,0 +1,79 @@
+{
+  "assumptions": {
+    "logical_architecture": {
+      "average_parallel_utilization": 1.0,
+      "base_logical_qubits": 40000.0,
+      "magic_factory_count": 1.0,
+      "oracle_workspace_logical_qubits_per_worker": 0.0,
+      "parallel_workers": 1.0,
+      "phase_state_logical_qubits": 0.0,
+      "quantum_accessible_classical_memory_bits": 0.0
+    },
+    "model_name": "Bonnetain-Schrottenloher 2020 CSIDH-512 Section 3.3 logical endpoint",
+    "model_status": "reproduces the published 2^19 * 2^52.6 = 2^71.6 T-gate row; surface-code outputs remain illustrative",
+    "operation_costs": {
+      "combination_clifford_gates": 0.0,
+      "combination_logical_depth": 0.0,
+      "combination_measurements": 0.0,
+      "combination_t_gates": 0.0,
+      "oracle_clifford_gates": 0.0,
+      "oracle_logical_depth": 6826180564135523.0,
+      "oracle_measurements": 0.0,
+      "oracle_t_gates": 6826180564135523.0
+    },
+    "published_auxiliary_costs": {
+      "classical_time_log2": 86.0,
+      "quantum_memory_log2_upper_bound": 15.3
+    },
+    "source": "EUROCRYPT 2020, Table 4, DOI 10.1007/978-3-030-45724-2_17",
+    "surface_code": {
+      "code_cycle_seconds": 1e-06,
+      "code_cycles_per_logical_layer_per_distance": 1.0,
+      "data_physical_qubits_per_d2": 2.0,
+      "factory_physical_qubits_per_d2": 12.0,
+      "failure_budget": 0.01,
+      "logical_error_prefactor": 0.1,
+      "minimum_code_distance": 3.0,
+      "physical_error_rate": 0.001,
+      "t_states_per_factory_per_code_cycle": 0.1,
+      "threshold_error_rate": 0.01,
+      "watts_per_active_physical_qubit": 1e-06
+    }
+  },
+  "logical_resources": {
+    "abstract_query_security_bits": 19.0,
+    "clifford_gates": 0.0,
+    "data_logical_qubits": 40000.0,
+    "fault_locations_union_bound": 1.4315896110893501e+26,
+    "measurements": 0.0,
+    "parallel_logical_depth": 3.578884555609485e+21,
+    "quantum_accessible_classical_memory_bits": 0.0,
+    "serial_logical_depth": 3.578884555609485e+21,
+    "t_gates": 3.578884555609485e+21
+  },
+  "model_name": "Bonnetain-Schrottenloher 2020 CSIDH-512 Section 3.3 logical endpoint",
+  "model_status": "reproduces the published 2^19 * 2^52.6 = 2^71.6 T-gate row; surface-code outputs remain illustrative",
+  "physical_resources": {
+    "algorithm_code_cycles": 1.9683865055852168e+23,
+    "code_cycles": 1.9683865055852168e+23,
+    "code_distance": 55,
+    "energy_joules": 4.764209867817751e+19,
+    "logical_error_per_location": 1.0000000000000016e-29,
+    "logical_error_target_per_location": 6.985242085118671e-29,
+    "magic_factory_code_cycles": 3.5788845556094848e+22,
+    "physical_data_qubits": 242000000.0,
+    "physical_factory_qubits": 36300.0,
+    "physical_qubits": 242036300.0,
+    "runtime_bottleneck": "logical_depth",
+    "runtime_seconds": 1.9683865055852166e+17,
+    "spacetime_qubit_seconds": 4.764209867817751e+25
+  },
+  "schema_version": 1,
+  "sieve_counters": {
+    "combination_attempts": 0.0,
+    "list_size": 1.0,
+    "n_bits": 257.0,
+    "query_count": 524288.0,
+    "trial_count": 0.0
+  }
+}

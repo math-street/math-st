@@ -1,0 +1,11 @@
+{
+  "operation_costs.oracle_logical_depth": [100000000.0, 10000000000.0],
+  "logical_architecture.parallel_workers": [1.0, 1024.0],
+  "logical_architecture.oracle_workspace_logical_qubits_per_worker": [1000.0, 20000.0],
+  "logical_architecture.magic_factory_count": [1.0, 1024.0],
+  "surface_code.physical_error_rate": [0.0001, 0.003],
+  "surface_code.failure_budget": [0.001, 0.1],
+  "surface_code.code_cycle_seconds": [2e-07, 1e-06],
+  "surface_code.t_states_per_factory_per_code_cycle": [0.01, 1.0],
+  "surface_code.data_physical_qubits_per_d2": [1.0, 4.0]
+}

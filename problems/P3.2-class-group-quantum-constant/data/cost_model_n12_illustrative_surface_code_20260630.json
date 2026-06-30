@@ -1,0 +1,74 @@
+{
+  "assumptions": {
+    "logical_architecture": {
+      "average_parallel_utilization": 0.8,
+      "base_logical_qubits": 1000.0,
+      "magic_factory_count": 1.0,
+      "oracle_workspace_logical_qubits_per_worker": 5000.0,
+      "parallel_workers": 1.0,
+      "phase_state_logical_qubits": 1.0,
+      "quantum_accessible_classical_memory_bits": 0.0
+    },
+    "model_name": "illustrative phenomenological surface-code model",
+    "model_status": "illustrative only; not attributed to a published CSIDH estimate",
+    "operation_costs": {
+      "combination_clifford_gates": 10.0,
+      "combination_logical_depth": 10.0,
+      "combination_measurements": 1.0,
+      "combination_t_gates": 0.0,
+      "oracle_clifford_gates": 5000000000.0,
+      "oracle_logical_depth": 1000000000.0,
+      "oracle_measurements": 100000000.0,
+      "oracle_t_gates": 1000000000.0
+    },
+    "surface_code": {
+      "code_cycle_seconds": 1e-06,
+      "code_cycles_per_logical_layer_per_distance": 1.0,
+      "data_physical_qubits_per_d2": 2.0,
+      "factory_physical_qubits_per_d2": 12.0,
+      "failure_budget": 0.01,
+      "logical_error_prefactor": 0.1,
+      "minimum_code_distance": 3.0,
+      "physical_error_rate": 0.001,
+      "t_states_per_factory_per_code_cycle": 0.1,
+      "threshold_error_rate": 0.01,
+      "watts_per_active_physical_qubit": 1e-06
+    }
+  },
+  "logical_resources": {
+    "abstract_query_security_bits": 6.643856189774724,
+    "clifford_gates": 500000002000.0,
+    "data_logical_qubits": 6064.0,
+    "fault_locations_union_bound": 758610015162200.0,
+    "measurements": 10000000200.0,
+    "parallel_logical_depth": 125000002500.0,
+    "quantum_accessible_classical_memory_bits": 0.0,
+    "serial_logical_depth": 100000002000.0,
+    "t_gates": 100000000000.0
+  },
+  "model_name": "illustrative phenomenological surface-code model",
+  "model_status": "illustrative only; not attributed to a published CSIDH estimate",
+  "physical_resources": {
+    "algorithm_code_cycles": 3875000077500.0,
+    "code_cycles": 3875000077500.0,
+    "code_distance": 31,
+    "energy_joules": 45207843.40415684,
+    "logical_error_per_location": 1.0000000000000008e-17,
+    "logical_error_target_per_location": 1.3182003664770863e-17,
+    "magic_factory_code_cycles": 1000000000000.0,
+    "physical_data_qubits": 11655008.0,
+    "physical_factory_qubits": 11532.0,
+    "physical_qubits": 11666540.0,
+    "runtime_bottleneck": "logical_depth",
+    "runtime_seconds": 3875000.0774999997,
+    "spacetime_qubit_seconds": 45207843404156.84
+  },
+  "schema_version": 1,
+  "sieve_counters": {
+    "combination_attempts": 200.0,
+    "list_size": 64.0,
+    "n_bits": 12.0,
+    "query_count": 100.0,
+    "trial_count": 1.0
+  }
+}

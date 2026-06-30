@@ -1,0 +1,113 @@
+{
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 20260723,
+  "log_base": "natural",
+  "model": "ln Q = c*sqrt(ln N) + d*ln(ln N) + k",
+  "parameters": {
+    "c_sqrt_log_N": {
+      "bootstrap_95_percent_ci": [
+        2.6545436703901526,
+        2.7192289807778294
+      ],
+      "estimate": 2.6867674774938926
+    },
+    "d_log_log_N": {
+      "bootstrap_95_percent_ci": [
+        -1.0421001621736987,
+        -0.8362905359335948
+      ],
+      "estimate": -0.9399643630551283
+    },
+    "k_intercept": {
+      "bootstrap_95_percent_ci": [
+        4.674437606504982,
+        5.030961238454216
+      ],
+      "estimate": 4.852313283378668
+    }
+  },
+  "residuals": [
+    {
+      "fitted_log_query": 13.16799745116533,
+      "mean_log_query": 13.377694969207797,
+      "n_bits": 24,
+      "residual": 0.20969751804246606
+    },
+    {
+      "fitted_log_query": 14.592861951611969,
+      "mean_log_query": 14.098445438835467,
+      "n_bits": 32,
+      "residual": -0.49441651277650145
+    },
+    {
+      "fitted_log_query": 15.87668257255375,
+      "mean_log_query": 16.205314092206997,
+      "n_bits": 40,
+      "residual": 0.32863151965324633
+    },
+    {
+      "fitted_log_query": 17.055595137212386,
+      "mean_log_query": 16.90128174743759,
+      "n_bits": 48,
+      "residual": -0.1543133897747957
+    },
+    {
+      "fitted_log_query": 18.15241726275725,
+      "mean_log_query": 18.347368177482505,
+      "n_bits": 56,
+      "residual": 0.19495091472525417
+    },
+    {
+      "fitted_log_query": 19.182665698822372,
+      "mean_log_query": 19.04575910452021,
+      "n_bits": 64,
+      "residual": -0.136906594302161
+    },
+    {
+      "fitted_log_query": 20.15747035978389,
+      "mean_log_query": 19.7620802753168,
+      "n_bits": 72,
+      "residual": -0.39539008446708834
+    },
+    {
+      "fitted_log_query": 21.085142278914088,
+      "mean_log_query": 21.875704539844275,
+      "n_bits": 80,
+      "residual": 0.7905622609301872
+    },
+    {
+      "fitted_log_query": 21.972085850943827,
+      "mean_log_query": 21.87747664037036,
+      "n_bits": 88,
+      "residual": -0.09460921057346638
+    },
+    {
+      "fitted_log_query": 22.82336258324692,
+      "mean_log_query": 22.575156161789845,
+      "n_bits": 96,
+      "residual": -0.2482064214570734
+    }
+  ],
+  "rmse_log_query": 0.3645354094663601,
+  "schema_version": 1,
+  "shape_comparison_in_sample_rmse": {
+    "log_N": 0.44852164984599285,
+    "log_log_N": 0.49875812753858895,
+    "sqrt_log_N": 0.3667213391889213,
+    "sqrt_log_N_plus_log_log_N": 0.3645354094663601
+  },
+  "size_count": 10,
+  "sizes": [
+    24,
+    32,
+    40,
+    48,
+    56,
+    64,
+    72,
+    80,
+    88,
+    96
+  ],
+  "trial_count": 1000
+}

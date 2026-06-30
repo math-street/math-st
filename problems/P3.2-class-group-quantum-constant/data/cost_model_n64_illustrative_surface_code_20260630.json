@@ -1,0 +1,74 @@
+{
+  "assumptions": {
+    "logical_architecture": {
+      "average_parallel_utilization": 0.8,
+      "base_logical_qubits": 1000.0,
+      "magic_factory_count": 1.0,
+      "oracle_workspace_logical_qubits_per_worker": 5000.0,
+      "parallel_workers": 1.0,
+      "phase_state_logical_qubits": 1.0,
+      "quantum_accessible_classical_memory_bits": 0.0
+    },
+    "model_name": "illustrative phenomenological surface-code model",
+    "model_status": "illustrative only; not attributed to a published CSIDH estimate",
+    "operation_costs": {
+      "combination_clifford_gates": 10.0,
+      "combination_logical_depth": 10.0,
+      "combination_measurements": 1.0,
+      "combination_t_gates": 0.0,
+      "oracle_clifford_gates": 5000000000.0,
+      "oracle_logical_depth": 1000000000.0,
+      "oracle_measurements": 100000000.0,
+      "oracle_t_gates": 1000000000.0
+    },
+    "surface_code": {
+      "code_cycle_seconds": 1e-06,
+      "code_cycles_per_logical_layer_per_distance": 1.0,
+      "data_physical_qubits_per_d2": 2.0,
+      "factory_physical_qubits_per_d2": 12.0,
+      "failure_budget": 0.01,
+      "logical_error_prefactor": 0.1,
+      "minimum_code_distance": 3.0,
+      "physical_error_rate": 0.001,
+      "t_states_per_factory_per_code_cycle": 0.1,
+      "threshold_error_rate": 0.01,
+      "watts_per_active_physical_qubit": 1e-06
+    }
+  },
+  "logical_resources": {
+    "abstract_query_security_bits": 27.47722221005714,
+    "clifford_gates": 9.341961811350656e+17,
+    "data_logical_qubits": 22384.0,
+    "fault_locations_union_bound": 5.228901574577542e+21,
+    "measurements": 1.868392371421263e+16,
+    "parallel_logical_depth": 2.3354904642765792e+17,
+    "quantum_accessible_classical_memory_bits": 0.0,
+    "serial_logical_depth": 1.8683923714212634e+17,
+    "t_gates": 1.868392359982348e+17
+  },
+  "model_name": "illustrative phenomenological surface-code model",
+  "model_status": "illustrative only; not attributed to a published CSIDH estimate",
+  "physical_resources": {
+    "algorithm_code_cycles": 1.0509707089244606e+19,
+    "code_cycles": 1.0509707089244606e+19,
+    "code_distance": 45,
+    "energy_joules": 953014983999156.2,
+    "logical_error_per_location": 1.0000000000000014e-24,
+    "logical_error_target_per_location": 1.912447548949691e-24,
+    "magic_factory_code_cycles": 1.868392359982348e+18,
+    "physical_data_qubits": 90655200.0,
+    "physical_factory_qubits": 24300.0,
+    "physical_qubits": 90679500.0,
+    "runtime_bottleneck": "logical_depth",
+    "runtime_seconds": 10509707089244.605,
+    "spacetime_qubit_seconds": 9.530149839991563e+20
+  },
+  "schema_version": 1,
+  "sieve_counters": {
+    "combination_attempts": 114389152.61805964,
+    "list_size": 16384.0,
+    "n_bits": 64.0,
+    "query_count": 186839235.9982348,
+    "trial_count": 100.0
+  }
+}

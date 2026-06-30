@@ -1,0 +1,206 @@
+{
+  "base_spacetime_qubit_seconds": 9.530149839991563e+20,
+  "method": "one parameter at a time over explicitly configured endpoints",
+  "metric": "physical qubit-seconds",
+  "ranking": [
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.0,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 9.530149839991563e+20,
+          "value": 1.0
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 5.350184155064679,
+          "physical_qubits": 20806429500.0,
+          "runtime_seconds": 1868392359982.348,
+          "spacetime_qubit_seconds": 3.887457391631134e+22,
+          "value": 1024.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 5.350184155064679,
+      "parameter": "logical_architecture.parallel_workers"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 43,
+          "log2_change_from_base": -2.623029788417484,
+          "physical_qubits": 82798220.0,
+          "runtime_seconds": 1868392359982.348,
+          "spacetime_qubit_seconds": 1.5469956166813765e+20,
+          "value": 100000000.0
+        },
+        {
+          "code_distance": 47,
+          "log2_change_from_base": 3.51013535298186,
+          "physical_qubits": 98919020.0,
+          "runtime_seconds": 109768051216166.56,
+          "spacetime_qubit_seconds": 1.0858148053613004e+22,
+          "value": 10000000000.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 3.51013535298186,
+      "parameter": "operation_costs.oracle_logical_depth"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 23,
+          "log2_change_from_base": -2.904873420817985,
+          "physical_qubits": 23688620.0,
+          "runtime_seconds": 5371628067836.132,
+          "spacetime_qubit_seconds": 1.2724645608030436e+20,
+          "value": 0.0001
+        },
+        {
+          "code_distance": 87,
+          "log2_change_from_base": 2.853271198557161,
+          "physical_qubits": 338939820.0,
+          "runtime_seconds": 20318767039206.24,
+          "spacetime_qubit_seconds": 6.886839242890495e+21,
+          "value": 0.003
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 2.904873420817985,
+      "parameter": "surface_code.physical_error_rate"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": -2.3219280948873626,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 2101941417848.9211,
+          "spacetime_qubit_seconds": 1.9060299679983124e+20,
+          "value": 2e-07
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.0,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 9.530149839991563e+20,
+          "value": 1e-06
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 2.3219280948873626,
+      "parameter": "surface_code.code_cycle_seconds"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": -0.9996134430269675,
+          "physical_qubits": 45351900.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 4.766351849407124e+20,
+          "value": 1.0
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.999806682666139,
+          "physical_qubits": 181334700.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 1.9057745821160437e+21,
+          "value": 4.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 0.999806682666139,
+      "parameter": "surface_code.data_physical_qubits_per_d2"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.830074989725032,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 18683923599823.48,
+          "spacetime_qubit_seconds": 1.6942488500701933e+21,
+          "value": 0.01
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.0,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 9.530149839991563e+20,
+          "value": 1.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 0.830074989725032,
+      "parameter": "surface_code.t_states_per_factory_per_code_cycle"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": -0.2839330484406599,
+          "physical_qubits": 74479500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 7.827577291533936e+20,
+          "value": 1000.0
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.7397979430055714,
+          "physical_qubits": 151429500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 1.591479689670766e+21,
+          "value": 20000.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 0.7397979430055714,
+      "parameter": "logical_architecture.oracle_workspace_logical_qubits_per_worker"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.0,
+          "physical_qubits": 90679500.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 9.530149839991563e+20,
+          "value": 1.0
+        },
+        {
+          "code_distance": 45,
+          "log2_change_from_base": 0.34952407988503487,
+          "physical_qubits": 115538400.0,
+          "runtime_seconds": 10509707089244.605,
+          "spacetime_qubit_seconds": 1.214274741559979e+21,
+          "value": 1024.0
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 0.34952407988503487,
+      "parameter": "logical_architecture.magic_factory_count"
+    },
+    {
+      "endpoints": [
+        {
+          "code_distance": 47,
+          "log2_change_from_base": 0.18820726604388788,
+          "physical_qubits": 98919020.0,
+          "runtime_seconds": 10976805182099.922,
+          "spacetime_qubit_seconds": 1.0858148113442458e+21,
+          "value": 0.001
+        },
+        {
+          "code_distance": 43,
+          "log2_change_from_base": -0.19676502488273068,
+          "physical_qubits": 82798220.0,
+          "runtime_seconds": 10042608996389.29,
+          "spacetime_qubit_seconds": 8.315101490570195e+20,
+          "value": 0.1
+        }
+      ],
+      "impact_score_max_abs_log2_spacetime_change": 0.19676502488273068,
+      "parameter": "surface_code.failure_budget"
+    }
+  ],
+  "schema_version": 1
+}

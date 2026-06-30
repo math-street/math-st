@@ -1,0 +1,78 @@
+{
+  "bootstrap_replicates": 10,
+  "bootstrap_seed": 20260723,
+  "log_base": "natural",
+  "model": "ln Q = c*sqrt(ln N) + d*ln(ln N) + k",
+  "parameters": {
+    "c_sqrt_log_N": {
+      "bootstrap_95_percent_ci": [
+        1.9999999999999982,
+        1.9999999999999982
+      ],
+      "estimate": 1.9999999999999982
+    },
+    "d_log_log_N": {
+      "bootstrap_95_percent_ci": [
+        0.5000000000000058,
+        0.5000000000000058
+      ],
+      "estimate": 0.5000000000000058
+    },
+    "k_intercept": {
+      "bootstrap_95_percent_ci": [
+        0.9999999999999927,
+        0.9999999999999927
+      ],
+      "estimate": 0.9999999999999927
+    }
+  },
+  "residuals": [
+    {
+      "fitted_log_query": 6.566104400610983,
+      "mean_log_query": 6.5661044006109845,
+      "n_bits": 8,
+      "residual": 1.7763568394002505e-15
+    },
+    {
+      "fitted_log_query": 7.8273044110067,
+      "mean_log_query": 7.8273044110067,
+      "n_bits": 12,
+      "residual": 0.0
+    },
+    {
+      "fitted_log_query": 8.86347479009064,
+      "mean_log_query": 8.86347479009064,
+      "n_bits": 16,
+      "residual": 0.0
+    },
+    {
+      "fitted_log_query": 9.761204498604233,
+      "mean_log_query": 9.761204498604231,
+      "n_bits": 20,
+      "residual": -1.7763568394002505e-15
+    },
+    {
+      "fitted_log_query": 10.563106376233614,
+      "mean_log_query": 10.563106376233613,
+      "n_bits": 24,
+      "residual": -1.7763568394002505e-15
+    }
+  ],
+  "rmse_log_query": 1.3759600911837627e-15,
+  "schema_version": 1,
+  "shape_comparison_in_sample_rmse": {
+    "log_N": 0.1276761646542802,
+    "log_log_N": 0.09863930339329151,
+    "sqrt_log_N": 0.015730689994109308,
+    "sqrt_log_N_plus_log_log_N": 1.3759600911837627e-15
+  },
+  "size_count": 5,
+  "sizes": [
+    8,
+    12,
+    16,
+    20,
+    24
+  ],
+  "trial_count": 10
+}
