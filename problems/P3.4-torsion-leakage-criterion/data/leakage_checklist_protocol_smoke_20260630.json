@@ -1,0 +1,10 @@
+[
+  {
+    "case_id": "SIDH-p434-shaped-Bob",
+    "verdict": "KEY_RECOVERY_POLYNOMIAL",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary."
+    ]
+  }
+]

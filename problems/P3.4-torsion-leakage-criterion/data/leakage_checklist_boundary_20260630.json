@@ -1,0 +1,69 @@
+[
+  {
+    "case_id": "B1-rank-one",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The derivable target-map restriction has rank below two (C2)."
+    ]
+  },
+  {
+    "case_id": "B2-one-unit-inside",
+    "verdict": "KEY_RECOVERY_POLYNOMIAL",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary."
+    ]
+  },
+  {
+    "case_id": "B3-hidden-degree",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The target degree is not polynomially enumerable (C1)."
+    ]
+  },
+  {
+    "case_id": "B4-below-boundary",
+    "verdict": "WITNESS_DEPENDENT",
+    "route": null,
+    "reasons": [
+      "N^2 <= degree, so the generic R8 direct-recovery leaf does not apply.",
+      "No mechanically valid K2 numerical certificate plus construction witness was supplied."
+    ]
+  },
+  {
+    "case_id": "B5-large-prime-torsion",
+    "verdict": "ALGEBRAIC_ONLY",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary.",
+      "At least one factorization, torsion-access, or smoothness cost is not polynomially available."
+    ]
+  },
+  {
+    "case_id": "B6-same-secret-CRT",
+    "verdict": "KEY_RECOVERY_POLYNOMIAL",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary."
+    ]
+  },
+  {
+    "case_id": "B6-distinct-secret-no-CRT",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The proposed leakage aggregation mixes distinct secret maps."
+    ]
+  },
+  {
+    "case_id": "B7-endring-without-images",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The transcript does not determine the target map on torsion (C2).",
+      "The derivable target-map restriction has rank below two (C2)."
+    ]
+  }
+]

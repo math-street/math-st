@@ -1,0 +1,46 @@
+[
+  {
+    "case_id": "SIDH-p434-shaped-Bob",
+    "verdict": "KEY_RECOVERY_POLYNOMIAL",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary."
+    ]
+  },
+  {
+    "case_id": "SIKEp434",
+    "verdict": "KEY_RECOVERY_POLYNOMIAL",
+    "route": "R8",
+    "reasons": [
+      "Full rank-two target action and N^2 > degree satisfy the R8 recovery boundary."
+    ]
+  },
+  {
+    "case_id": "CSIDH",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The target degree is not polynomially enumerable (C1).",
+      "The transcript does not determine the target map on torsion (C2).",
+      "The derivable target-map restriction has rank below two (C2)."
+    ]
+  },
+  {
+    "case_id": "SQIsign-2.0.1",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The transcript does not determine the target map on torsion (C2).",
+      "The derivable target-map restriction has rank below two (C2)."
+    ]
+  },
+  {
+    "case_id": "SQIsign2D-West",
+    "verdict": "NO_PUBLISHED_ROUTE",
+    "route": null,
+    "reasons": [
+      "The transcript does not determine the target map on torsion (C2).",
+      "The derivable target-map restriction has rank below two (C2)."
+    ]
+  }
+]
