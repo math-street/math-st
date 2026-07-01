@@ -201,3 +201,61 @@ strongly algebraically defined groups.
 find a selected subgroup/tori/other constant-rank family with an every-prime
 smooth-order and efficient-embedding theorem.  Further iid sampling or scans
 at the 60-bit ceiling will not close this proof gap.
+
+## Session 4 - 2026-07-01
+
+**Goal:** Test the simplest selected-torus replacement: choose between the
+split torus of order $r-1$ and the quadratic norm-one torus of order $r+1$.
+
+**Prediction (written before validation):** [CONJECTURE] CRT plus Linnik's
+least-prime theorem yields infinitely many primes for which both orders have
+a factor $r^{\Omega(1)}$, so this finite menu is not a uniform solution.  A
+gap in simultaneously forcing the two large factors falsifies the proposed
+argument.
+
+**Did:**
+- Initialized A004 and stated the algebraic/formula falsifiers before adding
+  the torus validation code.
+- Wrote failing tests first, then implemented and exhaustively validated the
+  quadratic norm-one torus parametrization, extraction, and group law.
+- Checked Xylouris's effective Linnik theorem in the primary text.
+- Combined Bertrand, CRT, and Linnik into a simultaneous $r-1$/$r+1$
+  large-factor theorem, then analyzed smooth subgroups in the standard
+  shift-and-test model.
+
+**Found:**
+- [PROVED] The torus $x^2-dy^2=1$ is cyclic of order $r+1$ and has a
+  constant-degree bijection from $\mathbb F_r$ onto all but one point, with
+  efficient extraction.  It is a valid related auxiliary whenever $r+1$ is
+  polylogarithmically smooth.
+- [EMPIRICAL: four complete toy fields] All points, parameters, extractions,
+  and group products matched the derived formulas.
+- [CITED] Linnik's least-prime theorem admits an effective absolute exponent
+  $L_0=5.2$ (Xylouris 2009).
+- [PROVED] Infinitely many primes satisfy both
+  $P^+(r-1),P^+(r+1)\ge c r^{1/10.4}$ for an absolute $c>0$.
+- [PROVED] Thus neither choosing between the two full one-dimensional tori nor
+  using uniform random shifts to hit their smooth subgroups is polynomial on
+  this prime family.
+- [PROVED] A fixed-modulus PNT/CRT extension simultaneously forces a
+  polynomially large factor in every full norm-one torus of degree
+  $1\le n\le D$, for each globally fixed $D$.
+- [EMPIRICAL: 69 shared tests and 11 P2.1 tests] The final full regression
+  suite passed on Python 3.13.4.
+
+**Prediction vs. outcome:** [PROVED] Confirmed.  The CRT conditions are
+coprime, their modulus is $O(X^2)$, and Linnik keeps the resulting prime below
+$O(X^{2L_0})$, preserving both forced factors as fixed powers of $r$.
+
+**Did not work:** [PROVED] The new obstruction does not classify general
+bounded-dimensional tori and does not extend to non-shift subgroup embeddings
+or elliptic curves merely from their order formulas.  It does cover all full
+norm-one extension degrees under any fixed global degree bound.
+
+**Changed my mind about:** [PROVED] The nonsplit torus is algebraically much
+simpler than a CM curve and gives a clean positive reduction on smooth-$r+1$
+inputs, but it does not complement smooth-$r-1$ inputs in the worst case.
+
+**Next:** The residual alternative-structure direction starts with general
+bounded-dimensional tori or selected subgroups equipped with a genuinely new
+efficient embedding; Q005 for elliptic CM remains unchanged.
