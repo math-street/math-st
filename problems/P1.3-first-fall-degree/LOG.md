@@ -39,3 +39,40 @@ compatible with the primary sources without leaving an unresolved ambiguity.
 **Changed my mind about:** A single quantity called “degree of regularity” cannot safely be copied from the experimental literature. Kousidis–Wiemers' highest Magma step degree belongs in the algorithm-trace column under the conventions fixed here.
 
 **Next:** Start SG-02 by auditing the existing shared Semaev implementation, adding $f_6$, and producing validated degree and term counts.
+
+## Session 2 — 2026-07-01
+
+**Goal:** Complete SG-02 and SG-03, then build and run the smallest exact SG-04/SG-06 experiment matrix that local resources permit.
+
+**Prediction (written before new algebra experiments):** Exact expanded $f_3$ and $f_4$ will be small, expanded $f_5$ will be reachable with sparse resultants, and generic expanded $f_6$ will be the first likely term-explosion boundary. Reducing factor-base variables modulo $x_i^q-x_i$ during arithmetic should keep the actual $n\in\{2,3\}$, $m\leq4$ Weil systems small enough for exact first-fall and solving-degree measurements at $q=3$ and at least part of $q=5$.
+
+**Positive result criterion:** A validated $f_6$ evaluator, explicit coordinate Weil systems with known-root checks, and a CSV containing exact first-fall and solving degrees for more than one independent $q,n,m$ combination.
+
+**Negative result criterion:** A declared per-case time or matrix-size ceiling is reached before Gröbner-basis containment; such a row must be recorded as censored rather than guessed.
+
+**Did:**
+- Added `f6_value` to shared tooling and validated it on six curve points summing to zero.
+- Implemented exact sparse summation-polynomial expansion, polynomial-basis extension fields, elliptic-curve decomposition construction, and coordinate Weil restriction.
+- Implemented the general syzygy-quotient first fall, Hilbert-function regularity, and closed-Macaulay solving degree with explicit field equations.
+- Ran deterministic known and external targets through $q=3,5,7$, extended known $m=2$ targets through $q=23$, and stored stage-aware timeouts.
+- Optimized Macaulay closure by batching new rows before RREF, which converted previously censored $q=3,m=4$, $q=5,m=3$, and $q=17,n=2,m=2$ cases into complete rows.
+- Added a deterministic merge script and generated one 34-row canonical comparison table.
+- Checked the results against Caminata–Gorla's invariant separations, Kousidis–Wiemers' binary scope, and Caminata–Ceria–Gorla's general Weil-restriction bounds.
+
+**Found:**
+- [EMPIRICAL: generic expansion with a 30-second/index ceiling] $f_3,f_4,f_5$ have respectively 13, 540, and 130,705 terms and total degrees 4, 12, and 32. Generic $f_6$ expansion crossed the declared ceiling; its evaluator is validated independently.
+- [EMPIRICAL: 34 canonical cases] Thirty-two cases completed and the two $q=5,m=4$ known-target cases reached exact first fall and regularity before their 60-second solving-stage timeout.
+- [PROVED] In the quadratic $m=2$ non-base-target shape, the top coordinates are $x_1^2x_2^2$ and $c x_1x_2(x_1+x_2)$, $c\ne0$, and their first fall degree is exactly 5 for odd $q\ge5$.
+- [EMPIRICAL: $q\in\{7,11,13,17,19,23\},n=m=2$, known decompositions] The exact values are $d_{\mathrm{ff}}=5$ and $d_{\mathrm{reg}}=\operatorname{sd}_{\mathrm{grevlex}}=q$. The gap grows from 2 to 18, and every stored decomposition is a root.
+- [EMPIRICAL: $q\in\{3,5,7,11,13,17\},n=3,m=2$, known decompositions] Solving degree stays 4 after $q=3$, while regularity grows with $q$; this independently confirms that regularity and solving degree are separate columns.
+- [CITED] Caminata and Gorla (2023) already prove arbitrary invariant gaps for general systems, including a field-equation-driven family. The local observation is specific to the deterministic odd-characteristic Semaev/Weil construction and does not settle the binary asymptotic question.
+
+**Prediction vs. outcome:** The prediction was accurate about $f_5$ being reachable and generic $f_6$ being the expansion boundary. The function reduction kept all $q=3,m\le4$ cases and the $q=5,m\le3$ cases solvable; $q=5,m=4$ was the first solving-stage boundary. The unpredicted positive result was a growing, known-solution first-fall/solving-degree divergence already visible at $m=2$.
+
+**Did not work:** Sage, Singular, msolve, and Macaulay2 were unavailable. A first all-in-one $q=5,m=4$ run timed out without stage detail, and a first generic-$f_6$ attempt exceeded its external timeout. Both were replaced by worker-isolated, stage-aware runs; superseded rows remain in raw data but are removed by the canonical merge rule.
+
+**Changed my mind about:** The most useful falsifier is not necessarily at $m\approx n$. In the odd-characteristic quadratic cases, a low-degree core syzygy coexists with field-equation-controlled Macaulay termination, producing a clearer growing gap at $m=n=2$.
+
+**Next:** Test whether the $\operatorname{sd}=q$ pattern survives curve and target changes, and seek a proof or counterexample for the deterministic family before attempting a broad explicit upper bound.
+
+**Final validation:** [EMPIRICAL: local environment on 2026-07-01] The final smoke case completed with a verified root and degrees (4,4,4); all 55 currently present shared tests and all 13 P1.3 tests passed, bytecode compilation passed, the canonical table had 34 unique keys, and `HANDOFF.md` remained below its 120-line cap.
