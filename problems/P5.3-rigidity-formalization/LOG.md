@@ -75,3 +75,80 @@ weak sets.
 **Next:** Investigate Q014 using archival, pre-publication sources for finite
 secp256k1 or BLS12-381 candidate menus; do not replace missing evidence with
 later folklore.
+
+## Session 2 — 2026-07-01
+
+**Goal:** Resolve Q014 as far as the surviving primary record permits and
+formalize what can still be proved when the historical candidate menu is not
+recoverable.
+
+**Prediction (written before the Session 2 archival search):** Primary SEC 2
+editions and dated BLS12-381 implementation history will probably confirm the
+published constants and some design criteria, but not a precommitted exhaustive
+candidate domain, ordering, and stopping rule.  If that prediction holds, the
+positive result will be a provenance non-identifiability theorem: the same
+published output is compatible with histories having different menu sizes, so
+no function of the final specification alone can recover historical \(b\). A
+verifiable provenance certificate will therefore have to commit, before the
+fresh experiment, to the meta-specification, candidate domain, enumeration,
+stopping rule, randomness origin, equivalence convention, and complete replay
+transcript.
+
+**Baseline:** `env/check_env.py` passed with Python 3.13.4; SageMath, GP,
+Singular, and msolve were unavailable.  The combined suite passed 61 tests.
+
+**Did:**
+
+- Audited SEC 2 version 1.0 in addition to version 2.0 and recorded the
+  original broad repeated-selection criterion for prime-field Koblitz curves.
+- Followed the BLS12-381 announcement's implementation link to the surviving
+  `zkcrypto/pairing` history, inspected every reachable root, and verified that
+  `a06216f` is the sole zero-parent commit, dated July 8, 2017.
+- Extracted the initial BLS12-381 README's field-size bounds, residue
+  subfamily, low-Hamming-weight objective, optimization claim, and canonical
+  G1/G2 generator rule.
+- Proved the final-output non-identifiability theorem and a seeded-replay
+  corollary, then specified a sufficient provenance certificate.
+- Updated the A256 category vector, result table, judgement calls, source
+  records, bibliography, open questions, state, subgoals, and handoff.
+- Re-ran the environment check, compilation, full tests, tag scan, and
+  Markdown control-character scan.
+
+**Found:**
+
+- **[CITED]** SEC 2 v1 says endomorphism-compatible parameters were repeatedly
+  selected until a prime-order curve was found, but does not publish the
+  candidate domain, order/distribution, failures, or generator derivation.
+- **[CITED]** The earliest surviving linked BLS12-381 commit gives materially
+  stronger replay evidence than the announcement, including a canonical
+  generator rule, but its incomplete \(u\)-domain/objective order and
+  post-announcement date do not certify a historical menu.
+- **[PROVED]** For any final projected output \(x\), public-output-only
+  histories can realize every menu size \(1\leq M\leq|\Omega|\); therefore no
+  estimator of the final output alone recovers historical \(b\).
+- **[PROVED]** BLS12-381's generator-only residual freedom is zero conditional
+  on the surviving canonical rule, while both unconditional A256 capacities
+  remain \(\bot\) because the \(u\)-menu is not identified.
+- **[EMPIRICAL: final 2026-07-01 validation]** All 66 tests passed in 1.56
+  seconds, `compileall` succeeded, no unresolved-status tags remained, and no
+  unexpected control characters occurred in P5.3 Markdown files.
+
+**Prediction vs. outcome:** Mostly matched. Neither source yielded a complete
+historical menu. The positive archival evidence was stronger than predicted:
+SEC 2 v1 supplies a broad stopping criterion, and the initial BLS12-381
+repository README supplies a canonical generator rule and an optimization
+claim.
+
+**Did not work:** A public Web Archive CDX request timed out, so it supplied no
+pre-publication snapshot. The reachable `pairing` Git history begins four
+months after the announcement and contains no selection script or rejection
+transcript.
+
+**Changed my mind about:** The original BLS12-381 announcement alone leaves
+the package generators opaque, but the surviving initial repository commit
+supports zero residual generator choice conditional on its conventions. This
+does not change the unconditional \(\bot\), which is driven by \(u\).
+
+**Next:** No action is required for the stated P5.3 deliverables. Reopen Q014
+only if a dated pre-publication artifact fixes the missing finite domain,
+selection order/objective priority, and transcript.
