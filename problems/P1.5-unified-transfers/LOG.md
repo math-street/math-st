@@ -81,3 +81,89 @@ geometric route under the operational definition.
 **Next:** Work A001 on the smallest ordinary CM curves: enumerate natural
 point-to-ideal assignments, reject those that fail the homomorphism identity on
 the full toy subgroup, and record the first structural obstruction.
+
+## Session 2 - 2026-07-02
+
+**Goal:** Resolve the natural CM/class-group branch of A001 as far as possible:
+test annihilator ideals and kernel-isogeny classes, prove the endomorphism-order
+size obstruction for cryptographic-size prime subgroups, and determine whether
+ray class groups preserve enough point orientation to survive.
+
+**Prediction (written before new experiments):** Annihilator ideals and
+isogenies defined by $\langle P\rangle$ will be constant on every nonzero
+multiple of $P$ and therefore cannot be injective for $r>2$. The class group of
+the curve's own CM order should also be too small to contain an order-$r$
+element when $r=\Theta(q)$. Ray class groups modulo $r$ will be prime-to-$r$
+when $r$ is unramified; modulus $r^2$ may contain additive principal units but
+will leave the evaluator problem rather than produce a natural point map.
+
+**Positive result criterion:** A candidate produces $r$ distinct target values,
+passes the homomorphism identity on a complete toy subgroup, and has a checked
+subexponential target algorithm.
+
+**Negative result criterion:** A proof shows the candidate factors through the
+unoriented subgroup $\langle P\rangle$, the target order is not divisible by
+$r$, or exhaustive evaluation finds a collision or homomorphism failure.
+
+**Did:**
+
+- Added `code/probe_cm_class_targets.py` and five regression tests for
+  ordinary $j=1728$ CM eigenlines, annihilators, cyclic kernels, canonical
+  Velu quotients, ray class orders, principal units, level-lift fibres, and the
+  explicit class-number threshold.
+- Split A001 into three dead natural branches: A003 for annihilator/kernel
+  labels, A004 for ray principal units and oriented levels, and A005/A006 for
+  local and global arithmetic class-pairing specializations.
+- Checked primary or authoritative sources for the CM ideal action, ray class
+  exact sequence, ring and analytic class-number formulas, arithmetic class
+  pairings, and explicit number-field torsion bounds.
+
+**Found:**
+
+- [PROVED] For every nonzero $n\bmod r$,
+  $\operatorname{Ann}_R(nP)=\operatorname{Ann}_R(P)$ and
+  $\langle nP\rangle=\langle P\rangle$; annihilator, kernel, and quotient
+  labels therefore cannot be injective homomorphisms.
+- [EMPIRICAL: 8 ordinary j=1728 curves, 13 <= p <= 421, 5 <= r <= 113]
+  Exhausting all 368 nonzero points produced exactly one CM eigenvalue,
+  annihilator label, cyclic kernel, and canonical Velu quotient per subgroup;
+  see `data/probe_cm_class_targets_full_20260702.csv`.
+- [PROVED] The ring and analytic class-number formulas plus the elementary
+  bound $|L(1,\chi)|\le\log|d|+2$ give
+  $h(\operatorname{End}(E))\le(6/\pi)\sqrt q(\log(4q)+2)^2$.
+- [PROVED] For $q\ge2^{21}$ and $r\ge q/2$, the last bound is below $r$, so
+  the curve's own endomorphism class group cannot contain the source image.
+- [PROVED] For $\mathbb Q(i)$, the ray class group modulo $r$ is prime to
+  $r$; modulo $r^2$ its principal units linearize, but they move the $r$ level
+  lifts above one source point rather than the $r$ source points.
+- [CITED] Buell--Call (2016) give genuine point-to-class homomorphisms over
+  number fields and relate them to Weil descent; direct finite/local
+  specialization has trivial Picard target.
+- [CITED] Parent's 1999 bound forces degree
+  $d>(r/12480)^{1/7}$ for a number field carrying a rational order-$r$ point,
+  which makes standard dense global lifts exponential in $\log r$.
+- [EMPIRICAL: final local verification on 2026-07-02] All 63 shared tests and
+  7 P1.5 tests passed, bytecode compilation succeeded, both smoke scripts
+  completed together in 1.303 seconds, the full CM CSV has 8 rows, and no
+  unresolved verification marker remains in P1.5.
+
+**Prediction vs. outcome:** Matched. The annihilator and kernel constructions
+were constant, the ordinary class group was too small in the large-prime
+regime, and modulus $r^2$ exposed easy principal units without a source
+evaluator. The stronger outcome is that standard level structure explains the
+failure geometrically, and Parent's theorem closes standard global lifts.
+
+**Did not work:** Annihilator ideals, cyclic-kernel quotients, modulus-$r$ ray
+classes, modulus-$r^2$ level rescaling, finite/local arithmetic class pairings,
+and standard dense global torsion lifts each fail for a different explicit
+reason recorded in A003--A006.
+
+**Changed my mind about:** Point-to-class-group homomorphisms do exist in
+arithmetic geometry, so their mere existence is not the right obstruction.
+The decisive finite-field questions are whether a nontrivial global class
+target survives specialization, whether the lift fits the full input budget,
+and whether its action follows point addition rather than level rescaling.
+
+**Next:** Work SG-14: either find a finite-field point-to-class formula outside
+the four excluded natural branches, or state a restricted oracle model for CM,
+ideal, ray, and coordinate operations in which a lower bound is provable.
