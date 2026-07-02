@@ -49,3 +49,41 @@
 **Changed my mind about:** [PROVED] Reporting only the quotient cardinality is insufficient for a practical rho speedup claim; cycle handling and the memory model are part of the algorithmic statement.
 
 **Next:** Implement the GLV $D=-7$ non-unit example, measure eigenvalue orders, and attack Q020.
+
+## Session 2 - 2026-07-02
+
+**Goal:** Complete SG-07a for the GLV discriminant-$-7$ degree-two endomorphism, measure its subgroup eigenvalue order at four or more toy sizes, and prove the exact cost of the current orbit-enumeration strategy.
+
+**Prediction (written before implementation or measurement):**
+
+- [CONJECTURE] The validated endomorphism will satisfy $\phi^2-\phi+[2]=0$ and its eigenvalue $\lambda\bmod r$ will have multiplicative order that is not bounded by a constant over the sampled prime subgroups. A refuting test is four increasing subgroup sizes on which every measured order is bounded by one common small constant.
+- [CONJECTURE] Explicitly enumerating an order-$m$ endomorphism orbit to choose its least coordinate representative will cost $\Theta(m)$ map evaluations per walk step, overwhelming the ideal $\sqrt m$ collision-space gain whenever $m$ grows. A refuting implementation is a correct representative algorithm using $o(m)$ endomorphism evaluations on the tested family without precomputing all subgroup points.
+
+**Next:** Reconstruct the exact GLV map, validate it on a hand-checkable curve, then build the seeded size sweep.
+
+**Recorded failure:** [PROVED] The initial direct-path `unittest` invocation failed at module import because the folder name `P5.2-cm-discriminant-security` contains a dot. The failure occurred before test discovery and does not validate or falsify the endomorphism implementation; A003 records the traceback class and cause.
+
+### Session 2 completion
+
+**Did:**
+
+- Reconstructed GLV Example 5 on a translated short-Weierstrass model, added independent validation and known-log tests, and wrote a seeded size-sweep with raw, summary, and validation CSV outputs.
+- Proved a tight query bound for exhaustive least-label normalization in a sequential successor/comparison model and an ECDLP reduction from exponent-returning orbit canonicalization.
+
+**Found:**
+
+- [EMPIRICAL: five curves, p=977..262007] Exhaustive and Hasse-interval/BSGS counts agreed, 32 seeded characteristic-equation checks passed per curve, and the eigenvalue orders were $116,495,1352,8069,16415$ for subgroup orders $233,991,4057,16139,32831$.
+- [EMPIRICAL: 80 normalized nonzero points] Every least-coordinate normalization used exactly $m-1$ map evaluations; the measured nonzero quotient contained only two or three orbits in each case.
+- [PROVED] Exhaustive enumeration is query-optimal in the stated sequential evaluator model, but that lower bound does not cover richer algebraic access.
+- [PROVED] An exponent-returning canonicalizer with quotient size $q=(r-1)/m$ yields an ECDLP solver using $q+1$ canonicalizer calls, so a cheap large-orbit normalizer is itself an attack primitive rather than a free rho optimization.
+
+**Prediction vs. outcome:** [EMPIRICAL: the five recorded subgroup sizes] The prediction matched: the exact orders increased from 116 to 16,415 and exhaustive cost grew linearly in $m$, while the ideal collision-space gain grew only as $\sqrt m$. No asymptotic claim is made from five cases.
+
+**Did not work:**
+
+- [PROVED] The initial direct-path test invocation failed before discovery because the problem directory contains a dot; discovery mode fixed it.
+- [PROVED] A later diagnostic supplied secret 37 to an order-29 fixture and initially treated the returned canonical residue 8 as wrong, although $37\equiv8\pmod {29}$. Restricting the known-answer secret to $[1,r-1]$ fixed the test design.
+
+**Changed my mind about:** [PROVED] For growing non-unit orbits, coefficient-aware canonicalization cannot be treated as a harmless implementation detail: when the quotient is small, returning the transformation exponent nearly solves the original DLP.
+
+**Next:** Attack Q024 by testing whether any exponent-free or batched orbit representation can support correct rho collision equations without reconstructing the transformation exponent.
