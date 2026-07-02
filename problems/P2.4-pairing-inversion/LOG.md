@@ -72,3 +72,30 @@ The global question IDs changed concurrently: the next decisions are Q006 (Satoh
 **Self-attack outcome:** [PROVED] Adaptive branching on target-label bits is covered by lazy sampling; blind source-label guesses are negligible; Markov plus Borel–Cantelli supplies a fixed oracle; and a \(j=1728\) torsion/Weil-pairing construction supplies an underlying elliptic curve. [PROVED] Exposing concrete target-field addition invalidates the affine-transcript proof and is explicitly outside the claim.
 
 **Next:** Obtain an independent audit of `CLAIM.md` under Q019. No additional toy experiment is needed to evaluate that proof-quantifier question.
+
+## Session 3 — 2026-07-02
+
+**Goal:** Close Q019 by auditing the random-encoding lower bound and fixed-oracle quantifiers, adding an exhaustive affine-collision verifier at small prime orders, and either promoting A002 to a scoped proved oracle separation or recording a concrete fatal counterexample.
+
+**Prediction (written before the audit):** The lazy-sampling collision argument and the probability-one fixed-oracle extraction will survive after making cross-parameter independence and arbitrary bit-string branching explicit. Exhaustive small-order checks will attain but not exceed the union-bound bad set. The result will remain a generic-encoding oracle separation and will not extend to coordinate-exposing target fields.
+
+## Session 3 outcome — 2026-07-02
+
+- [CITED] Shoup's RR model, Maurer's affine hidden-state argument, and Zhandry's RR/TS distinction confirm that A002 must name its model explicitly and that FAPI-1 is an applicable single-stage game.
+- [PROVED] The adaptive proof now uses a collision-free simulator coupled separately to a uniform encoding for each challenge. It no longer makes the false intermediate assertion that one fixed encoding supplies the same challenge label for different exponents.
+- [PROVED] For at most \(t\) target handles, the registered-handle success bound is exactly at most \((\binom t2+1)/r\); \(q\) blind source-label probes add \(O(q/2^L)\).
+- [PROVED] A worst-case bounded-error FAPI solver would retain its success under the uniform challenge distribution, so the distributional bound excludes the ordinary search solver.
+- [PROVED] Conditioning on every other security-parameter component leaves the current random encoding independent. Markov and the first Borel–Cantelli lemma give an eventually negligible bound for each machine on almost every fixed oracle; countable intersection supplies one oracle for all machines.
+- [EMPIRICAL: 541,966 exact sets plus 10,000 seeded sets] The affine collision audit found zero violations for \(p\in\{5,7,11\}\), \(2\le t\le4\), and attained the applicable bound in every exhaustive row.
+- [EMPIRICAL: Python 3.13.4] The audit ran in 0.9 seconds. All 64 shared tests, all 7 P2.4 tests, and compile checks passed.
+- [PROVED] A002 is promoted to a scoped theorem and Q019 is closed. The theorem is an elliptic-curve-backed RR/Shoup generic oracle separation; it makes no claim for coordinate-exposing target-field arithmetic.
+
+**Prediction vs. outcome:** [PROVED] The prediction matched. The proof survived only after explicitly separating the random-encoding coupling from the later fixed-oracle extraction. [EMPIRICAL: small prime orders] The bad-set bound was both respected and tight.
+
+**Did not work:** [PROVED] Holding one concrete encoding fixed while varying \(c\) does not preserve the initial challenge label. That phrasing was rejected and replaced by the standard coupled random-encoding experiment before applying the fixed-oracle existence argument.
+
+**Next:** P2.4 has no remaining required sub-goal or open question. A coordinate-exposing finite-field separation would be a strictly stronger new problem, not unfinished work in the stated generic oracle theorem.
+
+### Resolution of historical provisional tags
+
+[PROVED] The append-only Session 1 Satoh lead was resolved by A003, and the Session 2 `[UNVERIFIED]` A002 entry was resolved by A004. Those earlier strings remain only as chronological records; `CLAIM.md`, `STATE.md`, `NOTES.md`, and `OPEN_QUESTIONS.md` contain no unresolved P2.4 claim.
