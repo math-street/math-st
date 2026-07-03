@@ -76,3 +76,68 @@ the dimension-8 theorem.
 **Next:** Formalize the derived-leakage closure and common-factor peeling, then
 implement a toy product/Kani quotient only if it can validate a condition not
 already guaranteed by the cited theorems.
+
+## Session 2 — 2026-07-03
+
+**Goal:** Remove manually asserted checklist fields by implementing exact
+module-span and auxiliary-certificate checks, formalize the safe portion of
+common-factor peeling, and empirically test how leakage rank changes candidate
+isogeny ambiguity at toy scale.
+
+**Prediction (written before the new mathematics or experiment):** For point
+images expressed in fixed torsion bases, full action on
+$(\mathbb Z/N\mathbb Z)^2$ will be derivable exactly when the ideal generated
+by all $2\times2$ source-coordinate minors and $N$ is the unit ideal. I expect
+same-secret CRT aggregation to increase the effective leakage order, while
+mixing independent secrets will fail a target-identity check before any rank
+calculation. I expect common-factor peeling to be certifiable only after adding
+cyclicity, separability, and an explicit kernel-intersection witness; a mere
+gcd will remain insufficient. The toy enumeration should show fewer compatible
+secret paths under full-rank leakage than rank-one leakage, but it will not
+validate Kani's quotient formulas.
+
+**Did:**
+
+- Re-read the session-1 handoff, attempt, and sub-goals.
+- Re-ran the environment check, 53 shared tests, and 3 P3.4 tests before new work.
+- Proved and implemented the composite-order gcd-of-minors span test, verified
+  the derived action against every disclosed image, and added compatible-basis
+  generalized CRT aggregation.
+- Implemented exact small-prime and integer-identity checks for K2-CD and K2-MM
+  numerical certificates, and separated those checks from the unverified
+  existence/evaluation of an auxiliary isogeny.
+- Replaced the classifier's raw `surface_witness` flag with a numerical
+  certificate plus a distinct construction-status field.
+- Validated 15 P3.4 test methods and 61 shared test methods before closure.
+
+**Found:**
+
+- [PROVED] Several point records can generate rank-two composite torsion even
+  when no pair is a basis: the exact test is that $N$ together with all source
+  minors has gcd one.
+- [PROVED] CRT aggregation additionally needs compatible bases, not merely a
+  shared map identifier.
+- [EMPIRICAL: 6 deterministic record sets] The closure implementation accepts
+  collective span and same-secret CRT, and rejects rank one, inconsistent
+  images, mixed secrets, and incompatible bases.
+- [EMPIRICAL: 5 deterministic certificates] The certificate checker accepts
+  the valid CD/MM identities and rejects an incorrect degree difference,
+  cofactor relation, factorization, and search bound.
+
+**Prediction vs. outcome:** The module-span and CRT predictions matched. The
+common-factor analysis and ambiguity experiment were not completed, so their
+predictions were not tested.
+
+**Did not work:** [PROVED] This session did not turn the finite-template audit
+into the requested universal criterion. Mechanical closure and numerical
+certificates remove two asserted inputs, but neither proves that R8, K2-CD,
+and K2-MM exhaust every Kani or higher-dimensional route.
+
+**Changed my mind about:** [PROVED] A numerical surface certificate must be
+kept distinct from an auxiliary-isogeny construction witness; checking
+$N=d+c$ or $eB'=f+A'$ cannot establish that the required map is evaluable.
+
+**Disposition:** Failure. At the user's request the problem and both attempts
+are closed rather than continued as a partial research program.
+
+**Next:** None unless explicitly reopened; Q011 is the precise obstruction.

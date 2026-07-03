@@ -1,0 +1,72 @@
+[
+  {
+    "case_id": "S1-valid-cd",
+    "status": "NUMERICALLY_VALID",
+    "route": "K2-CD",
+    "derived": {
+      "expected_auxiliary_degree": 7
+    },
+    "reasons": [
+      "The coprimality, positivity, degree relation, and smooth factorization checks pass."
+    ]
+  },
+  {
+    "case_id": "S2-invalid-cd-difference",
+    "status": "INVALID",
+    "route": "K2-CD",
+    "derived": {
+      "expected_auxiliary_degree": 7
+    },
+    "reasons": [
+      "The auxiliary degree does not equal N - d."
+    ]
+  },
+  {
+    "case_id": "S3-valid-mm",
+    "status": "NUMERICALLY_VALID",
+    "route": "K2-MM",
+    "derived": {
+      "expected_secret_degree": 27,
+      "expected_torsion_order": 64,
+      "expected_reduced_secret_degree": 9,
+      "expected_reduced_torsion_order": 32,
+      "relation_left": 32,
+      "relation_right": 32
+    },
+    "reasons": [
+      "The prime powers, removals, search bounds, smooth factorizations, and e B' = f + A' relation check."
+    ]
+  },
+  {
+    "case_id": "S4-invalid-mm-relation",
+    "status": "INVALID",
+    "route": "K2-MM",
+    "derived": {
+      "expected_secret_degree": 27,
+      "expected_torsion_order": 64,
+      "expected_reduced_secret_degree": 9,
+      "expected_reduced_torsion_order": 32,
+      "relation_left": 32,
+      "relation_right": 31
+    },
+    "reasons": [
+      "The relation e B' = f + A' does not hold."
+    ]
+  },
+  {
+    "case_id": "S5-invalid-mm-search-bound",
+    "status": "INVALID",
+    "route": "K2-MM",
+    "derived": {
+      "expected_secret_degree": 27,
+      "expected_torsion_order": 64,
+      "expected_reduced_secret_degree": 9,
+      "expected_reduced_torsion_order": 32,
+      "relation_left": 32,
+      "relation_right": 32
+    },
+    "reasons": [
+      "The removed secret-step count exceeds its declared search bound."
+    ]
+  }
+]

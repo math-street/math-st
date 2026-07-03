@@ -1,0 +1,122 @@
+[
+  {
+    "case_id": "L1-composite-collective-span",
+    "status": "FULL_ACTION",
+    "reasons": [
+      "The source columns span at each retained order and all image equations verify."
+    ],
+    "groups": [
+      {
+        "modulus": 6,
+        "status": "FULL_ACTION",
+        "record_count": 3
+      }
+    ],
+    "certificate": {
+      "map_id": "phi-L1",
+      "basis_family_id": "bases-L1",
+      "effective_order": 6,
+      "action": [
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          3
+        ]
+      ],
+      "record_count": 3,
+      "source_minors": [
+        2,
+        3,
+        0
+      ],
+      "span_gcd": 1
+    }
+  },
+  {
+    "case_id": "L2-rank-one",
+    "status": "PARTIAL_SPAN",
+    "reasons": [
+      "No modulus group determines a full rank-two action."
+    ],
+    "groups": [
+      {
+        "modulus": 6,
+        "status": "PARTIAL_SPAN",
+        "record_count": 2
+      }
+    ]
+  },
+  {
+    "case_id": "L3-inconsistent-images",
+    "status": "INCONSISTENT_IMAGES",
+    "reasons": [
+      "Image records at modulus 6 are not values of one linear map."
+    ],
+    "groups": [
+      {
+        "modulus": 6,
+        "status": "INCONSISTENT_IMAGES",
+        "record_count": 3
+      }
+    ]
+  },
+  {
+    "case_id": "L4-same-secret-crt",
+    "status": "FULL_ACTION",
+    "reasons": [
+      "The source columns span at each retained order and all image equations verify."
+    ],
+    "groups": [
+      {
+        "modulus": 4,
+        "status": "FULL_ACTION",
+        "record_count": 2
+      },
+      {
+        "modulus": 9,
+        "status": "FULL_ACTION",
+        "record_count": 2
+      }
+    ],
+    "certificate": {
+      "map_id": "phi-L4",
+      "basis_family_id": "bases-L4",
+      "effective_order": 36,
+      "action": [
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "record_count": 4,
+      "source_minors": [
+        1,
+        1
+      ],
+      "span_gcd": 1
+    }
+  },
+  {
+    "case_id": "L5-mixed-secrets",
+    "status": "MIXED_TARGET_MAPS",
+    "reasons": [
+      "Records name more than one target homomorphism and were not aggregated."
+    ],
+    "groups": []
+  },
+  {
+    "case_id": "L6-incompatible-bases",
+    "status": "INCOMPATIBLE_BASES",
+    "reasons": [
+      "Records do not use one declared CRT-compatible source/target basis family."
+    ],
+    "groups": []
+  }
+]

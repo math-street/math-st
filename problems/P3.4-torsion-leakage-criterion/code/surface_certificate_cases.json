@@ -1,0 +1,98 @@
+{
+  "cases": [
+    {
+      "case_id": "S1-valid-cd",
+      "certificate": {
+        "route": "K2-CD",
+        "torsion_order": 16,
+        "target_degree": 9,
+        "auxiliary_degree": 7,
+        "auxiliary_factorization": [[7, 1]],
+        "smoothness_bound": 7
+      }
+    },
+    {
+      "case_id": "S2-invalid-cd-difference",
+      "certificate": {
+        "route": "K2-CD",
+        "torsion_order": 16,
+        "target_degree": 9,
+        "auxiliary_degree": 5,
+        "auxiliary_factorization": [[5, 1]],
+        "smoothness_bound": 7
+      }
+    },
+    {
+      "case_id": "S3-valid-mm",
+      "certificate": {
+        "route": "K2-MM",
+        "secret_prime": 3,
+        "secret_exponent": 3,
+        "secret_degree": 27,
+        "torsion_prime": 2,
+        "torsion_exponent": 6,
+        "torsion_order": 64,
+        "removed_secret_steps": 1,
+        "removed_torsion_levels": 1,
+        "reduced_secret_degree": 9,
+        "reduced_torsion_order": 32,
+        "multiplier": 1,
+        "multiplier_factorization": [],
+        "cofactor": 23,
+        "cofactor_factorization": [[23, 1]],
+        "smoothness_bound": 23,
+        "multiplier_bound": 1,
+        "secret_guess_bound": 1,
+        "torsion_drop_bound": 1
+      }
+    },
+    {
+      "case_id": "S4-invalid-mm-relation",
+      "certificate": {
+        "route": "K2-MM",
+        "secret_prime": 3,
+        "secret_exponent": 3,
+        "secret_degree": 27,
+        "torsion_prime": 2,
+        "torsion_exponent": 6,
+        "torsion_order": 64,
+        "removed_secret_steps": 1,
+        "removed_torsion_levels": 1,
+        "reduced_secret_degree": 9,
+        "reduced_torsion_order": 32,
+        "multiplier": 1,
+        "multiplier_factorization": [],
+        "cofactor": 22,
+        "cofactor_factorization": [[2, 1], [11, 1]],
+        "smoothness_bound": 23,
+        "multiplier_bound": 1,
+        "secret_guess_bound": 1,
+        "torsion_drop_bound": 1
+      }
+    },
+    {
+      "case_id": "S5-invalid-mm-search-bound",
+      "certificate": {
+        "route": "K2-MM",
+        "secret_prime": 3,
+        "secret_exponent": 3,
+        "secret_degree": 27,
+        "torsion_prime": 2,
+        "torsion_exponent": 6,
+        "torsion_order": 64,
+        "removed_secret_steps": 1,
+        "removed_torsion_levels": 1,
+        "reduced_secret_degree": 9,
+        "reduced_torsion_order": 32,
+        "multiplier": 1,
+        "multiplier_factorization": [],
+        "cofactor": 23,
+        "cofactor_factorization": [[23, 1]],
+        "smoothness_bound": 23,
+        "multiplier_bound": 1,
+        "secret_guess_bound": 0,
+        "torsion_drop_bound": 1
+      }
+    }
+  ]
+}

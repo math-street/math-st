@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "case_id": "L1-composite-collective-span",
+      "records": [
+        {"map_id": "phi-L1", "basis_family_id": "bases-L1", "modulus": 6, "source": [1, 0], "image": [2, 1]},
+        {"map_id": "phi-L1", "basis_family_id": "bases-L1", "modulus": 6, "source": [0, 2], "image": [2, 0]},
+        {"map_id": "phi-L1", "basis_family_id": "bases-L1", "modulus": 6, "source": [0, 3], "image": [3, 3]}
+      ]
+    },
+    {
+      "case_id": "L2-rank-one",
+      "records": [
+        {"map_id": "phi-L2", "basis_family_id": "bases-L2", "modulus": 6, "source": [1, 0], "image": [2, 1]},
+        {"map_id": "phi-L2", "basis_family_id": "bases-L2", "modulus": 6, "source": [2, 0], "image": [4, 2]}
+      ]
+    },
+    {
+      "case_id": "L3-inconsistent-images",
+      "records": [
+        {"map_id": "phi-L3", "basis_family_id": "bases-L3", "modulus": 6, "source": [1, 0], "image": [2, 1]},
+        {"map_id": "phi-L3", "basis_family_id": "bases-L3", "modulus": 6, "source": [0, 2], "image": [2, 0]},
+        {"map_id": "phi-L3", "basis_family_id": "bases-L3", "modulus": 6, "source": [0, 3], "image": [3, 4]}
+      ]
+    },
+    {
+      "case_id": "L4-same-secret-crt",
+      "records": [
+        {"map_id": "phi-L4", "basis_family_id": "bases-L4", "modulus": 4, "source": [1, 0], "image": [1, 1]},
+        {"map_id": "phi-L4", "basis_family_id": "bases-L4", "modulus": 4, "source": [0, 1], "image": [1, 2]},
+        {"map_id": "phi-L4", "basis_family_id": "bases-L4", "modulus": 9, "source": [1, 0], "image": [1, 1]},
+        {"map_id": "phi-L4", "basis_family_id": "bases-L4", "modulus": 9, "source": [0, 1], "image": [1, 2]}
+      ]
+    },
+    {
+      "case_id": "L5-mixed-secrets",
+      "records": [
+        {"map_id": "phi-L5-a", "basis_family_id": "bases-L5", "modulus": 4, "source": [1, 0], "image": [1, 1]},
+        {"map_id": "phi-L5-a", "basis_family_id": "bases-L5", "modulus": 4, "source": [0, 1], "image": [1, 2]},
+        {"map_id": "phi-L5-b", "basis_family_id": "bases-L5", "modulus": 9, "source": [1, 0], "image": [2, 1]},
+        {"map_id": "phi-L5-b", "basis_family_id": "bases-L5", "modulus": 9, "source": [0, 1], "image": [1, 2]}
+      ]
+    },
+    {
+      "case_id": "L6-incompatible-bases",
+      "records": [
+        {"map_id": "phi-L6", "basis_family_id": "bases-L6-a", "modulus": 4, "source": [1, 0], "image": [1, 1]},
+        {"map_id": "phi-L6", "basis_family_id": "bases-L6-a", "modulus": 4, "source": [0, 1], "image": [1, 2]},
+        {"map_id": "phi-L6", "basis_family_id": "bases-L6-b", "modulus": 9, "source": [1, 0], "image": [1, 1]},
+        {"map_id": "phi-L6", "basis_family_id": "bases-L6-b", "modulus": 9, "source": [0, 1], "image": [1, 2]}
+      ]
+    }
+  ]
+}
