@@ -1,0 +1,36 @@
+{
+  "attempted_draws": 256,
+  "coefficient_bound": 1169,
+  "coefficient_distribution": "independent discrete uniform integers on [-A,A]",
+  "construction": "Barbulescu--Duquesne 2019 Section 7.1.2 BLS12 SexTNFS",
+  "csv": "bls12_norms_n256_a1169_s20260722_20260704.csv",
+  "rng_seed": 20260722,
+  "seed": -151115726325920150061056,
+  "status": "EMPIRICAL exact-integer nested-resultant sample",
+  "summary": {
+    "accepted_samples": 256,
+    "f": {
+      "difference_from_paper": -1.6981258282572753,
+      "mean_log2_norm": 789.5018741717428,
+      "normal_95_interval": [
+        786.7657739154257,
+        792.2379744280598
+      ],
+      "paper_value": 791.2,
+      "sample_standard_deviation": 22.3355122964657,
+      "standard_error": 1.3959695185291063
+    },
+    "g": {
+      "difference_from_paper": -0.9902211466458084,
+      "mean_log2_norm": 583.8097788533541,
+      "normal_95_interval": [
+        583.0263705271389,
+        584.5931871795694
+      ],
+      "paper_value": 584.8,
+      "sample_standard_deviation": 6.395170009921116,
+      "standard_error": 0.39969812562006973
+    }
+  },
+  "zero_norm_policy": "reject and resample"
+}

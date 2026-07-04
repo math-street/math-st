@@ -1,0 +1,81 @@
+{
+  "attempted_draws": 1024,
+  "coefficient_bound": 1169,
+  "coefficient_distribution": "independent discrete uniform integers on [-A,A]",
+  "construction": "Barbulescu--Duquesne 2019 Section 7.1.2 BLS12 SexTNFS",
+  "csv": "bls12_norms_n1024_a1169_s20260722_20260704.csv",
+  "finite_cost_from_mean_integer_bit_lengths": {
+    "enough_relations": true,
+    "factor_base_log2": 68.82909402810853,
+    "linear_algebra_cost_log2": 128.25884336654434,
+    "norm_f_bits": 791.0830078125,
+    "norm_g_bits": 584.755859375,
+    "reduced_factor_base_log2": 67.82909402810853,
+    "relation_yield_log2": 69.47041226380374,
+    "sieve_cost_log2": 131.65879552053394,
+    "sieve_space_log2": 133.30011375622914,
+    "smoothness_f_log2": -39.16188967486496,
+    "smoothness_g_log2": -24.667811817560438,
+    "total_cost_log2": 131.78937776570385
+  },
+  "finite_cost_parameters": {
+    "coefficient_bound": 1169,
+    "dickman_polynomial_degree": 30,
+    "eta": 6,
+    "factor_base_numerator": 2.0,
+    "filtering_log2_bound_power": 1.0,
+    "linear_algebra_automorphisms": 2,
+    "linear_algebra_overhead_bits": 0.0,
+    "matrix_numerator": 1.0,
+    "nonzero_entries_per_row": 128,
+    "relation_automorphisms": 2,
+    "roots_of_unity_index": 1,
+    "sieve_overhead_bits": 0.0,
+    "sieve_space_sign_quotient": 2.0,
+    "smoothness_bound_bits": 73.5
+  },
+  "paper_metric_interpretation": "The published 791.2 and 584.8 are reproduced by mean integer bit length floor(log2(N))+1; mean log2(N) is also reported to expose the convention.",
+  "rng_seed": 20260722,
+  "seed": -151115726325920150061056,
+  "status": "EMPIRICAL exact-integer nested-resultant sample",
+  "summary": {
+    "accepted_samples": 1024,
+    "f": {
+      "bit_length_difference_from_paper": -0.11699218750004547,
+      "bit_length_normal_95_interval": [
+        789.7195778775169,
+        792.4464377474831
+      ],
+      "bit_length_sample_standard_deviation": 22.2600805711514,
+      "bit_length_standard_error": 0.6956275178484812,
+      "log2_difference_from_paper": -0.6065536437198489,
+      "log2_normal_95_interval": [
+        789.2306541300644,
+        791.956238582496
+      ],
+      "log2_standard_error": 0.695302156232523,
+      "mean_integer_bit_length": 791.0830078125,
+      "mean_log2_norm": 790.5934463562802,
+      "paper_value": 791.2
+    },
+    "g": {
+      "bit_length_difference_from_paper": -0.044140624999954525,
+      "bit_length_normal_95_interval": [
+        584.3688546450944,
+        585.1428641049056
+      ],
+      "bit_length_sample_standard_deviation": 6.318444569887974,
+      "bit_length_standard_error": 0.19745139280899918,
+      "log2_difference_from_paper": -0.5471746777849376,
+      "log2_normal_95_interval": [
+        583.8664379035616,
+        584.6392127408684
+      ],
+      "log2_standard_error": 0.19713643808847603,
+      "mean_integer_bit_length": 584.755859375,
+      "mean_log2_norm": 584.252825322215,
+      "paper_value": 584.8
+    }
+  },
+  "zero_norm_policy": "reject and resample"
+}
