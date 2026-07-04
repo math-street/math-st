@@ -1,0 +1,9 @@
+mapping,p,curve_parameters,z,seed,inputs_tested,on_curve,oracle_matches,exceptional_inputs,schedule_variants,schedule_operations
+simple_swu,11,a=1;b=1,6,5401,11,11,11,3,1,40
+elligator2,11,j=1;k=1,2,5401,11,11,11,2,1,24
+simple_swu,13,a=1;b=1,6,5401,13,13,13,1,1,47
+elligator2,13,j=3;k=1,2,5401,13,13,13,0,1,30
+simple_swu,29,a=1;b=1,8,5401,29,29,29,1,1,47
+elligator2,29,j=1;k=1,2,5401,29,29,29,0,1,30
+simple_swu,37,a=1;b=1,14,5401,37,37,37,1,1,47
+elligator2,37,j=3;k=1,2,5401,37,37,37,0,1,30
