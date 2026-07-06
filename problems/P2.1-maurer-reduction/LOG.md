@@ -259,3 +259,45 @@ inputs, but it does not complement smooth-$r-1$ inputs in the worst case.
 **Next:** The residual alternative-structure direction starts with general
 bounded-dimensional tori or selected subgroups equipped with a genuinely new
 efficient embedding; Q005 for elliptic CM remains unchanged.
+
+## Session 5 - 2026-07-06
+
+**Goal:** Decide whether A004 extends from full norm-one tori to every full
+algebraic torus of uniformly bounded dimension, then perform the mandatory
+fifth-session self-audit.
+
+**Prediction (written before constructing the proof):** [CONJECTURE] The
+finite-order Frobenius action makes every bounded-dimensional torus order a
+product from a finite cyclotomic menu, so a single CRT--Linnik construction
+will force a polynomially large factor in every menu entry simultaneously.
+The explicit falsifiers are recorded in A005.
+
+**Did:**
+- Opened A005 and checked the finite-field torus point-count formula in
+  Batyrev--Tschinkel 1995.
+
+**Found:**
+- [CITED] Every $d$-dimensional finite-field torus order is
+  $\det(rI-\Phi)$ for a finite-order integral $d\times d$ Frobenius matrix
+  (Batyrev--Tschinkel 1995, Theorem 1.3.11).
+- [PROVED] Its order polynomial is a product of $\Phi_n(r)$ with
+  $\varphi(n)\le d$; only finitely many $n$ occur below a fixed $D$.
+- [PROVED] One CRT--Linnik prime family simultaneously forces a factor
+  $c_Dr^{1/(|\mathcal N_D|L_0)}$ in every possible full torus order of
+  dimension at most $D$.
+
+**Prediction vs. outcome:** [PROVED] Confirmed.  All three falsifiers failed:
+the Frobenius polynomial is cyclotomic, the index menu is finite, and the
+simultaneous exact-order congruences retain a fixed-power factor after
+Linnik's bound.
+
+**Did not work:** [PROVED] A large factor in the full rational-point group does
+not automatically exclude a selected smooth subgroup.  A005 also says
+nothing about abelian varieties, including elliptic curves.
+
+**Changed my mind about:** [PROVED] The norm-one calculation was not a special
+accident: finite-order Frobenius makes the entire bounded-dimensional full-
+torus class a finite cyclotomic problem.
+
+**Next:** Run the fifth-session audit, then analyze affine commutative groups
+and selected subgroups under Maurer--Wolf's strong algebraic-definition model.
