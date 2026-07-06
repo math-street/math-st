@@ -94,3 +94,51 @@
 ### Correction to Session 2
 
 - [EMPIRICAL: 71 tests] The final post-documentation run of `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 71/71 tests in 1.93 seconds; this supersedes the earlier 70-test intermediate count.
+
+## Session 3 -- 2026-07-06
+
+**Goal:** Complete SG-09 by replacing general BSGS point counting with an exact $j=1728$ CM trace routine, validating it against exhaustive and BSGS counts, and reproducing Zywina's $x=2\mathbin{\cdot}10^7$ table entry.
+
+**Prediction (written before new computations):**
+
+- [EMPIRICAL: target $x=2\mathbin{\cdot}10^7$] An independently implemented exact CM counter will reproduce Zywina's published 49,847 quotient-prime events exactly; this prediction is refuted by any nonzero discrepancy after boundary conventions are aligned.
+- [HEURISTIC] The refined CM prediction will remain close to the published expected count 50,063, with observed/predicted within 1%; this is refuted if the ratio lies outside $[0.99,1.01]$.
+- [PROVED] A specialized $O(\log p)$ sum-of-two-squares trace computation per split prime removes the square-root-in-$p$ group-operation cost of the general Hasse-interval BSGS counter, once its sign convention is established and validated.
+
+**Environment preflight:**
+
+- [EMPIRICAL: Python 3.13.4 on Windows 11] SageMath, PARI/GP, Singular, and msolve remain unavailable.
+- [EMPIRICAL: 73 tests] `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 73/73 tests in 2.27 seconds.
+
+**Extended prediction (written after the first-row run but before the full-table run):**
+
+- [EMPIRICAL: target checkpoints $2\mathbin{\cdot}10^7,4\mathbin{\cdot}10^7,\ldots,10^9$] The segmented exact counter will match all 50 published actual counts and all 50 rounded integral predictions in Zywina's Table 3; any nonzero row discrepancy refutes this prediction.
+
+**Did:**
+
+- Implemented Cornacchia's algorithm and Walsh's exact $d=-1$ trace specialization for $y^2=x^3-x$.
+- Validated the specialized order against exhaustive point counting at every prime through 1000.
+- Added a bounded-memory segmented sieve, a Hasse-bounded quotient-primality sieve, the equation-(7.1) numerical integral, 50 published regression fixtures, deterministic CSV output, and a convergence figure.
+- Ran the complete published checkpoint sequence through $x=10^9$.
+
+**Found:**
+
+- [EMPIRICAL: every prime $5\le p\le1000$] The Cornacchia--Walsh order equals the exhaustive order at every tested prime.
+- [EMPIRICAL: $x=2\mathbin{\cdot}10^7$] The counter returns 49,847 and the integral rounds to 50,063, reproducing Zywina's first actual and expected entries exactly.
+- [EMPIRICAL: all 50 checkpoints $2\mathbin{\cdot}10^7\le x\le10^9$] All 50 actual-count differences and all 50 rounded-integral differences are zero.
+- [EMPIRICAL: $x=10^9$] The final count is 1,548,766 versus 1,549,656.621 predicted, ratio $0.9994253$; 25,423,491 split primes were processed.
+- [EMPIRICAL: Python 3.13.4, Windows 11] The full run took 148.7 seconds.
+
+**Prediction vs. outcome:** matched exactly. [EMPIRICAL: all 50 published checkpoints] Both mismatch totals are zero, and observed/integral-predicted remains in $[0.9956899,1.0002392]$, inside the predicted 1% band.
+
+**Did not work:** nothing remained unresolved. [EMPIRICAL: first smoke run] The small-endpoint baseline issue had already been fixed in Session 2, and both full and segmented sieves agree at $x=2\mathbin{\cdot}10^7$.
+
+**Changed my mind about:**
+
+- [EMPIRICAL: $x\le10^9$] A pure-Python exact reproduction at the paper's full range is practical once the CM trace replaces generic BSGS; the complete table requires under three minutes on the recorded host.
+
+**Next:** No scoped computational deliverable remains; further progress would require new mathematics toward the unconditional Koblitz asymptotic rather than a larger reproduction.
+
+**Final validation:**
+
+- [EMPIRICAL: 81 tests] `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 81/81 tests in 9.13 seconds after the full-table implementation and documentation updates.
