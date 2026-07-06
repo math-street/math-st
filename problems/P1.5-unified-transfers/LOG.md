@@ -167,3 +167,91 @@ and whether its action follows point addition rather than level rescaling.
 **Next:** Work SG-14: either find a finite-field point-to-class formula outside
 the four excluded natural branches, or state a restricted oracle model for CM,
 ideal, ray, and coordinate operations in which a lower bound is provable.
+
+## Session 3 - 2026-07-06
+
+**Goal:** Complete SG-14 by defining a generic-source transfer model, proving
+that no package with a subexponential target DLP can exist in that model, and
+locating exactly which representation-specific operations let anomalous,
+pairing, and Weil-descent transfers escape.
+
+**Prediction (written before the literature check):** Composing an injective
+homomorphic evaluator with its subexponential target DLP algorithm will solve
+the generic source DLP using $r^{o(1)}$ source-oracle queries, contradicting
+the $\Omega(\sqrt r)$ generic lower bound. The result will classify every
+generic-source candidate at once but will not rule out coordinate-sensitive
+maps.
+
+**Positive result criterion:** State the source encoding, setup, randomness,
+success probability, and query accounting precisely enough that the composed
+DLP algorithm falls under a checked published lower bound, then give an
+explicit escape clause for every known transfer.
+
+**Negative result criterion:** The published lower bound does not allow the
+evaluator's auxiliary computation or preprocessing, or the transfer
+definition permits a cross-representation oracle not captured by the model;
+in that case narrow the theorem rather than claiming a generic impossibility.
+
+**Did:**
+
+- Defined a classical generic-source transfer model with random injective
+  encodings, counted setup/evaluator source queries, explicit success, and no
+  encoding-dependent cross-representation advice.
+- Split the coordinate-sensitive residual into A008--A013: low-degree affine
+  maps, shallow rational circuits, finitely branched affine maps, proper
+  targets, piecewise proper targets, and mixed algebraic targets.
+- Checked Shoup's primary paper metadata, Miller's republished
+  straight-line-program account, the Stacks proper-target extension lemma, and
+  Milne's rigidity result for zero-preserving maps of abelian varieties.
+
+**Found:**
+
+- [CITED] Shoup's 1997 random-encoding lower bound makes a prime-order generic
+  DLP algorithm with $m$ source queries succeed with probability only
+  $O(m^2/r)$.
+- [PROVED] Composing a generic-source evaluator with its target DLP and
+  truncating expected queries gives $m=r^{o(1)}$ with fixed success, a
+  contradiction.  Every qualifying transfer must use a
+  representation-specific source operation.
+- [PROVED] If a rational map into an affine algebraic group is homomorphic on
+  the order-$r$ subgroup and its common pole degree is $D<r/2$, its
+  homomorphism defect vanishes globally and the map is trivial.
+- [PROVED] A branch-free rational circuit therefore has depth
+  $d\ge\log_2r-\log_2(2MD_0)$, and a $B$-branch piecewise-rational evaluator
+  satisfies $\max(1,D)B^3\ge r/4$.
+- [CITED] Miller's 1986/2024 account explains the matching escape: a
+  $\Theta(\log r)$ straight-line program compactly represents a rational
+  pairing function whose expanded degree is $\Theta(r)$.
+- [PROVED] A rational evaluator into a smooth proper algebraic group extends
+  globally.  Even with fewer than $r$ rational branches, two source points in
+  one branch force the entire subgroup map to be the restriction of one
+  global homomorphism, with trivial or elliptic-isogenous image.
+- [PROVED] Chevalley decomposition reduces a single rational mixed-target map
+  to its global abelian quotient and an affine-kernel homomorphism defect.  If
+  the defect pole degree is below $r$ in the controlled fibres, the whole map
+  is global and again has trivial or elliptic-isogenous image.
+- [EMPIRICAL: final local verification on 2026-07-06] All 69 shared tests and
+  7 P1.5 tests passed, bytecode compilation succeeded, both smoke experiments
+  recovered every fixed logarithm, the trailing-whitespace audit passed, and
+  P1.5 contains zero unresolved verification markers.
+
+**Prediction vs. outcome:** Matched and strengthened.  The generic
+composition did contradict Shoup exactly after query truncation.  The
+representation-specific escape audit then yielded quantitative rational
+degree, branch, and depth bounds plus a complete proper-target reduction.
+
+**Did not work:** Generic class/ideal arithmetic, affine rational degree below
+$r/2$, sublinear-depth rational circuits, polynomially many low-degree affine
+branches, and fewer than $r$ proper rational branches all fail for explicit
+reasons in A007--A013.
+
+**Changed my mind about:** Coordinate access is necessary but not sufficient
+for a new affine transfer.  The decisive resource is enough geometric degree,
+branch complexity, or non-rational structure to cross an essentially
+linear-in-$\log r$ boundary.  Proper targets are even more rigid: polynomially
+many rational pieces collapse to one global elliptic-isogenous map.
+
+**Next:** Continue A001 only in the genuine residual class: specify one
+high-degree or non-rational coordinate/lift/valuation interface for a succinct
+point-to-class evaluator, then either construct the homomorphism or prove a
+lower bound for that exact interface.
