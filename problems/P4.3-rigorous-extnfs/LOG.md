@@ -56,3 +56,17 @@
 [PROVED] Final validation after all edits passed 58 shared tests and all 3 P4.3 tests; the deterministic smoke run reproduced 544 candidates and the dated output files.
 
 [PROVED] A final independent SymPy replay matched all 23,424 stored factorizations and 128 nested resultants from 64 stratified candidates in the exhaustive $A=4$ data.
+
+## Session 2 - 2026-07-06
+
+**Goal:** Resolve SG-07 as far as possible: classify coefficient-randomized outer norms for fixed tower degree $\eta=2$, and decide exactly when the available fixed quadratic-form theorems apply.
+
+**Prediction (written before symbolic expansion):** [CONJECTURE] A one-parameter coefficient slice will give a quadratic polynomial, and a homogeneous two-parameter slice will give a binary quadratic norm form with discriminant $\Delta_h$ times a square lattice index.  Existing fixed-form theorems will fail to prove exTNFS supply because the algorithm produces an affine lattice coset with parameter-dependent index/discriminant, while the theorem averages a fixed homogeneous form.  This prediction is refuted by an explicit valid polynomial randomization whose evaluation directions have uniformly bounded index, preserve the exTNFS norm budget and irreducibility, and fall under a theorem uniform enough for the $L_Q(1/3)$ smoothness range.
+
+**A005 validation prediction (written before enumeration):** [CONJECTURE] The finite-field lower bound (15) will hold for every tested $s\in\{2,3,5,7,11\}$ and $2\le d\le8$, and the toy kernel pair $A=5$, $B=1-\iota$ in $\mathbb Z[\iota]/(\iota^2+2)$ will represent every target in the tested central box with bounded coefficients.  A single failed irreducible count or missing target refutes the corresponding lemma implementation.
+
+**A005 validation outcome:** [EMPIRICAL: 161 finite-field cases and 121 quadratic-order targets] The prediction matched.  Exact Möbius/norm-fiber counts satisfied (15) for every nonzero $c$ in the declared fields/degrees, with minimum slack 1.5.  The explicit Bezout identity represented all targets in $[-5,5]^2$ with coefficient magnitude at most 30.
+
+**Final outcome (user-directed stop):** [PROVED] The formal objective was not achieved. A005 proves only relation supply for the restricted ell_p = 2/3, p congruent to 3 modulo 4, eta = 2 boundary family. It does not prove rank, target splitting, or special-q descent; A003 shows that the fixed-quadratic proof does not extend to optimized strict-medium parameters where eta tends to infinity.
+
+**Status decision:** The user requested that the task be marked failed. The scaffold has no failed state, so STATE uses the terminal status abandoned. Validated partial artifacts are retained.
