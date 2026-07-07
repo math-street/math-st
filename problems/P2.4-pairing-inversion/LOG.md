@@ -99,3 +99,31 @@ The global question IDs changed concurrently: the next decisions are Q006 (Satoh
 ### Resolution of historical provisional tags
 
 [PROVED] The append-only Session 1 Satoh lead was resolved by A003, and the Session 2 `[UNVERIFIED]` A002 entry was resolved by A004. Those earlier strings remain only as chronological records; `CLAIM.md`, `STATE.md`, `NOTES.md`, and `OPEN_QUESTIONS.md` contain no unresolved P2.4 claim.
+
+## Session 4 — 2026-07-07
+
+**Goal:** Red-team the resolved result without assuming A004 is correct: audit arbitrary unregistered labels across all three types, re-check the random-encoding/fixed-oracle separation, verify the elliptic-curve realization, and reproduce the affine CSV independently.
+
+**Prediction (written before the checks):** The theorem will survive, but the blind-label paragraph will need to cover arbitrary typed group and pairing inputs rather than mentioning only `DLOG2`. The affine CSV will reproduce byte-for-byte, and no status rollback will be needed.
+
+## Session 4 outcome — 2026-07-07
+
+- [PROVED] The blind-label prediction was correct: arbitrary unregistered \(G_1,G_2,G_T\) strings must be covered. Independent typed encodings give the same \(O(q/2^L)\) total term, and `CLAIM.md` now states the full interface.
+- [PROVED] The adaptive coupling, worst-case search implication, cross-parameter independence, and Markov–Borel–Cantelli fixed-oracle extraction survived a second proof audit.
+- [EMPIRICAL: deterministic rerun] The separately generated affine CSV matched the recorded SHA-256 `8A69F4ACE2D21F1AA34105603A295121A4DE8A6F7746FD54779BD3682EE2A042` byte-for-byte.
+- [EMPIRICAL: six curves] Fresh arithmetic checks passed \(p\equiv-1\bmod4r\), \(\#E(\mathbb F_p)=p+1\), \(rP=\mathcal O\), pairing nonidentity, and target \(r\)-torsion for every measured realization.
+- [EMPIRICAL] One initial ad-hoc curve-check command failed before arithmetic because of a nonexistent placeholder import; it wrote nothing. The corrected invocation passed all rows.
+
+**Prediction vs. outcome:** [PROVED] Matched exactly. The wording defect was real but did not alter the theorem. [EMPIRICAL] The deterministic data and curve realization both reproduced.
+
+**Next:** Run the complete regression suite once more, then retain `resolved` if clean.
+
+### Session 4 final verification
+
+- [EMPIRICAL: Python 3.13.4] All 66 shared-library tests, all 7 P2.4 tests, and compile checks passed after the blind-label correction.
+- [EMPIRICAL] The temporary deterministic-rerun file was confirmed absent after the safe cleanup.
+- [PROVED] `CLAIM.md`, `STATE.md`, `NOTES.md`, and A005 contain no unresolved `[UNVERIFIED]` claim, and `OPEN_QUESTIONS.md` contains no P2.4 item.
+
+**Final outcome:** [PROVED] The resolved status is retained. A005 found and repaired one wording gap, reproduced the deterministic data, independently checked every curve realization, and found no counterexample to the scoped theorem.
+
+**Next:** none.
