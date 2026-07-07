@@ -1,0 +1,36 @@
+{
+  "-3": {
+    "bootstrap_resamples": 2000,
+    "group_count": 4,
+    "intercept": 1.0306651987564495,
+    "model": "log(speedup_ratio_of_means) = intercept + slope * log(subgroup_order)",
+    "slope": -0.010853577422889294,
+    "slope_ci95_high": 0.020850796015163583,
+    "slope_ci95_low": -0.04196832608613314
+  },
+  "-4": {
+    "bootstrap_resamples": 2000,
+    "group_count": 4,
+    "intercept": 1.0763071641842261,
+    "model": "log(speedup_ratio_of_means) = intercept + slope * log(subgroup_order)",
+    "slope": -0.038511479642045376,
+    "slope_ci95_high": -0.002690615432057597,
+    "slope_ci95_low": -0.07307610801934324
+  },
+  "metadata": {
+    "bits": [
+      12,
+      14,
+      16,
+      18
+    ],
+    "collision_table": true,
+    "cycle_escape": false,
+    "elapsed_seconds": 18.543976800050586,
+    "max_restarts": 128,
+    "partitions": 20,
+    "raw_path": "data\\measure_unit_rho_table_r20_b12-14-16-18_t200_s52022026_20260707_raw.csv",
+    "seed": 52022026,
+    "trials_per_case": 200
+  }
+}

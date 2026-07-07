@@ -1,0 +1,5 @@
+bits,discriminant,p,a,b,group_order,subgroup_order,cofactor,field_unit,automorphism_scalar,automorphism_order,exhaustive_order,bsgs_order,samples
+9,-3,457,0,3,417,139,3,323,43,6,417,417,32
+9,-4,457,5,0,466,233,2,109,89,4,466,466,32
+10,-3,1021,0,2,1036,37,28,652,27,6,1036,1036,32
+10,-4,1021,1,0,1044,29,36,374,17,4,1044,1044,32

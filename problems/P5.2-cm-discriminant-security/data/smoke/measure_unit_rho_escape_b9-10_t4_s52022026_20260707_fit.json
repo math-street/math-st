@@ -1,0 +1,33 @@
+{
+  "-3": {
+    "bootstrap_resamples": 100,
+    "group_count": 2,
+    "intercept": 8.878526765685802,
+    "model": "log(speedup_ratio_of_means) = intercept + slope * log(subgroup_order)",
+    "slope": -2.168064971450507,
+    "slope_ci95_high": 0.5305992603362245,
+    "slope_ci95_low": -3.229424404932444
+  },
+  "-4": {
+    "bootstrap_resamples": 100,
+    "group_count": 2,
+    "intercept": 0.09322510979364318,
+    "model": "log(speedup_ratio_of_means) = intercept + slope * log(subgroup_order)",
+    "slope": 0.16118680517848463,
+    "slope_ci95_high": 0.5934158161187244,
+    "slope_ci95_low": -0.2872826576694989
+  },
+  "metadata": {
+    "bits": [
+      9,
+      10
+    ],
+    "cycle_escape": true,
+    "elapsed_seconds": 0.45739979995414615,
+    "max_restarts": 128,
+    "partitions": 20,
+    "raw_path": "data\\smoke\\measure_unit_rho_escape_b9-10_t4_s52022026_20260707_raw.csv",
+    "seed": 52022026,
+    "trials_per_case": 4
+  }
+}

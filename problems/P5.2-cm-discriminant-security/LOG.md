@@ -87,3 +87,36 @@
 **Changed my mind about:** [PROVED] For growing non-unit orbits, coefficient-aware canonicalization cannot be treated as a harmless implementation detail: when the quotient is small, returning the transformation exponent nearly solves the original DLP.
 
 **Next:** Attack Q024 by testing whether any exponent-free or batched orbit representation can support correct rho collision equations without reconstructing the transformation exponent.
+
+## Session 3 - 2026-07-07
+
+**Goal:** Complete SG-08a for standard coefficient-tracking r-adding rho by deciding whether addition descends to a non-unit scalar-orbit quotient and whether orientation-free canonicalization can preserve the collision invariant.
+
+**Prediction (written before the proof):**
+
+- [CONJECTURE] For every nontrivial $H\le\mathbb F_r^*$ acting on the additive prime-order group, the orbit relation is not an additive congruence. A refutation is a well-defined quotient operation compatible with addition on all inputs.
+- [CONJECTURE] Canonicalized r-adding transitions require the multiplier relating the chosen representative to the incoming point, or equivalent per-state orientation information. A refutation is a correct known-log coefficient-tracking walk that stores neither.
+
+**Next:** Prove or refute the quotient-congruence claim, then derive the exact metadata consequence for rho states.
+
+### Session 3 completion
+
+**Did:**
+
+- Formalized scalar-orbit equivalence as a candidate quotient of the additive prime-order group and analyzed the formal coefficient invariant of an r-adding walk.
+- Strengthened the A003 ECDLP reduction from exponent-returning normalization to multiplier-returning normalization and batches.
+
+**Found:**
+
+- [PROVED] Nontrivial scalar-orbit equivalence is not an additive congruence: equivalent inputs $P$ and $[h]P$ produce inequivalent sums $0$ and $[h-1]P$ after adding $-P$.
+- [PROVED] In the standard formal coefficient model, canonicalizing a point by multiplier $h$ necessarily multiplies both tracked coefficients by $h$; orbit classes alone cannot update an additive transition.
+- [PROVED] The direct ECDLP reduction needs only the returned multiplier $h$, not an exponent $j$ with $h=\lambda^j$, and it extends to a multiplier-returning batch.
+- [PROVED] Without orientations, one orbit collision gives an $H$-membership constraint with up to $|H|$ candidate logarithms rather than one linear equation.
+
+**Prediction vs. outcome:** matched. Both the non-congruence and mandatory-orientation predictions hold in the stated standard algebraic coefficient model.
+
+**Did not work:** [PROVED] Treating the orbit set as if it inherited the elliptic-curve group addition fails at the identity/nonidentity counterexample above.
+
+**Changed my mind about:** [PROVED] Returning $\lambda^j$ is already enough to trigger the canonicalizer-to-ECDLP reduction; computing or storing the integer exponent $j$ is unnecessary.
+
+**Next:** Attack Q025 by expressing the index-two and index-three membership constraints as multiplicative-character observations and measuring whether their candidate intersections offer any algorithmic gain after acquisition cost.
