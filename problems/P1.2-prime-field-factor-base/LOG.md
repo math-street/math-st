@@ -282,3 +282,68 @@ under an explicitly selected Variant-S resource model.
   extension, Candidates B/D, and A008 all completed successfully.
 - [EMPIRICAL: syntax audit] Every Python file directly under P1.2 `code/`
   passed `py_compile` in the corrected file-by-file invocation.
+
+## Session 4 — 2026-07-07
+
+**Goal:** Resolve Q001 for the explicit translate-probe model containing the
+implemented lexicographic pair scan, while separating that result from
+coordinate-aware algorithms for Candidate A.
+
+**Prediction (written before the toy experiment):**
+
+- [HEURISTIC] For every subset $\mathcal F$ of the order-19 test group and
+  every list of $T$ shifts, the union of the translated sets
+  $a_j+\mathcal F$ will contain at most $T|\mathcal F|$ targets. Exhaustive
+  enumeration of all shift subsets for $1\le T\le4$ on the existing
+  four-point base will falsify the implementation if any larger union appears.
+- [HEURISTIC] Collisions will make the inequality strict for at least one
+  nontrivial list, illustrating that the union bound is an upper bound rather
+  than an assumed random-independence equality.
+
+**Plan:** Prove the bound for fixed schedules, failure-adaptive schedules, and
+randomized schedules; add an exhaustive toy regression; and record the exact
+model boundary around target-coordinate access.
+
+**Did:**
+
+- Defined translate-probe schedules, including adaptation based on prior
+  failures and randomized mixtures.
+- Proved the translated-set union bound and specialized it to Candidate A.
+- Added `code/audit_translate_probe.py`, a unit regression, and a four-row raw
+  audit CSV covering every one-to-four-shift subset of the order-19 group.
+
+**Found:**
+
+- [PROVED] After $T$ translate probes, success is at most
+  $T|\mathcal F|/r$ for fixed, failure-adaptive, and randomized schedules.
+- [PROVED] Candidate A has at most $2\lfloor\sqrt p\rfloor$ points, so
+  inverse-polylogarithmic success needs $T\ge p^{1/2-o(1)}$ in this model.
+- [EMPIRICAL: 5,035 shift schedules in the order-19 group] No schedule
+  exceeded the union bound. For $T=2,3,4$, respectively 95, 950, and 3,876
+  schedules were strictly below it because of translate collisions.
+
+**Prediction vs. outcome:** [EMPIRICAL: preregistered exhaustive toy audit]
+Matched. There were zero violations, and strict inequality occurred for every
+nontrivial probe count tested.
+
+**Did not work:** Nothing mathematical failed. The experiment exercised a
+strictly stronger shift universe than valid stored pair sums, so passing it
+also covers the pair-sum-only schedules used by the model.
+
+**Changed my mind about:** [PROVED] The measured $\sqrt p$ pair-scan behavior
+now has a genuine restricted-model explanation, not merely a three-point
+scaling fit. It remains invalid to extrapolate this lower bound to an algorithm
+that exploits target coordinates.
+
+**Next:** Q001 is closed for translate probes. Any continuation of Variant S
+must address P1.2/Q004 and state how coordinate access is modeled without
+allowing A008-style target-indexed advice.
+
+**Final validation:**
+
+- [EMPIRICAL: local CPython 3.13.4] All 63 currently present shared tests and
+  all 13 P1.2 tests passed after A009.
+- [EMPIRICAL: translate-probe smoke] The one- and two-shift audit completed
+  with zero violations, and the full one-to-four-shift CSV was regenerated.
+- [EMPIRICAL: syntax and tag audit] Every P1.2 code driver compiled, and no
+  unresolved `[UNVERIFIED]` or compound epistemic tag remained in P1.2.
