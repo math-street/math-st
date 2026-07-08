@@ -301,3 +301,52 @@ torus class a finite cyclotomic problem.
 
 **Next:** Run the fifth-session audit, then analyze affine commutative groups
 and selected subgroups under Maurer--Wolf's strong algebraic-definition model.
+
+## Session 6 - 2026-07-08
+
+**Goal:** Eliminate full connected commutative groups with affine structure
+and determine how far the selected-subgroup escape survives a general
+recoverable encoding.
+
+**Prediction (written before formalizing the proof):** [CONJECTURE] Chevalley
+decomposition and the unipotent radical will reduce full groups to abelian
+varieties, while a fixed-public-coin injectivity count will close selected
+subgroups in dimension one.  Dimension at least two is expected to survive
+the cardinality argument.
+
+**Did:**
+- Opened A006 and checked Chevalley's theorem, the perfect-field unipotent-
+  radical structure, and Lang's theorem in primary sources.
+- Proved the rational-point factorization and the public-coin target-size
+  lemma.
+
+**Found:**
+- [CITED] A full smooth connected commutative group has an affine kernel and
+  abelian-variety quotient; its affine kernel has split unipotent radical and
+  torus quotient.
+- [PROVED] A positive-dimensional unipotent part forces the input prime $r$
+  into the group order, while a nontrivial torus part is covered by A005.
+- [PROVED] Hence the only unobstructed full connected commutative class is
+  pure abelian varieties.
+- [PROVED] Any correct public-coin recoverable encoding with target $H$ has
+  average success at most $|H|/r$ on $\mathbb F_r$.
+- [PROVED] On A005's prime family, every polylog-smooth subgroup of a one-
+  dimensional torus has size $O(r^{1-\eta})$, so its recoverable-encoding
+  success is negligible even beyond the shift-and-test model.
+
+**Prediction vs. outcome:** [PROVED] Confirmed.  The higher-dimensional
+selected-subgroup branch remains because the ambient $r^d$ cardinality can
+absorb the forced factor and still leave at least $r$ elements.
+
+**Did not work:** [PROVED] The argument does not eliminate pure abelian
+varieties, selected subgroups in dimension at least two, uncontrolled
+disconnected families, or encodings carrying recovery information outside
+the auxiliary group.
+
+**Changed my mind about:** [PROVED] The affine-group branch is not an
+independent construction frontier: for full connected commutative groups it
+collapses completely to the already solved unipotent and torus cases.
+
+**Next:** Audit prescribed-order theorems for fixed-dimensional abelian
+varieties and determine whether Honda--Tate can turn a smooth target integer
+near $r^g$ into a uniform constructive auxiliary group.
