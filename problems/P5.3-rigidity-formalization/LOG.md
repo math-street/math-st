@@ -152,3 +152,90 @@ does not change the unconditional \(\bot\), which is driven by \(u\).
 **Next:** No action is required for the stated P5.3 deliverables. Reopen Q014
 only if a dated pre-publication artifact fixes the missing finite domain,
 selection order/objective priority, and transcript.
+
+## Session 3 — 2026-07-08
+
+**Goal:** Exhaust the versioned package artifacts omitted by A003 and close
+Q015's remaining sampling-kernel ambiguity at the permitted toy scale.
+
+**Prediction (written before the Session 3 registry search or new
+experiments):** Because the surviving `pairing` root already declares version
+0.9.0, crates.io or docs.rs will preserve versions 0.8.x or earlier that
+predate the July Git rewrite. They may move the archival boundary earlier and
+recover generator implementation details, but probably will not contain a
+precommitted exhaustive BLS12-381 \(u\)-menu. For Q015, exact enumeration at
+\(p=127\) will show that uniform safe coefficient encodings are not uniform
+over \(\mathbb F_p\)-isomorphism classes; a canonical safe-class unranking
+kernel should remove that ambiguity with designer capacity \(b=0\).
+
+**Baseline:** `env/check_env.py` passed with Python 3.13.4; the combined suite
+passed 68 tests.
+
+**Did:**
+
+- Checked the crates.io API and docs.rs version index, recorded the primary
+  links in `refs/crates-pairing2017.md`, and added the result to the audit.
+- Implemented `code/class_uniform_kernel.py` with explicit scaling orbits,
+  lexicographic canonical representatives, exact safe-class enumeration, and
+  SHAKE256 rejection/unranking.
+- Added five focused kernel tests, generated the 67-row JSON/CSV census, and
+  replayed both outputs byte-for-byte.
+- Updated `DEFINITIONS.md` with the short-Weierstrass isomorphism criterion,
+  orbit-projection formula, fixed-universe minimax theorem, and forced
+  class-uniform generator.
+
+**Found:**
+
+- **[CITED]** The public crates.io/docs.rs history starts at `pairing` 0.9.0
+  on 2017-07-08. It contains no 0.8.x or earlier snapshot, so the predicted
+  pre-0.9 registry channel does not exist.
+- **[EMPIRICAL: exhaustive enumeration at \(p=127\)]** The 16,002
+  nonsingular coefficient encodings form 258 classes with orbit histogram
+  \(\{21:6,63:252\}\). The safety predicate retains 4,179 encodings in 67
+  classes with histogram \(\{21:1,63:66\}\).
+- **[PROVED]** Conditional on those exact counts, coefficient-uniform class
+  masses are \(1/199\) and \(3/199\), class-uniform mass is \(1/67\), and the
+  total-variation distance is \(132/13333\).
+- **[CONDITIONAL: SHAKE256 blocks are independent uniform strings]** The A004
+  rank sampler is exactly uniform over the 67 safe classes; with an
+  unselectable, non-restartable, non-suppressible beacon its designer capacity
+  is \(b=0\).
+- **[PROVED]** Uniform is the unique distribution on a fixed finite universe
+  whose maximum singleton probability reaches the lower bound \(1/N\).
+- **[EMPIRICAL: final 2026-07-08 replay]** The JSON SHA-256 is
+  `1BA019A7DA47C2FB64764B3D9A79680C7CB2904D6AD9062899069689AEB03F15`
+  and the CSV SHA-256 is
+  `EDC4C7875E2CE7A0AB0F44529BD65A99D35ADF5A57C8E485070B983DBFD382A9`.
+
+**Prediction outcome:** The predicted coefficient-to-class bias and its
+class-uniform repair were confirmed. The predicted earlier registry versions
+were falsified: version 0.9.0 is the registry boundary.
+
+**Did not work:** Searching for pre-0.9 registry packages could not move the
+archival boundary because neither registry indexes such a version. Casting
+every API version to PowerShell's `System.Version` also rejected a modern
+prerelease label; the returned metadata itself remained usable and the dated
+version boundary was independently checked against docs.rs.
+
+**Changed my mind about:** Coefficient-uniform rejection is exact for the
+encoding projection but is not the strongest fixed-profile answer. Once the
+equivalence projection is fixed to isomorphism classes, canonical
+class-uniform unranking supplies the unique minimax singleton distribution.
+
+**Final validation:** **[EMPIRICAL: combined shared and P5.3 suite]** All 77
+tests passed; `compileall` succeeded, the unresolved-status scan was empty,
+and the Markdown control-character scan was clean.
+
+**Next:** None at the authorized scope. Reopen Q014 only on a dated
+pre-publication artifact fixing the missing historical fiber. Treat any
+production-scale sampling profile as a new, separately authorized problem.
+
+### Correction to Session 3 final validation
+
+The scaffold audit required an explicit `--smoke` mode in the new class
+kernel. It now runs the fixed \(p=31\) profile, has a dedicated CLI regression
+test, and leaves the checked-in \(p=127\) data unchanged.
+
+**[EMPIRICAL: corrected combined shared and P5.3 suite]** All 78 tests passed
+in 11.27 seconds; the six A004 kernel tests passed in 3.33 seconds, and
+`compileall` succeeded.

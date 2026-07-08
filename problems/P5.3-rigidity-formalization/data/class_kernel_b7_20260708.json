@@ -1,0 +1,20 @@
+{
+  "all_classes": 258,
+  "all_orbit_histogram": {
+    "21": 6,
+    "63": 252
+  },
+  "bits": 7,
+  "class_uniform_mass": "1/67",
+  "coefficient_kernel_max_class_mass": "3/199",
+  "coefficient_kernel_min_class_mass": "1/199",
+  "nonsingular_encodings": 16002,
+  "p": 127,
+  "safe_classes": 67,
+  "safe_encodings": 4179,
+  "safe_orbit_histogram": {
+    "21": 1,
+    "63": 66
+  },
+  "total_variation_from_class_uniform": "132/13333"
+}
