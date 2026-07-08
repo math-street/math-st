@@ -142,3 +142,130 @@ rules.
 
 **Final validation:** [EMPIRICAL: Python 3.13.4, 2026-06-27] All 53 shared
 tests and all nine P4.2 tests passed after the concurrent shared-library update.
+
+## Session 2 - 2026-07-08
+
+**Goal:** Extend both primary deterministic searches from primes below
+\(2^{16}\) to primes below \(2^{18}\), keep exact embedding degrees 3 through
+12, and independently verify every newly appearing full hit.
+
+**Prediction (written before running either extension):** [CONJECTURE] The
+larger range will add only 2-cycle hits with degree pairs (6,4) or (4,6), and
+will add no full directed 3-cycle. This is refuted by a new non-{(6,4),(4,6)}
+2-cycle or any new full 3-cycle.
+
+**Positive result criterion:** [CONJECTURE] The full enumerations complete,
+the embedded 16-bit counts are recovered as a strict subset, and every new hit
+passes both point counters and exact degree checks.
+
+**Negative result criterion:** [CONJECTURE] A deterministic search or subset
+check fails, or a newly appearing arithmetic hit cannot be independently
+instantiated and counted within the declared 20,000-trial construction bound.
+
+**Did:**
+- Reconciled session-1 state and found no incomplete attempt or stale handoff.
+- Ran `env/check_env.py`; Python 3.13.4 is available and SageMath, GP,
+  Singular, and msolve are unavailable.
+- Ran all 55 current shared tests and all nine P4.2 tests successfully.
+- Froze the one-axis extension in `EXTENSION_18BIT.md`.
+
+**Found:** Pending the predeclared searches.
+
+**Prediction vs. outcome:** Pending.
+
+**Next:** Run the 18-bit 2-cycle census, then the directed 3-cycle census.
+
+### A005 outcome and A006 pre-run amendment
+
+**A005 outcome:** [EMPIRICAL: primes below 2^18, exact degrees 3 through 12]
+The extension added eight MNT-pattern 2-cycle hits, no exceptional 2-cycle,
+and no 3-cycle candidate row. All 68 curves in the 34-hit extended 2-cycle
+ledger passed both point counters.
+
+**A006 goal:** Validate a target-edge-complete 3-cycle algorithm against both
+prior bounds, then extend the unchanged primary conditions to primes below
+\(2^{20}\).
+
+**A006 prediction (written before implementation and execution):**
+[CONJECTURE] Targeted and exhaustive candidate rows will agree exactly below
+\(2^{16}\) and \(2^{18}\). The 20-bit extension will add only MNT-pattern
+2-cycles and no new 3-cycle candidate row.
+
+**A006 outcome:** [EMPIRICAL: primes below 2^20, exact degrees 3 through 12]
+Only 13 MNT-pattern 2-cycle hits were added and all were independently
+verified. No 3-cycle hit appeared, but three two-of-three near-misses refuted
+the stronger no-new-candidate prediction. Their missing exact degrees are
+483882, 2055, and 115320.
+
+**A007 goal:** Validate a candidate-complete targeted 2-cycle algorithm and
+extend both primary searches to primes below \(2^{22}\).
+
+**A007 prediction (written before implementation and execution):**
+[CONJECTURE] All new 2-cycle hits will have degree pair (6,4) or (4,6), and no
+new full directed 3-cycle will appear. New near-misses are allowed.
+
+### A009 pre-run amendment
+
+**Goal:** Prove that the consecutive MNT prime 3-chain
+\((4x^2-2x+1,4x^2+1,4x^2+2x+1)\) cannot close in either orientation with all
+exact degrees at most 12.
+
+**Prediction (written before the finite remainder search):** [CONJECTURE] The
+linear recurrence rules out every \(x\ge1026\), and exhaustive enumeration of
+\(1\le x\le1025\) will find no closing degree at most 12. One finite hit
+refutes the claim.
+
+### Session 2 completion
+
+**Did:**
+- Completed the exhaustive 18-bit primary searches and constructed every
+  2-cycle hit in the extended ledger.
+- Proved candidate completeness for target-edge 2-cycle and 3-cycle searches,
+  validated their rows against prior exhaustive ledgers, and extended both
+  primary spaces to 20 and 22 bits.
+- Computed the exact missing degrees of every newly appearing 3-cycle
+  near-miss.
+- Constructed and independently counted all 13 new 20-bit 2-cycles and all 29
+  new 22-bit 2-cycles.
+- Proved an elementary converse identifying every exact degree-(6,4) or
+  degree-(4,6) prime-order 2-cycle with the standard MNT parameter formulas.
+- Derived a quadratic remainder recurrence and excluded closure of the
+  consecutive MNT prime 3-chain for every integer parameter.
+
+**Found:**
+- [EMPIRICAL: primes below 2^22, exact degrees 3 through 12] There are 76
+  2-cycle hits and 819 one-sided near-misses. The five exceptional hits are
+  unchanged from 16 bits; all 71 degree-{4,6} hits match the MNT formulas.
+- [EMPIRICAL: three distinct primes below 2^22, exact degrees 3 through 12]
+  There are five directed 3-cycle hits and 42 two-of-three near-misses. No hit
+  contains a field above 43.
+- [PROVED] Every exact degree-(6,4) or degree-(4,6) prime-order 2-cycle is an
+  MNT polynomial instance (`MNT_CLASSIFICATION.md`).
+- [PROVED] The consecutive MNT 3-chain never closes in either orientation
+  with all exact degrees in 3 through 12
+  (`MNT_THREE_CHAIN_OBSTRUCTION.md`).
+
+**Prediction vs. outcome:** A005 and A007 matched fully. A006 matched on full
+hits but not on its stronger near-miss prediction. A009 matched: the four
+all-prime parameters at most 1025 have closing degrees above 12, and the
+remainder proof covers all larger parameters.
+
+**Did not work:** A first 20,000-trial construction cap missed one 20-bit
+curve. Adding quadratic-twist complement recovery and raising the declared cap
+to 100,000 found it; the later 22-bit construction needed at most 43,462
+trials. Exhaustive directed-triangle enumeration became wasteful beyond 18
+bits, so the candidate-complete target-edge join replaced it.
+
+**Changed my mind about:** The persistent large 3-cycle near-misses are not
+evidence that the consecutive MNT chain is close to closing: their missing
+orders grow far beyond the target interval, and the entire class is now
+excluded by a parameter-uniform remainder argument.
+
+**Next:** Classify the remaining non-MNT two-target-edge near-miss families
+before extending the finite bound again.
+
+**Final validation:** [EMPIRICAL: Python 3.13.4, 2026-07-08] All 69 shared
+tests and all 19 P4.2 tests passed. Every P4.2 Python file compiled, and
+cross-file certificate assertions recovered 76/819 2-cycle hits/near-misses,
+5/42 3-cycle hits/near-misses, 58 correctly counted new 22-bit curve rows, 71
+MNT parameter rows, and four non-closing all-prime MNT triples.

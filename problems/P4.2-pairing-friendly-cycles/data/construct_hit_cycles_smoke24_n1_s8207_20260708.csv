@@ -1,0 +1,3 @@
+cycle,position,field_prime,a,b,expected_order,bsgs_order,exhaustive_order,trace,cm_radicand,embedding_degree,coefficient_attempts,bsgs_isolation_failures,seed,elapsed_seconds,verification_method,independently_verified_order,witness_x,witness_y
+4200451-4202501,E1,4200451,2853635,1550755,4202501,4202501,,-2049,12603403,4,5394,0,8207,1.935789,prime_point_hasse_certificate,4202501,0,2958225
+4200451-4202501,E2,4202501,2826409,773185,4200451,4200451,,2051,12603403,6,28405,0,8208,8.078430,prime_point_hasse_certificate,4200451,2,383605

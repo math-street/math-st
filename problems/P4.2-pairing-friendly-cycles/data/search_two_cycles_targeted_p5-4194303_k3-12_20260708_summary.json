@@ -1,0 +1,28 @@
+{
+  "algorithm": "candidate-targeted",
+  "candidate_row_count": 895,
+  "date": "2026-07-08",
+  "hasse_valid_pair_count": 54092289,
+  "hit_count": 76,
+  "hit_degree_pair_counts": {
+    "10,11": 1,
+    "10,3": 1,
+    "12,10": 1,
+    "4,6": 31,
+    "6,4": 40,
+    "7,11": 1,
+    "9,8": 1
+  },
+  "limit_exclusive": 4194304,
+  "minimum_prime": 5,
+  "near_miss_count": 819,
+  "non_4_6_or_6_4_hit_count": 5,
+  "prime_count": 295945,
+  "runtime_seconds": 82.278883,
+  "schema_version": 1,
+  "target_embedding_degrees": [
+    3,
+    12
+  ],
+  "unordered_prime_pair_count": 43791573540
+}

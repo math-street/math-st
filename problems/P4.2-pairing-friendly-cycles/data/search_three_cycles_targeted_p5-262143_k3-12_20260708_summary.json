@@ -1,0 +1,25 @@
+{
+  "algorithm": "target-edge join",
+  "candidate_row_count": 42,
+  "date": "2026-07-08",
+  "directed_hasse_edge_count": 2562602,
+  "hit_count": 5,
+  "hit_degree_triple_counts": {
+    "12,10,3": 1,
+    "12,4,10": 1,
+    "4,9,12": 1,
+    "5,7,4": 1,
+    "7,10,11": 1
+  },
+  "limit_exclusive": 262144,
+  "minimum_prime": 5,
+  "prime_count": 22998,
+  "runtime_seconds": 2.190664,
+  "schema_version": 1,
+  "target_edge_count": 399,
+  "target_embedding_degrees": [
+    3,
+    12
+  ],
+  "two_of_three_near_miss_count": 37
+}

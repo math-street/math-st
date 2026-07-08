@@ -1,0 +1,28 @@
+{
+  "algorithm": "cyclotomic-root candidate-targeted",
+  "candidate_row_count": 1494,
+  "date": "2026-07-08",
+  "hasse_valid_pair_count": null,
+  "hit_count": 130,
+  "hit_degree_pair_counts": {
+    "10,11": 1,
+    "10,3": 1,
+    "12,10": 1,
+    "4,6": 64,
+    "6,4": 61,
+    "7,11": 1,
+    "9,8": 1
+  },
+  "limit_exclusive": 16777216,
+  "minimum_prime": 5,
+  "near_miss_count": 1364,
+  "non_4_6_or_6_4_hit_count": 5,
+  "prime_count": 1077869,
+  "runtime_seconds": 20.219457,
+  "schema_version": 1,
+  "target_embedding_degrees": [
+    3,
+    12
+  ],
+  "unordered_prime_pair_count": 580900251646
+}

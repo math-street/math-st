@@ -1,0 +1,34 @@
+{
+  "candidate_row_count": 245,
+  "date": "2026-07-08",
+  "hasse_valid_pair_count": 204074,
+  "hit_count": 26,
+  "hit_degree_pair_counts": {
+    "10,11": 1,
+    "10,3": 1,
+    "12,10": 1,
+    "4,6": 8,
+    "6,4": 13,
+    "7,11": 1,
+    "9,8": 1
+  },
+  "induced_fundamental_discriminant_count": 16514,
+  "limit_exclusive": 65536,
+  "maximum_fundamental_discriminant": -3,
+  "minimum_fundamental_discriminant": -261787,
+  "minimum_prime": 5,
+  "near_miss_count": 219,
+  "non_4_6_or_6_4_hit_count": 5,
+  "prime_count": 6540,
+  "published_pair_validations": {
+    "37_43_6_4": true,
+    "5_7_6_4": true
+  },
+  "runtime_seconds": 0.490239,
+  "schema_version": 1,
+  "target_embedding_degrees": [
+    3,
+    12
+  ],
+  "unordered_prime_pair_count": 21382530
+}
