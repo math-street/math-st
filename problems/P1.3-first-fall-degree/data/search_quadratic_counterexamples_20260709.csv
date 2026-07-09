@@ -1,0 +1,3 @@
+search_space,q,status,candidates_checked,eligible_cases,solving_degree_q_cases,solving_degree_q_plus_1_cases,first_counterexample,seed,elapsed_seconds,engine,engine_version,order
+abstract normalized symmetric top shape,5,counterexample found,566,566,565,1,"trial=565;coefficients=(3, 1, 4, 0, 1, 2, 0, 3)",20260722,4.518455,exact closed Macaulay + SymPy Groebner target,1.14.0,grevlex(x>y)
+actual nonsingular curves and non-base on-curve targets,5,exhaustive: no counterexample,12000,6228,6228,0,,,49.448814,exact closed Macaulay + SymPy Groebner target,1.14.0,grevlex(x>y)

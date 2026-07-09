@@ -1,0 +1,4 @@
+q,rows,unique_curves,unique_targets,complete_rows,verified_roots,top_shape_verified_rows,nonredundant_field_equation_rows,first_fall_values,regularity_values,solving_degree_values,core_solving_degree_values,core_field_remainder_degree_values,mutant_regularity_values,mutant_solving_degree_values
+5,171,90,20,171,171,171,171,5,5,5,5,2;3,3;4,3;4
+7,190,96,38,190,190,190,190,5,7,7,5,2;3,3;4,3;4
+11,36,18,20,36,36,36,36,5,11,11,5,3,4,3;4

@@ -76,3 +76,41 @@ compatible with the primary sources without leaving an unresolved ambiguity.
 **Next:** Test whether the $\operatorname{sd}=q$ pattern survives curve and target changes, and seek a proof or counterexample for the deterministic family before attempting a broad explicit upper bound.
 
 **Final validation:** [EMPIRICAL: local environment on 2026-07-01] The final smoke case completed with a verified root and degrees (4,4,4); all 55 currently present shared tests and all 13 P1.3 tests passed, bytecode compilation passed, the canonical table had 34 unique keys, and `HANDOFF.md` remained below its 120-line cap.
+
+## Session 3 — 2026-07-09
+
+**Goal:** Push the quadratic divergence from a deterministic six-prime pattern toward a theorem: vary curves and targets, prove the uniform regularity and solving-degree lower bound, and either prove the matching upper bound or isolate its exact obstruction.
+
+**Prediction (written before new experiments):** For every odd (q\ge5) and quadratic non-base target, the top Weil coordinates will force (d_{\mathrm{ff}}=5) and, after field equations, (d_{\mathrm{reg}}=q). The lower bound (\operatorname{sd}\ge q) should follow whenever the field equations genuinely shrink the core ideal. The difficult step will be (\operatorname{sd}\le q): it may require a field-equation theorem with additional hypotheses or explicit degree-(q) representations of a Gröbner basis. Varying curves and targets should preserve the first-fall/regularity values but may falsify the solving-degree equality.
+
+**Positive result criterion:** A proved parameter-uniform statement stronger than the finite table, plus exact curve/target-variation data with verified roots; ideally a complete proof of (d_{\mathrm{ff}}=5<\operatorname{sd}=d_{\mathrm{reg}}=q) under explicit hypotheses.
+
+**Negative result criterion:** A varied known-solution system with (\operatorname{sd}\ne q), or a precise theorem hypothesis that cannot be established for these systems. Either outcome must replace the current broad conjecture with a narrower falsifiable statement.
+
+**Did:**
+- Added explicit curve, target, and known-root overrides to the exact measurement pipeline.
+- Enumerated 397 verified-root variants over $q=5,7,11$, recording core-ideal nonredundancy, core solving degree, field-equation remainder degrees, and mutant-family invariants.
+- Derived the quadratic top-ideal proof $d_{\mathrm{reg}}=q$ and the nonredundancy lower bound $\operatorname{sd}\ge q$.
+- Audited Caminata-Gorla's homogenized-regularity result and Salizzoni's closed-space bound; rejected raw $t$-saturation after an exact representative saturation calculation.
+- Normalized the Semaev core in symmetric variables and generated an exact fraction-field Groebner certificate with sole exceptional factor $(m_1^2-4m_0)t_1^2/4$.
+- Constructed a degree-at-most-4 mutant family inside the original degree-$q$ space and applied Salizzoni's bound to prove $\operatorname{sd}\le q$.
+- Searched 566 abstract top-shape systems until finding a degree-$q+1$ counterexample, then exhaustively checked all 6,228 eligible actual $q=5$ curve/target systems.
+
+**Found:**
+- [PROVED] For every odd prime power $q\ge5$ and quadratic non-base target, $d_{\mathrm{ff}}=5$, $d_{\mathrm{reg}}=q$, and $\operatorname{sd}_{\mathrm{grevlex}}\le q$.
+- [CONDITIONAL: the field equations enlarge the core ideal] The matching lower bound proves $\operatorname{sd}_{\mathrm{grevlex}}=q$.
+- [PROVED] The normalized core basis has degrees $4,4,3,3$, leading monomials $xy^3,y^4,x^3,x^2y$, and lies in the closed degree-5 core space.
+- [PROVED] Field-equation remainders have degree at most 3; the same-ideal mutant family has maximum degree and degree of regularity at most 4, hence solving degree at most 5 by Salizzoni (2023), Proposition 3.10.
+- [EMPIRICAL: 397 verified-root variants over $q=5,7,11$] Every row has nonredundant field equations and $(d_{\mathrm{ff}},d_{\mathrm{reg}},\operatorname{sd})=(5,q,q)$.
+- [EMPIRICAL: exhaustive actual $q=5$] All 6,228 eligible systems have solving degree 5.
+- [EMPIRICAL: deterministic abstract $q=5$ search, seed 20260722] The tuple $(3,1,4,0,1,2,0,3)$ has solving degree 6 and $c+g^2=0$, proving that the top shape alone does not imply the upper bound.
+
+**Prediction vs. outcome:** The first-fall, regularity, and lower-bound predictions matched. The upper bound was easier after abandoning raw homogenization saturation: a low-degree same-ideal mutant family made Salizzoni's general bound sharp enough. No actual varied counterexample appeared, but the abstract counterexample precisely identified the missing Semaev coefficient constraint.
+
+**Did not work:** Raw homogenization is not $t$-saturated in the representative $q=5$ case; saturation adds $x+y-t$ and $y^2-ty$. A proof based on equality with the homogenized affine ideal was therefore invalid. The top shape alone also failed, as shown by the exact solving-degree-6 abstract counterexample.
+
+**Changed my mind about:** The decisive structure is not just the degree-4/degree-3 top pair. It is the nonvanishing quadratic-modulus discriminant factor, which forces a constant-degree core basis and makes the field equations fall to cubic remainders.
+
+**Next:** Prove or refute automatic field-equation nonredundancy, then test the constant-degree mutant-family strategy at $n=3,m=2$.
+
+**Final validation:** [EMPIRICAL: local environment on 2026-07-09] All 69 shared-library tests and all 17 P1.3 tests passed, bytecode compilation passed, the symbolic JSON certificate regenerated successfully, the variant summary contained exactly 397 rows, the exhaustive actual $q=5$ search contained 6,228 eligible cases, and `HANDOFF.md` had 87 lines.
