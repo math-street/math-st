@@ -350,3 +350,52 @@ collapses completely to the already solved unipotent and torus cases.
 **Next:** Audit prescribed-order theorems for fixed-dimensional abelian
 varieties and determine whether Honda--Tate can turn a smooth target integer
 near $r^g$ into a uniform constructive auxiliary group.
+
+## Session 7 - 2026-07-10
+
+**Goal:** Determine whether fixed-dimensional abelian varieties escape the
+Hasse-interval endpoint and whether prescribed-order existence is sufficient
+for Maurer--Wolf.
+
+**Prediction (written before the synthesis):** [CONJECTURE] Dimension two
+will give a polylog-smooth every-prime existence result under RH, but the
+construction and strong-embedding requirements will remain unproved.
+
+**Did:**
+- Checked the 2025 prescribed-order theorem in its fixed-dimension regime.
+- Combined its ordinary abelian-surface interval with Younis's RH theorem at
+  interval exponent $3/4$.
+- Visually re-read Maurer--Wolf Definition 4 and Theorem 2 from the primary
+  PDF after ordinary text extraction failed.
+- Audited the genus-two prescribed-order construction literature and Cantor
+  arithmetic.
+
+**Found:**
+- [CONDITIONAL: Riemann Hypothesis] Every sufficiently large prime field has
+  an ordinary abelian surface whose full order is polylog-smooth.
+- [PROVED] This does not give a uniform algorithm: neither cited existence
+  theorem finds the smooth integer or outputs an explicit strongly
+  algebraically defined surface in polynomial time.
+- [CITED] Standard genus-two CM construction has exponential worst-case
+  running time; the alternative result is heuristic and most-input only.
+- [PROVED] An explicitly supplied genus-two Jacobian is a valid constant-rank
+  Maurer--Wolf auxiliary: Cantor arithmetic is algebraic, and the curve-point
+  embedding succeeds with bounded expected trials and recovers the input
+  coordinate.
+
+**Prediction vs. outcome:** [PROVED] Confirmed.  The interval exponent moves
+from the elliptic endpoint $1/2$ to $3/4$, but existence and uniform
+construction separate sharply.
+
+**Did not work:** [PROVED] Honda--Tate existence, even with a constructible
+Weil polynomial, does not output a curve equation or `EMBED/EXTRACT`; CM does
+not repair this in worst-case polynomial time.
+
+**Changed my mind about:** [PROVED] Higher dimension genuinely resolves the
+conditional existence side of smoothness.  The central obstruction is now an
+algorithmic inverse problem, not merely a short-interval existence theorem.
+
+**Next:** Test whether polylog-smooth integers in the $r^{3/2}$ surface
+interval can be generated directly in polynomial time; if not, state the
+precise lattice/knapsack obstruction before auditing explicit realization
+algorithms beyond CM.

@@ -1,0 +1,4 @@
+bits,prime,smoothness_exponent,smoothness_bound,interval_lower,interval_upper,interval_size,ordinary_surface_orders,jacobian_admissible_orders,smooth_integers,smooth_surface_orders,smooth_jacobian_admissible_orders,elapsed_seconds
+8,251,3,506,59025,66977,7953,7953,7953,3038,3038,3038,0.018761100014671683
+10,1019,3,997,1005833,1070889,65057,65057,65057,17379,17379,17379,0.15091069997288287
+12,4091,3,1727,16474617,16997945,523329,523329,523329,97059,97059,97059,1.2183199999853969
