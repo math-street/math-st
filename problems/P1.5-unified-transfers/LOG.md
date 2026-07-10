@@ -255,3 +255,122 @@ many rational pieces collapse to one global elliptic-isogenous map.
 high-degree or non-rational coordinate/lift/valuation interface for a succinct
 point-to-class evaluator, then either construct the homomorphism or prove a
 lower bound for that exact interface.
+
+## Session 4 - 2026-07-10
+
+**Goal:** Push Q004 beyond the generic/rational lower bounds by classifying
+class-group targets according to their base - finite/local rings, global
+function fields, and number fields - and reduce the last succinct
+cross-characteristic evaluator to an exact computational problem.
+
+**Prediction (written before the literature search):** Finite and local bases
+will have trivial Picard targets; global function-field class groups will be
+Jacobians and hence fall under the proper-target classification; standard
+number-field lifts will remain excluded by A006.  The only survivor will be a
+direct bit/coordinate-to-ideal algorithm for a separately constructed number
+field order.  Its evaluation complexity will be sandwiched between source
+ECDLP and target class-group DLP, so an unconditional exclusion will require a
+new concrete-coordinate lower bound rather than more CM size arguments.
+
+**Positive result criterion:** Exhibit one uniform family of orders, known
+order-$r$ ideal classes, and a polynomial-time coordinate evaluator that passes
+the homomorphism law and nonzero-image test, with all setup and target DLP costs
+inside SG-01.
+
+**Negative result criterion:** Prove that an entire base category reduces to a
+previously classified target, or state a two-way reduction showing exactly
+which unresolved evaluator problem remains and why the existing lower bounds
+do not cover it.
+
+**Did:**
+
+- Split A001 into A014--A022, covering class-target bases, evaluator
+  reductions, discriminant budgets, the Buell residue-coordinate formula,
+  checked literature, prescribed-order targets, and the ray evaluator.
+- Added `code/probe_buell_reduction.py` with three tests and two CSVs, and
+  `code/probe_exact_order_targets.py` with three tests and two CSVs.
+- Checked primary or authoritative sources for Picard groups of finite rings,
+  function-field class groups, Buell--Soleng point-to-class constructions,
+  modern class-pairing specializations, and prescribed-order imaginary
+  quadratic class groups.
+- Updated P1.5/Q004 with an explicit positive and negative closure criterion.
+
+**Found:**
+
+- [PROVED] Finite and local bases have trivial Picard groups, while a pointed
+  global function-field class group is a Jacobian rational-point group; a
+  genuinely distinct class target must be a global number-field order.
+- [PROVED] Evaluation and source DLP are polynomial-time equivalent given a
+  target-DLP oracle.  A polynomial evaluator plus an $\exp(o(\log r))$ target
+  algorithm is exactly a subexponential source-DLP reduction, not a
+  contradiction to a known unrestricted lower bound.
+- [PROVED] For discriminant bit length $B$ and
+  $n=\lceil\log_2r\rceil$, the checked Hafner--McCurley route requires
+  $2n-O(\log n)\le B=o(n^2/\log n)$.
+- [CITED] All checked Buell, Soleng, Buell--Call, Gillibert, and
+  Blum--Choi--Hoey--Iskander--Lakein--Martinez point-to-class maps use
+  characteristic-zero rational or algebraic points.
+- [EMPIRICAL: bounded primary-source search on 2026-07-10] No checked source
+  supplied a direct $E(\mathbb F_q)[r]$-to-fixed-number-field-class
+  homomorphism; this is a bounded search result, not a nonexistence theorem.
+- [PROVED] Canonical integer representatives in the Buell formula produce
+  discriminant $\mathcal D+k_Qp$, so different source points generally land
+  in different quadratic orders rather than one class group.
+- [EMPIRICAL: 10 nonsingular reductions, $23\le p\le59$, $13\le r\le37$,
+  218 nonzero points] All 218 lifted discriminants were distinct, only two
+  equalled the model discriminant, every discrepancy was divisible by $p$,
+  195 were negative, and 199 form triples were primitive.
+- [PROVED] For every prime $r\ge3$, the ideal
+  $(2,(1+\sqrt{1-4\cdot2^r})/2)$ has exact class order $r$, but its
+  discriminant has $\Theta(r)$ bits and violates SG-01.
+- [EMPIRICAL: every negative order discriminant with
+  $|\Delta|\le200000$, 13 primes $3\le r\le43$] Each least discriminant with
+  $r\mid h(\Delta)$ had $h(\Delta)=r$ and
+  $0.684711\le|\Delta|/r^2\le2.555556$; each recorded nonprincipal reduced
+  form therefore has exact order $r$.
+- [PROVED] The last census is nonuniform: exhaustive class-number search does
+  not give a polynomial-time growing-family target constructor.
+- [EMPIRICAL: bounded prescribed-order primary-source search on 2026-07-10]
+  Checked exact-order theorems use $n$-th-power discriminant families or
+  fixed-$n$ ineffective thresholds; no checked theorem supplied the uniform
+  polynomial-bit constructor required by SG-01.
+- [PROVED] Any nonzero evaluator into the modulus-$r^2$ Gaussian
+  principal-unit target immediately reveals the source scalar through
+  $1+rz\mapsto z\bmod r$.  Ray evaluation and source DLP are polynomial-time
+  equivalent, so this easy target has no intermediate subexponential regime.
+- [EMPIRICAL: final local verification on 2026-07-10] Python 3.13.4 was
+  available while SageMath, PARI/GP, Singular, and msolve were unavailable;
+  all 70 shared and 13 P1.5 tests passed, bytecode compilation succeeded, all
+  four smoke scripts completed, the full exact-target census took 2.72
+  seconds, the trailing-whitespace audit passed, and P1.5 contains zero
+  unresolved verification markers.
+
+**Prediction vs. outcome:** Matched and strengthened.  The target-base
+taxonomy and evaluator sandwich left the predicted cross-characteristic
+ordinary-class evaluator.  The stronger outcome separates two additional
+issues: explicit prescribed-order targets can be either provably oversized or
+small but nonuniform, and the ray principal-unit fallback is already
+polynomially equivalent to source DLP.
+
+**Did not work:** The direct Buell residue-coordinate formula failed because
+its discriminant varied by multiples of $p$.  The self-certifying exact-order
+target had exponential input length.  The small-target census found excellent
+toy instances but only by exhaustive search.  Bounded literature searches
+found no direct finite-field evaluator or uniform succinct prescribed-order
+constructor.  Two initially selected Buell fixtures were singular and were
+replaced by nonsingular cases; the new census test initially lacked the
+repository import path and was repaired before the final run.
+
+**Changed my mind about:** The ordinary target and the evaluator must be
+treated as separate construction problems.  Small exact-order class targets
+exist throughout the toy range, but this does not make them uniform; conversely
+the uniform ray target is too transparent to provide a merely subexponential
+reduction.  The main residual is now specifically an ordinary number-field
+class target with a nontransparent target DLP and a direct
+cross-characteristic evaluator.
+
+**Next:** Work SG-32 first.  Fix one concrete ordinary-class output encoding
+and one allowed coordinate/lift/valuation instruction set, then either build a
+nonzero evaluator inside the SG-25 target window or prove a lower bound for
+that exact program model.  SG-30 remains the separate prescribed-order target
+construction task.
