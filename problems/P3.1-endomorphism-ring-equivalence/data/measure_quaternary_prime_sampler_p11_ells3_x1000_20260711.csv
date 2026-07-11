@@ -1,0 +1,5 @@
+p,ell,ideal,ideal_norm,cutoff,modulus,residue,discriminant,coefficient_bounds,box_candidates,ellipsoid_vectors,prime_vectors,prime_probability,prime_probability_times_log_cutoff,progression_primes,represented_progression_primes,progression_coverage,least_missing_progression_prime,reciprocity_violations
+7,3,maximal_order,1,1000,24,17,9364045824,33;1;11;0,4623,166,36,0.21686746987951808,1.4980674098997406,23,13,0.5652173913043478,17,0
+7,3,prime_ideal_5_trial_0,5,1000,24,17,9364045824,23;1;5;3,10857,188,32,0.1702127659574468,1.1757881325927042,23,11,0.4782608695652174,17,0
+11,3,maximal_order,1,1000,24,17,23123460096,33;1;1;2,3015,128,30,0.234375,1.6190051435114383,23,11,0.4782608695652174,41,0
+11,3,prime_ideal_5_trial_0,5,1000,24,17,23123460096,19;0;1;5,1287,138,24,0.17391304347826086,1.2013487441708064,23,11,0.4782608695652174,17,0

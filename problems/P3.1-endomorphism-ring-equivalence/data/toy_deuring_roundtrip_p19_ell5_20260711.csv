@@ -1,0 +1,2 @@
+p,ell,trial,seed,source_order,torsion_points,neighbor_ideals,alpha,ideal_id,recovered_ideal_id,roundtrip_match,kernel_nonzero_points,source_deuring_key,target_deuring_key,target_order,ideal_candidates,velu_steps,oracle_queries,batch_wall_seconds,seconds_per_trial
+19,5,0,3119,400,24,6,0;0;2;1,"5,0,0,0;0,5,0,0;0,0,1,0;0,0,0,1","5,0,0,0;0,5,0,0;0,0,1,0;0,0,0,1",1,4,1;0;0;0,1;0;0;0,400,624,1,0,0.6286130000371486,0.6286130000371486
