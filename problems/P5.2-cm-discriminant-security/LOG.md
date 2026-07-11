@@ -120,3 +120,30 @@
 **Changed my mind about:** [PROVED] Returning $\lambda^j$ is already enough to trigger the canonicalizer-to-ECDLP reduction; computing or storing the integer exponent $j$ is unnecessary.
 
 **Next:** Attack Q025 by expressing the index-two and index-three membership constraints as multiplicative-character observations and measuring whether their candidate intersections offer any algorithmic gain after acquisition cost.
+
+## Session 4 - 2026-07-11
+
+**Goal:** Complete a synthetic known-secret baseline for Q025 by intersecting exact unoriented $H$-membership constraints at all five validated $D=-7$ subgroup sizes.
+
+**Prediction (written before implementation or measurement):**
+
+- [CONJECTURE] Independent conditioned constraints will reduce the wrong-candidate count geometrically by the subgroup index $q$, reaching a unique candidate after about $\log_q r$ constraints. Failure to reach one by $2\lceil\log_q r\rceil+8$ in a material fraction of trials refutes the tested formulation.
+- [CONJECTURE] Filtering the surviving candidates will still require linear-in-$r$ total membership tests and therefore will not beat square-root ECDLP work. A validated sub-square-root solver over the increasing test sizes would refute this implementation-level prediction.
+
+**Next:** Implement and known-answer test the constraint filter before running the five-size sweep.
+
+### Session 4 termination - marked failure
+
+**Outcome:** failure by explicit user request.
+
+**Did:** Preserved the preregistered A005 plan and predictions without implementing or running the proposed synthetic constraint experiment.
+
+**Found:** [PROVED] No mathematical or empirical conclusion about Q025 was obtained in this session.
+
+**Prediction vs. outcome:** not tested because execution stopped before implementation.
+
+**Did not work:** The session did not reach a runnable experiment.
+
+**Changed my mind about:** nothing; the failure designation records workflow termination rather than a mathematical refutation.
+
+**Next:** none unless the user explicitly resumes Q025.

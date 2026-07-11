@@ -1,0 +1,7 @@
+bits,p,group_order,subgroup_order,cofactor,endomorphism_scalar,scalar_order,sample,secret,representative_x,representative_y,orbit_exponent,map_evaluations,elapsed_ns
+9,499,464,29,16,22,14,0,7,27,26,7,13,36400
+9,499,464,29,16,22,14,1,1,27,26,1,13,29800
+9,499,464,29,16,22,14,2,26,20,42,10,13,30800
+10,1019,1072,67,16,56,33,0,55,0,426,30,32,102300
+10,1019,1072,67,16,56,33,1,52,0,593,13,32,98100
+10,1019,1072,67,16,56,33,2,44,0,593,14,32,102100

@@ -1,0 +1,3 @@
+bits,p,a,b,group_order,subgroup_order,cofactor,omega,kernel_x,endomorphism_scalar,scalar_order,nonzero_quotient_orbits,exhaustive_order,bsgs_order,samples
+9,499,29,170,464,29,16,348,211,22,14,2,464,464,32
+10,1019,571,94,1072,67,16,217,563,56,33,2,1072,1072,32
