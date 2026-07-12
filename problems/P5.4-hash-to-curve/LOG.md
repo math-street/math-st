@@ -42,3 +42,47 @@ independent direct-formula oracles, and record exact applicability failures.
 **Changed my mind about:** [CITED] The prompt's obstruction summary underplays RFC's generic SvdW fallback: RFC 9380 explicitly recommends SvdW when a generic map is required (RFC 9380, Section 6.1). [PROVED] The remaining implementation gaps are uniform transport, low-level constant-time realization, exceptional target presentations, subgroup handling, and the scope beyond RFC's field assumptions; `COVERAGE.md` inventories them.
 
 **Next:** Implement the RFC Appendix F.1 SvdW straight-line fallback and exhaust it on toy $j=0$ and $j=1728$ curves; use that result to decide whether isogeny work or a generic fallback is the better unification route.
+
+## Session 2 - 2026-07-12
+
+**Goal:** Complete SG-08a, then connect the generic exceptional-invariant path to subgroup-cleared two-map hashing and determine precisely which formal requirements remain outside the characteristic-greater-than-three prime-field model.
+
+**Prediction (written before implementation or new experiments):**
+
+- [CONJECTURE] RFC 9380 Appendix F.1 SvdW will map every input to an on-curve point on valid toy $j=0$ and $j=1728$ fixtures with one recorded schedule per fixed fixture. A refuting test is any exhaustive oracle mismatch, off-curve output, or second schedule variant.
+- [CONJECTURE] A compile-time suite descriptor can unify dispatch, cofactor clearing, and the two-map sum across direct SSWU, SvdW, and Elligator 2, but it will still contain distinct map formulas and therefore will meet only the problem's stated partial-credit criterion. A refuting construction is one parameter substitution that makes the three implemented formulas identical without changing their target presentations.
+- [CONJECTURE] Exhaustive search below $p=100$ will find at least one rational odd-degree isogeny into a toy $j=0$ target and one into a toy $j=1728$ target from source curves with nonzero short-Weierstrass coefficients. A refuting test is exhaustive failure over all nonsingular source curves, degrees 3 and 5, and primes $5\le p<100$.
+
+**Did:**
+
+- [PROVED] Reconciled session 1 and reran the baseline: all 55 then-present shared tests and all 10 P5.4 tests passed under Python 3.13.4.
+- [PROVED] Implemented RFC Appendix F.1 SvdW, its public-parameter finder, an independent branch-using oracle, exhaustive fixtures, fixed outputs, and source/schedule tests.
+- [PROVED] Added an exhaustive odd-degree Vélu search and selected SSWU-to-3-isogeny workarounds whose source-map ranges avoid their kernels and whose target groups admit nontrivial prime-subgroup cofactor clearing.
+- [PROVED] Implemented RFC-shaped SHA-256 XMD, prime-field `hash_to_field`, six short-Weierstrass compile-time suites, two-map addition, and cofactor clearing.
+- [PROVED] Added Montgomery/Weierstrass and Montgomery/twisted-Edwards rational transports, a toy Edwards group model, Montgomery and Edwards two-map suites, and exhaustive transport/group-law checks.
+- [PROVED] Added `INDIFFERENTIABILITY.md` and `UNIFICATION.md` to separate the cited conditional theorem, empirical checks, and the unsatisfied universal requirements.
+- [PROVED] Added and ran the extended randomized timing experiment after recording its detector band below.
+
+**Extended timing prediction (written before the extended measurements):**
+
+- [CONJECTURE] For SvdW, both exceptional-invariant SSWU-isogeny paths, the generic Montgomery transport, and the Elligator-to-Edwards transport, the fixed-input class-A/class-B mean-time ratio will have a paired-bootstrap 95% interval intersecting $[0.8,1.25]$ after 160 randomized rounds of batches of 80 calls. A refuting result is an interval wholly below $0.8$ or wholly above $1.25$. This deliberately broad detector concerns the recorded Python process only and is not a constant-time certificate.
+
+**Found:**
+
+- [EMPIRICAL: $p\in\{11,13,29,37\}$, 12 fixtures, all 270 inputs] SvdW returned on-curve points equal to the independent oracle with one schedule per fixed fixture; the data include 30 exceptional denominators and use all three candidate positions (`code/validate_svdw.py`).
+- [EMPIRICAL: all nonsingular $AB\ne0$ curves over primes $5\le p<100$, all rational 3/5-subgroups] The search tested 62,664 curves and 45,166 kernels and found 1,492 $j=0$ or $j=1728$ quotients (`code/search_exceptional_isogenies.py`).
+- [EMPIRICAL: fixed $p=29$ and $p=59$ paths] Both SSWU ranges avoid the selected kernels; all 88 map inputs and 4,500 homomorphism pairs pass (`code/validate_isogeny_workarounds.py`).
+- [PROVED] The empty-message and `abc` outputs of SHA-256 XMD equal RFC 9380 Appendix K.1; these official byte-level vectors do not violate the field-size ceiling.
+- [EMPIRICAL: six short-Weierstrass suites, all 8,982 field pairs] Every two-map sum followed by cofactor multiplication lies in the declared prime-order subgroup, and every subgroup point occurs (`code/validate_hash_pipeline.py`).
+- [EMPIRICAL: $p=7$ Montgomery and twisted-Edwards suites, all 98 field pairs] Both form-specific pipelines land in the declared order-three subgroups; 3,744 group-law checks pass (`code/validate_curve_transports.py`).
+- [EMPIRICAL: Python 3.13.4, 160 rounds, batch 80, seed 5408] The six extended timing ratios range from $0.965472$ to $0.995130$ and every 95% interval intersects the preregistered $[0.8,1.25]$ band. Elligator-to-Edwards and $j=0$ SvdW have unadjusted intervals just below one (`code/measure_extended_timing.py`).
+- [PROVED] The common suite interface retains three distinct core formulas; it is a compile-time family and not a single uniform construction (`UNIFICATION.md`).
+- [PROVED] Characteristics two and three, extension fields, production curve-suite vectors, and a compiled constant-time field/complete group backend remain outside the achieved result. Q021 records this blocking gap.
+
+**Prediction vs. outcome:** [EMPIRICAL: session 2] All three main predictions matched within their registered toy ranges: every SvdW fixture passed; both exceptional isogeny families were found abundantly; and the common wrapper still dispatches among distinct formulas. [EMPIRICAL: same session] The extended timing prediction also matched its broad detector, although two small intervals excluded one and were recorded as runtime differences rather than suppressed.
+
+**Did not work:** [PROVED] The first safe-range isogeny fixtures had target orders 27 and 36. Multiplication by the naive cofactors 9 and 12 collapsed the whole rational group to the identity because the target groups had too much rational 3-torsion. Requiring a prime factor $r$ with $r\nmid h$ and exhaustively checking the cofactor image produced the replacement order-30 and order-60 fixtures over $p=29$ and $p=59$.
+
+**Changed my mind about:** [CITED] RFC Appendix D makes SvdW plus model transport a more useful generic fallback than the prompt's obstruction summary suggests (Faz-Hernandez et al. 2023). [EMPIRICAL: one $p=7$ curve] A valid SvdW $Z$ is not automatic on every tiny field, so this fallback must still be a suite construction with verified parameters, not an unqualified universal formula.
+
+**Next:** Treat SG-10a and SG-11a as separate research tasks: first add extension-field and characteristic-two/three constructions with independent toy oracles, then move the surviving compile-time family to a compiled constant-time field and complete group backend. Production curve vectors remain deferred unless the shared ceiling is explicitly lifted.

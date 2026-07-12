@@ -1,0 +1,3 @@
+form,mapping,seed,p,curve_parameters,inputs_tested,on_curve,oracle_matches,schedule_variants,group_order,group_law_checks,pipeline_field_pairs,subgroup_order,subgroup_support
+montgomery,elligator2,5407,7,j=4;k=3,7,7,7,1,12,1872,49,3,3
+twisted_edwards,elligator2_transport,5407,7,a=2;d=3,7,7,7,1,12,1872,49,3,3

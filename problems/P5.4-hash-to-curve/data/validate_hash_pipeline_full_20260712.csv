@@ -1,0 +1,7 @@
+suite_id,method,seed,p,curve,subgroup_order,cofactor,field_pairs,subgroup_checks,support_size,minimum_preimages,maximum_preimages,tv_distance_fraction,tv_distance_decimal,map_schedule_variants,abc_output
+TOY-P13-SHA256-SSWU-RO,sswu,5406,13,a=1;b=1,3,6,169,169,3,56,57,2/507,0.00394477,1,identity
+TOY-P13-SHA256-SVDW-RO,svdw,5406,13,a=1;b=1,3,6,169,169,3,49,64,23/507,0.04536489,1,identity
+TOY-P29-SHA256-SVDW-J0-RO,svdw,5406,29,a=0;b=9,5,6,841,841,5,156,180,98/4205,0.02330559,1,identity
+TOY-P29-SHA256-SSWU-ISO-J0-RO,sswu_isogeny,5406,29,a=0;b=9,5,6,841,841,5,145,212,258/4205,0.06135553,1,x=20;y=18
+TOY-P59-SHA256-SVDW-J1728-RO,svdw,5406,59,a=56;b=0,5,12,3481,3481,5,585,812,917/17405,0.05268601,1,x=46;y=54
+TOY-P59-SHA256-SSWU-ISO-J1728-RO,sswu_isogeny,5406,59,a=56;b=0,5,12,3481,3481,5,337,1156,3477/17405,0.19977018,1,x=15;y=47
