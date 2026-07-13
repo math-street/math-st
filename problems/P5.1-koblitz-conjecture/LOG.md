@@ -142,3 +142,52 @@
 **Final validation:**
 
 - [EMPIRICAL: 81 tests] `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 81/81 tests in 9.13 seconds after the full-table implementation and documentation updates.
+
+## Session 4 -- 2026-07-13
+
+**Goal:** Adversarially self-verify the completed work through independent computational paths and explicit data-flow review, with emphasis on detecting circular validation.
+
+**Prediction (written before the new checks):**
+
+- [CONJECTURE] The Cornacchia--Walsh CM orders will match the generic Hasse-interval BSGS counter on deterministic large-prime samples through $10^9$; one mismatch refutes this prediction.
+- [CONJECTURE] Independent SciPy quadrature will agree with the mpmath equation-(7.1) implementation to substantially below the 0.5 rounding threshold at every audited cutoff; a discrepancy of at least $10^{-3}$ refutes this prediction.
+- [CONJECTURE] Full and segmented sieves will yield identical split-prime sequences at an enlarged audit bound, and the published table fixture will have no data-flow path into event counting; any mismatch or fixture-dependent count refutes this prediction.
+- [CONDITIONAL: LMFDB's 540.f2 adelic generators and level are correct] An independent exact-arithmetic recomputation will recover $\delta_{E,3}(90)=91/648$ and correction $5824/5913$; any different fraction refutes the implementation.
+
+**Environment preflight:**
+
+- [EMPIRICAL: Python 3.13.4 on Windows 11] SageMath, PARI/GP, Singular, and msolve remain unavailable.
+- [EMPIRICAL: 81 tests] The pre-audit shared and P5.1 suite passed 81/81 tests in 8.22 seconds.
+
+**Did:**
+
+- Compared the specialized CM counter with generic BSGS on deterministic split and inert primes spanning five orders of magnitude.
+- Wrote an independent odd-only prime sieve and compared its full sequence with both production sieve modes.
+- Evaluated equation (7.1) independently with SciPy quadrature in logarithmic coordinates.
+- Recomputed both Euler products at 60-digit precision and decomposed the 540.f2 lift count into CRT-local conditions.
+- Inspected the counting function's AST, corrupted a published fixture deliberately, and added persistent large-prime and anti-circularity regression tests.
+- Audited the prose for stale range claims and wrote `audits/SELF-CHECK-20260713.md`.
+
+**Found:**
+
+- [EMPIRICAL: 12 split primes $10009\le p\le900010009$ and 3 inert primes $10007\le p\le100000007$] Every specialized CM order equals the generic BSGS order.
+- [EMPIRICAL: split primes $p\le5000000$] Independent odd-only, production full, and production segmented sieves return the identical 174,193-element sequence.
+- [EMPIRICAL: $x\in\{2\mathbin{\cdot}10^7,4\mathbin{\cdot}10^8,10^9\}$] SciPy and mpmath integral predictions differ by at most $1.2\mathbin{\cdot}10^{-9}$.
+- [EMPIRICAL: Euler factors $\ell\le10^6$] Sixty-digit recomputation differs from the float universal and CM products by $9.0\mathbin{\cdot}10^{-15}$ and $2.4\mathbin{\cdot}10^{-13}$ respectively.
+- [EMPIRICAL: 500 deterministic quotient samples below $10^9$] Eratosthenes, repository Miller--Rabin, and SymPy primality results have zero mismatches.
+- [EMPIRICAL: exact CRT-decomposed enumeration] The independent count gives 98,280 favorable lifts out of 699,840 and reproduces $91/648$, $455/864$, and $5824/5913$.
+- [PROVED] `measure` does not reference `PUBLISHED_TABLE`; corrupting the $x=10000$ fixture leaves the computed count at 105 and changes only the comparison field.
+- [EMPIRICAL: documentation audit] Two stale Session-1 scope sentences were corrected, with no effect on code or data.
+- [EMPIRICAL: 83 tests] The final suite passed 83/83 tests in 5.62 seconds.
+
+**Prediction vs. outcome:** matched. [EMPIRICAL: all Session 4 checks] No production discrepancy or circular-validation path was found.
+
+**Did not work:**
+
+- [EMPIRICAL: disposable audit harness] The first odd-only sieve used an off-by-one extended-slice length and raised `ValueError`; deriving the slice count from its start index fixed the harness, after which all three sequences agreed. This code never entered a repository artifact.
+
+**Changed my mind about:**
+
+- [EMPIRICAL: documentation audit] Chronologically true claims can become misleading when later sections extend their scope; session-qualified wording is necessary even when append-only logs remain unchanged.
+
+**Next:** The self-verification is complete. Q026 remains the explicit theoretical boundary; no computational or documentation defect is open.
