@@ -347,3 +347,99 @@ allowing A008-style target-indexed advice.
   with zero violations, and the full one-to-four-shift CSV was regenerated.
 - [EMPIRICAL: syntax and tag audit] Every P1.2 code driver compiled, and no
   unresolved `[UNVERIFIED]` or compound epistemic tag remained in P1.2.
+
+## Session 5 — 2026-07-13
+
+**Goal:** Attack the coordinate-aware residual P1.2/Q004 using the concrete
+smooth-subgroup factor base of Petit–Kosters–Messeng rather than another
+target-oblivious pair schedule.
+
+**Prediction (written before the experiment):**
+
+- [HEURISTIC] Over a prime-order curve above $p=65537$, the multiplicative
+  subgroup $H\subset\mathbb F_p^*$ of order $64=2^6$ will yield between 32 and
+  96 curve points and its six-squaring membership chain will agree with
+  $x^{64}=1$ on every field element. Any predicate mismatch or base size
+  outside that range falsifies this prediction.
+- [HEURISTIC] Three-term decomposition counts for this base will be within 25%
+  of the exact random-base expectation $s^3/r$, and its generic pair-scan work
+  will not improve by a factor of two over a size-matched random base. The
+  respective bootstrap interval excluding $[0.75,1.25]$ or pair-work ratio
+  interval lying wholly below $0.5$ falsifies the prediction.
+- [HEURISTIC] The low-degree composition chain will make membership succinct
+  but will not by itself produce a polylogarithmic decomposition finder. A
+  validated coordinate solver whose operation count is polynomial in
+  $\log p$ would falsify this assessment.
+
+**Plan:** Find a deterministic prime-order toy curve over $\mathbb F_{65537}$,
+validate the subgroup and chain exhaustively, compare 96 common targets against
+three matched random bases with hierarchical bootstrap intervals, and keep
+predicate structure separate from actual finder complexity.
+
+**Additional Gröbner prediction (written after the density run but before any
+Gröbner benchmark):**
+
+- [HEURISTIC] Both the direct root constraint and repeated-squaring chain will
+  complete on the tiny $p=17$, order-4 subgroup fixture, but moving to
+  $p=257$, subgroup order 16 will either trigger a five-second timeout in at
+  least one encoding or increase the returned basis size, maximum degree, or
+  term count. If both encodings complete without any such growth, this
+  prediction is falsified.
+- [HEURISTIC] A completion at tiny scale is a correctness control, not an
+  asymptotic complexity result. Only a proved polynomial bound in $\log p$ or
+  stable completion over separated growing sizes would falsify the assessment
+  that the coordinate solver remains missing.
+
+**Did:**
+
+- Read and summarized Petit–Kosters–Messeng (PKC 2016) and
+  Amadori–Pintore–Sala (FFA 2018) in `refs/` and the root bibliography.
+- Added `code/measure_smooth_subgroup.py`, exhaustively checked its subgroup
+  and curve predicates, and compared it with matched random bases.
+- Added `code/benchmark_smooth_groebner.py` with subprocess timeouts and
+  separate direct and repeated-squaring encodings of the actual $f_4$ system.
+- Added four unit tests and repaired the shared finite-field compatibility API
+  without removing the newer tuple-based API used elsewhere.
+
+**Found:**
+
+- [PROVED] The order-64 subgroup predicate is exactly expressible by six
+  quadratic squaring steps and is coordinate-aware, so A009 does not cover it.
+- [EMPIRICAL: all field and curve elements at $p=65537$] The explicit
+  subgroup, $x^{64}=1$, and chain predicates had zero mismatches; the curve
+  factor base had size 60.
+- [EMPIRICAL: 96 targets, three matched random controls] The normalized count
+  ratio was 1.112 with 95% interval $[0.819,1.470]$; the pair-check ratio was
+  0.969 with interval $[0.827,1.130]$.
+- [EMPIRICAL: SymPy 1.14.0] Both encodings completed at $p=17$ and both timed
+  out after five seconds at $p=257$ and $p=65537$. At the largest fixture the
+  chain changed maximum input degree 64 to 12 and variable count 3 to 18.
+- [CITED] Both audited papers leave the relevant prime-field polynomial-system
+  complexity open; neither supplies the Variant-S decoder.
+
+**Prediction vs. outcome:** [EMPIRICAL: preregistered experiment] Matched.
+Every correctness and size control passed, neither bootstrap interval showed
+the preregistered advantage, and the $p=257$ systems timed out.
+
+**Did not work:** [EMPIRICAL: tested solver and timeout] Low-degree subgroup
+membership did not translate into a completed Gröbner solve beyond the tiny
+fixture. The timeout is recorded as solver status, not as nonexistence of a
+decomposition or a general lower bound.
+
+**Changed my mind about:** [PROVED] Coordinate structure exists in prime-field
+factor bases outside translate-probe search. [EMPIRICAL: tested range] Making
+that structure low-degree can trade degree for auxiliary variables without
+making the decomposition finder efficient.
+
+**Next:** None for literal P1.2. If the human selects Variant S, attack Q004
+through a coordinate-aware complexity model or a solver with a proved total
+resource bound; do not repeat generic pair scanning.
+
+**Final validation:**
+
+- [EMPIRICAL: local CPython 3.13.4] All 69 shared-library tests and all 17
+  P1.2 tests passed.
+- [EMPIRICAL: seven smoke drivers] Every documented P1.2 smoke command
+  completed, including both smooth-subgroup Gröbner encodings.
+- [EMPIRICAL: syntax audit] Every Python file directly under P1.2 `code/`
+  passed `py_compile`.

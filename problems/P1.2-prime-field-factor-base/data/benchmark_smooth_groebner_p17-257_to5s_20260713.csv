@@ -1,0 +1,5 @@
+date,sympy_version,p,a,b,r,subgroup_order,encoding,status,timeout_s,system_build_s,variables,equations,input_max_total_degree,input_terms,basis_polynomials,basis_max_total_degree,basis_terms,elapsed_s,target_x
+2026-07-13,1.14.0,17,2,11,11,4,direct,completed,5.0,0.12246740004047751,3,4,12,122,7,4,42,0.26227650011423975,4
+2026-07-13,1.14.0,17,2,11,11,4,chain,completed,5.0,0.00468919996637851,6,7,12,128,18,3,101,1.0746204999741167,4
+2026-07-13,1.14.0,257,127,216,241,16,direct,timeout,5.0,0.10595899994950742,3,4,16,131,,,,,138
+2026-07-13,1.14.0,257,127,216,241,16,chain,timeout,5.0,0.008641800028271973,12,13,12,149,,,,,138

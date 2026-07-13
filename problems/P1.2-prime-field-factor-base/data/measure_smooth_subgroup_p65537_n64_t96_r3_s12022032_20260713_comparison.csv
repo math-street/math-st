@@ -1,0 +1,2 @@
+p,candidate_kind,baseline_kind,candidate_size,baseline_size,normalized_count_ratio,normalized_count_ratio_ci_low,normalized_count_ratio_ci_high,pair_checks_ratio,pair_checks_ratio_ci_low,pair_checks_ratio_ci_high,bootstrap_samples
+65537,smooth_subgroup,random_matched_subgroup,60,60,1.11174785,0.818748672,1.46965814,0.969480719,0.826807404,1.12978044,2000

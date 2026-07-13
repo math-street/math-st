@@ -1,0 +1,2 @@
+date,seed,p,a,b,r,trace,curve_attempts,curve_search_s,primitive_root,subgroup_order,subgroup_generator,subgroup_elements,factor_base_size,chain_length,chain_max_degree,field_predicate_mismatches,curve_membership_mismatches
+2026-07-13,12022032,65537,31771,14358,65809,-271,56,0.518661900,3,64,8224,64,60,6,2,0,0
