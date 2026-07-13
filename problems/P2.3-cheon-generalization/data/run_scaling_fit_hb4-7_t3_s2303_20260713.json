@@ -1,0 +1,19 @@
+{
+  "all_recoveries_verified": true,
+  "bootstrap_repetitions": 100,
+  "intercept": 1.4033343244901877,
+  "metric": "median scalar-multiplication calls",
+  "seed": 2303,
+  "sizes": 4,
+  "slope": 0.2186478106016502,
+  "slope_ci_95": [
+    0.20238627114276844,
+    0.2649067893299601
+  ],
+  "target_interval": [
+    0.2,
+    0.3
+  ],
+  "target_interval_intersects_ci": true,
+  "trials_per_size": 3
+}
