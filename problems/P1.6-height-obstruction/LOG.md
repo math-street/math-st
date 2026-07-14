@@ -54,3 +54,58 @@ obstruction. The missing theorem must combine a no-small-relation finite-field
 input distribution with rational dependence or rank below $k$.
 
 **Next:** Add an exact small-relation search for the random rational lifts at bits $5,7,9,11$, stratify height and discriminant by detected relation size, and compare that conditional sample with Section 5 of Jacobson et al. (2000).
+
+## Session 2 - 2026-07-14
+
+**Goal:** Complete SG-08 by exactly classifying bounded relations in the
+existing random lifts, then use the result to decide whether a faithful
+$p=17$ xedni reproduction is the next useful experiment.
+
+**Prediction (written before implementing or running the relation search):**
+[CONJECTURE] Most finite-field tuples will already have no relation with
+$\ell_\infty$ coefficient bound eight, and no rational relation will occur
+unless the finite tuple first passes that necessary filter. This prediction is
+refuted if at least 10% of the random general-model lifts have a rational
+relation of bound at most eight.
+
+**Positive result criterion:** [EMPIRICAL: pre-registered] Every row is checked
+by exact arithmetic, relation witnesses re-evaluate to the identity, and a CSV
+separates finite-field no-small-relation cases from rationally dependent cases
+by $k$, bit size, variant, height, and discriminant height.
+
+**Negative result criterion:** [EMPIRICAL: pre-registered] If exact rational
+coordinates exceed a 60-second per-matrix ceiling, retain the finite-field
+filter and mark the affected rational rows as censored rather than independent.
+
+**Did:**
+- Implemented an exact meet-in-the-middle minimal-$\ell_\infty$ relation search and exact witness re-evaluation.
+- Audited all stored variants at bits 5,7,9,11 for $k=1,2,3,4$ through coefficient bound eight and wrote row-level and stratified CSV files.
+- Implemented a diagnostic $p=17$ projective-lattice prototype, validated its reusable algebraic components, and stopped before accepting any dependency-rate output.
+- Marked the $p=17$ reproduction as failed dead attempt A002 at the user's direction.
+
+**Found:**
+- [EMPIRICAL: 144 curve variants, coefficient bound 8] A finite-field relation existed in 99 variants, while a rational relation existed in only two variants.
+- [EMPIRICAL: the same 144 variants] The rational statuses were 97 `no-relation-through-bound`, 45 `skipped-no-finite-relation`, and two `relation`, with no timeout-censored rows.
+- [EMPIRICAL: 108 variants with k in {2,3,4}] No rational relation through coefficient bound eight was found.
+- [EMPIRICAL: two rational-relation variants] Both witnesses were coefficient $-2$ on the same $p=31$, $k=1$, $y=0$ two-torsion input, under two different lift variants.
+
+**Prediction vs. outcome:** [EMPIRICAL: 144 curve variants] The prediction that
+most finite tuples would lack a relation through bound eight was wrong because
+99 of 144 had one, especially every tested $k=3,4$ tuple. The registered 10%
+rational-relation falsifier was not reached: the observed bounded rational rate
+was $2/144$.
+
+**Did not work:** [PROVED] A002 is not a reproduction of the published $p=17$
+experiment. The paper does not specify the sampling/tie-breaking distribution
+needed to match the reported rate, and a bound-eight relation search cannot
+replace the paper's 2-descent test of dependence.
+
+**Changed my mind about:** [EMPIRICAL: this bounded audit] Small finite-field
+relations are common for the tested $k=3,4$ samples, but they almost never lift
+to equally small rational relations. Finite relation incidence alone is
+therefore a weak proxy for useful lifted dependence.
+
+**Next:** Keep A002 closed unless the original sampling implementation or a
+complete distribution and equivalent 2-descent pipeline becomes available;
+this reopening condition is Q018. Use the exact SG-08 data only for
+bounded-relation claims.
