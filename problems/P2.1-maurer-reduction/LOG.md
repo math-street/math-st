@@ -399,3 +399,60 @@ algorithmic inverse problem, not merely a short-interval existence theorem.
 interval can be generated directly in polynomial time; if not, state the
 precise lattice/knapsack obstruction before auditing explicit realization
 algorithms beyond CM.
+
+## Session 8 - 2026-07-14
+
+**Goal:** Decide whether Boneh's CRT-decoding algorithm turns the RH
+existence of a polylog-smooth integer in the abelian-surface interval into a
+polynomial-time finder, and isolate the exact obstruction if it does not.
+
+**Prediction (written before completing the primary-source audit):**
+[CONJECTURE] CRT list decoding will enumerate integers having a sufficiently
+large strongly smooth divisor, but Younis's theorem counts ordinary smooth
+integers and will not directly guarantee the stronger decoder promise.  The
+route will therefore expose a precise promise gap rather than complete the
+finder.
+
+**Did:**
+- Checked Boneh's author-hosted primary text and recovered the exact
+  list-decoding threshold.
+- Substituted the A007 scales and audited the best possible limit as the
+  lattice dimension grows.
+
+**Found:**
+- [CITED] Boneh lists integers with a sufficiently large strongly smooth
+  divisor when
+  $T>S^{\sqrt{\log(4H)/\log S}+5/(4d)}$.
+- [PROVED] For $H=X^{3/4}$ and $s=(\log X)^K$, $K>1$, the irreducible
+  square-root term makes this inequality fail for every $d$.
+- [PROVED] The full-order decoder can reach this interval scale only near
+  $s=c\log X$, $1\le c\le4/3$, where strongly smooth values number only
+  $X^{o(1)}$ globally and almost all disjoint $X^{3/4}$ intervals are empty.
+
+**Prediction vs. outcome:** [PROVED] The prediction was correct about the
+promise mismatch but too optimistic about the decoder radius.  Even a strong-
+smoothness promise at Younis's polylogarithmic threshold does not satisfy the
+CRT parameter inequality.
+
+**Did not work:** [PROVED] Increasing the LLL dimension only removes the
+$5/(4d)$ loss; it cannot remove the term
+$\sqrt{\log(4H)/\log S}$.
+
+**Changed my mind about:** [PROVED] CRT decoding is not a plausible generic
+bridge from short-interval density to construction at the surface scale.  A
+finder must use the exponent-vector distribution or additional arithmetic
+structure of the target intervals.
+
+**Next:** Audit polynomial-time realization of a supplied ordinary abelian-
+surface Weil polynomial, including algorithms outside genus-two CM, and test
+whether the Maurer--Wolf interface can be obtained without constructing a
+principal genus-two Jacobian.
+
+### Correction to Session 7
+
+[CITED] Bröker--Howe--Lauter--Stevenhagen's heuristic polynomial-time
+algorithm prescribes $|C(\mathbb F_p)|$, not
+$|J(C)(\mathbb F_p)|$.  Only their CM route addresses prescribed Jacobian
+order, and that route has exponential worst cases.  The earlier phrase
+"heuristic most-input alternative" conflated the two inverse problems; A007,
+NOTES, the reference note, bibliography, and Q005 now state the distinction.
