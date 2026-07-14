@@ -239,3 +239,66 @@ test, and leaves the checked-in \(p=127\) data unchanged.
 **[EMPIRICAL: corrected combined shared and P5.3 suite]** All 78 tests passed
 in 11.27 seconds; the six A004 kernel tests passed in 3.33 seconds, and
 `compileall` succeeded.
+
+## Session 4 — 2026-07-14
+
+**Goal:** Expand P5.3/Q014 and Q015 in the repository-wide
+`OPEN_QUESTIONS.md` until each entry is self-contained about its exact
+question, evidence, theorem or experiment, audit consequence, artifacts,
+scope boundary, and reopening condition.
+
+**Prediction (written before the Session 4 baseline or edits):** No new
+mathematical or archival gap will appear. Q014 will remain numerically
+unidentifiable but source-bounded and nonblocking; Q015 will remain resolved
+for the fixed toy class universe. The expansion should require documentation
+only, apart from correcting any stale validation metadata it exposes.
+
+**Baseline:** `env/check_env.py` passed with Python 3.13.4; the combined suite
+passed 79 tests in 8.25 seconds.
+
+**Did:**
+
+- Replaced the compressed Q014 entry with its exact acceptance criterion,
+  six-source evidence ledger, final-output non-identifiability argument, audit
+  consequences, and falsifiable reopening certificate.
+- Replaced the compressed Q015 entry with the complete toy profile,
+  isomorphism action, kernel projection formula, exhaustive census, exact
+  mass and total-variation derivation, rejection/unranking proof, minimax
+  proof, artifact hashes, and production boundary.
+- Corrected A004's stale “five tests” annotation to the current six dedicated
+  kernel tests.
+
+**Found:**
+
+- **[PROVED]** Q014's surviving uncertainty is solely archival: no theorem or
+  audit entry depends on guessing the missing historical menu.
+- **[PROVED]** Q015's word “best” becomes precise only after fixing the
+  equivalence projection and loss function; under class projection and maximum
+  singleton mass, uniform is the unique minimizer.
+- **[EMPIRICAL: documentation audit on 2026-07-14]** Every numerical Q015
+  statement now points to the generating script, dedicated tests, stored data,
+  or exact derivation, and Q014 names the local reference record for every
+  inspected source family.
+
+**Prediction outcome:** Matched. The detailed pass exposed no new mathematical
+or archival gap; it exposed only the stale A004 test-count annotation predicted
+as possible validation metadata.
+
+**Did not work:** The earlier compressed entries were correct but could not
+serve as standalone resume packets because they omitted acceptance criteria,
+negative-evidence boundaries, the exact safety profile, and the probability
+derivation.
+
+**Changed my mind about:** A repository-wide open-question entry should not
+merely point at an attempt file when the distinction between unresolved
+history and resolved mathematics is central. Q014/Q015 now preserve that
+distinction locally.
+
+**Next:** None at the authorized scope. Q014 has an evidence-triggered
+reopening condition; a production or differently projected Q015 is explicitly
+a new problem.
+
+**Final validation:** **[EMPIRICAL: combined shared and P5.3 suite]** All 79
+tests passed in 9.72 seconds; `compileall` succeeded, the unresolved-status
+scan was empty, the Markdown control-character and stale-state scans were
+clean, and `HANDOFF.md` remained within its cap at 99 lines.
