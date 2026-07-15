@@ -1,0 +1,110 @@
+{
+  "attempted_draws": 128,
+  "coefficient_distribution": "author-code reproduction: randint(-A,A+1), inclusive [-10,11]",
+  "csv": "bls24-192_norms_paper-code_sampling-a10_n128_s20260724_20260715.csv",
+  "difference_paper_input_cost_from_paper_security": -0.6302875141784625,
+  "difference_sampled_cost_from_paper_security": -0.5492997377322411,
+  "distribution_mode": "paper-code",
+  "finite_cost_from_paper_norm_inputs": {
+    "enough_relations": true,
+    "factor_base_log2": 104.55003212882706,
+    "linear_algebra_cost_log2": 200.54259576941843,
+    "norm_f_bits": 1295.0,
+    "norm_g_bits": 1460.0,
+    "reduced_factor_base_log2": 104.55003212882706,
+    "relation_yield_log2": 104.63156446195877,
+    "sieve_cost_log2": 202.8189883121604,
+    "sieve_space_log2": 202.9005206452921,
+    "smoothness_f_log2": -44.846444164263744,
+    "smoothness_g_log2": -53.42251201906957,
+    "total_cost_log2": 203.08971248582154
+  },
+  "finite_cost_from_sampled_mean_bit_lengths": {
+    "enough_relations": false,
+    "factor_base_log2": 104.55003212882706,
+    "linear_algebra_cost_log2": 200.54259576941843,
+    "norm_f_bits": 1295.8671875,
+    "norm_g_bits": 1461.0,
+    "reduced_factor_base_log2": 104.55003212882706,
+    "relation_yield_log2": 104.53441119949518,
+    "sieve_cost_log2": 202.91614157462396,
+    "sieve_space_log2": 202.9005206452921,
+    "smoothness_f_log2": -44.890640493078045,
+    "smoothness_g_log2": -53.475468952718856,
+    "total_cost_log2": 203.17070026226776
+  },
+  "finite_cost_parameters": {
+    "coefficient_bound": 9,
+    "dickman_polynomial_degree": 30,
+    "eta": 24,
+    "factor_base_numerator": 2.0,
+    "filtering_log2_bound_power": 1.0,
+    "linear_algebra_automorphisms": 1,
+    "linear_algebra_overhead_bits": 0.0,
+    "matrix_numerator": 1.0,
+    "nonzero_entries_per_row": 128,
+    "relation_automorphisms": 1,
+    "roots_of_unity_index": 1,
+    "sieve_overhead_bits": 0.0,
+    "sieve_space_sign_quotient": 2.0,
+    "smoothness_bound_bits": 109.8
+  },
+  "profile": {
+    "automorphisms": 1,
+    "citation_section": "7.2.2",
+    "coefficient_bound": 9,
+    "eta": 24,
+    "family": "BLS24",
+    "level": 192,
+    "name": "bls24-192",
+    "paper_norm_f_bits": 1295.0,
+    "paper_norm_g_bits": 1460.0,
+    "paper_security_bits": 203.72,
+    "roots_of_unity_index": 1,
+    "seed": -72066390130949696,
+    "smoothness_bound_bits": 109.8
+  },
+  "rng_seed": 20260724,
+  "sampling_coefficient_bound": 10,
+  "status": "EMPIRICAL exact-integer nested-resultant sample",
+  "summary": {
+    "accepted_samples": 128,
+    "f": {
+      "bit_length_difference_from_paper": 0.8671875,
+      "bit_length_normal_95_interval": [
+        1289.298096894963,
+        1302.436278105037
+      ],
+      "bit_length_sample_standard_deviation": 37.91876337184015,
+      "bit_length_standard_error": 3.3515768393045304,
+      "log2_difference_from_paper": 0.3480811243846347,
+      "log2_normal_95_interval": [
+        1288.7822457635398,
+        1301.9139164852295
+      ],
+      "log2_standard_error": 3.34991600043106,
+      "mean_integer_bit_length": 1295.8671875,
+      "mean_log2_norm": 1295.3480811243846,
+      "paper_value": 1295.0
+    },
+    "g": {
+      "bit_length_difference_from_paper": 1.0,
+      "bit_length_normal_95_interval": [
+        1459.9610078323637,
+        1462.0389921676363
+      ],
+      "bit_length_sample_standard_deviation": 5.997374753757503,
+      "bit_length_standard_error": 0.5300980447123663,
+      "log2_difference_from_paper": 0.528148697646202,
+      "log2_normal_95_interval": [
+        1459.4856545687005,
+        1461.570642826592
+      ],
+      "log2_standard_error": 0.5318847596661753,
+      "mean_integer_bit_length": 1461.0,
+      "mean_log2_norm": 1460.5281486976462,
+      "paper_value": 1460.0
+    }
+  },
+  "zero_norm_policy": "reject and resample"
+}

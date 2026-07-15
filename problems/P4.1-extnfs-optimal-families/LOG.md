@@ -54,3 +54,33 @@
 **Changed my mind about:** [PROVED] A second family regression did not require tuning a new asymptotic prefactor; the finite equation was adequate once the exact norm construction, Galois quotient, and stable Dickman evaluation were combined.
 
 **Next:** None for P4.1's stated scope. Treat a larger family taxonomy or concrete production prime-seed generation as a new task rather than silently expanding this search space.
+
+## Session 3 — 2026-07-15
+
+**Goal:** Extend exact norm validation to every implemented family, audit the authors' public sampling code, and report any irreducible reproduction discrepancy instead of ending at the BLS12 row.
+
+**Protocol note:** [EMPIRICAL] The goal was stated in the live work commentary before the exploratory 512-sample runs, but a numeric prediction was not first written to this log. The forward prediction below is therefore reserved for a new independent-seed confirmation run rather than being retroactively attached to the completed samples.
+
+**Prediction (written before independent-seed confirmation):** [HEURISTIC] With the public-code bound convention `randint(-A,A+1)`, a fresh 128-sample KSS16 run will remain within 1.0 cost bit of the printed 139.0 row, while BLS24 will remain at least 1.0 bit below the printed 203.72 row. The prediction is falsified if either inequality reverses. All shared and P4.1 tests should still pass after replacing binary64 Dickman integration with the 80-decimal-digit evaluator.
+
+**Did:**
+- [EMPIRICAL: independent RNG seed 20260723, 128 samples] Confirmed the prediction: KSS16 was 0.542 bits below its printed row and BLS24 was 1.800 bits below its printed row.
+- Inspected the authors' public sampler and found its inclusive `randint(-A,A+1)` bound differs from the paper's stated `[-A,A]` domain.
+- Replaced binary64 Dickman integration with a cached 80-decimal-digit, degree-30 interval evaluator and added finite-row regressions through BLS24 `u=1460/109.8`.
+- Added deterministic exact samplers for the published BN, KSS16, and BLS24 constructions, retained both coefficient domains, and combined eight checked-in runs into one CSV/JSON audit.
+
+**Next experiment prediction (written before execution):** [HEURISTIC] If the BLS24 discrepancy comes from applying both an integer ceiling to an internal coefficient bound near 10 and the public sampler's extra `+1`, then sampling the profile with nominal bound 10 under the public-code convention will place the mean `f` norm within 10 bits of 1295. Failure leaves the historical norm row under-specified by the surviving public artifacts.
+
+**Found:**
+- [EMPIRICAL: 512 samples per convention, RNG seed 20260722] BN sampled costs differ from the printed 131.3 row by 0.026/0.035 bits; KSS16 differs by -0.847 bits on `[-A,A]` and -0.120 bits under the public-code bound.
+- [EMPIRICAL: same BLS24 runs] Printed `A=9` gives 201.255 bits on `[-A,A]` and 201.803 bits under the public-code convention, respectively 2.465 and 1.917 bits below 203.72.
+- [EMPIRICAL: preregistered RNG seed 20260724, 128 samples] The sampling-bound-10 public-code run gives mean integer bit lengths 1295.867/1461.000, with both printed norms inside the normal 95% intervals, and cost 203.171 bits.
+- [PROVED] The paper's printed domain and public source cannot denote the same discrete distribution because Python `randint` includes both endpoints.
+
+**Prediction vs. outcome:** [EMPIRICAL: session 3] Both forward predictions matched. The independent seed kept KSS16 within 1 bit and BLS24 more than 1 bit low at printed `A=9`. The bound-10 sensitivity put the `f` norm only 0.867 bits above 1295, well inside the preregistered 10-bit threshold, and also reproduced the `g` norm within one bit. The final suite passed all 70 shared and 10 P4.1 tests, plus `compileall` and the stale-tag scan.
+
+**Did not work:** [EMPIRICAL] Direct downloads of the paper PDF through ePrint and HAL were blocked by anti-bot interstitials. Primary-source text extraction, the authors' public Python source, and their published parameter archive nevertheless independently fixed the relevant formulas. The printed `A=9` BLS24 row did not reproduce under either literal coefficient-domain interpretation. The first combined P4.1 test run exposed one indentation error in the newly changed comparison-test assertion; correcting it and rerunning the entire suite resolved the failure.
+
+**Changed my mind about:** [HEURISTIC] The BLS24 gap is unlikely to be a polynomial-selection error: a one-unit sampling-bound change explains the printed norms on both sides simultaneously. The strongest surviving explanation is an unrecorded internal rounding step, but it remains an inference rather than a recovered historical fact.
+
+**Next:** None for the declared deliverable. Historical BLS24 setting recovery is isolated as non-blocking Q027; expanding the taxonomy or generating production primes is new scope.

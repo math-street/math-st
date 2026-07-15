@@ -1,0 +1,209 @@
+{
+  "analytic_argument": "For x=|u|>=256, triangle inequality gives N(u)>=x^6(x^4-2x^3-5x^2-6588). The parenthesis is positive and increasing; the bound at 256 exceeds 980*2^60, hence p=N(u)/980>2^60.",
+  "analytic_cutoff_abs_seed": 256,
+  "bound_ratio": 1061.5330526546556,
+  "ceiling": 1152921504606846976,
+  "ceiling_relation": "strict p < 2^60 (there is no equality candidate)",
+  "claim": "No integral KSS16 seed has prime p and prime r with p < 2^60.",
+  "cutoff_lower_bound_numerator": 1199386998571374766718976,
+  "enumerated_seed_count": 511,
+  "enumerated_seed_interval_inclusive": [
+    -255,
+    255
+  ],
+  "evaluation_failures_nonintegral_or_nonpositive": 495,
+  "integral_parameters_above_ceiling": 8,
+  "integral_parameters_below_ceiling": 8,
+  "parameters_below_ceiling": [
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 405788857287465401,
+      "p_bits": 59,
+      "p_factorization": {
+        "236421257": 1,
+        "269": 1,
+        "6380597": 1
+      },
+      "p_is_prime": false,
+      "r": 499432441153,
+      "r_bits": 39,
+      "r_factorization": {
+        "180289": 1,
+        "4801": 1,
+        "577": 1
+      },
+      "r_is_prime": false,
+      "seed": -115,
+      "trace": -1149347098,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 59843265565071853,
+      "p_bits": 56,
+      "p_factorization": {
+        "37355510021": 1,
+        "41": 2,
+        "953": 1
+      },
+      "p_is_prime": false,
+      "r": 108313603633,
+      "r_bits": 37,
+      "r_factorization": {
+        "16417": 1,
+        "17": 1,
+        "4001": 1,
+        "97": 1
+      },
+      "r_is_prime": false,
+      "seed": -95,
+      "trace": -442160646,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 33287464056733,
+      "p_bits": 45,
+      "p_factorization": {
+        "53": 1,
+        "628065359561": 1
+      },
+      "p_is_prime": false,
+      "r": 274535873,
+      "r_bits": 29,
+      "r_factorization": {
+        "113": 1,
+        "17": 1,
+        "241": 1,
+        "593": 1
+      },
+      "r_is_prime": false,
+      "seed": -45,
+      "trace": -10544516,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 90317658185,
+      "p_bits": 37,
+      "p_factorization": {
+        "18063531637": 1,
+        "5": 1
+      },
+      "p_is_prime": false,
+      "r": 2491537,
+      "r_bits": 22,
+      "r_factorization": {
+        "113": 1,
+        "1297": 1,
+        "17": 1
+      },
+      "r_is_prime": false,
+      "seed": -25,
+      "trace": -558064,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 105890880565,
+      "p_bits": 37,
+      "p_factorization": {
+        "26573": 1,
+        "5": 1,
+        "796981": 1
+      },
+      "p_is_prime": false,
+      "r": 2491537,
+      "r_bits": 22,
+      "r_factorization": {
+        "113": 1,
+        "1297": 1,
+        "17": 1
+      },
+      "r_is_prime": false,
+      "seed": 25,
+      "trace": 558066,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 36376013717017,
+      "p_bits": 46,
+      "p_factorization": {
+        "13": 1,
+        "513517141": 1,
+        "5449": 1
+      },
+      "p_is_prime": false,
+      "r": 274535873,
+      "r_bits": 29,
+      "r_factorization": {
+        "113": 1,
+        "17": 1,
+        "241": 1,
+        "593": 1
+      },
+      "r_is_prime": false,
+      "seed": 45,
+      "trace": 10544518,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 62415714535676897,
+      "p_bits": 56,
+      "p_factorization": {
+        "62415714535676897": 1
+      },
+      "p_is_prime": true,
+      "r": 108313603633,
+      "r_bits": 37,
+      "r_factorization": {
+        "16417": 1,
+        "17": 1,
+        "4001": 1,
+        "97": 1
+      },
+      "r_is_prime": false,
+      "seed": 95,
+      "trace": 442160648,
+      "valid_pairing_candidate": false
+    },
+    {
+      "exact_embedding_degree": true,
+      "order_divisible": true,
+      "p": 420147542269308349,
+      "p_bits": 59,
+      "p_factorization": {
+        "10973": 1,
+        "1721": 1,
+        "21313": 1,
+        "317": 1,
+        "37": 1,
+        "89": 1
+      },
+      "p_is_prime": false,
+      "r": 499432441153,
+      "r_bits": 39,
+      "r_factorization": {
+        "180289": 1,
+        "4801": 1,
+        "577": 1
+      },
+      "r_is_prime": false,
+      "seed": 115,
+      "trace": 1149347100,
+      "valid_pairing_candidate": false
+    }
+  ],
+  "required_numerator_to_reach_ceiling": 1129863074514710036480,
+  "status": "PROVED within the scaffold ceiling",
+  "valid_candidate_count": 0
+}
