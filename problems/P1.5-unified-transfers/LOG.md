@@ -374,3 +374,98 @@ and one allowed coordinate/lift/valuation instruction set, then either build a
 nonzero evaluator inside the SG-25 target window or prove a lower bound for
 that exact program model.  SG-30 remains the separate prescribed-order target
 construction task.
+
+## Session 5 - 2026-07-15
+
+**Goal:** Reconstruct and adversarially audit A008--A013, decide whether they
+form a correct nontrivial restricted classification, and replace the scattered
+claims by one externally reviewable theorem package.
+
+**Prediction:** The one-branch affine and proper arguments would survive after
+base-change and specialization cleanup, while the computational corollary
+would need a narrower explicit model.  The \(B^3\) branch exponent looked like
+a coloring artifact and might improve.
+
+**Positive result criterion:** Every zero count has an intrinsic pole bound,
+every proper/mixed argument handles components and descent, adversarial branch
+sets are covered, and the circuit statement names a model that actually
+implies a degree bound.
+
+**Negative result criterion:** A constant/translation/disconnected-target,
+vertical-denominator, characteristic, or branch-partition counterexample
+survives the stated hypotheses; in that case replace the claim rather than
+strengthening it silently.
+
+**Did:**
+
+- Read all P1.5 core files, A007--A016, A018, relevant references, every P1.5
+  code file, and every P1.5 test.
+- Reproved the affine theorem using one generator and translation invariance
+  of the least common pole divisor, avoiding an unnecessary second
+  specialization.
+- Replaced the triple-color branch proof by a largest-branch
+  ordered-difference argument.
+- Restated proper rigidity over a perfect base, with explicit handling of
+  disconnected and noncommutative targets.
+- Restated the Chevalley defect theorem with the exact specialized and generic
+  fibre pole bounds used by the proof and explicit descent.
+- Defined a rational decision-tree evaluator and separated algebraic depth
+  from general polynomial-time bit complexity.
+- Performed a focused primary-literature search around interpolation and zero
+  estimates on algebraic groups, proper-map rigidity, Chevalley decomposition,
+  and algebraic computation trees.
+- Wrote RATIONAL_TRANSFER_REVIEW.md and added an exhaustive finite
+  combinatorial falsification certificate.
+
+**Found:**
+
+- [PROVED] A rational affine subgroup homomorphism of common pole degree
+  \(D<r/2\) is the identity.  The proof works in every characteristic, but the
+  degree is relative to a fixed faithful representation over \(\bar k\).
+- [PROVED] For \(B\) arbitrary nonempty affine branches,
+  \[
+  \left\lceil\frac rB\right\rceil
+  \left(\left\lceil\frac rB\right\rceil-1\right)\le2D(r-1).
+  \]
+  Hence \(\max(1,D)B^2\ge r/4\).  The previous \(B^3\) proof is correct but
+  strictly weaker.
+- [PROVED] In the rational decision-tree model the circuit corollary is
+  \(d+2b\ge\log_2r-\log_2(4MD_0)\).  This is not a lower bound against
+  arbitrary polynomial-time evaluators, and linear depth remains polynomial.
+- [PROVED] A pointed rational map from \(E\) to a smooth proper algebraic group
+  is global.  With fewer than \(r\) rational branches, any subgroup
+  homomorphism equals one global homomorphism on \(C\), including for
+  disconnected/noncommutative targets.
+- [PROVED] The mixed Chevalley/cocycle theorem is valid under explicit
+  fibrewise pole assumptions.  A generic displayed bidegree alone is
+  insufficient to control vertical specialization.
+- [PROVED] No exceptional-characteristic or purely inseparable counterexample
+  occurs.  Genuine out-of-scope counterexamples arise from non-faithful
+  representations, maps defined only on \(C\), \(r\) singleton proper
+  branches, or programs with no controlled rational realization.
+- [EMPIRICAL: bounded primary-source search, 2026-07-15] The closest checked
+  prior art is Masser/Fischler/Fischler--Nakamaye interpolation on commutative
+  algebraic groups, Gomez-Perez--Shparlinski on rational-function values in
+  finite-field subgroups, Miller on short curve-function programs, and Ben-Or
+  on algebraic computation trees.  No checked source states the same
+  prime-subgroup defect, \(B^2\) branch, or proper-branch collapse theorem.
+  This is not a certified novelty claim.
+- [EMPIRICAL: final verification on 2026-07-15] All 70 shared and 16 P1.5
+  tests passed, bytecode compilation succeeded, all four existing smoke
+  drivers and the new certificate completed, and the edited-file trailing
+  whitespace audit passed.
+
+**Prediction vs. outcome:** The core affine/proper/mixed arguments survived
+with explicit hypotheses.  The branch exponent improved from \(3\) to \(2\),
+and the main correction was interpretive: polynomial time is not itself tied
+to low geometric degree or sublinear algebraic depth.
+
+**Classification status:** P1.5 now contains a repository-original synthesis
+of restricted classification statements. The proper-target part is largely
+standard rigidity, and the quantitative affine mechanism requires the A023
+prior-art reconciliation. The package is neither an unrestricted solution nor
+a certified literature novelty claim.
+
+**Next:** Return to SG-32's non-rational coordinate/lift/valuation evaluator
+model.  Do not apply the rational circuit theorem to that residual without an
+explicit reduction to the audited decision-tree model.
