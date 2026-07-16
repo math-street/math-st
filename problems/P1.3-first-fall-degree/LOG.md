@@ -114,3 +114,61 @@ compatible with the primary sources without leaving an unresolved ambiguity.
 **Next:** Prove or refute automatic field-equation nonredundancy, then test the constant-degree mutant-family strategy at $n=3,m=2$.
 
 **Final validation:** [EMPIRICAL: local environment on 2026-07-09] All 69 shared-library tests and all 17 P1.3 tests passed, bytecode compilation passed, the symbolic JSON certificate regenerated successfully, the variant summary contained exactly 397 rows, the exhaustive actual $q=5$ search contained 6,228 eligible cases, and `HANDOFF.md` had 87 lines.
+
+## Session 4 - 2026-07-16
+
+**Goal:** Resolve SG-11 by proving or refuting automatic field-equation
+nonredundancy, while independently auditing the definitions and every step of
+the A004 upper bound.
+
+**Prediction:** The eight-dimensional core quotient should turn redundancy
+into an exact Frobenius/split-algebra condition. Exhaustive $q=7$ variation is
+the smallest search likely to reveal a specialization missed by the prior
+structured sampler.
+
+**Did:**
+- Re-read every P1.3 document, attempt, script, and test, and checked the
+  primary definitions and theorem statements in Caminata-Gorla, Salizzoni,
+  Hodges-Petit-Schlather, Kousidis-Wiemers, Petit-Quisquater, and the general
+  Weil-restriction work.
+- Exhaustively filtered every eligible $q=5,7,9$ system by rational core-zero
+  count and checked exact normal forms for the prime-field survivors.
+- Derived an infinite genuine-Semaev redundant family for every
+  $q\equiv3\pmod4$, $q\ge7$.
+- Added an exact $q=7$ normal-form, quotient-matrix, and closed-space
+  certificate.
+- Strengthened A004 to explicit localized-ring identities, all Buchberger
+  pairs, and a unit quartic top-part minor.
+- Made a bounded $n=3,m=2$ check at $q=3,5,7,11$ only after SG-11 was closed.
+
+**Found:**
+- [REFUTED] Automatic nonredundancy is false even for nonsingular curves and
+  non-base on-curve targets.
+- [PROVED] Over $\mathbb F_7$, the curve $Y^2=X^3+3X$ and point
+  $(2u,6+u)$ with $u^2=-1$ give
+  $(d_{\mathrm{ff}},d_{\mathrm{reg}},\operatorname{sd})=(5,7,5)$.
+- [PROVED] Redundancy is equivalent to identity $q$-Frobenius on the core
+  quotient, to both normal forms vanishing, and to the quotient splitting as
+  $\mathbb F_q^8$.
+- [EMPIRICAL: exhaustive] Redundant eligible systems number $0,6,0$ at
+  $q=5,7,9$, respectively.
+- [PROVED] The A004 upper bound remains valid; its replacement family has the
+  same ideal, lies in the original closed degree-$q$ space, and satisfies
+  Salizzoni's hypotheses. Only the unconditional lower bound fails.
+- [EMPIRICAL: bounded $n=3,m=2$] Four known-target systems retain low-degree
+  core bases and remainders, but no general theorem was claimed.
+
+**Prediction vs. outcome:** The quotient/Frobenius characterization was
+correct. The $q=7$ exhaustive search found six counterexamples, and their
+simple base-defined shape led to an infinite construction.
+
+**Changed my mind about:** The nonzero Semaev discriminant factor controls the
+universal core basis but does not control field-equation nonredundancy. The
+earlier structured sampler excluded the base-defined curves where redundancy
+occurs.
+
+**Final validation:** [EMPIRICAL: local environment on 2026-07-16] All 70
+shared-library tests and all 19 P1.3 tests passed; bytecode compilation and
+environment checks passed; both symbolic certificates regenerated; the
+exhaustive $q=5,7,9$ search data parsed; and `HANDOFF.md` remained below its
+120-line cap.

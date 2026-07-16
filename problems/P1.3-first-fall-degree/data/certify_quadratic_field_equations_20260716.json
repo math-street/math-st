@@ -1,0 +1,112 @@
+{
+  "status": "exact symbolic and finite-field counterexample certificate passed",
+  "engine": "SymPy exact identities + exact F_7 closed Macaulay spaces",
+  "engine_version": "1.14.0",
+  "infinite_family": {
+    "coefficient_ring": "ZZ[1/2,h,h^-1,u]/(u^2+1)",
+    "base_field_conditions": "q == 3 mod 4, q >= 7, h != 0,+1,-1",
+    "curve_a": "-(h - 1)**2*(h + 1)**2/h**2",
+    "curve_b": "0",
+    "target_point": [
+      "2*u",
+      "-(h**2 + 1)*(u - 1)/h"
+    ],
+    "eight_symbolic_core_points_checked": 8,
+    "noncollision_factorizations": {
+      "rho": "(h**2 + 1)/(2*h)",
+      "sigma": "-(h - 1)*(h + 1)/(2*h)",
+      "one_plus_rho": "(h + 1)**2/(2*h)",
+      "one_minus_rho": "-(h - 1)**2/(2*h)",
+      "second_branch_discriminant": "(h - 1)**4*(h + 1)**4/h**4"
+    }
+  },
+  "concrete_counterexample": {
+    "q": 7,
+    "quadratic_modulus": [
+      1,
+      0,
+      1
+    ],
+    "curve": "Y^2 = X^3 + 3*X",
+    "curve_nonsingular": true,
+    "target_point_coordinates": [
+      [
+        0,
+        2
+      ],
+      [
+        6,
+        1
+      ]
+    ],
+    "target_is_on_curve": true,
+    "target_x_is_nonbase": true,
+    "core_generators": [
+      "x**2*y**2 + 3*x**2 + 2*x*y + 3*y**2 + 2",
+      "3*x**2*y + 3*x*y**2 + 2*x + 2*y"
+    ],
+    "core_groebner_basis": [
+      "-3*x1**2 + x1*x2**3 + x1*x2 - 2",
+      "x2**4 - 3*x2**2 + 2",
+      "x1**3 + x1 + x2**3 + x2",
+      "x1**2*x2 + x1*x2**2 + 3*x1 + 3*x2"
+    ],
+    "leading_monomials": [
+      "x**1*y**3",
+      "x**0*y**4",
+      "x**3*y**0",
+      "x**2*y**1"
+    ],
+    "quotient_dimension": 8,
+    "base_field_core_zeros": [
+      [
+        1,
+        4
+      ],
+      [
+        1,
+        6
+      ],
+      [
+        3,
+        4
+      ],
+      [
+        3,
+        6
+      ],
+      [
+        4,
+        1
+      ],
+      [
+        4,
+        3
+      ],
+      [
+        6,
+        1
+      ],
+      [
+        6,
+        3
+      ]
+    ],
+    "field_equation_normal_forms": [
+      "0",
+      "0"
+    ],
+    "q_frobenius_is_identity": true,
+    "first_fall_degree": 5,
+    "degree_of_regularity": 7,
+    "solving_degree_grevlex": 5,
+    "degree_four_closed_space_rank": 4,
+    "degree_four_groebner_membership": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "degree_five_closed_space_contains_basis": true
+  }
+}

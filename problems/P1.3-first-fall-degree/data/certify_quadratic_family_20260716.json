@@ -1,0 +1,50 @@
+{
+  "status": "exact symbolic certificate passed",
+  "engine": "SymPy exact fraction-field Groebner basis",
+  "engine_version": "1.14.0",
+  "coefficient_ring": "ZZ[b,c,d,e,f,g,h,i][(c+g^2)^-1]",
+  "normalized_generators": [
+    "b*x*y + c*x**2 + 2*c*x*y + c*y**2 + d*x + d*y + e + x**2*y**2",
+    "f*x*y + g*x**2 + 2*g*x*y + g*y**2 + h*x + h*y + i + x**2*y + x*y**2"
+  ],
+  "basis_leading_monomials_grevlex_x_gt_y": [
+    "x**1*y**3",
+    "x**0*y**4",
+    "x**3*y**0",
+    "x**2*y**1"
+  ],
+  "basis_total_degrees": [
+    4,
+    4,
+    3,
+    3
+  ],
+  "nonconstant_denominator_factors": [
+    "c + g**2"
+  ],
+  "basis_indices_in_initial_degree_five_macaulay_span": [
+    0,
+    2,
+    3
+  ],
+  "closed_degree_five_contains_entire_basis": true,
+  "explicit_localized_basis_identities": true,
+  "buchberger_pairs_checked_symbolically": 6,
+  "maximum_buchberger_denominator_power": 3,
+  "quartic_top_part_rank": 5,
+  "quartic_unit_minor_rows_zero_based": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "quartic_unit_minor_determinant": -1,
+  "semaev_delta_identity": "-t1**2*(4*m0 - m1**2)/4",
+  "representative_raw_homogenization_t_saturated": false,
+  "representative_saturation_new_elements": [
+    "-t + x + y",
+    "-t*y + y**2"
+  ],
+  "interpretation": "For an irreducible odd-characteristic quadratic modulus and a non-base target, the discriminant and t1 are nonzero, so the four-polynomial core basis specializes without a denominator pole."
+}

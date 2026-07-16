@@ -1,0 +1,370 @@
+{
+  "status": "exhaustive small-field search complete",
+  "scope": "all nonsingular short-Weierstrass curves and nonbase on-curve target x-coordinates",
+  "results": [
+    {
+      "q": 5,
+      "base_field_model": "prime field F_5",
+      "quadratic_modulus": [
+        1,
+        1,
+        1
+      ],
+      "candidates_checked": 12000,
+      "eligible_on_curve_targets": 6228,
+      "rational_core_zero_histogram": {
+        "0": 3580,
+        "1": 744,
+        "2": 1560,
+        "3": 136,
+        "4": 184,
+        "5": 24
+      },
+      "redundant_cases": 0,
+      "candidates": [],
+      "elapsed_seconds": 2.140885,
+      "verification": "eight-zero filter plus exact Groebner normal forms"
+    },
+    {
+      "q": 7,
+      "base_field_model": "prime field F_7",
+      "quadratic_modulus": [
+        1,
+        0,
+        1
+      ],
+      "candidates_checked": 98784,
+      "eligible_on_curve_targets": 50376,
+      "rational_core_zero_histogram": {
+        "0": 29772,
+        "1": 4128,
+        "2": 12822,
+        "3": 1344,
+        "4": 2010,
+        "5": 126,
+        "6": 144,
+        "7": 24,
+        "8": 6
+      },
+      "redundant_cases": 6,
+      "candidates": [
+        {
+          "curve_a": [
+            3,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            2
+          ],
+          "rational_zeros": [
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              3
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        },
+        {
+          "curve_a": [
+            3,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            5
+          ],
+          "rational_zeros": [
+            [
+              1,
+              4
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              6
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              3
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        },
+        {
+          "curve_a": [
+            5,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            3
+          ],
+          "rational_zeros": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        },
+        {
+          "curve_a": [
+            5,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            4
+          ],
+          "rational_zeros": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              6
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              6,
+              1
+            ],
+            [
+              6,
+              5
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        },
+        {
+          "curve_a": [
+            6,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            1
+          ],
+          "rational_zeros": [
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        },
+        {
+          "curve_a": [
+            6,
+            0
+          ],
+          "curve_b": [
+            0,
+            0
+          ],
+          "target_x": [
+            0,
+            6
+          ],
+          "rational_zeros": [
+            [
+              2,
+              4
+            ],
+            [
+              2,
+              5
+            ],
+            [
+              3,
+              4
+            ],
+            [
+              3,
+              5
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              5,
+              2
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          "field_equation_normal_forms": "0;0"
+        }
+      ],
+      "elapsed_seconds": 52.647266,
+      "verification": "eight-zero filter plus exact Groebner normal forms"
+    },
+    {
+      "q": 9,
+      "base_field_model": "F_3[v]/(v^2+1)",
+      "quadratic_extension_nonsquare_id": 4,
+      "candidates_checked": 466560,
+      "eligible_on_curve_targets": 236160,
+      "rational_core_zero_histogram": {
+        "0": 141048,
+        "1": 14760,
+        "2": 61632,
+        "3": 6048,
+        "4": 10368,
+        "5": 864,
+        "6": 1440
+      },
+      "redundant_cases": 0,
+      "candidates": [],
+      "elapsed_seconds": 5.599229,
+      "verification": "exhaustive eight-zero necessary-condition filter"
+    }
+  ]
+}
