@@ -456,3 +456,50 @@ $|J(C)(\mathbb F_p)|$.  Only their CM route addresses prescribed Jacobian
 order, and that route has exponential worst cases.  The earlier phrase
 "heuristic most-input alternative" conflated the two inverse problems; A007,
 NOTES, the reference note, bibliography, and Q005 now state the distinction.
+
+## Session 9 - 2026-07-17
+
+**Goal:** Determine whether a supplied ordinary abelian-surface Weil
+polynomial can be converted into an explicit strongly algebraically defined
+Maurer--Wolf auxiliary in polynomial time without invoking worst-case CM.
+
+**Prediction (written before completing the realization audit):**
+[CONJECTURE] Honda--Tate and Jacobian-isogeny-class criteria will certify
+existence but not output equations.  Isogeny and reconstruction algorithms
+will require either a seed surface or CM invariants, leaving the inverse seed
+problem open.
+
+**Did:**
+- Re-read the constructive steps of the prescribed-order proof, the complete
+  HNR Jacobian criterion, and both inverse problems in the 2015 paper.
+- Implemented and unit-tested exact ordinary surface Weil inequalities and
+  the ordinary cases of the HNR exception tables.
+- Exhausted the central surface interval through a 14-bit prime field.
+
+**Found:**
+- [CITED] The prescribed-order proof constructs a Weil polynomial and invokes
+  Honda--Tate for existence; it does not construct equations.
+- [CITED] HNR decides whether the isogeny class contains a Jacobian but does
+  not output that Jacobian.
+- [EMPIRICAL: r=251,1019,4091,16363] Every central-interval integer, including
+  every cubic-log-smooth one, had an ordinary Jacobian-admissible Weil
+  polynomial.  The largest interval contained 4,186,243 integers and 528,541
+  smooth values; runtime was 10.58 seconds.
+- [PROVED] CM has exponential worst cases, isogeny walks require an explicit
+  seed in the target class, and abstract group data omits `EMBED/EXTRACT`.
+
+**Prediction vs. outcome:** [PROVED] Confirmed.  Jacobian existence appears
+abundant and is exactly decidable, but no checked route outputs a seed model
+uniformly in polynomial time.
+
+**Did not work:** [PROVED] The 2015 heuristic gluing algorithm prescribes the
+curve's point count, not its Jacobian order.  It cannot replace CM for this
+task.
+
+**Changed my mind about:** [PROVED] The realization gap is not principally a
+question of whether the isogeny class contains a Jacobian.  At the tested
+scale every order has one; the missing object is an explicit member with a
+recoverable coordinate embedding.
+
+**Next:** Return to the smooth-order finder and audit exponent-vector,
+subset-product, and logarithmic-lattice algorithms beyond CRT decoding.
