@@ -1,0 +1,10 @@
+Magma V2.29-8, official online calculator
+Input: code/magma_two_cover_descent.m
+
+QG012|1
+QG013|1
+QG018|0
+QG019|0
+QG026|0
+QG028|0
+QG029|0

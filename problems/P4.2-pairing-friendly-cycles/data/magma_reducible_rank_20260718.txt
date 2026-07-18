@@ -1,0 +1,8 @@
+Magma V2.29-8, official online calculator
+Input: code/magma_reducible_rank.m
+
+RankBounds: 0 0
+Torsion: Z/2
+Nonzero torsion point: (-702 : 37908 : 1)
+Image of (-1,9): (0 : 1 : 0)
+Image of (-1,-9): (-702 : 37908 : 1)

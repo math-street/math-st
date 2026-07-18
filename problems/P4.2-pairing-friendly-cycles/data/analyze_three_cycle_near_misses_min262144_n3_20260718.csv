@@ -1,0 +1,4 @@
+field_prime_e1,field_prime_e2,field_prime_e3,bounded_degree_e1,bounded_degree_e2,bounded_degree_e3,exact_degree_e1,exact_degree_e2,exact_degree_e3,missing_positions,maximum_field_prime
+482659,483883,483481,>12,5,11,483882,5,11,1,483883
+920641,921601,922561,4,6,>12,4,6,2055,3,922561
+920641,922561,921601,>12,4,6,115320,4,6,1,922561

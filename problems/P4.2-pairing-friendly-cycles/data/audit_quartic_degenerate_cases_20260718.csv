@@ -1,0 +1,35 @@
+degree_e1,degree_e2,quotient_difference_h,source_classification,gap_c,field_p,field_q,status,rejection_reason
+5,5,-1,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+5,5,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+5,5,4,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+5,8,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+5,10,-20,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+5,10,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+5,10,0,h0_impossible_zero_g,,,,audited_empty,G=0 makes H=G*p impossible
+5,10,5,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+5,12,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+5,12,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+8,5,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+8,8,-8,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+8,8,0,h0_impossible_zero_g,,,,audited_empty,G=0 makes H=G*p impossible
+8,8,8,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+8,10,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+8,12,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+10,5,-20,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+10,5,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+10,5,0,h0_impossible_zero_g,,,,audited_empty,G=0 makes H=G*p impossible
+10,5,5,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+10,8,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+10,10,-1,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+10,10,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+10,10,4,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+10,12,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+10,12,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+12,5,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+12,5,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+12,8,0,h0_finite_divisibility,,,,audited_empty,no allowable positive even-gap field candidate
+12,10,-4,genus_zero_after_square_removal,,,,audited_empty,no allowable positive even-gap field candidate
+12,10,0,h0_finite_divisibility,2,11,13,exact_cycle,none
+12,12,-4,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
+12,12,0,h0_impossible_zero_g,,,,audited_empty,G=0 makes H=G*p impossible
+12,12,12,constant_nonsquare_times_square,,,,audited_empty,no allowable positive even-gap field candidate
