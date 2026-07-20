@@ -1,0 +1,2 @@
+backend,compiler,seed,map_inputs,map_matches,group_pairs,group_law_matches,hash_pairs,hash_matches,subgroup_checks,support_size,source_branch_violations,source_index_violations,assembly_divides,assembly_conditional_jumps,assembly_non_loop_jumps,compile_warnings
+rust-u64-p11,rustc 1.93.1 (01f6ddf75 2026-02-11),5409,11,11,144,144,121,121,121,3,0,0,0,8,0,0

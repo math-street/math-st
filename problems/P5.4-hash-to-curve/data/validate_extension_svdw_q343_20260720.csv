@@ -1,0 +1,2 @@
+mapping,field,modulus,curve_a,curve_b,z,seed,inputs_tested,inverse_checks,on_curve,oracle_matches,schedule_variants,schedule_operations
+svdw,F_(7^3),x^3+2,"(0, 0, 1)","(0, 0, 1)","(0, 0, 3)",5404,343,342,343,343,1,6

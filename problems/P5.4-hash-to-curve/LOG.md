@@ -86,3 +86,90 @@ independent direct-formula oracles, and record exact applicability failures.
 **Changed my mind about:** [CITED] RFC Appendix D makes SvdW plus model transport a more useful generic fallback than the prompt's obstruction summary suggests (Faz-Hernandez et al. 2023). [EMPIRICAL: one $p=7$ curve] A valid SvdW $Z$ is not automatic on every tiny field, so this fallback must still be a suite construction with verified parameters, not an unqualified universal formula.
 
 **Next:** Treat SG-10a and SG-11a as separate research tasks: first add extension-field and characteristic-two/three constructions with independent toy oracles, then move the surviving compile-time family to a compiled constant-time field and complete group backend. Production curve vectors remain deferred unless the shared ceiling is explicitly lifted.
+
+## Session 3 - 2026-07-20
+
+**Goal:** Extend the construction beyond prime characteristic greater than three: first validate one true extension-field SvdW instance, then determine by construction or a precise obstruction what survives in characteristics three and two. If that boundary is stable, start the compiled fixed-width backend rather than stopping at Python.
+
+**Prediction (written before new literature searches or experiments):**
+
+- [CONJECTURE] A polynomial-basis implementation of $\mathbb F_{7^3}$ with fixed-loop inversion, square test, and square root will support the same SvdW straight-line formula on at least one nonsingular curve and valid $Z$, with exhaustive oracle agreement and one schedule over all 343 inputs. A refuting test is exhaustive failure to find a valid curve/$Z$ or any oracle, curve-membership, or schedule mismatch.
+- [CONJECTURE] The Appendix F.1 SvdW formula will remain algebraically correct on at least one characteristic-three curve with $A\ne0$, despite RFC 9380 excluding this characteristic. A refuting test is exhaustive failure over all nonsingular short-Weierstrass curves over $\mathbb F_3$ and every candidate $Z$.
+- [CONJECTURE] For characteristic two, the current map family will not transport verbatim because its divisions by two and sign/square-root conventions fail. The session will either locate and implement a cited bounded-operation binary-field map or record that the only locally constructed fallback is a fixed exhaustive selector with $\Theta(q)$ field work. A refuting construction is a validated bounded-operation map derived without an unverified literature step.
+
+**Did:**
+
+- [PROVED] Reconciled session 2 and reran the baseline: all 65 then-present shared tests and all 26 P5.4 tests passed under Python 3.13.4; Sage, PARI/GP, Singular, and msolve remained unavailable.
+- [CITED] Located the full version of Brier--Coron--Icart--Madore--Randriam--Tibouchi, *Efficient Indifferentiable Hashing into Ordinary Elliptic Curves* (CRYPTO 2010; IACR ePrint 2009/340). Sections 8.1 and E supply the characteristic-three square-discriminant and odd-degree binary SvdW formulas used below.
+- [PROVED] Added fixed-degree polynomial-basis arithmetic, extension-field sign, total inversion, fixed-exponent square root, generic-field SvdW, and a branch-using exhaustive oracle. The original operator-friendly extension-field API was retained and all its pre-existing tests pass.
+- [PROVED] Added fixed-loop binary multiplication, total inversion, absolute half trace, masked element selection, the characteristic-three Section-8.1 map, and the odd-degree binary Appendix-E map with an explicit $x=0$ ordinate correction.
+- [PROVED] Added deterministic validators, fixed vectors, schedule checks, source audits, and CSV output for the extension and small-characteristic branches.
+
+**Found:**
+
+- [EMPIRICAL: $\mathbb F_{7^3}=\mathbb F_7[X]/(X^3+2)$, all 343 inputs] On $y^2=x^3+X^2x+X^2$ with $Z=3X^2$, generic SvdW matched the independent candidate/root oracle, returned on-curve points, and produced one recorded high-level schedule (`code/validate_extension_svdw.py`). All 342 nonzero field elements passed the inversion check.
+- [EMPIRICAL: $\mathbb F_3$, all 3 inputs] The cited square-discriminant formula on the ordinary curve $y^2=x^3+x^2+2$ matched its direct oracle, remained on-curve, and used one schedule (`code/validate_small_characteristic.py`).
+- [EMPIRICAL: $\mathbb F_3$, all 3 inputs] The RFC F.1 algebra also happens to remain on-curve on the out-of-scope $j=0$ short model $y^2=x^3+2x+1$ with $Z=1$ and one schedule. This is only an algebraic toy probe, not an extension of RFC's cited characteristic assumptions (same script).
+- [EMPIRICAL: $\mathbb F_{2^n}$ for $n\in\{3,5,7\}$, all 168 inputs and all 17,472 fixed-multiplication pairs] The Appendix-E map returned on-curve points accepted by exhaustive ordinate oracles with one schedule. Its observed maximum preimage size was six, and all three candidate positions occurred by degree five (`code/validate_small_characteristic.py`).
+- [PROVED] The binary formula's published $g(x)=(x^3+a x^2+b)/x^2$ is undefined at $x=0$. Selecting the unique point $(0,\sqrt b)$ by a mask makes the formula total on the tested fixtures; without this correction, $t=0$ returns $(0,0)$ off-curve.
+
+**Prediction vs. outcome:** [EMPIRICAL: session 3 to this point] The extension-field prediction matched exactly: the first registered $\mathbb F_{7^3}$ fixture passed all 343 inputs. The characteristic-three SvdW prediction also matched on one $j=0$ short model, but literature review changed the main ordinary-curve route to the correct $x^2$ model and its cited Section-8.1 formula. The characteristic-two prediction selected its constructive branch: a cited bounded-operation odd-degree binary map was found and exhaustively validated, so the anticipated $\Theta(q)$ fallback was unnecessary.
+
+**Did not work:** [PROVED] Applying the odd-characteristic short-Weierstrass model as the only characteristic-three normal form would miss ordinary curves: the cited paper uses $y^2=x^3+a x^2+b$ with discriminant $-a^3b$. The implementation therefore keeps the RFC-F.1 $j=0$ probe separate from the ordinary Section-8.1 construction.
+
+**Changed my mind about:** [CITED] Characteristic two does not force an exhaustive table selector. For odd extension degree, the binary SvdW construction uses three rational candidates plus trace and half trace, so its field-operation count is bounded independently of $q$ (Brier et al., Appendix E). [PROVED] This still does not yield one formula across all characteristics; it expands the compile-time family.
+
+**Next:** connect the new encodings to two-map group pipelines where a complete schedule is available, then start the compiled fixed-width backend and report the exact residual universal gap.
+
+**Compiled-backend prediction (written before implementation or compilation):**
+
+- [CONJECTURE] A Rust `u64` backend specialized to $p=11$, $E:y^2=x^3+1$, SvdW $Z=1$, can implement field inversion/square testing/square root, the map, exception-complete masked affine addition, and cofactor-four clearing without source-level branches or indexed memory depending on either field input. A refuting test is any source-audit violation, any disagreement with the Python oracle over all 121 input pairs, or any invalid/non-subgroup output.
+- [CONJECTURE] Optimized assembly for the exported map and complete-add functions will contain no integer divide instruction. A refuting test is `div` or `idiv` in either delimited function body; this is a code-generation audit for this compiler/target only, not a cross-platform constant-time proof.
+
+**Compiled-timing prediction (written before adding or running the harness):**
+
+- [CONJECTURE] For the compiled $p=11$ two-map/cofactor pipeline, the fixed pair $(0,0)$ to fixed pair $(1,2)$ mean-time ratio will have a paired-bootstrap 95% interval intersecting $[0.9,1.1]$ over at least 300 randomized-order rounds, and a paired sign-permutation test will not reject equal means at $p<0.01$. Either an interval disjoint from that band or permutation $p<0.01$ refutes this detector prediction. It remains a platform-specific leakage screen, not a constant-time proof.
+
+**Compiled-backend outcome:**
+
+- [PROVED] `code/ct_backend_p11.rs` contains a compile-time $p=11$, $j=0$ SvdW suite using `u64` field elements, masked candidate selection, exception-complete masked affine addition, two-map addition, and fixed cofactor-four clearing. The exported secret paths contain no Rust `if`, `match`, `while`, or indexed access; exponentiation uses a public fixed 64-round loop.
+- [EMPIRICAL: rustc 1.93.1 on the recorded x86-64 Windows target] All 11 map outputs, all 144 ordered group pairs (including the identity, inverse pairs, doubling, and the order-two point), and all 121 two-map/cofactor pairs match the Python oracle. Every final output is killed by subgroup order three and all three subgroup points occur (`code/validate_compiled_backend.py`).
+- [EMPIRICAL: same compiler/target] The delimited optimized assembly for the map, complete addition, and pipeline contains zero integer divides and zero non-loop conditional jumps. Eight conditional jumps remain; the combined source/assembly audit identifies them as fixed-count exponentiation-loop back edges. This is not a microarchitectural constant-time certificate.
+- [EMPIRICAL: same process, 400 randomized-order rounds, batch 1,000, seed 5409] The $(0,0)$ to $(1,2)$ mean-time ratio was $1.000555$ with paired-bootstrap 95% interval $[0.998811,1.002232]$ and paired sign-permutation $p=0.524248$ (`code/measure_compiled_timing.py`). Both preregistered timing criteria passed.
+
+**Compiled prediction vs. outcome:** [EMPIRICAL: registered compiler and toy suite] Both predictions matched: exhaustive correctness/source checks passed, optimized assembly used no divide instruction, and the timing interval/permutation detector did not distinguish the registered input classes. [PROVED] The result is one compiled toy suite, not a portable certified backend for every field/model.
+
+**Small-characteristic pipeline prediction (written before group-law implementation or pair exhaustion):**
+
+- [CONJECTURE] The registered characteristic-three curve has order three, and the registered binary curves for odd degrees $3,5,7$ have orders $14,22,142$ respectively; masked exception-complete affine laws will agree with branch-using group oracles on every ordered group pair. A refuting test is any order mismatch or group-law mismatch.
+- [CONJECTURE] Two independent map evaluations followed by complete addition and public cofactor clearing (cofactor one in characteristic three, cofactor two in the binary cases) will land in prime-order subgroups of orders $3,7,11,71$ for every one of the $3^2+8^2+32^2+128^2=17,481$ field pairs, with one recorded schedule per fixture and complete subgroup support. Any failed annihilation, second schedule, or missing subgroup point refutes this prediction.
+
+**Small-characteristic pipeline outcome:**
+
+- [EMPIRICAL: four registered groups, all 20,853 ordered group pairs] Masked complete addition agreed with independent branch-using laws on the order-$3$, order-$14$, order-$22$, and order-$142$ groups, including identities, inverse pairs, and doubling (`code/validate_small_characteristic_pipelines.py`).
+- [EMPIRICAL: all 17,481 field pairs] Two maps, complete addition, and cofactor clearing matched the branch-using pipeline oracle and were annihilated by subgroup orders $3,7,11,71$. Every subgroup point occurred and each fixed fixture produced one recorded schedule (same script).
+- [EMPIRICAL: full run on Python 3.13.4] The four-fixture exhaustion took 13.831443 seconds; smoke mode (characteristic three and $\mathbb F_{2^3}$) took 0.016523 seconds.
+
+**Small-characteristic prediction vs. outcome:** [EMPIRICAL: registered fields] Both predictions matched exactly, including the preregistered group orders, prime subgroup orders, complete support, and schedule count. [PROVED] This closes the two-map/group/cofactor obligation for these four toy fixtures but not for all curves or extension degrees.
+
+**Extension-pipeline addendum:**
+
+- [EMPIRICAL: preliminary exhaustive $x$ count before group implementation] The registered $\mathbb F_{7^3}$ curve has 320 rational points, factoring as $64\cdot5$.
+- [CONJECTURE] A masked complete extension-field affine law will match a branch-using oracle on all $320^2=102,400$ ordered group pairs. A refuting test is any mismatch, including an identity, inverse, doubling, or order-two case.
+- [CONJECTURE] For all $343^2=117,649$ SvdW input pairs, two maps, complete addition, and six fixed doublings (cofactor 64) will agree with the branch-using pipeline oracle, be annihilated by subgroup order five, reach all five subgroup points, and use one schedule. Any failed equality, annihilation, support, or schedule check refutes this prediction.
+
+**Extension-pipeline outcome:**
+
+- [EMPIRICAL: all $320^2=102,400$ ordered group pairs] Masked extension-field complete addition matched the branch-using oracle, including every exceptional group-law case (`code/validate_extension_pipeline.py`).
+- [EMPIRICAL: all $343^2=117,649$ field pairs] Two SvdW maps, complete addition, and cofactor 64 matched the oracle, every output was killed by subgroup order five, all five subgroup points occurred, and the composed schedule had one variant (same script).
+- [EMPIRICAL: Python 3.13.4] The full cached-Cayley-table exhaustion took 11.145540 seconds; the 1,024-pair smoke check took 0.076104 seconds.
+
+**Extension prediction vs. outcome:** [EMPIRICAL: registered cubic suite] Both predictions matched, so the cubic extension now has the same toy two-map/group/cofactor evidence as the prime and small-characteristic fixtures. [PROVED] This is one extension degree and curve, not arbitrary extension-field coverage.
+
+**End-of-session audit:**
+
+- [PROVED] All 70 shared library tests and all 37 P5.4 tests pass under Python 3.13.4; bytecode compilation and every new smoke path pass.
+- [PROVED] Full data files exist for the cubic extension maps/pipeline, small-characteristic maps/pipelines, compiled correctness/assembly audit, and compiled timing screen. `SPEC.md` and `TOY_VECTORS.md` give the requested RFC-style partial specification and toy vectors.
+- [PROVED] No `[UNVERIFIED]` marker or unfinished placeholder remains in the P5.4 record. Q021, SG-11b, and the ceiling-conditional SG-12a state the residual boundary without calling the formal universal problem solved.
+
+**Next:** The next non-redundant research step is either an all-curves/all-degrees small-characteristic and extension construction plus a portable compiled realization of every route, or an impossibility theorem in a precisely defined bounded-operation model. Production RFC curve-suite vectors remain conditional on lifting the shared ceiling.

@@ -1,0 +1,3 @@
+characteristic,field,curve,seed,group_order,subgroup_order,cofactor,group_pairs,group_law_matches,field_pairs,pipeline_oracle_matches,subgroup_checks,subgroup_support,schedule_variants
+3,F_3,y^2=x^3+x^2+2,5410,3,3,1,9,9,9,9,9,3,1
+2,F_(2^3),y^2+xy=x^3+x^2+1,5410,14,7,2,196,196,64,64,64,7,1

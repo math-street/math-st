@@ -1,0 +1,4 @@
+characteristic,field,modulus,curve,method,seed,inputs_tested,on_curve,oracle_matches,support_size,maximum_preimage,candidate_1,candidate_2,candidate_3,schedule_variants,schedule_operations
+3,F_3,prime,y^2=x^3+x^2+2,Brier-et-al-Section-8.1,5408,3,3,3,2,2,n/a,n/a,n/a,1,4
+3,F_3,prime,y^2=x^3+2x+1 (j=0),RFC-F.1-out-of-scope-probe,5408,3,3,3,2,2,n/a,n/a,n/a,1,3
+2,F_(2^3),0xb,y^2+xy=x^3+x^2+1,Brier-et-al-Appendix-E,5408,8,8,8,4,2,7,1,0,1,3

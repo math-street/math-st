@@ -1,0 +1,2 @@
+backend,compiler,platform,class_a,class_b,rounds,batch,resamples,seed,class_a_mean_ns,class_b_mean_ns,mean_ratio_a_over_b,paired_bootstrap_ci_low,paired_bootstrap_ci_high,sign_permutation_p,interval_intersects_0.9_1.1,permutation_p_at_least_0.01,detector_passed
+rust-u64-p11,rustc 1.93.1 (01f6ddf75 2026-02-11),Windows-11-10.0.26200-SP0,u0=0;u1=0,u0=1;u1=2,400,1000,10000,5409,3940.5775,3938.39075,1.0005552394718578,0.9988106354279344,1.0022323268016635,0.5242475752424758,1,1,1

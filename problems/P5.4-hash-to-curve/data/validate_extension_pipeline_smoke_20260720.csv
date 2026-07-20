@@ -1,0 +1,2 @@
+field,curve,seed,group_order,subgroup_order,cofactor,map_inputs,map_oracle_matches,group_pairs,group_law_matches,field_pairs,pipeline_oracle_matches,subgroup_checks,subgroup_support,schedule_variants
+F_(7^3),y^2=x^3+X^2*x+X^2,5411,320,5,64,0,0,1024,1024,0,0,0,0,1
