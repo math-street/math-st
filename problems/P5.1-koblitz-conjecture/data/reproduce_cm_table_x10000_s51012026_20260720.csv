@@ -1,0 +1,4 @@
+cutoff,split_prime_count,quotient_prime_count,published_cm_constant,integral_predicted_count,integral_predicted_rounded,observed_over_integral_predicted,direct_prime_sum_baseline,direct_prime_sum_predicted,observed_over_direct_predicted,sieve_seconds,elapsed_seconds,seed,point_counter
+1000,80,23,1.067350894000,30.333406533412,30,0.758239928465,24.904330146150,26.581659045964,0.865258257968,0.000029,0.014009,51012026,cornacchia_walsh_j1728_exact_trace
+5000,329,64,1.067350894000,77.111794323793,77,0.829963827988,68.005182631723,72.585392478603,0.881720106685,0.000029,0.023311,51012026,cornacchia_walsh_j1728_exact_trace
+10000,609,105,1.067350894000,121.116835557680,121,0.866931500617,109.075763628495,116.422113822607,0.901890513343,0.000029,0.032490,51012026,cornacchia_walsh_j1728_exact_trace

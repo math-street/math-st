@@ -191,3 +191,50 @@
 - [EMPIRICAL: documentation audit] Chronologically true claims can become misleading when later sections extend their scope; session-qualified wording is necessary even when append-only logs remain unchanged.
 
 **Next:** The self-verification is complete. Q026 remains the explicit theoretical boundary; no computational or documentation defect is open.
+
+## Session 5 -- 2026-07-20
+
+**Goal:** Determine whether the theoretical gap can honestly be closed using primary literature available through 2026; if not, prove the strongest finite or conditional closure statement and isolate the irreducible missing theorem.
+
+**Prediction (written before the literature audit):**
+
+- [CONJECTURE] No primary source through 2026 proves the unconditional fixed-curve Koblitz asymptotic with positive corrected constant; a verified theorem doing so refutes this prediction.
+- [CITED] Removing GRH from David--Wu's Chebotarev estimates alone will not produce the target asymptotic, because their method supplies no prime-order lower bound even under its zero-free hypothesis. (David and Wu 2012, Theorems 1.1 and 1.3.)
+- [CONJECTURE] The strongest honest repository-level closure will be an exact finite-range theorem plus a conditional asymptotic statement whose unproved prime-value input is explicit; this prediction is refuted if the literature audit yields an unconditional asymptotic.
+
+**Environment preflight:**
+
+- [EMPIRICAL: Python 3.13.4 on Windows 11] SageMath, PARI/GP, Singular, and msolve remain unavailable.
+- [EMPIRICAL: 84 tests] The pre-audit shared and P5.1 suite passed 84/84 tests in 6.10 seconds.
+
+**Did:**
+
+- Audited 2025--2026 primary literature for fixed-curve, average-family, and almost-prime results.
+- Wrote `THEORY_CLOSURE.md` with an exact CM norm reduction and an explicit classification of unconditional, conditional, empirical, and still-open statements.
+- Added three paper-specific reference notes and the mandatory fifth-session audit.
+- Tested the new norm identity and residue-class exception independently, then added a persistent regression.
+
+**Found:**
+
+- [CITED] Dey--Saha--Sivaraman--Vatwani obtain the refined fixed-curve constant only under an elliptic Elliott--Halberstam conjecture and a separate conjecture on average growth of $N_p$. (Dey et al. 2025, DOI 10.1016/j.jmaa.2024.129212.)
+- [CITED] Lee--Mayle--Wang explicitly state that the refined Koblitz conjecture remains open; their unconditional results are moments of constants over curve families. (Lee, Mayle, and Wang 2025, arXiv:2408.16641.)
+- [CITED] Xie's 2025 unconditional CM advance concerns bounded-almost-prime quotients over prime-power fields, not prime values of $\#E(\mathbb F_p)/8$. (Xie 2025, arXiv:2504.18732.)
+- [PROVED] For $E:y^2=x^3-x$, all prime-quotient events except $p=17$ lie in $p\equiv5\pmod8$ and are exactly simultaneous primality of $N(a+bi)$ and $N(a+bi+1)/8$. (`THEORY_CLOSURE.md`.)
+- [EMPIRICAL: all 74,416 split primes $5\le p\le2,000,000$] The norm identity, divisibility by $8$, and unique $p\equiv1\pmod8$ event $(17,2)$ all matched the independent check.
+- [EMPIRICAL: fifth-session audit] No unresolved verification tag, stale attempt, missing script validation, contradiction, or vague sub-goal was found. (`audits/AUDIT-20260720.md`.)
+
+**Prediction vs. outcome:** matched. [CITED] The latest directly targeted fixed-curve theorem remains conditional, while the unconditional advances are averages or almost-prime results. (Dey et al. 2025; Lee, Mayle, and Wang 2025; Xie 2025.)
+
+**Did not work:**
+
+- [EMPIRICAL: first disposable Session 5 harness] The initial check called `is_prime` from the reproduction module, where it is not exported; importing the independently tested shared primality routine fixed the harness without changing any result or repository production code.
+
+**Changed my mind about:**
+
+- [PROVED] The CM residue classes sharpen the generic parity diagnosis: $p\equiv1\pmod8$ contributes only $p=17$, so the unbounded count is concentrated in one explicit simultaneous norm-prime pattern.
+
+**Next:** Q026 is the only remaining theoretical statement: replace both distributional and parity-breaking conjectural inputs with unconditional theorems. No further numerical extension is logically required for the scoped closure.
+
+**Final validation:**
+
+- [EMPIRICAL: 85 tests] `python -m pytest -q problems/P5.1-koblitz-conjecture/code/tests lib/tests` passed 85/85 tests in 6.93 seconds after the theory regression and documentation updates.
