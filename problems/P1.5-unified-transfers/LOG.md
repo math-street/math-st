@@ -469,3 +469,94 @@ a certified literature novelty claim.
 **Next:** Return to SG-32's non-rational coordinate/lift/valuation evaluator
 model.  Do not apply the rational circuit theorem to that residual without an
 explicit reduction to the audited decision-tree model.
+
+## Session 6 - 2026-07-20
+
+**Goal:** Reconcile the rational-transfer package with the missed
+cryptographic interpolation and efficiently computable-homomorphism
+literature before doing any further construction work, then resume SG-32 in
+one exact non-rational evaluator model while leaving SG-30 separate.
+
+**Prediction:** Coppersmith--Shparlinski would recover the quadratic
+arbitrary-subset overlap scale but not the elliptic-source/arbitrary-target
+theorems. Character-sum refinements would need structure absent from an
+adversarial branch partition. A Verheul-style consequence would require
+pairing structure unavailable in an ordinary reduced-form target, so SG-32
+would need a model-internal lower bound.
+
+**Positive result criterion:** A023 gives one proof-or-citation verdict for
+all five synthesis items and directly answers both the \(B^2\) and
+character-sum questions. Only after that audit, SG-32 fixes one canonical
+ordinary output and finite lift/valuation instruction set and proves either a
+nonzero evaluator or a lower bound in exactly that model.
+
+**Negative result criterion:** A checked interpolation theorem derives the
+full P1.5 statement or improves the worst-case exponent, requiring the
+repository claims to be withdrawn; or the SG-32 interface cannot support a
+sound nontrivial theorem without implicitly solving SG-30.
+
+**Did:**
+
+- Added seven P1.5 reference records and matching bibliography/BibTeX entries
+  for Coppersmith--Shparlinski, Lange--Winterhof, Kiltz--Winterhof,
+  Winterhof/Meidl--Winterhof, Verheul, Moody, and Koblitz--Menezes.
+- Corrected the requested Meidl--Winterhof attribution: the discrete-logarithm
+  interpolation paper is sole-authored by Winterhof, while the actual
+  Meidl--Winterhof paper concerns a polynomial Diffie--Hellman
+  representation.
+- Wrote A023, reconciled Section 10, replaced novelty-adjacent wording by
+  repository-original synthesis, and recorded the SG-14 and SG-23 conceptual
+  overlaps.
+- After A023 was complete, fixed A024's canonical reduced-form output and VFB
+  instruction set, including exact coordinate lifts, integer arithmetic,
+  valuations, comparisons, and fixed-factor-base target operations.
+- Checked the Verheul/Moody pairing-and-distortion template before proving a
+  model-internal transcript lower bound. SG-30 was not started.
+
+**Found:**
+
+- [CITED] Coppersmith--Shparlinski Theorem 1 proves
+  \[
+  d\ge |S|(|S|-1)/(2(p-2))
+  \]
+  for a polynomial computing discrete logarithms on an arbitrary subset.
+  This is direct prior art for the quadratic-overlap mechanism and recovers
+  \(D_+B^2=\Omega(r)\) in its scalar finite-field specialization.
+- [PROVED] The checked interpolation papers do not state the elliptic-source,
+  arbitrary faithfully represented affine-target result, nor the proper or
+  mixed-target theorems. All five requested comparison verdicts are therefore
+  (b), with the scalar scale and proof patterns explicitly credited.
+- [PROVED] The checked character-sum improvements require dense, random, or
+  otherwise structured sample sets. For an arbitrary branch the universal
+  identity remains
+  \(\sum_{t\ne0}|S\cap(S-t)|=|S|(|S|-1)\), so no improvement from \(B^2\)
+  toward \(B\) follows.
+- [PROVED] A024's VFB theorem states that a nonzero evaluator with \(C\)
+  comparisons and valuation-operand bit bounds \(h_j\) must satisfy
+  \[
+  C+\sum_j\log_2(h_j+1)\ge\log_2r.
+  \]
+  Thus polynomial-height operands and \(C=o(\log r)\) require
+  \(\Omega(\log r/\log\log r)\) valuation observations.
+- [PROVED] Verheul/Moody would give a conditional Diffie--Hellman consequence
+  if the ordinary target supplied an efficient pairing, distortion map, and
+  tractable paired-target logarithm. No checked reduced-form construction has
+  that package, so the template is not an unconditional lower bound here.
+- [PROVED] A024 completes SG-32 only at the requested one-model scope. Its
+  bound is compatible with polynomial time and excludes neither
+  polynomial-length VFB programs nor direct raw-coordinate form synthesis.
+  P1.5/Q004 remains open.
+- [EMPIRICAL: final verification on 2026-07-20] All 70 shared and 16 P1.5
+  tests passed, bytecode compilation succeeded, and the edited-file control
+  character, unresolved-marker, and trailing-whitespace audits passed.
+
+**Prediction vs. outcome:** Matched. The closest literature materially
+narrows the novelty wording without deriving the repository's full theorem
+statements. The Verheul/Moody template clarified the missing target structure,
+and the exact VFB boundary supported a clean information-transcript lower
+bound without entering SG-30.
+
+**Next:** Keep SG-30 separate and untouched. If evaluator work continues,
+formalize the direct raw-coordinate MAKEFORM-style extension excluded by VFB;
+its fixed-discriminant and homomorphism invariants, rather than generic or
+bounded-degree rational arguments, are the next unresolved issue.
