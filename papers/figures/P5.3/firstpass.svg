@@ -1,0 +1,2942 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="440.170781pt" height="238.780703pt" viewBox="0 0 440.170781 238.780703" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-07-23T00:53:10.812011</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.1, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 238.780703 
+L 440.170781 238.780703 
+L 440.170781 0 
+L 0 0 
+z
+" style="fill: #fcfcfb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 40.970781 198.684248 
+L 432.970781 198.684248 
+L 432.970781 25.08 
+L 40.970781 25.08 
+z
+" style="fill: #fcfcfb"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <path d="M 52.672274 198.684248 
+L 52.672274 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_2">
+      <defs>
+       <path id="m4b7523c1ea" d="M 0 0 
+L 0 3.5 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="52.672274" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <!-- 0 -->
+      <g style="fill: #52514e" transform="translate(49.450086 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-13" d="M 3209 2919 
+Q 3409 2678 3507 2354 
+Q 3606 2031 3606 1678 
+Q 3606 1253 3484 917 
+Q 3363 581 3150 359 
+Q 2931 131 2631 15 
+Q 2331 -100 1963 -100 
+Q 1559 -100 1243 34 
+Q 928 169 731 403 
+Q 525 647 423 973 
+Q 322 1300 322 1678 
+Q 322 2050 420 2362 
+Q 519 2675 728 2928 
+Q 928 3172 1243 3312 
+Q 1559 3453 1966 3453 
+Q 2394 3453 2700 3309 
+Q 3006 3166 3209 2919 
+z
+M 2916 1678 
+Q 2916 2422 2661 2831 
+Q 2406 3241 1969 3241 
+Q 1525 3241 1269 2831 
+Q 1013 2422 1013 1678 
+Q 1013 972 1258 542 
+Q 1503 113 1963 113 
+Q 2422 113 2669 542 
+Q 2916 972 2916 1678 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <path d="M 91.677249 198.684248 
+L 91.677249 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="91.677249" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <!-- 2 -->
+      <g style="fill: #52514e" transform="translate(88.744632 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-15" d="M 3272 0 
+L 344 0 
+L 344 425 
+Q 428 522 578 642 
+Q 728 763 934 903 
+Q 1059 988 1234 1088 
+Q 1409 1188 1631 1306 
+Q 1878 1438 2011 1538 
+Q 2144 1638 2253 1784 
+Q 2325 1881 2369 2026 
+Q 2413 2172 2413 2441 
+Q 2413 2831 2203 3014 
+Q 1994 3197 1666 3197 
+Q 1463 3197 1281 3117 
+Q 1100 3038 1009 2897 
+Q 1031 2797 1064 2659 
+Q 1097 2522 1097 2391 
+Q 1097 2272 998 2180 
+Q 900 2088 706 2088 
+Q 550 2088 465 2195 
+Q 381 2303 381 2484 
+Q 381 2653 475 2823 
+Q 569 2994 744 3138 
+Q 916 3278 1169 3365 
+Q 1422 3453 1716 3453 
+Q 2356 3453 2732 3167 
+Q 3109 2881 3109 2403 
+Q 3109 2175 3042 1987 
+Q 2975 1800 2825 1656 
+Q 2659 1497 2437 1383 
+Q 2216 1269 1759 1066 
+Q 1488 944 1253 811 
+Q 1019 678 869 553 
+L 3272 553 
+L 3272 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-15"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_5">
+      <path d="M 130.682224 198.684248 
+L 130.682224 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_6">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="130.682224" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <!-- 4 -->
+      <g style="fill: #52514e" transform="translate(127.715974 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-17" d="M 3388 281 
+L 2753 281 
+L 2753 -1141 
+L 2153 -1141 
+L 2153 281 
+L 153 281 
+L 153 763 
+L 2344 3434 
+L 2753 3434 
+L 2753 691 
+L 3388 691 
+L 3388 281 
+z
+M 2153 691 
+L 2153 2738 
+L 466 691 
+L 2153 691 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-17"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_7">
+      <path d="M 169.687199 198.684248 
+L 169.687199 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="169.687199" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <!-- 6 -->
+      <g style="fill: #52514e" transform="translate(166.716027 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-19" d="M 3359 1441 
+Q 3359 1116 3242 831 
+Q 3125 547 2928 347 
+Q 2700 119 2423 9 
+Q 2147 -100 1847 -100 
+Q 1500 -100 1219 28 
+Q 938 156 741 391 
+Q 541 628 431 972 
+Q 322 1316 322 1744 
+Q 322 2859 986 3625 
+Q 1650 4391 2766 4544 
+L 2822 4263 
+L 2541 4213 
+Q 1863 3994 1492 3531 
+Q 1122 3069 1013 2409 
+Q 1281 2644 1543 2741 
+Q 1806 2838 2097 2838 
+Q 2619 2838 2989 2438 
+Q 3359 2038 3359 1441 
+z
+M 2681 1356 
+Q 2681 1863 2448 2169 
+Q 2216 2475 1825 2475 
+Q 1591 2475 1389 2387 
+Q 1188 2300 1000 2094 
+Q 997 2056 990 1920 
+Q 984 1784 984 1706 
+Q 984 975 1223 561 
+Q 1463 147 1853 147 
+Q 2225 147 2453 470 
+Q 2681 794 2681 1356 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-19"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_9">
+      <path d="M 208.692174 198.684248 
+L 208.692174 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="208.692174" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <!-- 8 -->
+      <g style="fill: #52514e" transform="translate(205.561862 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-1b" d="M 3491 1175 
+Q 3491 650 3037 272 
+Q 2584 -106 1847 -106 
+Q 1156 -106 740 241 
+Q 325 588 325 1134 
+Q 325 1538 570 1808 
+Q 816 2078 1297 2266 
+Q 900 2488 703 2753 
+Q 506 3019 506 3353 
+Q 506 3863 939 4206 
+Q 1372 4550 1975 4550 
+Q 2578 4550 2951 4225 
+Q 3325 3900 3325 3409 
+Q 3325 3094 3119 2811 
+Q 2913 2528 2513 2347 
+Q 3031 2125 3261 1856 
+Q 3491 1588 3491 1175 
+z
+M 2734 3444 
+Q 2734 3825 2507 4064 
+Q 2281 4303 1928 4303 
+Q 1575 4303 1350 4073 
+Q 1125 3844 1125 3503 
+Q 1125 3175 1381 2947 
+Q 1638 2719 2294 2459 
+Q 2528 2609 2631 2856 
+Q 2734 3103 2734 3444 
+z
+M 2866 1028 
+Q 2866 1225 2781 1373 
+Q 2697 1522 2538 1644 
+Q 2384 1763 2111 1892 
+Q 1838 2022 1519 2156 
+Q 1219 1994 1078 1742 
+Q 938 1491 938 1169 
+Q 938 709 1208 426 
+Q 1478 144 1928 144 
+Q 2359 144 2612 394 
+Q 2866 644 2866 1028 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-1b"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_11">
+      <path d="M 247.697149 198.684248 
+L 247.697149 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="247.697149" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <!-- 10 -->
+      <g style="fill: #52514e" transform="translate(242.219103 213.625898) scale(0.105 -0.105)">
+       <defs>
+        <path id="Georgia-14" d="M 2528 0 
+L 422 0 
+L 422 222 
+Q 516 228 714 248 
+Q 913 269 988 291 
+Q 1084 322 1136 392 
+Q 1188 463 1188 603 
+L 1188 2797 
+L 409 2797 
+L 409 3059 
+L 581 3059 
+Q 919 3059 1186 3184 
+Q 1453 3309 1569 3453 
+L 1828 3453 
+Q 1819 3250 1809 2978 
+Q 1800 2706 1800 2491 
+L 1800 638 
+Q 1800 528 1848 442 
+Q 1897 356 1988 316 
+Q 2069 281 2253 253 
+Q 2438 225 2528 222 
+L 2528 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-14"/>
+       <use xlink:href="#Georgia-13" transform="translate(42.96875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_13">
+      <path d="M 286.702125 198.684248 
+L 286.702125 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="286.702125" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <!-- 12 -->
+      <g style="fill: #52514e" transform="translate(281.513648 213.625898) scale(0.105 -0.105)">
+       <use xlink:href="#Georgia-14"/>
+       <use xlink:href="#Georgia-15" transform="translate(42.96875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_15">
+      <path d="M 325.7071 198.684248 
+L 325.7071 25.08 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_16">
+      <g>
+       <use xlink:href="#m4b7523c1ea" x="325.7071" y="198.684248" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <!-- 14 -->
+      <g style="fill: #52514e" transform="translate(320.48499 213.625898) scale(0.105 -0.105)">
+       <use xlink:href="#Georgia-14"/>
+       <use xlink:href="#Georgia-17" transform="translate(42.96875 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="text_9">
+     <!-- candidate counter inside one forced execution -->
+     <g style="fill: #0b0b0b" transform="translate(115.407031 228.979141) scale(0.12 -0.12)">
+      <defs>
+       <path id="Georgia-46" d="M 1650 -81 
+Q 981 -81 603 362 
+Q 225 806 225 1553 
+Q 225 1878 326 2161 
+Q 428 2444 622 2675 
+Q 806 2897 1084 3033 
+Q 1363 3169 1691 3169 
+Q 2144 3169 2428 2951 
+Q 2713 2734 2713 2359 
+Q 2713 2203 2638 2083 
+Q 2563 1963 2391 1963 
+Q 2206 1963 2104 2056 
+Q 2003 2150 2003 2266 
+Q 2003 2406 2040 2554 
+Q 2078 2703 2084 2772 
+Q 2028 2869 1917 2901 
+Q 1806 2934 1678 2934 
+Q 1528 2934 1392 2870 
+Q 1256 2806 1128 2634 
+Q 1013 2478 941 2212 
+Q 869 1947 869 1578 
+Q 869 997 1126 630 
+Q 1384 263 1803 263 
+Q 2106 263 2311 409 
+Q 2516 556 2691 850 
+L 2891 719 
+Q 2684 350 2346 134 
+Q 2009 -81 1650 -81 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-44" d="M 3144 56 
+Q 2997 3 2886 -30 
+Q 2775 -63 2634 -63 
+Q 2391 -63 2245 51 
+Q 2100 166 2059 384 
+L 2041 384 
+Q 1838 159 1605 40 
+Q 1372 -78 1044 -78 
+Q 697 -78 473 134 
+Q 250 347 250 691 
+Q 250 869 300 1009 
+Q 350 1150 450 1263 
+Q 528 1356 656 1429 
+Q 784 1503 897 1547 
+Q 1038 1600 1467 1744 
+Q 1897 1888 2047 1969 
+L 2047 2278 
+Q 2047 2319 2030 2434 
+Q 2013 2550 1956 2653 
+Q 1894 2769 1780 2855 
+Q 1666 2941 1456 2941 
+Q 1313 2941 1189 2892 
+Q 1066 2844 1016 2791 
+Q 1016 2728 1045 2606 
+Q 1075 2484 1075 2381 
+Q 1075 2272 976 2181 
+Q 878 2091 703 2091 
+Q 547 2091 473 2202 
+Q 400 2313 400 2450 
+Q 400 2594 501 2725 
+Q 603 2856 766 2959 
+Q 906 3047 1106 3108 
+Q 1306 3169 1497 3169 
+Q 1759 3169 1954 3133 
+Q 2150 3097 2309 2978 
+Q 2469 2863 2551 2664 
+Q 2634 2466 2634 2153 
+Q 2634 1706 2625 1361 
+Q 2616 1016 2616 606 
+Q 2616 484 2658 412 
+Q 2700 341 2788 291 
+Q 2834 263 2936 259 
+Q 3038 256 3144 256 
+L 3144 56 
+z
+M 2053 1706 
+Q 1788 1628 1588 1553 
+Q 1388 1478 1216 1366 
+Q 1059 1259 968 1114 
+Q 878 969 878 769 
+Q 878 509 1014 387 
+Q 1150 266 1359 266 
+Q 1581 266 1750 373 
+Q 1919 481 2034 628 
+L 2053 1706 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-51" d="M 3628 0 
+L 2119 0 
+L 2119 206 
+Q 2191 213 2277 219 
+Q 2363 225 2419 244 
+Q 2506 272 2548 342 
+Q 2591 413 2591 525 
+L 2591 2109 
+Q 2591 2438 2436 2616 
+Q 2281 2794 2059 2794 
+Q 1894 2794 1756 2742 
+Q 1619 2691 1513 2616 
+Q 1409 2544 1348 2461 
+Q 1288 2378 1259 2328 
+L 1259 556 
+Q 1259 450 1303 381 
+Q 1347 313 1434 275 
+Q 1500 244 1576 228 
+Q 1653 213 1734 206 
+L 1734 0 
+L 225 0 
+L 225 206 
+Q 297 213 373 219 
+Q 450 225 506 244 
+Q 594 272 636 342 
+Q 678 413 678 525 
+L 678 2428 
+Q 678 2534 633 2623 
+Q 588 2713 506 2769 
+Q 447 2806 365 2823 
+Q 284 2841 191 2847 
+L 191 3050 
+L 1216 3119 
+L 1259 3075 
+L 1259 2641 
+L 1275 2641 
+Q 1350 2716 1462 2820 
+Q 1575 2925 1675 2991 
+Q 1791 3066 1950 3116 
+Q 2109 3166 2309 3166 
+Q 2753 3166 2967 2889 
+Q 3181 2613 3181 2153 
+L 3181 550 
+Q 3181 441 3218 373 
+Q 3256 306 3347 269 
+Q 3422 238 3476 225 
+Q 3531 213 3628 206 
+L 3628 0 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-47" d="M 3600 56 
+L 2525 -13 
+L 2478 31 
+L 2478 319 
+L 2453 325 
+Q 2291 144 2052 28 
+Q 1813 -88 1559 -88 
+Q 1297 -88 1051 29 
+Q 806 147 625 359 
+Q 441 575 333 878 
+Q 225 1181 225 1547 
+Q 225 1881 340 2181 
+Q 456 2481 659 2706 
+Q 850 2916 1126 3041 
+Q 1403 3166 1691 3166 
+Q 1906 3166 2114 3111 
+Q 2322 3056 2472 2972 
+L 2472 4044 
+Q 2472 4175 2428 4283 
+Q 2384 4391 2306 4447 
+Q 2219 4506 2070 4532 
+Q 1922 4559 1750 4572 
+L 1750 4766 
+L 3009 4838 
+L 3056 4791 
+L 3056 634 
+Q 3056 525 3098 448 
+Q 3141 372 3222 319 
+Q 3281 281 3393 272 
+Q 3506 263 3600 259 
+L 3600 56 
+z
+M 2472 597 
+L 2472 2400 
+Q 2447 2481 2390 2575 
+Q 2334 2669 2250 2747 
+Q 2159 2825 2037 2876 
+Q 1916 2928 1753 2928 
+Q 1566 2928 1408 2831 
+Q 1250 2734 1128 2553 
+Q 1013 2378 945 2108 
+Q 878 1838 878 1509 
+Q 878 1247 928 1033 
+Q 978 819 1097 634 
+Q 1206 459 1376 353 
+Q 1547 247 1781 247 
+Q 2031 247 2195 356 
+Q 2359 466 2472 597 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-4c" d="M 1722 0 
+L 231 0 
+L 231 206 
+Q 303 213 379 219 
+Q 456 225 513 244 
+Q 600 272 642 342 
+Q 684 413 684 525 
+L 684 2428 
+Q 684 2528 639 2611 
+Q 594 2694 513 2750 
+Q 453 2788 340 2814 
+Q 228 2841 134 2847 
+L 134 3050 
+L 1222 3119 
+L 1266 3075 
+L 1266 563 
+Q 1266 453 1308 381 
+Q 1350 309 1441 275 
+Q 1509 247 1575 230 
+Q 1641 213 1722 206 
+L 1722 0 
+z
+M 1328 4334 
+Q 1328 4156 1211 4023 
+Q 1094 3891 922 3891 
+Q 763 3891 645 4017 
+Q 528 4144 528 4306 
+Q 528 4478 645 4606 
+Q 763 4734 922 4734 
+Q 1100 4734 1214 4614 
+Q 1328 4494 1328 4334 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-57" d="M 2128 134 
+Q 1925 50 1744 -8 
+Q 1563 -66 1300 -66 
+Q 913 -66 755 129 
+Q 597 325 597 681 
+L 597 2769 
+L 41 2769 
+L 41 3069 
+L 609 3069 
+L 609 4028 
+L 1178 4028 
+L 1178 3069 
+L 2063 3069 
+L 2063 2769 
+L 1184 2769 
+L 1184 1047 
+Q 1184 853 1198 723 
+Q 1213 594 1266 497 
+Q 1316 406 1416 359 
+Q 1516 313 1684 313 
+Q 1763 313 1914 327 
+Q 2066 341 2128 363 
+L 2128 134 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-48" d="M 2963 725 
+Q 2769 356 2444 137 
+Q 2119 -81 1697 -81 
+Q 1325 -81 1045 50 
+Q 766 181 584 406 
+Q 403 631 314 931 
+Q 225 1231 225 1566 
+Q 225 1866 320 2155 
+Q 416 2444 600 2675 
+Q 778 2897 1042 3033 
+Q 1306 3169 1634 3169 
+Q 1972 3169 2212 3062 
+Q 2453 2956 2603 2772 
+Q 2747 2597 2817 2359 
+Q 2888 2122 2888 1844 
+L 2888 1638 
+L 847 1638 
+Q 847 1334 905 1087 
+Q 963 841 1088 653 
+Q 1209 472 1406 367 
+Q 1603 263 1875 263 
+Q 2153 263 2354 392 
+Q 2556 522 2744 859 
+L 2963 725 
+z
+M 2272 1900 
+Q 2272 2075 2242 2275 
+Q 2213 2475 2147 2609 
+Q 2075 2753 1950 2843 
+Q 1825 2934 1628 2934 
+Q 1300 2934 1083 2661 
+Q 866 2388 847 1900 
+L 2272 1900 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-3" transform="scale(0.015625)"/>
+       <path id="Georgia-52" d="M 3228 1572 
+Q 3228 1247 3125 933 
+Q 3022 619 2831 400 
+Q 2616 150 2331 28 
+Q 2047 -94 1694 -94 
+Q 1400 -94 1134 17 
+Q 869 128 663 341 
+Q 459 550 339 851 
+Q 219 1153 219 1528 
+Q 219 2250 639 2709 
+Q 1059 3169 1741 3169 
+Q 2388 3169 2808 2733 
+Q 3228 2297 3228 1572 
+z
+M 2581 1566 
+Q 2581 1800 2534 2061 
+Q 2488 2322 2394 2503 
+Q 2294 2697 2131 2814 
+Q 1969 2931 1734 2931 
+Q 1494 2931 1323 2812 
+Q 1153 2694 1047 2488 
+Q 947 2297 906 2053 
+Q 866 1809 866 1581 
+Q 866 1281 914 1026 
+Q 963 772 1069 572 
+Q 1175 372 1336 258 
+Q 1497 144 1734 144 
+Q 2125 144 2353 522 
+Q 2581 900 2581 1566 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-58" d="M 3528 56 
+L 2525 -13 
+L 2478 31 
+L 2478 422 
+L 2459 422 
+Q 2384 344 2290 255 
+Q 2197 166 2075 94 
+Q 1934 9 1803 -34 
+Q 1672 -78 1431 -78 
+Q 1022 -78 808 189 
+Q 594 456 594 966 
+L 594 2441 
+Q 594 2553 551 2629 
+Q 509 2706 428 2763 
+Q 372 2800 287 2817 
+Q 203 2834 109 2841 
+L 109 3044 
+L 1138 3119 
+L 1184 3075 
+L 1184 934 
+Q 1184 600 1334 431 
+Q 1484 263 1694 263 
+Q 1866 263 2000 316 
+Q 2134 369 2225 441 
+Q 2309 506 2373 579 
+Q 2438 653 2472 716 
+L 2472 2463 
+Q 2472 2566 2428 2645 
+Q 2384 2725 2306 2781 
+Q 2250 2819 2139 2826 
+Q 2028 2834 1891 2841 
+L 1891 3044 
+L 3009 3119 
+L 3056 3075 
+L 3056 628 
+Q 3056 522 3100 447 
+Q 3144 372 3222 319 
+Q 3278 284 3356 273 
+Q 3434 263 3528 259 
+L 3528 56 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-55" d="M 2584 2684 
+Q 2584 2525 2506 2401 
+Q 2428 2278 2266 2278 
+Q 2091 2278 1998 2368 
+Q 1906 2459 1906 2569 
+Q 1906 2638 1917 2694 
+Q 1928 2750 1938 2806 
+Q 1791 2806 1594 2687 
+Q 1397 2569 1259 2350 
+L 1259 556 
+Q 1259 447 1301 378 
+Q 1344 309 1434 275 
+Q 1513 244 1636 228 
+Q 1759 213 1850 206 
+L 1850 0 
+L 225 0 
+L 225 206 
+Q 297 213 373 219 
+Q 450 225 506 244 
+Q 594 272 636 342 
+Q 678 413 678 525 
+L 678 2428 
+Q 678 2525 633 2619 
+Q 588 2713 506 2769 
+Q 447 2806 365 2823 
+Q 284 2841 191 2847 
+L 191 3050 
+L 1216 3119 
+L 1259 3075 
+L 1259 2641 
+L 1275 2641 
+Q 1469 2894 1706 3025 
+Q 1944 3156 2141 3156 
+Q 2338 3156 2461 3028 
+Q 2584 2900 2584 2684 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-56" d="M 2259 1509 
+Q 2388 1397 2456 1250 
+Q 2525 1103 2525 891 
+Q 2525 463 2204 191 
+Q 1884 -81 1375 -81 
+Q 1106 -81 879 16 
+Q 653 113 556 194 
+L 494 -9 
+L 259 -9 
+L 228 1063 
+L 444 1063 
+Q 469 941 550 778 
+Q 631 616 747 484 
+Q 869 347 1039 253 
+Q 1209 159 1422 159 
+Q 1722 159 1884 295 
+Q 2047 431 2047 684 
+Q 2047 816 1995 911 
+Q 1944 1006 1844 1078 
+Q 1741 1150 1591 1208 
+Q 1441 1266 1256 1322 
+Q 1109 1366 929 1442 
+Q 750 1519 622 1622 
+Q 484 1731 396 1890 
+Q 309 2050 309 2266 
+Q 309 2644 590 2906 
+Q 872 3169 1344 3169 
+Q 1525 3169 1714 3122 
+Q 1903 3075 2022 3009 
+L 2094 3172 
+L 2319 3172 
+L 2366 2181 
+L 2150 2181 
+Q 2084 2513 1867 2720 
+Q 1650 2928 1338 2928 
+Q 1081 2928 934 2800 
+Q 788 2672 788 2491 
+Q 788 2350 836 2256 
+Q 884 2163 981 2097 
+Q 1075 2034 1217 1979 
+Q 1359 1925 1569 1856 
+Q 1775 1791 1958 1703 
+Q 2141 1616 2259 1509 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-49" d="M 2519 4466 
+Q 2519 4325 2444 4228 
+Q 2369 4131 2216 4131 
+Q 2119 4131 2045 4172 
+Q 1972 4213 1909 4281 
+Q 1847 4350 1794 4437 
+Q 1741 4525 1703 4578 
+Q 1494 4569 1380 4286 
+Q 1266 4003 1266 3384 
+L 1266 3069 
+L 2059 3069 
+L 2059 2769 
+L 1266 2769 
+L 1266 556 
+Q 1266 447 1308 378 
+Q 1350 309 1441 275 
+Q 1516 247 1641 230 
+Q 1766 213 1856 206 
+L 1856 0 
+L 231 0 
+L 231 206 
+Q 303 213 379 219 
+Q 456 225 513 244 
+Q 600 272 642 342 
+Q 684 413 684 525 
+L 684 2769 
+L 75 2769 
+L 75 3069 
+L 684 3069 
+L 684 3266 
+Q 684 3969 1048 4405 
+Q 1413 4841 1959 4841 
+Q 2238 4841 2378 4731 
+Q 2519 4622 2519 4466 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-5b" d="M 3194 0 
+L 1781 0 
+L 1781 206 
+Q 1922 222 2020 237 
+Q 2119 253 2119 319 
+Q 2119 347 2087 406 
+Q 2056 466 2025 516 
+Q 1947 638 1811 842 
+Q 1675 1047 1478 1331 
+Q 1316 1128 1178 936 
+Q 1041 744 891 528 
+Q 869 497 845 450 
+Q 822 403 822 375 
+Q 822 306 911 261 
+Q 1000 216 1178 200 
+L 1178 0 
+L 38 0 
+L 38 194 
+Q 250 256 379 345 
+Q 509 434 619 566 
+Q 716 691 889 909 
+Q 1063 1128 1338 1503 
+Q 1178 1731 948 2061 
+Q 719 2391 569 2609 
+Q 488 2728 383 2801 
+Q 278 2875 88 2875 
+L 88 3081 
+L 1428 3081 
+L 1428 2875 
+Q 1328 2875 1231 2862 
+Q 1134 2850 1134 2806 
+Q 1134 2778 1153 2743 
+Q 1172 2709 1200 2669 
+Q 1269 2563 1414 2341 
+Q 1559 2119 1728 1872 
+Q 1838 2022 1983 2222 
+Q 2128 2422 2250 2603 
+Q 2263 2625 2275 2658 
+Q 2288 2691 2288 2722 
+Q 2288 2788 2180 2827 
+Q 2072 2866 1975 2881 
+L 1975 3081 
+L 3113 3081 
+L 3113 2888 
+Q 2872 2825 2737 2739 
+Q 2603 2653 2509 2541 
+Q 2406 2413 2264 2225 
+Q 2122 2038 1866 1700 
+Q 2150 1300 2328 1044 
+Q 2506 788 2688 516 
+Q 2778 378 2889 298 
+Q 3000 219 3194 206 
+L 3194 0 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#Georgia-46"/>
+      <use xlink:href="#Georgia-44" transform="translate(45.40625 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(95.796875 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(154.875 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(212.296875 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(241.59375 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(299.015625 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(349.40625 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(383.921875 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(432.265625 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(456.390625 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(501.796875 0)"/>
+      <use xlink:href="#Georgia-58" transform="translate(555.703125 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(613.21875 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(672.296875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(706.8125 0)"/>
+      <use xlink:href="#Georgia-55" transform="translate(755.15625 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(796.125 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(820.25 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(849.546875 0)"/>
+      <use xlink:href="#Georgia-56" transform="translate(908.625 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(951.84375 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(981.140625 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1038.5625 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(1086.90625 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1111.03125 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(1164.9375 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1224.015625 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(1272.359375 0)"/>
+      <use xlink:href="#Georgia-49" transform="translate(1296.484375 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1329 0)"/>
+      <use xlink:href="#Georgia-55" transform="translate(1382.90625 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(1423.875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1469.28125 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(1517.625 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(1575.046875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1599.171875 0)"/>
+      <use xlink:href="#Georgia-5b" transform="translate(1647.515625 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1698 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(1746.34375 0)"/>
+      <use xlink:href="#Georgia-58" transform="translate(1791.75 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(1849.265625 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(1883.78125 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1913.078125 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(1966.984375 0)"/>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_17">
+      <path d="M 40.970781 32.971102 
+L 432.970781 32.971102 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_18">
+      <defs>
+       <path id="me12627ef17" d="M 0 0 
+L -3.5 0 
+" style="stroke: #898781; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="32.971102" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <!-- label 0 -->
+      <g style="fill: #52514e" transform="translate(7.2 36.374667) scale(0.09 -0.09)">
+       <defs>
+        <path id="Georgia-4f" d="M 1669 0 
+L 166 0 
+L 166 206 
+Q 238 213 319 220 
+Q 400 228 453 244 
+Q 541 272 584 342 
+Q 628 413 628 525 
+L 628 4094 
+Q 628 4206 579 4304 
+Q 531 4403 453 4459 
+Q 397 4497 247 4528 
+Q 97 4559 6 4566 
+L 6 4766 
+L 1166 4838 
+L 1209 4791 
+L 1209 563 
+Q 1209 453 1250 383 
+Q 1291 313 1381 275 
+Q 1450 244 1517 228 
+Q 1584 213 1669 206 
+L 1669 0 
+z
+" transform="scale(0.015625)"/>
+        <path id="Georgia-45" d="M 3353 1544 
+Q 3353 850 2915 378 
+Q 2478 -94 1900 -94 
+Q 1647 -94 1401 -15 
+Q 1156 63 941 194 
+L 709 -166 
+L 516 -122 
+Q 531 109 537 434 
+Q 544 759 544 1063 
+L 544 4113 
+Q 544 4219 495 4325 
+Q 447 4431 372 4478 
+Q 313 4519 173 4539 
+Q 34 4559 -50 4566 
+L -50 4766 
+L 1081 4838 
+L 1125 4791 
+L 1125 2759 
+L 1147 2753 
+Q 1341 2959 1570 3062 
+Q 1800 3166 2022 3166 
+Q 2591 3166 2972 2716 
+Q 3353 2266 3353 1544 
+z
+M 2700 1522 
+Q 2700 1753 2650 1993 
+Q 2600 2234 2494 2413 
+Q 2388 2594 2216 2706 
+Q 2044 2819 1803 2819 
+Q 1584 2819 1420 2733 
+Q 1256 2647 1125 2500 
+L 1125 706 
+Q 1144 631 1198 531 
+Q 1253 431 1347 341 
+Q 1441 253 1559 198 
+Q 1678 144 1850 144 
+Q 2231 144 2465 512 
+Q 2700 881 2700 1522 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-13" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_19">
+      <path d="M 40.970781 55.517108 
+L 432.970781 55.517108 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="55.517108" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <!-- label 1 -->
+      <g style="fill: #52514e" transform="translate(8.856563 58.920673) scale(0.09 -0.09)">
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-14" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_21">
+      <path d="M 40.970781 78.063115 
+L 432.970781 78.063115 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="78.063115" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <!-- label 2 -->
+      <g style="fill: #52514e" transform="translate(7.696406 81.466679) scale(0.09 -0.09)">
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-15" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_23">
+      <path d="M 40.970781 100.609121 
+L 432.970781 100.609121 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="100.609121" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <!-- label 3 -->
+      <g style="fill: #52514e" transform="translate(7.758281 104.012685) scale(0.09 -0.09)">
+       <defs>
+        <path id="Georgia-16" d="M 1522 -1141 
+Q 1228 -1141 984 -1067 
+Q 741 -994 566 -869 
+Q 391 -744 295 -581 
+Q 200 -419 200 -247 
+Q 200 -94 275 29 
+Q 350 153 516 153 
+Q 703 153 801 61 
+Q 900 -31 900 -150 
+Q 900 -250 867 -403 
+Q 834 -556 816 -622 
+Q 838 -650 895 -697 
+Q 953 -744 1038 -781 
+Q 1138 -828 1247 -856 
+Q 1356 -884 1556 -884 
+Q 1744 -884 1917 -821 
+Q 2091 -759 2222 -622 
+Q 2359 -478 2436 -286 
+Q 2513 -94 2513 219 
+Q 2513 388 2477 553 
+Q 2441 719 2344 841 
+Q 2247 963 2080 1030 
+Q 1913 1097 1656 1097 
+L 1247 1097 
+L 1247 1456 
+L 1519 1456 
+Q 1950 1456 2140 1693 
+Q 2331 1931 2331 2409 
+Q 2331 2800 2147 2998 
+Q 1963 3197 1625 3197 
+Q 1463 3197 1358 3158 
+Q 1253 3119 1188 3081 
+Q 1109 3038 1059 2984 
+Q 1009 2931 984 2906 
+Q 1006 2806 1037 2661 
+Q 1069 2516 1069 2384 
+Q 1069 2269 970 2176 
+Q 872 2084 681 2084 
+Q 516 2084 439 2203 
+Q 363 2322 363 2478 
+Q 363 2641 453 2809 
+Q 544 2978 722 3125 
+Q 900 3272 1156 3362 
+Q 1413 3453 1747 3453 
+Q 2131 3453 2382 3339 
+Q 2634 3225 2778 3063 
+Q 2919 2903 2972 2728 
+Q 3025 2553 3025 2428 
+Q 3025 2272 2981 2114 
+Q 2938 1956 2838 1822 
+Q 2728 1675 2548 1554 
+Q 2369 1434 2097 1359 
+L 2097 1309 
+Q 2272 1294 2470 1231 
+Q 2669 1169 2828 1047 
+Q 2994 919 3100 717 
+Q 3206 516 3206 206 
+Q 3206 -394 2725 -767 
+Q 2244 -1141 1522 -1141 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-16" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_25">
+      <path d="M 40.970781 123.155127 
+L 432.970781 123.155127 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="123.155127" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <!-- label 4 -->
+      <g style="fill: #52514e" transform="translate(7.63875 126.558692) scale(0.09 -0.09)">
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-17" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_27">
+      <path d="M 40.970781 145.701133 
+L 432.970781 145.701133 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="145.701133" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <!-- label 5 -->
+      <g style="fill: #52514e" transform="translate(7.969219 149.104698) scale(0.09 -0.09)">
+       <defs>
+        <path id="Georgia-18" d="M 2634 1466 
+Q 2841 1303 2977 1047 
+Q 3113 791 3113 406 
+Q 3113 -266 2653 -703 
+Q 2194 -1141 1488 -1141 
+Q 941 -1141 562 -881 
+Q 184 -622 184 -278 
+Q 184 -119 262 0 
+Q 341 119 503 119 
+Q 691 119 789 20 
+Q 888 -78 888 -194 
+Q 888 -294 853 -444 
+Q 819 -594 800 -666 
+Q 825 -688 881 -725 
+Q 938 -763 1016 -797 
+Q 1097 -831 1214 -857 
+Q 1331 -884 1488 -884 
+Q 1688 -884 1866 -803 
+Q 2044 -722 2166 -563 
+Q 2300 -388 2367 -164 
+Q 2434 59 2434 403 
+Q 2434 844 2189 1133 
+Q 1944 1422 1544 1422 
+Q 1294 1422 1076 1328 
+Q 859 1234 688 1016 
+L 478 1097 
+L 744 3353 
+L 2981 3353 
+L 2981 2797 
+L 997 2797 
+L 834 1472 
+Q 975 1572 1204 1670 
+Q 1434 1769 1709 1769 
+Q 1938 1769 2183 1698 
+Q 2428 1628 2634 1466 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-18" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_29">
+      <path d="M 40.970781 168.24714 
+L 432.970781 168.24714 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="168.24714" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <!-- label 6 -->
+      <g style="fill: #52514e" transform="translate(7.630313 171.650704) scale(0.09 -0.09)">
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-19" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_31">
+      <path d="M 40.970781 190.793146 
+L 432.970781 190.793146 
+" clip-path="url(#pa00ce5f377)" style="fill: none; stroke: #e1e0d9; stroke-width: 0.7; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#me12627ef17" x="40.970781" y="190.793146" style="fill: #898781; stroke: #898781; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <!-- label 7 -->
+      <g style="fill: #52514e" transform="translate(8.20125 194.19671) scale(0.09 -0.09)">
+       <defs>
+        <path id="Georgia-1a" d="M 3216 3150 
+L 988 -1141 
+L 597 -1141 
+L 2694 2828 
+L 1466 2828 
+Q 1194 2828 1041 2822 
+Q 888 2816 759 2763 
+Q 663 2722 586 2555 
+Q 509 2388 469 2128 
+L 278 2128 
+L 278 3353 
+L 3216 3353 
+L 3216 3150 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#Georgia-4f"/>
+       <use xlink:href="#Georgia-44" transform="translate(28.609375 0)"/>
+       <use xlink:href="#Georgia-45" transform="translate(79 0)"/>
+       <use xlink:href="#Georgia-48" transform="translate(135 0)"/>
+       <use xlink:href="#Georgia-4f" transform="translate(183.34375 0)"/>
+       <use xlink:href="#Georgia-3" transform="translate(211.953125 0)"/>
+       <use xlink:href="#Georgia-1a" transform="translate(236.078125 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_33">
+    <defs>
+     <path id="m6a3a175db6" d="M 0 2.5 
+C 0.663008 2.5 1.29895 2.236584 1.767767 1.767767 
+C 2.236584 1.29895 2.5 0.663008 2.5 0 
+C 2.5 -0.663008 2.236584 -1.29895 1.767767 -1.767767 
+C 1.29895 -2.236584 0.663008 -2.5 0 -2.5 
+C -0.663008 -2.5 -1.29895 -2.236584 -1.767767 -1.767767 
+C -2.236584 -1.29895 -2.5 -0.663008 -2.5 0 
+C -2.5 0.663008 -2.236584 1.29895 -1.767767 1.767767 
+C -1.29895 2.236584 -0.663008 2.5 0 2.5 
+z
+" style="stroke: #898781; stroke-width: 1.1"/>
+    </defs>
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="72.174761" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="91.677249" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="111.179736" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="130.682224" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="150.184712" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="169.687199" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="189.189687" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="208.692174" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="228.194662" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="247.697149" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="267.199637" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="286.702125" y="32.971102" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_34">
+    <defs>
+     <path id="m3805e5808c" d="M 0 3.75 
+C 0.994512 3.75 1.948425 3.354876 2.65165 2.65165 
+C 3.354876 1.948425 3.75 0.994512 3.75 0 
+C 3.75 -0.994512 3.354876 -1.948425 2.65165 -2.65165 
+C 1.948425 -3.354876 0.994512 -3.75 0 -3.75 
+C -0.994512 -3.75 -1.948425 -3.354876 -2.65165 -2.65165 
+C -3.354876 -1.948425 -3.75 -0.994512 -3.75 0 
+C -3.75 0.994512 -3.354876 1.948425 -2.65165 2.65165 
+C -1.948425 3.354876 -0.994512 3.75 0 3.75 
+z
+" style="stroke: #2a78d6"/>
+    </defs>
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="306.204612" y="32.971102" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_35">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="52.672274" y="55.517108" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_36">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="72.174761" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="91.677249" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="111.179736" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="130.682224" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="150.184712" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="169.687199" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="189.189687" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="208.692174" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="228.194662" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="247.697149" y="78.063115" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_37">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="267.199637" y="78.063115" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_38">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="100.609121" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_39">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="72.174761" y="100.609121" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_40">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="123.155127" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="72.174761" y="123.155127" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_41">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="91.677249" y="123.155127" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_42">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="145.701133" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_43">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="72.174761" y="145.701133" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_44">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="52.672274" y="168.24714" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="line2d_45">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m6a3a175db6" x="52.672274" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="72.174761" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="91.677249" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="111.179736" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="130.682224" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="150.184712" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="169.687199" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="189.189687" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="208.692174" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="228.194662" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+     <use xlink:href="#m6a3a175db6" x="247.697149" y="190.793146" style="fill-opacity: 0; stroke: #898781; stroke-width: 1.1"/>
+    </g>
+   </g>
+   <g id="line2d_46">
+    <g clip-path="url(#pa00ce5f377)">
+     <use xlink:href="#m3805e5808c" x="267.199637" y="190.793146" style="fill: #2a78d6; stroke: #2a78d6"/>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 40.970781 198.684248 
+L 40.970781 25.08 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 40.970781 198.684248 
+L 432.970781 198.684248 
+" style="fill: none; stroke: #c3c2b7; stroke-width: 0.9; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_18">
+    <!-- $(a,b)=(113,115)$,  $r=19$ -->
+    <g style="fill: #52514e" transform="translate(314.204612 34.996493) scale(0.08 -0.08)">
+     <defs>
+      <path id="Cmr10-77" d="M 1984 -1588 
+Q 1628 -1306 1370 -942 
+Q 1113 -578 948 -165 
+Q 784 247 703 697 
+Q 622 1147 622 1600 
+Q 622 2059 703 2509 
+Q 784 2959 951 3375 
+Q 1119 3791 1378 4153 
+Q 1638 4516 1984 4788 
+Q 1984 4800 2016 4800 
+L 2075 4800 
+Q 2094 4800 2109 4783 
+Q 2125 4766 2125 4744 
+Q 2125 4716 2113 4703 
+Q 1800 4397 1592 4047 
+Q 1384 3697 1257 3301 
+Q 1131 2906 1075 2482 
+Q 1019 2059 1019 1600 
+Q 1019 -434 2106 -1491 
+Q 2125 -1509 2125 -1544 
+Q 2125 -1559 2108 -1579 
+Q 2091 -1600 2075 -1600 
+L 2016 -1600 
+Q 1984 -1600 1984 -1588 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmmi10-79" d="M 1113 -72 
+Q 709 -72 476 233 
+Q 244 538 244 953 
+Q 244 1363 456 1803 
+Q 669 2244 1030 2536 
+Q 1391 2828 1806 2828 
+Q 1997 2828 2147 2725 
+Q 2297 2622 2381 2444 
+Q 2453 2700 2663 2700 
+Q 2744 2700 2798 2651 
+Q 2853 2603 2853 2522 
+Q 2853 2503 2851 2493 
+Q 2850 2484 2847 2472 
+L 2400 684 
+Q 2356 494 2356 372 
+Q 2356 97 2541 97 
+Q 2741 97 2845 351 
+Q 2950 606 3022 941 
+Q 3034 978 3072 978 
+L 3150 978 
+Q 3175 978 3190 956 
+Q 3206 934 3206 916 
+Q 3094 469 2961 198 
+Q 2828 -72 2528 -72 
+Q 2313 -72 2147 54 
+Q 1981 181 1941 391 
+Q 1528 -72 1113 -72 
+z
+M 1119 97 
+Q 1350 97 1567 270 
+Q 1784 444 1941 678 
+Q 1947 684 1947 697 
+L 2291 2088 
+L 2297 2106 
+Q 2259 2334 2132 2498 
+Q 2006 2663 1791 2663 
+Q 1575 2663 1389 2486 
+Q 1203 2309 1075 2069 
+Q 950 1813 836 1366 
+Q 722 919 722 672 
+Q 722 450 817 273 
+Q 913 97 1119 97 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmmi10-2c" d="M 634 -1153 
+Q 634 -1125 659 -1100 
+Q 891 -878 1019 -587 
+Q 1147 -297 1147 25 
+L 1147 103 
+Q 1044 0 891 0 
+Q 744 0 641 103 
+Q 538 206 538 353 
+Q 538 503 641 603 
+Q 744 703 891 703 
+Q 1119 703 1216 492 
+Q 1313 281 1313 25 
+Q 1313 -331 1170 -651 
+Q 1028 -972 769 -1228 
+Q 744 -1241 728 -1241 
+Q 697 -1241 665 -1212 
+Q 634 -1184 634 -1153 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmmi10-4b" d="M 1106 -72 
+Q 719 -72 503 231 
+Q 288 534 288 941 
+Q 288 1000 317 1173 
+Q 347 1347 347 1388 
+L 966 3872 
+Q 991 3981 997 4044 
+Q 997 4147 581 4147 
+Q 519 4147 519 4231 
+Q 522 4247 533 4287 
+Q 544 4328 561 4350 
+Q 578 4372 609 4372 
+L 1472 4441 
+Q 1550 4441 1550 4359 
+L 1075 2472 
+Q 1438 2828 1806 2828 
+Q 2078 2828 2273 2684 
+Q 2469 2541 2566 2306 
+Q 2663 2072 2663 1806 
+Q 2663 1497 2542 1167 
+Q 2422 838 2209 555 
+Q 1997 272 1712 100 
+Q 1428 -72 1106 -72 
+z
+M 1119 97 
+Q 1338 97 1528 280 
+Q 1719 463 1838 691 
+Q 1966 947 2077 1386 
+Q 2188 1825 2188 2088 
+Q 2188 2316 2092 2489 
+Q 1997 2663 1791 2663 
+Q 1559 2663 1348 2492 
+Q 1138 2322 978 2088 
+L 800 1363 
+Q 697 959 691 716 
+Q 691 475 795 286 
+Q 900 97 1119 97 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-44" d="M 416 -1600 
+Q 359 -1600 359 -1544 
+Q 359 -1516 372 -1503 
+Q 1466 -434 1466 1600 
+Q 1466 3634 384 4691 
+Q 359 4706 359 4744 
+Q 359 4766 376 4783 
+Q 394 4800 416 4800 
+L 475 4800 
+Q 494 4800 506 4788 
+Q 966 4425 1272 3906 
+Q 1578 3388 1720 2800 
+Q 1863 2213 1863 1600 
+Q 1863 1147 1786 708 
+Q 1709 269 1542 -157 
+Q 1375 -584 1119 -945 
+Q 863 -1306 506 -1588 
+Q 494 -1600 475 -1600 
+L 416 -1600 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-29" d="M 481 850 
+Q 428 850 393 890 
+Q 359 931 359 978 
+Q 359 1031 393 1068 
+Q 428 1106 481 1106 
+L 4500 1106 
+Q 4547 1106 4581 1068 
+Q 4616 1031 4616 978 
+Q 4616 931 4581 890 
+Q 4547 850 4500 850 
+L 481 850 
+z
+M 481 2094 
+Q 428 2094 393 2131 
+Q 359 2169 359 2222 
+Q 359 2269 393 2309 
+Q 428 2350 481 2350 
+L 4500 2350 
+Q 4547 2350 4581 2309 
+Q 4616 2269 4616 2222 
+Q 4616 2169 4581 2131 
+Q 4547 2094 4500 2094 
+L 481 2094 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-64" d="M 594 0 
+L 594 225 
+Q 1394 225 1394 428 
+L 1394 3788 
+Q 1063 3628 556 3628 
+L 556 3853 
+Q 1341 3853 1741 4263 
+L 1831 4263 
+Q 1853 4263 1873 4245 
+Q 1894 4228 1894 4206 
+L 1894 428 
+Q 1894 225 2694 225 
+L 2694 0 
+L 594 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-6e" d="M 609 494 
+Q 759 275 1012 169 
+Q 1266 63 1556 63 
+Q 1928 63 2084 380 
+Q 2241 697 2241 1100 
+Q 2241 1281 2208 1462 
+Q 2175 1644 2097 1800 
+Q 2019 1956 1883 2050 
+Q 1747 2144 1550 2144 
+L 1125 2144 
+Q 1069 2144 1069 2203 
+L 1069 2259 
+Q 1069 2309 1125 2309 
+L 1478 2338 
+Q 1703 2338 1851 2506 
+Q 2000 2675 2069 2917 
+Q 2138 3159 2138 3378 
+Q 2138 3684 1994 3881 
+Q 1850 4078 1556 4078 
+Q 1313 4078 1091 3986 
+Q 869 3894 738 3706 
+Q 750 3709 759 3711 
+Q 769 3713 781 3713 
+Q 925 3713 1022 3613 
+Q 1119 3513 1119 3372 
+Q 1119 3234 1022 3134 
+Q 925 3034 781 3034 
+Q 641 3034 541 3134 
+Q 441 3234 441 3372 
+Q 441 3647 606 3850 
+Q 772 4053 1033 4158 
+Q 1294 4263 1556 4263 
+Q 1750 4263 1965 4205 
+Q 2181 4147 2356 4039 
+Q 2531 3931 2642 3762 
+Q 2753 3594 2753 3378 
+Q 2753 3109 2633 2881 
+Q 2513 2653 2303 2487 
+Q 2094 2322 1844 2241 
+Q 2122 2188 2372 2031 
+Q 2622 1875 2773 1631 
+Q 2925 1388 2925 1106 
+Q 2925 753 2731 467 
+Q 2538 181 2222 20 
+Q 1906 -141 1556 -141 
+Q 1256 -141 954 -26 
+Q 653 88 461 316 
+Q 269 544 269 863 
+Q 269 1022 375 1128 
+Q 481 1234 641 1234 
+Q 744 1234 830 1186 
+Q 916 1138 964 1050 
+Q 1013 963 1013 863 
+Q 1013 706 903 600 
+Q 794 494 641 494 
+L 609 494 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-78" d="M 556 728 
+Q 622 541 758 387 
+Q 894 234 1080 148 
+Q 1266 63 1466 63 
+Q 1928 63 2103 422 
+Q 2278 781 2278 1294 
+Q 2278 1516 2270 1667 
+Q 2263 1819 2228 1959 
+Q 2169 2184 2020 2353 
+Q 1872 2522 1656 2522 
+Q 1441 2522 1286 2456 
+Q 1131 2391 1034 2303 
+Q 938 2216 863 2119 
+Q 788 2022 769 2016 
+L 697 2016 
+Q 681 2016 657 2036 
+Q 634 2056 634 2075 
+L 634 4213 
+Q 634 4228 654 4245 
+Q 675 4263 697 4263 
+L 716 4263 
+Q 1147 4056 1631 4056 
+Q 2106 4056 2547 4263 
+L 2566 4263 
+Q 2588 4263 2606 4247 
+Q 2625 4231 2625 4213 
+L 2625 4153 
+Q 2625 4122 2613 4122 
+Q 2394 3831 2064 3668 
+Q 1734 3506 1381 3506 
+Q 1125 3506 856 3578 
+L 856 2369 
+Q 1069 2541 1236 2614 
+Q 1403 2688 1663 2688 
+Q 2016 2688 2295 2484 
+Q 2575 2281 2725 1954 
+Q 2875 1628 2875 1288 
+Q 2875 903 2686 575 
+Q 2497 247 2172 53 
+Q 1847 -141 1466 -141 
+Q 1150 -141 886 21 
+Q 622 184 470 459 
+Q 319 734 319 1044 
+Q 319 1188 412 1278 
+Q 506 1369 647 1369 
+Q 788 1369 883 1276 
+Q 978 1184 978 1044 
+Q 978 906 883 811 
+Q 788 716 647 716 
+Q 625 716 597 720 
+Q 569 725 556 728 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-f" d="M 1341 109 
+Q 1341 -116 1239 -316 
+Q 1138 -516 1006 -659 
+Q 872 -809 722 -925 
+Q 572 -1041 447 -1106 
+L 303 -897 
+Q 453 -803 572 -709 
+Q 691 -616 766 -522 
+Q 859 -413 925 -284 
+Q 991 -156 1009 6 
+L 850 6 
+Q 641 6 523 115 
+Q 406 225 406 409 
+Q 406 541 512 664 
+Q 619 788 803 788 
+Q 1072 788 1206 608 
+Q 1341 428 1341 109 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmmi10-84" d="M 494 109 
+Q 494 147 500 166 
+L 978 2075 
+Q 1025 2253 1025 2388 
+Q 1025 2663 838 2663 
+Q 638 2663 541 2423 
+Q 444 2184 353 1819 
+Q 353 1800 334 1789 
+Q 316 1778 300 1778 
+L 225 1778 
+Q 203 1778 187 1801 
+Q 172 1825 172 1844 
+Q 241 2122 305 2315 
+Q 369 2509 505 2668 
+Q 641 2828 844 2828 
+Q 1066 2828 1233 2700 
+Q 1400 2572 1441 2363 
+Q 1603 2575 1811 2701 
+Q 2019 2828 2266 2828 
+Q 2469 2828 2623 2709 
+Q 2778 2591 2778 2388 
+Q 2778 2225 2676 2104 
+Q 2575 1984 2406 1984 
+Q 2303 1984 2233 2048 
+Q 2163 2113 2163 2216 
+Q 2163 2356 2266 2467 
+Q 2369 2578 2503 2578 
+Q 2400 2663 2253 2663 
+Q 1978 2663 1775 2467 
+Q 1572 2272 1409 1972 
+L 953 141 
+Q 931 53 854 -9 
+Q 778 -72 684 -72 
+Q 606 -72 550 -22 
+Q 494 28 494 109 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-16" d="M 722 269 
+Q 897 63 1331 63 
+Q 1575 63 1786 228 
+Q 1997 394 2113 634 
+Q 2247 906 2284 1214 
+Q 2322 1522 2322 1978 
+Q 2213 1719 2008 1553 
+Q 1803 1388 1538 1388 
+Q 1166 1388 873 1589 
+Q 581 1791 425 2120 
+Q 269 2450 269 2822 
+Q 269 3206 444 3539 
+Q 619 3872 928 4067 
+Q 1238 4263 1631 4263 
+Q 2019 4263 2280 4052 
+Q 2541 3841 2678 3508 
+Q 2816 3175 2870 2803 
+Q 2925 2431 2925 2069 
+Q 2925 1575 2744 1061 
+Q 2563 547 2202 203 
+Q 1841 -141 1331 -141 
+Q 953 -141 690 37 
+Q 428 216 428 575 
+Q 428 706 517 795 
+Q 606 884 738 884 
+Q 866 884 955 795 
+Q 1044 706 1044 575 
+Q 1044 450 953 359 
+Q 863 269 738 269 
+L 722 269 
+z
+M 1563 1556 
+Q 1825 1556 1992 1732 
+Q 2159 1909 2234 2171 
+Q 2309 2434 2309 2694 
+L 2309 2816 
+L 2309 2841 
+Q 2309 3322 2168 3700 
+Q 2028 4078 1631 4078 
+Q 1378 4078 1220 3967 
+Q 1063 3856 988 3672 
+Q 913 3488 892 3278 
+Q 872 3069 872 2822 
+Q 872 2459 906 2203 
+Q 941 1947 1094 1751 
+Q 1247 1556 1563 1556 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmr10-6e" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(527.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Cmr10-78" transform="translate(675.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(725.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(764.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(790.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(815.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(839.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(904.345989 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(1002.031593 0)"/>
+     <use xlink:href="#Cmr10-16" transform="translate(1052.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_19">
+    <!-- $(a,b)=(115,12)$,  $r=41$ -->
+    <g style="fill: #52514e" transform="translate(60.672274 57.542499) scale(0.08 -0.08)">
+     <defs>
+      <path id="Cmr10-31" d="M 319 0 
+L 319 172 
+Q 319 188 331 206 
+L 1325 1306 
+Q 1550 1550 1690 1715 
+Q 1831 1881 1968 2097 
+Q 2106 2313 2186 2536 
+Q 2266 2759 2266 3009 
+Q 2266 3272 2169 3511 
+Q 2072 3750 1880 3894 
+Q 1688 4038 1416 4038 
+Q 1138 4038 916 3870 
+Q 694 3703 603 3438 
+Q 628 3444 672 3444 
+Q 816 3444 917 3347 
+Q 1019 3250 1019 3097 
+Q 1019 2950 917 2848 
+Q 816 2747 672 2747 
+Q 522 2747 420 2851 
+Q 319 2956 319 3097 
+Q 319 3338 409 3548 
+Q 500 3759 670 3923 
+Q 841 4088 1055 4175 
+Q 1269 4263 1509 4263 
+Q 1875 4263 2190 4108 
+Q 2506 3953 2690 3670 
+Q 2875 3388 2875 3009 
+Q 2875 2731 2753 2481 
+Q 2631 2231 2440 2026 
+Q 2250 1822 1953 1562 
+Q 1656 1303 1563 1216 
+L 838 519 
+L 1453 519 
+Q 1906 519 2211 526 
+Q 2516 534 2534 550 
+Q 2609 631 2688 1141 
+L 2875 1141 
+L 2694 0 
+L 319 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-3b" d="M 178 1056 
+L 178 1281 
+L 2156 4231 
+Q 2178 4263 2222 4263 
+L 2316 4263 
+Q 2388 4263 2388 4191 
+L 2388 1281 
+L 3016 1281 
+L 3016 1056 
+L 2388 1056 
+L 2388 428 
+Q 2388 297 2575 261 
+Q 2763 225 3009 225 
+L 3009 0 
+L 1247 0 
+L 1247 225 
+Q 1494 225 1681 261 
+Q 1869 297 1869 428 
+L 1869 1056 
+L 178 1056 
+z
+M 391 1281 
+L 1906 1281 
+L 1906 3547 
+L 391 1281 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmr10-78" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(527.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(675.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(714.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(740.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(765.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(789.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(854.345989 0)"/>
+     <use xlink:href="#Cmr10-3b" transform="translate(952.031593 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(1002.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_20">
+    <!-- $(a,b)=(80,26)$,  $r=107$ -->
+    <g style="fill: #52514e" transform="translate(275.199637 80.088505) scale(0.08 -0.08)">
+     <defs>
+      <path id="Cmr10-4d" d="M 269 972 
+Q 269 1356 522 1651 
+Q 775 1947 1172 2144 
+L 934 2297 
+Q 716 2441 578 2680 
+Q 441 2919 441 3181 
+Q 441 3488 602 3734 
+Q 763 3981 1030 4122 
+Q 1297 4263 1600 4263 
+Q 1884 4263 2148 4147 
+Q 2413 4031 2583 3815 
+Q 2753 3600 2753 3303 
+Q 2753 3088 2651 2903 
+Q 2550 2719 2373 2572 
+Q 2197 2425 1997 2322 
+L 2363 2088 
+Q 2616 1922 2770 1653 
+Q 2925 1384 2925 1088 
+Q 2925 741 2739 456 
+Q 2553 172 2247 15 
+Q 1941 -141 1600 -141 
+Q 1269 -141 961 -6 
+Q 653 128 461 383 
+Q 269 638 269 972 
+z
+M 616 972 
+Q 616 719 755 509 
+Q 894 300 1122 181 
+Q 1350 63 1600 63 
+Q 1972 63 2275 280 
+Q 2578 497 2578 856 
+Q 2578 978 2529 1098 
+Q 2481 1219 2395 1317 
+Q 2309 1416 2203 1478 
+L 1344 2034 
+Q 1144 1928 976 1765 
+Q 809 1603 712 1400 
+Q 616 1197 616 972 
+z
+M 1056 2925 
+L 1831 2425 
+Q 2100 2581 2272 2803 
+Q 2444 3025 2444 3303 
+Q 2444 3519 2323 3698 
+Q 2203 3878 2009 3978 
+Q 1816 4078 1594 4078 
+Q 1400 4078 1203 4003 
+Q 1006 3928 878 3779 
+Q 750 3631 750 3431 
+Q 750 3131 1056 2925 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-28" d="M 1600 -141 
+Q 816 -141 533 504 
+Q 250 1150 250 2041 
+Q 250 2597 351 3087 
+Q 453 3578 754 3920 
+Q 1056 4263 1600 4263 
+Q 2022 4263 2290 4056 
+Q 2559 3850 2700 3523 
+Q 2841 3197 2892 2823 
+Q 2944 2450 2944 2041 
+Q 2944 1491 2842 1011 
+Q 2741 531 2444 195 
+Q 2147 -141 1600 -141 
+z
+M 1600 25 
+Q 1956 25 2131 390 
+Q 2306 756 2347 1200 
+Q 2388 1644 2388 2144 
+Q 2388 2625 2347 3031 
+Q 2306 3438 2132 3767 
+Q 1959 4097 1600 4097 
+Q 1238 4097 1063 3765 
+Q 888 3434 847 3029 
+Q 806 2625 806 2144 
+Q 806 1788 823 1472 
+Q 841 1156 916 820 
+Q 991 484 1158 254 
+Q 1325 25 1600 25 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-45" d="M 1600 -141 
+Q 1203 -141 937 70 
+Q 672 281 526 617 
+Q 381 953 325 1322 
+Q 269 1691 269 2069 
+Q 269 2575 466 3084 
+Q 663 3594 1045 3928 
+Q 1428 4263 1953 4263 
+Q 2172 4263 2361 4180 
+Q 2550 4097 2658 3936 
+Q 2766 3775 2766 3547 
+Q 2766 3416 2677 3327 
+Q 2588 3238 2456 3238 
+Q 2331 3238 2240 3328 
+Q 2150 3419 2150 3547 
+Q 2150 3672 2240 3762 
+Q 2331 3853 2456 3853 
+L 2491 3853 
+Q 2409 3969 2261 4023 
+Q 2113 4078 1953 4078 
+Q 1759 4078 1595 3993 
+Q 1431 3909 1300 3765 
+Q 1169 3622 1081 3448 
+Q 994 3275 945 3053 
+Q 897 2831 884 2637 
+Q 872 2444 872 2150 
+Q 984 2413 1190 2580 
+Q 1397 2747 1656 2747 
+Q 1941 2747 2175 2631 
+Q 2409 2516 2578 2311 
+Q 2747 2106 2836 1843 
+Q 2925 1581 2925 1313 
+Q 2925 938 2758 598 
+Q 2591 259 2287 59 
+Q 1984 -141 1600 -141 
+z
+M 1600 63 
+Q 1847 63 1997 175 
+Q 2147 288 2217 473 
+Q 2288 659 2305 848 
+Q 2322 1038 2322 1313 
+Q 2322 1675 2287 1931 
+Q 2253 2188 2100 2383 
+Q 1947 2578 1631 2578 
+Q 1372 2578 1205 2403 
+Q 1038 2228 961 1961 
+Q 884 1694 884 1447 
+Q 884 1363 891 1319 
+Q 891 1309 889 1303 
+Q 888 1297 884 1288 
+Q 884 1013 940 731 
+Q 997 450 1156 256 
+Q 1316 63 1600 63 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmr10-7f" d="M 1113 166 
+Q 1113 522 1175 862 
+Q 1238 1203 1358 1536 
+Q 1478 1869 1648 2189 
+Q 1819 2509 2022 2791 
+L 2606 3603 
+L 1875 3603 
+Q 738 3603 703 3572 
+Q 619 3469 544 2981 
+L 359 2981 
+L 569 4325 
+L 756 4325 
+L 756 4306 
+Q 756 4191 1147 4156 
+Q 1538 4122 1913 4122 
+L 3103 4122 
+L 3103 3956 
+Q 3103 3950 3101 3947 
+Q 3100 3944 3097 3938 
+L 2216 2700 
+Q 1891 2219 1809 1631 
+Q 1728 1044 1728 166 
+Q 1728 41 1637 -50 
+Q 1547 -141 1422 -141 
+Q 1294 -141 1203 -50 
+Q 1113 41 1113 166 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-4d" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-28" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(525.215073 0)"/>
+     <use xlink:href="#Cmr10-45" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(664.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(690.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(715.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(739.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(804.345989 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(902.031593 0)"/>
+     <use xlink:href="#Cmr10-28" transform="translate(952.031593 0)"/>
+     <use xlink:href="#Cmr10-7f" transform="translate(1002.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_21">
+    <!-- $(a,b)=(92,90)$,  $r=23$ -->
+    <g style="fill: #52514e" transform="translate(80.174761 102.634512) scale(0.08 -0.08)">
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-16" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmr10-16" transform="translate(525.215073 0)"/>
+     <use xlink:href="#Cmr10-28" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(664.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(690.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(715.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(739.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(804.345989 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(902.031593 0)"/>
+     <use xlink:href="#Cmr10-6e" transform="translate(952.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_22">
+    <!-- $(a,b)=(46,28)$,  $r=37$ -->
+    <g style="fill: #52514e" transform="translate(99.677249 125.180518) scale(0.08 -0.08)">
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-3b" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-45" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(525.215073 0)"/>
+     <use xlink:href="#Cmr10-4d" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(664.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(690.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(715.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(739.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(804.345989 0)"/>
+     <use xlink:href="#Cmr10-6e" transform="translate(902.031593 0)"/>
+     <use xlink:href="#Cmr10-7f" transform="translate(952.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_23">
+    <!-- $(a,b)=(110,37)$,  $r=23$ -->
+    <g style="fill: #52514e" transform="translate(80.174761 147.726524) scale(0.08 -0.08)">
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmr10-28" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(527.529469 0)"/>
+     <use xlink:href="#Cmr10-6e" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-7f" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(675.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(714.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(740.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(765.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(789.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(854.345989 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(952.031593 0)"/>
+     <use xlink:href="#Cmr10-6e" transform="translate(1002.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_24">
+    <!-- $(a,b)=(61,118)$,  $r=41$ -->
+    <g style="fill: #52514e" transform="translate(60.672274 170.27253) scale(0.08 -0.08)">
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-45" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(477.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(525.215073 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(575.215073 0)"/>
+     <use xlink:href="#Cmr10-4d" transform="translate(625.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(675.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(714.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(740.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(765.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(789.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(854.345989 0)"/>
+     <use xlink:href="#Cmr10-3b" transform="translate(952.031593 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(1002.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_25">
+    <!-- $(a,b)=(2,1)$,  $r=41$ -->
+    <g style="fill: #52514e" transform="translate(275.199637 192.818536) scale(0.08 -0.08)">
+     <use xlink:href="#Cmr10-77"/>
+     <use xlink:href="#Cmmi10-79" transform="translate(38.818359 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(91.601562 0)"/>
+     <use xlink:href="#Cmmi10-4b" transform="translate(139.287167 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(182.207088 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(241.025505 0)"/>
+     <use xlink:href="#Cmr10-77" transform="translate(338.711109 0)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(377.529469 0)"/>
+     <use xlink:href="#Cmmi10-2c" transform="translate(427.529469 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(475.215073 0)"/>
+     <use xlink:href="#Cmr10-44" transform="translate(525.215073 0)"/>
+     <use xlink:href="#Georgia-f" transform="translate(564.033432 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(590.986557 0)"/>
+     <use xlink:href="#Georgia-3" transform="translate(615.107651 0)"/>
+     <use xlink:href="#Cmmi10-84" transform="translate(639.228745 0)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(704.345989 0)"/>
+     <use xlink:href="#Cmr10-3b" transform="translate(802.031593 0)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(852.031593 0)"/>
+    </g>
+   </g>
+   <g id="text_26">
+    <!-- First-passing search at $p=127$: eight beacon labels -->
+    <g style="fill: #0b0b0b" transform="translate(40.970781 17.08) scale(0.13 -0.13)">
+     <defs>
+      <path id="Georgia-29" d="M 3747 3325 
+L 3513 3325 
+Q 3447 3572 3239 3853 
+Q 3031 4134 2841 4163 
+Q 2744 4175 2611 4181 
+Q 2478 4188 2309 4188 
+L 1566 4188 
+L 1566 2406 
+L 2075 2406 
+Q 2306 2406 2434 2454 
+Q 2563 2503 2653 2603 
+Q 2716 2672 2767 2817 
+Q 2819 2963 2834 3128 
+L 3072 3128 
+L 3072 1388 
+L 2834 1388 
+Q 2825 1525 2770 1700 
+Q 2716 1875 2653 1953 
+Q 2559 2069 2417 2111 
+Q 2275 2153 2075 2153 
+L 1566 2153 
+L 1566 625 
+Q 1566 522 1606 440 
+Q 1647 359 1750 309 
+Q 1797 288 1953 256 
+Q 2109 225 2191 222 
+L 2191 0 
+L 269 0 
+L 269 222 
+Q 363 228 519 242 
+Q 675 256 722 278 
+Q 816 319 858 398 
+Q 900 478 900 591 
+L 900 3791 
+Q 900 3894 865 3973 
+Q 831 4053 722 4103 
+Q 638 4144 495 4175 
+Q 353 4206 269 4213 
+L 269 4434 
+L 3747 4434 
+L 3747 3325 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-10" d="M 2128 1453 
+L 266 1453 
+L 266 1944 
+L 2128 1944 
+L 2128 1453 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-53" d="M 3041 2716 
+Q 3225 2497 3326 2208 
+Q 3428 1919 3428 1547 
+Q 3428 1181 3306 879 
+Q 3184 578 2984 366 
+Q 2775 150 2519 34 
+Q 2263 -81 1975 -81 
+Q 1697 -81 1519 -18 
+Q 1341 44 1228 128 
+L 1203 128 
+L 1203 -797 
+Q 1203 -909 1247 -984 
+Q 1291 -1059 1381 -1094 
+Q 1456 -1122 1595 -1148 
+Q 1734 -1175 1825 -1178 
+L 1825 -1388 
+L 103 -1388 
+L 103 -1178 
+Q 200 -1172 290 -1162 
+Q 381 -1153 453 -1131 
+Q 547 -1100 584 -1022 
+Q 622 -944 622 -838 
+L 622 2441 
+Q 622 2534 575 2621 
+Q 528 2709 453 2763 
+Q 397 2800 297 2820 
+Q 197 2841 103 2847 
+L 103 3050 
+L 1153 3119 
+L 1197 3081 
+L 1197 2734 
+L 1222 2728 
+Q 1384 2916 1625 3041 
+Q 1866 3166 2103 3166 
+Q 2391 3166 2630 3044 
+Q 2869 2922 3041 2716 
+z
+M 2531 500 
+Q 2656 694 2715 950 
+Q 2775 1206 2775 1522 
+Q 2775 1753 2725 1993 
+Q 2675 2234 2569 2413 
+Q 2463 2594 2291 2706 
+Q 2119 2819 1878 2819 
+Q 1647 2819 1484 2717 
+Q 1322 2616 1203 2475 
+L 1203 653 
+Q 1231 569 1295 478 
+Q 1359 388 1438 322 
+Q 1534 244 1646 195 
+Q 1759 147 1922 147 
+Q 2097 147 2259 239 
+Q 2422 331 2531 500 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-4a" d="M 2866 319 
+Q 2991 200 3062 50 
+Q 3134 -100 3134 -322 
+Q 3134 -544 3037 -739 
+Q 2941 -934 2744 -1078 
+Q 2534 -1225 2243 -1306 
+Q 1953 -1388 1525 -1388 
+Q 825 -1388 478 -1183 
+Q 131 -978 131 -584 
+Q 131 -266 381 -81 
+Q 631 103 1019 119 
+L 1019 163 
+Q 925 191 825 233 
+Q 725 275 653 331 
+Q 572 397 522 486 
+Q 472 575 472 706 
+Q 472 872 589 1011 
+Q 706 1150 944 1250 
+L 944 1297 
+Q 644 1438 478 1658 
+Q 313 1878 313 2169 
+Q 313 2606 639 2887 
+Q 966 3169 1475 3169 
+Q 1616 3169 1755 3141 
+Q 1894 3113 2038 3069 
+L 3113 3069 
+L 3113 2769 
+L 2388 2769 
+L 2388 2750 
+Q 2503 2616 2559 2453 
+Q 2616 2291 2616 2134 
+Q 2616 1728 2286 1447 
+Q 1956 1166 1519 1166 
+L 1141 1166 
+Q 1069 1141 991 1075 
+Q 913 1009 913 897 
+Q 913 781 978 720 
+Q 1044 659 1138 638 
+Q 1228 613 1348 606 
+Q 1469 600 1597 597 
+Q 1734 594 1973 578 
+Q 2213 563 2313 559 
+Q 2456 553 2601 490 
+Q 2747 428 2866 319 
+z
+M 2022 2147 
+Q 2022 2513 1873 2730 
+Q 1725 2947 1456 2947 
+Q 1309 2947 1204 2886 
+Q 1100 2825 1034 2713 
+Q 972 2609 945 2464 
+Q 919 2319 919 2166 
+Q 919 1819 1070 1600 
+Q 1222 1381 1463 1381 
+Q 1731 1381 1876 1598 
+Q 2022 1816 2022 2147 
+z
+M 2622 -438 
+Q 2622 -263 2540 -150 
+Q 2459 -38 2294 3 
+Q 2206 16 1934 31 
+Q 1663 47 1303 47 
+Q 966 -19 823 -173 
+Q 681 -328 681 -572 
+Q 681 -681 728 -781 
+Q 775 -881 891 -966 
+Q 1000 -1047 1184 -1098 
+Q 1369 -1150 1634 -1150 
+Q 2094 -1150 2358 -973 
+Q 2622 -797 2622 -438 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-4b" d="M 3572 0 
+L 2059 0 
+L 2059 206 
+Q 2131 213 2218 219 
+Q 2306 225 2363 244 
+Q 2450 272 2492 342 
+Q 2534 413 2534 525 
+L 2534 2109 
+Q 2534 2438 2379 2616 
+Q 2225 2794 2003 2794 
+Q 1841 2794 1702 2742 
+Q 1563 2691 1453 2616 
+Q 1347 2538 1290 2459 
+Q 1234 2381 1203 2328 
+L 1203 556 
+Q 1203 450 1245 381 
+Q 1288 313 1375 275 
+Q 1444 244 1517 228 
+Q 1591 213 1678 206 
+L 1678 0 
+L 166 0 
+L 166 206 
+Q 238 213 316 220 
+Q 394 228 447 244 
+Q 534 272 578 342 
+Q 622 413 622 525 
+L 622 4113 
+Q 622 4219 573 4325 
+Q 525 4431 447 4484 
+Q 391 4525 248 4542 
+Q 106 4559 19 4566 
+L 19 4766 
+L 1159 4838 
+L 1203 4791 
+L 1203 2641 
+L 1216 2641 
+Q 1319 2744 1403 2823 
+Q 1488 2903 1625 2991 
+Q 1744 3066 1905 3116 
+Q 2066 3166 2266 3166 
+Q 2678 3166 2900 2905 
+Q 3122 2644 3122 2153 
+L 3122 550 
+Q 3122 441 3161 373 
+Q 3200 306 3291 269 
+Q 3363 241 3420 227 
+Q 3478 213 3572 206 
+L 3572 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="Cmmi10-80" d="M -159 -1241 
+Q -219 -1241 -219 -1159 
+Q -197 -1019 -134 -1019 
+Q 66 -1019 145 -983 
+Q 225 -947 269 -800 
+L 991 2081 
+Q 1038 2200 1038 2388 
+Q 1038 2663 850 2663 
+Q 650 2663 553 2423 
+Q 456 2184 366 1819 
+Q 366 1778 313 1778 
+L 238 1778 
+Q 222 1778 203 1801 
+Q 184 1825 184 1844 
+Q 253 2122 317 2315 
+Q 381 2509 517 2668 
+Q 653 2828 856 2828 
+Q 1075 2828 1240 2704 
+Q 1406 2581 1453 2369 
+Q 1628 2572 1840 2700 
+Q 2053 2828 2278 2828 
+Q 2547 2828 2745 2684 
+Q 2944 2541 3044 2308 
+Q 3144 2075 3144 1806 
+Q 3144 1394 2933 953 
+Q 2722 513 2361 220 
+Q 2000 -72 1588 -72 
+Q 1400 -72 1248 34 
+Q 1097 141 1013 313 
+L 722 -825 
+Q 706 -919 703 -934 
+Q 703 -1019 1125 -1019 
+Q 1191 -1019 1191 -1100 
+Q 1169 -1184 1155 -1212 
+Q 1141 -1241 1081 -1241 
+L -159 -1241 
+z
+M 1594 97 
+Q 1816 97 2006 280 
+Q 2197 463 2316 691 
+Q 2403 863 2479 1111 
+Q 2556 1359 2612 1640 
+Q 2669 1922 2669 2088 
+Q 2669 2234 2630 2362 
+Q 2591 2491 2502 2577 
+Q 2413 2663 2266 2663 
+Q 2031 2663 1823 2495 
+Q 1616 2328 1447 2081 
+L 1447 2059 
+L 1094 647 
+Q 1138 419 1263 258 
+Q 1388 97 1594 97 
+z
+" transform="scale(0.015625)"/>
+      <path id="Georgia-1d" d="M 1428 2666 
+Q 1428 2491 1301 2366 
+Q 1175 2241 1000 2241 
+Q 825 2241 698 2366 
+Q 572 2491 572 2666 
+Q 572 2841 697 2967 
+Q 822 3094 1000 3094 
+Q 1178 3094 1303 2967 
+Q 1428 2841 1428 2666 
+z
+M 1428 359 
+Q 1428 184 1301 60 
+Q 1175 -63 1000 -63 
+Q 825 -63 698 60 
+Q 572 184 572 359 
+Q 572 534 698 661 
+Q 825 788 1000 788 
+Q 1175 788 1301 661 
+Q 1428 534 1428 359 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#Georgia-29" transform="translate(0 0.40625)"/>
+     <use xlink:href="#Georgia-4c" transform="translate(59.912109 0.40625)"/>
+     <use xlink:href="#Georgia-55" transform="translate(89.208984 0.40625)"/>
+     <use xlink:href="#Georgia-56" transform="translate(130.175781 0.40625)"/>
+     <use xlink:href="#Georgia-57" transform="translate(173.388672 0.40625)"/>
+     <use xlink:href="#Georgia-10" transform="translate(207.910156 0.40625)"/>
+     <use xlink:href="#Georgia-53" transform="translate(245.3125 0.40625)"/>
+     <use xlink:href="#Georgia-44" transform="translate(302.441406 0.40625)"/>
+     <use xlink:href="#Georgia-56" transform="translate(352.832031 0.40625)"/>
+     <use xlink:href="#Georgia-56" transform="translate(396.044922 0.40625)"/>
+     <use xlink:href="#Georgia-4c" transform="translate(439.257812 0.40625)"/>
+     <use xlink:href="#Georgia-51" transform="translate(468.554688 0.40625)"/>
+     <use xlink:href="#Georgia-4a" transform="translate(527.636719 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(578.564453 0.40625)"/>
+     <use xlink:href="#Georgia-56" transform="translate(602.685547 0.40625)"/>
+     <use xlink:href="#Georgia-48" transform="translate(645.898438 0.40625)"/>
+     <use xlink:href="#Georgia-44" transform="translate(694.238281 0.40625)"/>
+     <use xlink:href="#Georgia-55" transform="translate(744.628906 0.40625)"/>
+     <use xlink:href="#Georgia-46" transform="translate(785.595703 0.40625)"/>
+     <use xlink:href="#Georgia-4b" transform="translate(831.005859 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(889.208984 0.40625)"/>
+     <use xlink:href="#Georgia-44" transform="translate(913.330078 0.40625)"/>
+     <use xlink:href="#Georgia-57" transform="translate(963.720703 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(998.242188 0.40625)"/>
+     <use xlink:href="#Cmmi10-80" transform="translate(1022.363281 0.40625)"/>
+     <use xlink:href="#Cmr10-29" transform="translate(1092.656307 0.40625)"/>
+     <use xlink:href="#Cmr10-64" transform="translate(1190.341911 0.40625)"/>
+     <use xlink:href="#Cmr10-31" transform="translate(1240.341911 0.40625)"/>
+     <use xlink:href="#Cmr10-7f" transform="translate(1290.341911 0.40625)"/>
+     <use xlink:href="#Georgia-1d" transform="translate(1340.341911 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(1371.591911 0.40625)"/>
+     <use xlink:href="#Georgia-48" transform="translate(1395.713005 0.40625)"/>
+     <use xlink:href="#Georgia-4c" transform="translate(1444.052849 0.40625)"/>
+     <use xlink:href="#Georgia-4a" transform="translate(1473.349724 0.40625)"/>
+     <use xlink:href="#Georgia-4b" transform="translate(1524.277458 0.40625)"/>
+     <use xlink:href="#Georgia-57" transform="translate(1582.480583 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(1617.002068 0.40625)"/>
+     <use xlink:href="#Georgia-45" transform="translate(1641.123161 0.40625)"/>
+     <use xlink:href="#Georgia-48" transform="translate(1697.129021 0.40625)"/>
+     <use xlink:href="#Georgia-44" transform="translate(1745.468864 0.40625)"/>
+     <use xlink:href="#Georgia-46" transform="translate(1795.859489 0.40625)"/>
+     <use xlink:href="#Georgia-52" transform="translate(1841.269646 0.40625)"/>
+     <use xlink:href="#Georgia-51" transform="translate(1895.175896 0.40625)"/>
+     <use xlink:href="#Georgia-3" transform="translate(1954.257927 0.40625)"/>
+     <use xlink:href="#Georgia-4f" transform="translate(1978.379021 0.40625)"/>
+     <use xlink:href="#Georgia-44" transform="translate(2006.992302 0.40625)"/>
+     <use xlink:href="#Georgia-45" transform="translate(2057.382927 0.40625)"/>
+     <use xlink:href="#Georgia-48" transform="translate(2113.388786 0.40625)"/>
+     <use xlink:href="#Georgia-4f" transform="translate(2161.72863 0.40625)"/>
+     <use xlink:href="#Georgia-56" transform="translate(2190.341911 0.40625)"/>
+    </g>
+   </g>
+   <g id="legend_1">
+    <g id="line2d_47">
+     <defs>
+      <path id="m6df7e52e11" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #898781"/>
+     </defs>
+     <g>
+      <use xlink:href="#m6df7e52e11" x="255.257563" y="139.904599" style="fill-opacity: 0; stroke: #898781"/>
+     </g>
+    </g>
+    <g id="text_27">
+     <!-- rejected by the public safety profile -->
+     <g transform="translate(270.017562 142.774599) scale(0.082 -0.082)">
+      <defs>
+       <path id="Georgia-4d" d="M 1347 188 
+Q 1347 -156 1247 -457 
+Q 1147 -759 981 -956 
+Q 803 -1166 579 -1277 
+Q 356 -1388 88 -1388 
+Q -191 -1388 -331 -1277 
+Q -472 -1166 -472 -1016 
+Q -472 -881 -397 -779 
+Q -322 -678 -178 -678 
+Q -81 -678 -6 -718 
+Q 69 -759 125 -825 
+Q 175 -881 226 -964 
+Q 278 -1047 325 -1125 
+Q 563 -1125 664 -837 
+Q 766 -550 766 84 
+L 766 2403 
+Q 766 2503 717 2595 
+Q 669 2688 591 2744 
+Q 541 2778 352 2812 
+Q 163 2847 66 2856 
+L 66 3050 
+L 1303 3119 
+L 1347 3075 
+L 1347 188 
+z
+M 1394 4338 
+Q 1394 4159 1276 4026 
+Q 1159 3894 988 3894 
+Q 828 3894 711 4020 
+Q 594 4147 594 4309 
+Q 594 4481 711 4609 
+Q 828 4738 988 4738 
+Q 1166 4738 1280 4617 
+Q 1394 4497 1394 4338 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-5c" d="M -9 -1006 
+Q -9 -850 77 -751 
+Q 163 -653 291 -653 
+Q 391 -653 462 -690 
+Q 534 -728 591 -788 
+Q 638 -834 691 -915 
+Q 744 -997 775 -1050 
+Q 931 -966 1148 -609 
+Q 1366 -253 1463 16 
+Q 1166 756 925 1340 
+Q 684 1925 422 2550 
+Q 363 2694 222 2773 
+Q 81 2853 -59 2875 
+L -59 3081 
+L 1347 3081 
+L 1347 2863 
+Q 1253 2859 1122 2823 
+Q 991 2788 991 2741 
+Q 991 2722 1005 2678 
+Q 1019 2634 1038 2588 
+Q 1156 2278 1400 1695 
+Q 1644 1113 1778 763 
+Q 1919 1097 2070 1455 
+Q 2222 1813 2409 2300 
+Q 2431 2359 2472 2464 
+Q 2513 2569 2513 2644 
+Q 2513 2725 2370 2795 
+Q 2228 2866 2100 2881 
+L 2100 3081 
+L 3244 3081 
+L 3244 2888 
+Q 3150 2872 2997 2780 
+Q 2844 2688 2769 2519 
+Q 2397 1656 2108 947 
+Q 1819 238 1669 -97 
+Q 1472 -534 1317 -779 
+Q 1163 -1025 1016 -1166 
+Q 872 -1297 755 -1342 
+Q 638 -1388 513 -1388 
+Q 269 -1388 130 -1272 
+Q -9 -1156 -9 -1006 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#Georgia-55"/>
+      <use xlink:href="#Georgia-48" transform="translate(40.96875 0)"/>
+      <use xlink:href="#Georgia-4d" transform="translate(89.3125 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(118.515625 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(166.859375 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(212.265625 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(246.78125 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(295.125 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(352.546875 0)"/>
+      <use xlink:href="#Georgia-45" transform="translate(376.671875 0)"/>
+      <use xlink:href="#Georgia-5c" transform="translate(432.671875 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(481.890625 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(506.015625 0)"/>
+      <use xlink:href="#Georgia-4b" transform="translate(540.53125 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(598.734375 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(647.078125 0)"/>
+      <use xlink:href="#Georgia-53" transform="translate(671.203125 0)"/>
+      <use xlink:href="#Georgia-58" transform="translate(728.328125 0)"/>
+      <use xlink:href="#Georgia-45" transform="translate(785.84375 0)"/>
+      <use xlink:href="#Georgia-4f" transform="translate(841.84375 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(870.453125 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(899.75 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(945.15625 0)"/>
+      <use xlink:href="#Georgia-56" transform="translate(969.28125 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(1012.5 0)"/>
+      <use xlink:href="#Georgia-49" transform="translate(1062.890625 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1095.40625 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(1143.75 0)"/>
+      <use xlink:href="#Georgia-5c" transform="translate(1178.265625 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(1227.484375 0)"/>
+      <use xlink:href="#Georgia-53" transform="translate(1251.609375 0)"/>
+      <use xlink:href="#Georgia-55" transform="translate(1308.734375 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1349.703125 0)"/>
+      <use xlink:href="#Georgia-49" transform="translate(1403.609375 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(1436.125 0)"/>
+      <use xlink:href="#Georgia-4f" transform="translate(1465.421875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1494.03125 0)"/>
+     </g>
+    </g>
+    <g id="line2d_48">
+     <defs>
+      <path id="md1f88ac4e9" d="M 0 3 
+C 0.795609 3 1.55874 2.683901 2.12132 2.12132 
+C 2.683901 1.55874 3 0.795609 3 0 
+C 3 -0.795609 2.683901 -1.55874 2.12132 -2.12132 
+C 1.55874 -2.683901 0.795609 -3 0 -3 
+C -0.795609 -3 -1.55874 -2.683901 -2.12132 -2.12132 
+C -2.683901 -1.55874 -3 -0.795609 -3 0 
+C -3 0.795609 -2.683901 1.55874 -2.12132 2.12132 
+C -1.55874 2.683901 -0.795609 3 0 3 
+z
+" style="stroke: #2a78d6"/>
+     </defs>
+     <g>
+      <use xlink:href="#md1f88ac4e9" x="255.257563" y="151.985505" style="fill: #2a78d6; stroke: #2a78d6"/>
+     </g>
+    </g>
+    <g id="text_28">
+     <!-- first passing candidate (forced publication) -->
+     <g transform="translate(270.017562 154.855505) scale(0.082 -0.082)">
+      <defs>
+       <path id="Georgia-b" d="M 2191 -1025 
+Q 1338 -919 852 -165 
+Q 366 588 366 1863 
+Q 366 3159 852 3917 
+Q 1338 4675 2191 4788 
+L 2191 4528 
+Q 1591 4419 1278 3762 
+Q 966 3106 966 1856 
+Q 966 666 1272 5 
+Q 1578 -656 2191 -769 
+L 2191 -1025 
+z
+" transform="scale(0.015625)"/>
+       <path id="Georgia-c" d="M 2034 1863 
+Q 2034 588 1548 -165 
+Q 1063 -919 209 -1025 
+L 209 -769 
+Q 822 -656 1128 5 
+Q 1434 666 1434 1856 
+Q 1434 3106 1121 3762 
+Q 809 4419 209 4528 
+L 209 4788 
+Q 1063 4675 1548 3917 
+Q 2034 3159 2034 1863 
+z
+" transform="scale(0.015625)"/>
+      </defs>
+      <use xlink:href="#Georgia-49"/>
+      <use xlink:href="#Georgia-4c" transform="translate(32.515625 0)"/>
+      <use xlink:href="#Georgia-55" transform="translate(61.8125 0)"/>
+      <use xlink:href="#Georgia-56" transform="translate(102.78125 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(146 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(180.515625 0)"/>
+      <use xlink:href="#Georgia-53" transform="translate(204.640625 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(261.765625 0)"/>
+      <use xlink:href="#Georgia-56" transform="translate(312.15625 0)"/>
+      <use xlink:href="#Georgia-56" transform="translate(355.375 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(398.59375 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(427.890625 0)"/>
+      <use xlink:href="#Georgia-4a" transform="translate(486.96875 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(537.890625 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(562.015625 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(607.421875 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(657.8125 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(716.890625 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(774.3125 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(803.609375 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(861.03125 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(911.421875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(945.9375 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(994.28125 0)"/>
+      <use xlink:href="#Georgia-b" transform="translate(1018.40625 0)"/>
+      <use xlink:href="#Georgia-49" transform="translate(1055.90625 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1088.421875 0)"/>
+      <use xlink:href="#Georgia-55" transform="translate(1142.328125 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(1183.296875 0)"/>
+      <use xlink:href="#Georgia-48" transform="translate(1228.703125 0)"/>
+      <use xlink:href="#Georgia-47" transform="translate(1277.046875 0)"/>
+      <use xlink:href="#Georgia-3" transform="translate(1334.46875 0)"/>
+      <use xlink:href="#Georgia-53" transform="translate(1358.59375 0)"/>
+      <use xlink:href="#Georgia-58" transform="translate(1415.71875 0)"/>
+      <use xlink:href="#Georgia-45" transform="translate(1473.234375 0)"/>
+      <use xlink:href="#Georgia-4f" transform="translate(1529.234375 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(1557.84375 0)"/>
+      <use xlink:href="#Georgia-46" transform="translate(1587.140625 0)"/>
+      <use xlink:href="#Georgia-44" transform="translate(1632.546875 0)"/>
+      <use xlink:href="#Georgia-57" transform="translate(1682.9375 0)"/>
+      <use xlink:href="#Georgia-4c" transform="translate(1717.453125 0)"/>
+      <use xlink:href="#Georgia-52" transform="translate(1746.75 0)"/>
+      <use xlink:href="#Georgia-51" transform="translate(1800.65625 0)"/>
+      <use xlink:href="#Georgia-c" transform="translate(1859.734375 0)"/>
+     </g>
+    </g>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pa00ce5f377">
+   <rect x="40.970781" y="25.08" width="392" height="173.604248"/>
+  </clipPath>
+ </defs>
+</svg>
