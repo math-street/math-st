@@ -560,3 +560,87 @@ bound without entering SG-30.
 formalize the direct raw-coordinate MAKEFORM-style extension excluded by VFB;
 its fixed-discriminant and homomorphism invariants, rather than generic or
 bounded-degree rational arguments, are the next unresolved issue.
+
+## Session 7 - 2026-07-23
+
+**Goal:** Finish Q004 under its recorded positive or negative closure criterion,
+without conflating it with the stronger target-only SG-30 problem or claiming
+that a repackaging of a known transfer is a new mechanism.
+
+**Prediction:** The missing MAKEFORM invariant might be supplied by a standard
+exact sequence rather than by a new point-to-class pairing. In the
+embedding-degree-two Gaussian setting, the conductor quotient for
+\(\mathbb Z+p\mathbb Z[i]\) should turn projective finite-field residues into
+ordinary ring classes; the decisive tests are injectivity on \(\mu_r\), a
+fixed-discriminant canonical form, and an explicit target-logarithm route.
+
+**Positive result criterion:** Give an infinite family of polynomial-length
+instances, one fixed ordinary class group per instance, a uniform evaluator
+from ordinary point encodings, complete homomorphism and injectivity proofs,
+and an \(\exp(o(\log r))\) target DLP including instance precomputation.
+
+**Negative result criterion:** If the conductor quotient kills the order-
+\(r\) pairing image, the form coefficients cannot be canonicalized in
+polynomial time, or target forms cannot be converted to a qualifying DLP, close
+the exact model negatively and leave Q004 open outside it.
+
+**Did:**
+
+- Defined \(\mathcal O_p=\mathbb Z+p\mathbb Z[i]\) for
+  \(p\equiv3\pmod4\) and specialized Conrad's conductor exact sequence.
+- Composed its quotient map with the nondegenerate degree-two pairing on
+  \(E_p:y^2=x^3+x\), using \(\psi(x,y)=(-x,iy)\).
+- Derived the direct fixed-discriminant output
+  \((1+t^2,2pt,p^2)\), followed by ordinary positive-form reduction.
+- Proved a Gaussian-gcd conversion from reduced target forms back to the same
+  finite-field torus and preserved logs by exponent \(-4\bmod r\).
+- Used CRT plus Linnik--Xylouris to obtain an infinite family with
+  \(\log p=O(\log r)\), keeping SG-30 untouched.
+- Added A025, its implementation and four regression tests; synchronized
+  NOTES, STATE, HANDOFF, SUBGOALS, OPEN_QUESTIONS, PROBLEM, A001, the rational
+  review postscript, references, bibliography, paper source, taxonomy figure,
+  and the regenerated PDF.
+
+**Found:**
+
+- [PROVED] The exact sequence gives
+  \[
+  \operatorname{Pic}(\mathcal O_p)\cong
+  \mathbb F_{p^2}^{\times}/
+  (\mathbb F_p^{\times}\langle i\rangle),
+  \qquad h(-4p^2)=(p+1)/2.
+  \]
+- [PROVED] Its kernel has order \(2(p-1)\), so it meets the odd order-
+  \(r\) pairing image trivially when \(r\mid p+1\).
+- [PROVED] For a projective pairing residue \(1+ti\), contraction is
+  \([1+t^2,-pt+pi]\), represented by the primitive form
+  \((1+t^2,2pt,p^2)\) of discriminant \(-4p^2\).
+- [PROVED] Extending a reduced ideal to \(\mathbb Z[i]\), taking a Gaussian
+  gcd \(\gamma\), and returning
+  \((\gamma\bmod p)^{2(p-1)}\) is well defined and acts by
+  \(-4\bmod r\) on the transfer image.
+- [PROVED] The target DLP therefore reduces to the same degree-two finite-field
+  DLP accepted for MOV/Frey--Ruck; independently, the stated conditional
+  Hafner--McCurley route also fits the SG-25 window because
+  \(\log|\Delta|=\Theta(\log r)\).
+- [PROVED] Q004 is closed positively, but A025 is not a structurally new
+  transfer: it factors through the known pairing and efficiently returns to
+  that same torus. A004's ray-principal-unit negative result remains intact.
+- [EMPIRICAL: complete \(p=43,211,331\) class groups] The A025 driver enumerated
+  22, 106, and 166 reduced classes, obtained injective images of sizes 11, 53,
+  and 83, and recovered every seeded logarithm.
+- [EMPIRICAL: final verification on 2026-07-23] All 70 shared and 20 P1.5 tests
+  passed, bytecode compilation succeeded, and the source control-character,
+  unresolved-marker, trailing-whitespace, and bibliography-brace audits passed.
+  Typst 0.14.2 rebuilt a 17-page PDF; raster inspection found no clipping,
+  overlap, broken table, or unreadable formula on the updated pages.
+
+**Prediction vs. outcome:** Matched, with a stronger positive outcome than the
+VFB lower-bound path suggested. The conductor exact sequence supplies the
+previously missing homomorphism invariant and canonical MAKEFORM instruction,
+but it does so only after the known pairing has exposed the projective residue.
+
+**Next:** Treat Q004 as closed. Keep SG-30 separate and unchecked; it asks for
+a prescribed-order ordinary target from arbitrary \(r\), which A025 neither
+needs nor supplies. Any future unrestricted-classification work must also keep
+the pairing-derived A025 family distinct from a genuinely new mechanism.

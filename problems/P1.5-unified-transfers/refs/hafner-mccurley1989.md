@@ -8,4 +8,5 @@
   subexponential relation algorithm for imaginary-quadratic class groups.
 - [CONDITIONAL: factor-base decompositions for the represented target inputs]
   A relation presentation reduces the target DLP to integer linear algebra;
-  A001 remains blocked on the source-to-class-group evaluator.
+  A025 later supplies a pairing-derived source-to-class evaluator and also
+  gives a direct reduction of its image DLP to the finite-field torus.
