@@ -1,10 +1,10 @@
 #import "lib/paper.typ": *
 
 #show: paper.with(
-  title: "A Unified Theory of Transfers: One Character Framework, a Restricted Classification, and the Number-Field Class-Group Residual",
-  subtitle: "Where the two elementary ECDLP transfers come from, why generic and rational constructions cannot produce a third, and the single evaluator that remains open",
+  title: "Unified Transfers: Restricted Classification, Quadratic Class-Target Factorization, and Uniform Ring-Class Torsion",
+  subtitle: "Why every prime-order imaginary-quadratic Picard image exposes a finite or local residue character",
   pid: "P1.5",
-  keywords: ("ECDLP", "transfer maps", "anomalous curves", "MOV/Frey–Rück", "Weil descent", "class groups", "generic group model", "algebraic groups"),
+  keywords: ("ECDLP", "transfer maps", "anomalous curves", "MOV/Frey–Rück", "Weil descent", "class groups", "Kummer pairing", "generic group model", "algebraic groups"),
   abstract: [
     The two textbook attacks that break special elliptic curves — the anomalous
     additive reduction of Semaev, Satoh–Araki and Smart, and the
@@ -15,8 +15,9 @@
     setup and evaluation cost and a subexponential target DLP, settle the status
     of Weil descent inside it (it counts, as a known third geometric family),
     and ask the problem's question: does a *structurally different* fourth
-    transfer exist, or can one be ruled out in a stated class? Our answer is a
-    restricted classification with an explicitly isolated residual. We prove
+    transfer exist, or can one be ruled out in a stated class? We give a
+    restricted classification and give an explicit pairing-derived
+    ordinary-class control construction. We prove
     (i) an algebraic-group rigidity theorem: every global homomorphism
     $E -> H$ into an affine group is trivial and every nontrivial one has
     elliptic image isogenous to $E$; (ii) a generic-source impossibility
@@ -27,17 +28,29 @@
     forces $max(1,D) B^2 >= r \/ 4$, and the decision-tree depth obeys
     $d + 2 b >= log_2 r - O(log log r)$; and (iv) a base classification sending
     finite/local and function-field class targets back to trivial or Jacobian
-    ones. Against these we place the honest boundary. An evaluator-sandwich
-    argument makes point-to-class evaluation polynomial-time equivalent to the
-    source DLP given a target oracle, so class-number size arguments alone
-    cannot close the problem; the surviving candidate is a direct
-    cross-characteristic evaluator into a separately constructed
-    number-field class group, whose discriminant must live in the window
-    $2n - O(log n) <= B = o(n^2 \/ log n)$. We validate both elementary
-    transfers end to end at toy scale, exhibit the exact-order target census,
-    and show why the ray-class shortcut collapses to the source DLP. The result
-    is a defensible restricted classification, not a solution: it names the one
-    object a fourth transfer would have to be.
+    ones. An evaluator-sandwich argument makes point-to-class evaluation
+    polynomial-time equivalent to the source DLP given a target oracle, so
+    class-number size arguments alone cannot close the problem. We first give
+    a pairing-derived ordinary ring-class control. We then prove the stronger
+    target theorem. Every exact order-$r$ element of an explicit
+    imaginary-quadratic Picard group is exposed either by the effective
+    conductor residue quotient or by a maximal Kummer character. In the
+    latter branch, $frak(a)^r=(alpha)$ defines a canonical virtual unit and a
+    suitable split $q equiv 1 mod r$ gives
+    $[frak(a)] |-> alpha^((q-1)/r) mod frak(q) in mu_r(FF_q)$.
+    Compact relative-generator tracking makes evaluation polynomial without
+    expanding $alpha$; under the standing ERH/GRH convention, effective
+    Chebotarev finds a short separator in expected polynomial time. Hence
+    every ordinary quadratic class evaluator, including arbitrary direct-form
+    synthesis, post-composes to a finite/local residue character. The class
+    presentation is not an independent fourth mechanism. This is a
+    factorization theorem, not a proof that the source evaluator cannot exist
+    or that its residue character is pairing-derived. Finally, the separate
+    prescribed-order target problem has an unconditional deterministic
+    solution: for every odd prime $r$, the reduced form
+    $[r^2,2r,r^2+1]$ has exact order $r$ in the order of discriminant
+    $-4r^4$. Its encoding has $Theta(log r)$ bits and its subgroup logarithm
+    is the exposed wild conductor coordinate.
   ],
 )
 
@@ -67,11 +80,15 @@ a subexponential discrete logarithm algorithm.* This is a question about the
 existence of transfers, and it is genuinely open in full generality. What we can
 do — and what this paper does — is give a precise operational definition,
 identify the common structure of the two known cases, prove that entire natural
-classes of would-be transfers cannot exist, and isolate the single residual
-object that a structurally new transfer would have to be. The deliverable is a
-*restricted classification*, honestly labelled: several branches are closed by
-proof, one is closed by citation to prior art (Weil descent), and one concrete
-possibility remains open.
+classes of would-be transfers cannot exist, and identify the exact ordinary
+class-group object that had remained. We first construct a pairing-derived
+control by composing the known degree-two pairing with a conductor exact
+sequence. We then prove that every prime-order subgroup of every explicit
+imaginary-quadratic Picard target has a removable finite/local residue
+character. We finally solve the separate uniform prescribed-order target
+problem by an explicit wild ring-class family. The deliverable is a
+*restricted classification*, an evaluator-independent quadratic class-target
+factorization, and a succinct exact-order target constructor.
 
 #keybox(title: "Main finding")[
   The anomalous and pairing transfers are two instances of one construction: a
@@ -82,11 +99,20 @@ possibility remains open.
   Shoup's bound), *rational of low degree* into an affine target
   ($D >= r \/ 2$, and $max(1,D) B^2 >= r \/ 4$ with branching), or *rational
   into a proper or mixed target* (its image is forced to be elliptic and
-  isogenous to $E$). The only surviving candidate is a direct
-  cross-characteristic evaluator from finite-field point coordinates into a
-  separately constructed number-field class group; an evaluator-sandwich
-  argument shows this cannot be excluded by target size alone, and it remains
-  open.
+  isogenous to $E$). The ordinary-class residual nevertheless has a positive
+  realization: on a succinct trace-zero $j=1728$ family, pair into
+  $mu_r subset FF_(p^2)^times$ and apply the conductor quotient to
+  $op("Pic")(ZZ+p ZZ[i])$. The resulting fixed-discriminant reduced-form map is
+  injective and has a subexponential target DLP, but it factors through and back
+  to the known pairing target. More generally, the conductor/maximal dichotomy
+  exposes every order-$r$ quadratic Picard image in a local conductor factor or
+  a split-prime Kummer power residue. Algebraic separation is unconditional;
+  uniform short-prime setup uses the same ERH/GRH convention as the rigorous
+  class-group target route. Separately, no hypothesis or auxiliary prime is
+  needed to construct an exact-order target: in
+  $op("Pic")(ZZ+r^2 ZZ[i])$, the reduced form
+  $[r^2,2r,r^2+1]$ has exact order $r$ and discriminant $-4r^4$. This closes
+  the target-only SG-30 problem but supplies no source evaluator.
 ]
 
 == Contributions and honest scope
@@ -99,17 +125,27 @@ every verdict (§4, #ref(<fig:tax>)); (iv) the algebraic-group rigidity theorem
 (§5); (v) the generic-source impossibility theorem (§6); (vi) rational-evaluator
 degree, branch and depth lower bounds, adversarially audited (§7); (vii) the
 CM/ray class-group obstructions with explicit class-number bounds (§8); (viii)
-the evaluator sandwich and discriminant-window analysis that locate the residual
-(§9); and (ix) end-to-end toy validation of both known transfers and the
-negative probes (§10, #ref(<fig:scaling>), #ref(<fig:buell>), #ref(<fig:window>)).
+  the evaluator sandwich and discriminant-window analysis (§9); (ix) an explicit
+  pairing-to-ring-class transfer, with fixed-discriminant form encoding and a
+  target-DLP conversion (§9.4); (x) the conductor/maximal Kummer factorization
+  for every explicit imaginary-quadratic target (§11); (xi) an unconditional
+  uniform exact-order ring-class target of discriminant $-4r^4$ (§11.1); and
+  (xii) end-to-end toy
+  validation of the known transfers, the ring-class realization, the maximal
+  Kummer character, the exact-order constructor, and the negative probes (§10,
+  #ref(<fig:scaling>), #ref(<fig:buell>), #ref(<fig:window>)).
 
 We state the scope plainly. This is *not* a solution of the unrestricted
-problem. The classification is complete only within the models it names —
-global algebraic-group homomorphisms, generic source oracles, rational
-decision-tree evaluators into affine/proper/mixed targets, and the standard
-class-target bases. Outside those models, in particular for high-degree or
-non-rational coordinate/lift/valuation programs into a number-field class group,
-the question is open, and we record it as such rather than overclaim.
+classification over arbitrary target categories. The rational negative
+classification is complete only within
+the models it names — global algebraic-group homomorphisms, generic source
+oracles, rational decision-tree evaluators into affine/proper/mixed targets,
+and the standard class-target bases. Outside those models, arbitrary
+high-degree or non-rational evaluators remain unclassified in general. For
+explicit imaginary-quadratic ordinary-class targets, however, the later
+factorization is independent of the evaluator model and closes novelty-grade
+Q004 under the stated ERH/GRH convention. The target interface publicly
+supplies its maximal discriminant, conductor, and conductor factorization.
 
 = Setting and notation
 
@@ -241,19 +277,21 @@ discovered mechanism.
 = Taxonomy of candidate targets
 
 The problem asks for a candidate-target table with a reason for every verdict.
-#ref(<fig:tax>) records ours; §5–§9 supply the proofs. The organising principle
+#ref(<fig:tax>) records ours; §5–§11 supply the proofs. The organising principle
 is that a target must be able to *contain* an order-$r$ element and to *receive*
 it homomorphically from the source, and that requirement (4) demands the target
 DLP be genuinely easier than the source.
 
 #fig("/figures/P1.5/taxonomy.svg", width: 82%, caption: [
-  Candidate-target verdicts (SG-05/SG-06/SG-22). E = excluded by proof, K =
-  known established mechanism, C = conditional or neutral, O = open residual.
+  Candidate-target verdicts (SG-05/SG-06/SG-22/SG-33/SG-36). E = excluded by
+  proof, K = known established mechanism, C = conditional or neutral, and R =
+  residue-factorized by A028.
   Every additive/affine target is excluded away from $r = p$ by exponent or
   algebraic-group rigidity; every natural CM/ray class construction is excluded
   by orientation loss, size, or transparency; covers and descent are the known
-  geometric family; only a separately constructed number-field class group
-  retains an open cell (Q004).
+  geometric family. Every explicit ordinary imaginary-quadratic target has a
+  finite/local post-character, whether its source evaluator is pairing-derived
+  or not.
 ]) <fig:tax>
 
 #tag("PROVED") *Local formal groups and additive char-$p$ rings.* If $r$ is a
@@ -543,10 +581,11 @@ through $(ZZ \/ r ZZ)^times$, a multiplicative action of order $r - 1$ that omit
 the identity and does not respect the additive source law. #ref(<fig:tax>)'s ray
 cell is excluded on these grounds, sharpened in §9.
 
-= The evaluator sandwich and the surviving residual
+= The evaluator sandwich and the ordinary-class control
 
-The class-group branch is not closed by any size argument, and the reason is a
-two-way reduction that we make explicit.
+Class-group size alone does not construct an evaluator. The reason is a two-way
+reduction that we make explicit; the construction later in this section supplies
+the missing evaluator through pairing data rather than through size estimates.
 
 #theorem(name: "evaluator sandwich")[
   #tag("PROVED") Let $phi : C -> G$ be a fixed nonzero homomorphism with all
@@ -574,7 +613,7 @@ target ideal arithmetic and class-number estimates *alone* can never give an
 unconditional negative answer: once a known order-$r$ target element exists, the
 only remaining content is the complexity of converting a concrete source point
 into the corresponding power of that element. A universal impossibility theorem
-for the residual evaluator must therefore restrict its coordinate/bit/lift
+  for an arbitrary evaluator must therefore restrict its coordinate/bit/lift
 interface or prove a genuinely new lower bound for the concrete source family.
 
 == Base classification and the discriminant window
@@ -591,7 +630,7 @@ torsion bound @parent1999: a rational order-$r$ point over a degree-$d$ number
 field forces $r <= 65(3 d - 1)(2 d)^6$, so $d > (r \/ 12480)^(1\/7)$ and the
 lifted encoding is exponential in $n$.
 
-The surviving class target must therefore satisfy a two-sided discriminant
+Any qualifying class target must therefore satisfy a two-sided discriminant
 constraint, from which the window is immediate.
 
 #proposition(name: [discriminant window])[
@@ -629,19 +668,95 @@ opaque ordinary class group. It fails for a sharp reason.
 #tag("PROVED") Because the target logarithm is transparent in the ordinary
 encoding, any nonzero point evaluator into $U_r$ is *already* a polynomial-time
 source-DLP algorithm; the ray target has no intermediate subexponential regime.
-This is why the residual must be an ordinary number-field class group whose
-target DLP is subexponential rather than polynomial. Two logically separate
-tasks remain: *construct* a certified exact order-$r$ class in a polynomial-bit
-order inside the window, and *evaluate* a nonzero homomorphism from finite-field
-coordinates into it. The sandwich shows solving the first does not supply the
-second.
+This is why the ray target cannot supply the required intermediate
+subexponential regime. Before the construction below, the ordinary-class branch
+had two logically separate tasks: *construct* a certified order-$r$ class in a
+polynomial-bit order inside the window, and *evaluate* a nonzero homomorphism
+from finite-field coordinates into it. The sandwich explains why solving only
+the first would not have supplied the second.
+
+== Pairing values as ordinary ring classes
+
+#theorem(name: "pairing-to-ring-class transfer")[
+  #tag("PROVED") Let $r$ be an odd prime and let $p$ be a prime satisfying
+  $p equiv 3 mod 4$ and $r divides p+1$. On
+  $E_p : y^2=x^3+x$ over $FF_p$, choose $P$ of order $r$ and the distortion map
+  $psi(x,y)=(-x,i y)$ over $FF_(p^2)=FF_p(i)$. If
+  $z(Q)=e_r(Q,psi(P))$, then
+  $
+    phi(Q)=kappa(z(Q)) in op("Pic")(cal(O)_p),
+    quad cal(O)_p=ZZ+p ZZ[i],
+  $
+  is a polynomial-time injective homomorphism. For $z(Q)=a+b i$ with
+  $a eq.not 0$, put $t=b a^(-1) mod p$; a canonical output is the reduced
+  primitive form equivalent to
+  $
+    (1+t^2, 2 p t, p^2),
+  $
+  whose discriminant is always $-4p^2$. The $a=0$ branch is principal and
+  makes the evaluator total.
+]
+
+#proof[
+  #tag("CITED") The conductor exact sequence @conradconductor, specialized to
+  $ZZ+p ZZ[i] subset ZZ[i]$, gives
+  $
+    op("Pic")(cal(O)_p)
+    tilde.equiv FF_(p^2)^times/(FF_p^times ⟨ i ⟩),
+    quad h(-4p^2)=(p+1)/2,
+  $
+  and sends a residue $alpha$ to
+  $[alpha ZZ[i] inter cal(O)_p]$. #tag("PROVED") The quotient kernel has
+  order $2(p-1)$, coprime to the odd prime $r divides p+1$, so it is injective
+  on $mu_r$. Directly solving the contraction for $alpha=1+t i$ gives
+  $[1+t^2,-p t+p i]$, which is the displayed form under the convention
+  $[A,(-B+sqrt(Delta))/2]$. Miller evaluation, one field inversion, and Gauss
+  reduction are polynomial in $log p$.
+]
+
+#tag("CITED") CRT and Linnik's theorem with Xylouris's exponent $5.2$
+@xylouris2011 give, for every odd prime $r$, a prime in the class
+$p equiv 3 mod 4$, $p equiv -1 mod r$ with $p <= C(4r)^(5.2)$. Thus the valid
+instance family is infinite and $log p=O(log r)$. This is an existence and
+input-succinctness statement; the uniform transfer algorithms operate on the
+supplied valid tuple $(p,E_p,P,r)$.
+
+#proposition(name: "ring-class target logarithm")[
+  #tag("PROVED") Given a primitive reduced form $(A,B,C)$ of discriminant
+  $-4p^2$, extend its ideal $J=[A,-B/2+p i]$ to $ZZ[i]$ and compute
+  $gamma=gcd_(ZZ[i])(A,-B/2+p i)$. Then
+  $
+    tau([J])=(gamma mod p)^(2(p-1)) in FF_(p^2)^times
+  $
+  is independent of representatives. On $kappa(mu_r)$ it is exponentiation by
+  $2(p-1) equiv -4 mod r$, hence injective and logarithm-preserving.
+]
+
+#proof[
+  #tag("PROVED") Primitivity forces $p divides.not A$. Extension to the Euclidean
+  domain $ZZ[i]$ is principal, and contraction recovers $J$. Changing the
+  Gaussian generator multiplies $gamma$ by a unit, while changing the residue
+  representative contributes an $FF_p^times$ factor; exponent $2(p-1)$ kills
+  both. Its residue exponent is invertible modulo odd $r$. The Gaussian
+  Euclidean algorithm is polynomial in $log p$.
+]
+
+#tag("CITED") The remaining finite-field logarithm is exactly the degree-two
+target DLP already used by MOV/Frey--Rück; under the same NFS convention its
+cost is $L_(p^2)[1/3,O(1)]=exp(o(log r))$ @schirokauer2008. Independently, the
+Hafner--McCurley route is conditional on its stated ERH and factor-base
+hypotheses. Since $log_2 abs(-4p^2)=Theta(log r)$, the target lies inside the
+discriminant window. Thus the construction is a complete control instance.
+The efficient map back to the same torus also proves why it is not
+novelty-grade Q004 closure: this is an ordinary ring-class presentation of the
+known pairing mechanism, not a fourth one.
 
 = Empirical validation
 
-Every positive claim about the two known transfers is backed by an end-to-end
-toy run, and every negative probe by an exhaustive enumeration. #ref(<tab:val>)
-collects the parameters; the scripts recover fixed seeded logarithms and log the
-work actually performed.
+Every positive claim about the two elementary transfers and their ring-class
+composition is backed by an end-to-end toy run, and every negative probe by an
+exhaustive enumeration. #ref(<tab:val>) collects the parameters; the scripts
+recover fixed seeded logarithms and log the work actually performed.
 
 #figure(
   table(
@@ -655,6 +770,12 @@ work actually performed.
       [validated],
     [Pairing (MOV/Tate)], [7 subgroups, $(p, r)$ from $(43, 11)$ to $(8011, 2003)$, $k = 2$],
       [order + $k$ checks, 4 bilinearity checks/curve, seeded log recovered],
+      [validated],
+    [Pairing to ring class], [$(p,r)=(43,11),(211,53),(331,83)$],
+      [all $(p+1)/2$ classes, injective source image, Gaussian-gcd log recovery],
+      [validated],
+    [Maximal Kummer character], [10 primes, $3 <= r <= 31$],
+      [split separator, exact character order, every scalar log recovered],
       [validated],
     [Buell reduction], [10 reductions, $23 <= p <= 59$, $13 <= r <= 37$, 218 points],
       [distinct lifted discriminants, points hitting model $cal(D)$],
@@ -743,7 +864,7 @@ no checked theorem supplied a uniform polynomial-bit exact-order constructor.
   Source: `probe_exact_order_targets_full_20260710.csv`.
 ]) <fig:window>
 
-= The restricted classification and its residual
+= Restricted classification and quadratic class-target factorization
 
 We can now state what is settled.
 
@@ -763,18 +884,204 @@ We can now state what is settled.
   side.
 ]
 
-#tag("CONJECTURE") The residual class is precise: a structurally new transfer
-must escape the generic theorem by a representation-specific source operation,
-and if it targets a class group it must be a *direct cross-characteristic
-evaluator* taking the ordinary representation of $Q in E(FF_q)[r]$ to an ideal
-class of a separately constructed number-field order inside the discriminant
-window — with no dense global lift supplied as advice. #tag("EMPIRICAL", detail: "bounded literature search 2026-07-10") Every checked point-to-class
-construction — Buell @buell1977, Soleng @soleng1994, Buell–Call @buellcall2016,
-Gillibert @gillibert2018, Blum et al. @blum2022 — uses characteristic-zero
-rational or algebraic points, not finite-field source points; this is a
-documented search result, not a nonexistence theorem. One explicit family
-meeting the transfer definition and lying outside all three known mechanisms
-would refute the negative assessment.
+#tag("PROVED") The former literal positive checklist is met by the
+pairing-to-ring-class theorem: it accepts ordinary finite-field point
+encodings, outputs canonical reduced ideal classes of one fixed polynomial-bit
+discriminant, is nonzero and homomorphic, and admits the required target
+logarithm. #tag("PROVED") Its factorization through $mu_r$, together with the
+polynomial map back to that torus, places it inside the established pairing
+mechanism and prevents it from closing novelty-grade Q004.
+
+#tag("CITED") The first attempted strengthening of this control is also prior
+art. Huehnlein--Takagi reduce the class-number-one nonmaximal-order DLP to a
+finite-field DLP @huehnleintakagi1999, while Castagnos--Laguillaumie give the
+effective isomorphism between a general conductor kernel and its finite
+residue quotient, including the inverse from reduced ideals
+@castagnoslaguillaumie2009. Kopp--Lagarias place the order-change sequence in
+a general ray-class framework @kopplagarias2024. Thus effective conductor
+extraction is a control, not the missing discovery.
+
+#tag("PROVED") A source-side theorem does survive. Let $E / FF_p$ be
+ordinary, let $P$ have prime order $r != p$, put
+$K = op("End")(E) ⊗ QQ$, and assume
+$r > h(cal(O)_K)$ and $r > 2 sqrt(p) + 2$. If the target is an order in $K$
+whose conductor is supported only on $p$ and $r$, then every nonzero transfer
+has one of two outcomes. Its $r$-local projection has an explicit
+$FF_r$ logarithm and therefore recovers the source scalar in polynomial time;
+or its $p$-local projection forces $r divides p-1$. Since also
+$r divides p+1-t$, Hasse forces $t=2$, so the source already has embedding
+degree one. This theorem permits arbitrary coordinate, lift, valuation,
+branching, and direct-form evaluators.
+
+#tag("PROVED") Consequently a still-genuine transfer into an order of the
+source CM field must use an external conductor prime $ell$ satisfying
+$r divides ell-chi_K(ell)$, or survive in the maximal-order component. In the
+split case $ell >= 2r+1$; in the inert case $ell >= 2r-1$.
+
+The residual looks wider than it is. Its conductor and maximal components are
+both residue characters.
+
+#theorem(name: "quadratic class-target factorization")[
+  #tag("PROVED", detail: "GRH only for uniform short-prime setup") Let
+  $r >= 5$ be prime and let $h$ have exact order $r$ in
+  $op("Pic")(cal(O)_f)$, where
+  $cal(O)_f=ZZ+f cal(O)_K$ is an explicit imaginary-quadratic order whose
+  maximal discriminant, conductor, and conductor factorization are public.
+  There is a target-side homomorphism $Lambda_h$, nonzero on $h$, into one of
+  $
+    FF_ell^times, quad
+    FF_(ell^2)^times \/ FF_ell^times, quad
+    (FF_r,+), quad
+    mu_r(FF_q).
+  $
+  Evaluation is polynomial in the target bit length. In the last case
+  $q equiv 1 mod r$ splits in $K$; a separating $q$ exists unconditionally,
+  and under GRH it can be found in Las Vegas expected-polynomial time with
+  $log q=O(log r+log(log abs(D_K)+2))$.
+]
+
+#proof[
+  #tag("CITED") The conductor exact sequence @conradconductor
+  $
+    (cal(O)_K \/ f cal(O)_K)^times \/ (ZZ \/ f ZZ)^times
+    -> op("Pic")(cal(O)_f) -> op("Cl")(cal(O)_K) -> 1
+  $
+  is effective on its kernel @castagnoslaguillaumie2009. Since imaginary
+  quadratic units have order dividing six, they contribute no $r$-torsion.
+  If $h$ dies maximally, one nonzero CRT component is therefore a tame split
+  or inert finite-field torus, or a wild principal-unit $FF_r$ line.
+
+  Otherwise its maximal projection $bar(h)$ has exact order $r$. Choose
+  $frak(a)$ representing it and write
+  $frak(a)^r=(alpha)$. The virtual-unit exact sequence identifies
+  $op("Cl")(cal(O)_K)[r]$ with the classes
+  $alpha K^(times r)$ whose finite valuations are divisible by $r$; the unit
+  ambiguity vanishes because raising to the $r$-th power is an automorphism of
+  $cal(O)_K^times$. Thus $alpha$ is canonical modulo $r$-th powers and is not
+  itself an $r$-th power.
+
+  Put $M=K(zeta_r)$. Restriction remains injective on
+  $K^times \/ K^(times r)$ because $[M:K]$ divides $r-1$ and
+  corestriction after restriction is multiplication by $[M:K]$. Hence
+  $M(root(r, alpha)) \/ M$ is a nontrivial Kummer extension. Chebotarev gives
+  infinitely many rational primes splitting in $M$ with nontrivial Kummer
+  Frobenius. For a selected $frak(q)$ above such a $q$,
+  $
+    lambda_(frak(q))([frak(a)])
+    = alpha^((q-1)\/r) mod frak(q) in mu_r(FF_q)
+  $
+  is nonzero and therefore injective on the prime-order line.
+
+  Expanding $alpha$ would be exponential. Instead, binary ideal powering
+  reduces after each of $O(log r)$ multiplications and records each relative
+  generator in a compact power-product graph @vollmer2003
+  @jacobsonsawillawilliams2006. Hensel-lifting the selected square root of
+  $D_K$ evaluates every compact factor locally, cancels its recorded
+  $frak(q)$-valuation, and computes the unit residue by repeated squaring.
+  This is polynomial without expanding $alpha$.
+
+  Finally, the normal closure
+  $N=K(zeta_r,root(r,alpha),root(r,bar(alpha)))$ has degree $O(r^3)$ and
+  $log abs(op("Disc") N)=O(r^3(log abs(D_K)+log r))$: the virtual-unit
+  condition makes the Kummer layer unramified away from primes above $r$.
+  Effective Chebotarev @lagariasodlyzko1977 and the prescribed-Artin bound
+  @bachsorenson1996 give the stated GRH size and Las Vegas search bounds.
+]
+
+#tag("PROVED") For any source evaluator $phi$ and $h=phi(P)$, the theorem gives
+$
+  Lambda_h(phi(x P))=Lambda_h(h)^x
+$
+in a multiplicative branch, or $x Lambda_h(h)$ in the additive branch.
+Therefore an ordinary imaginary-quadratic class presentation cannot be an
+independent fourth endpoint. If the composite is not anomalous or
+MOV/Frey–Rück, its novelty already lies in a direct source-to-finite-field
+character; the class layer is removable. This does not prove that $phi$ cannot
+exist and does not claim that every resulting character is pairing-derived.
+
+#tag("CITED") Virtual units and Kummer pairings are classical class field
+theory; a modern explicit Selmer presentation appears in
+@breenvarmavoight2023. #tag("EMPIRICAL", detail: "bounded primary-source search through 2026-07-23")
+The checked literature contains the classical ingredients and the
+Hühnlein–Takagi conductor reduction, but no source found in this audit states
+the full effective conductor/maximal prime-order dichotomy above. The novelty
+claim is therefore the repository-original synthesis, not any ingredient.
+
+#tag("EMPIRICAL", detail: "ten exact-order targets, all scalars") On the
+A019 exact-order test family
+$D_r=1-4 dot 2^r$, $frak(a)=(2,omega)$, $frak(a)^r=(omega)$, the new probe
+finds a nontrivial split-prime character for
+$r=3,5,7,11,13,17,19,23,29,31$ and recovers all $r$ scalar logarithms. The
+nontrivial values certify a nonzero maximal projection in those ten cases.
+The order discriminant is not proved fundamental for every prime $r$, so
+A019 is not claimed as an infinite maximal-order family. Instead, Lim's
+prescribed-order theorem @lim2016 supplies rigorous infinitude: for every
+fixed odd prime $r$, infinitely many imaginary quadratic fields have a
+maximal ideal class of exact order $r$, and A028 gives infinitely many
+separators for each. Those maximal-order results do not by themselves solve
+the separate succinct-target SG-30 problem. The wild conductor branch does.
+
+#pagebreak(weak: true)
+
+== A uniform succinct exact-order target
+
+#theorem(name: "uniform wild ring-class target")[
+  #tag("PROVED") For every odd prime $r$, put
+  $
+    cal(O)_r=ZZ+r^2 ZZ[i], quad Delta_r=-4r^4.
+  $
+  The primitive reduced form
+  $
+    F_r=[r^2,2r,r^2+1]
+  $
+  has exact order $r$ in $op("Pic")(cal(O)_r)$. The pair
+  $(Delta_r,F_r)$ and an exact-order certificate are computable
+  deterministically in time polynomial in $log r$, and
+  $log_2 abs(Delta_r)=2+4log_2 r$. On the generated subgroup, the target
+  logarithm is computable in polynomial time through the wild conductor
+  coordinate.
+]
+
+#proof[
+  #tag("CITED") Since $op("Cl")(ZZ[i])=1$, the conductor exact sequence
+  @conradconductor identifies $op("Pic")(cal(O)_r)$ with
+  $
+    (ZZ[i]\/r^2 ZZ[i])^times
+    \/
+    ((ZZ\/r^2 ZZ)^times dot ZZ[i]^times).
+  $
+  Let $z_r=1+r i$. It is a unit modulo $r^2$, and the binomial theorem gives
+  $z_r^r equiv 1 mod r^2$. Its residue is nontrivial in the displayed
+  quotient: multiplication of a rational unit by one of
+  $plus.minus 1, plus.minus i$ has a zero real or imaginary coordinate,
+  whereas $1+r i$ has neither. Thus its image has exact order $r$.
+
+  The contraction map sends $z_r$ to
+  $
+    z_r ZZ[i] inter cal(O)_r
+    =[1+r^2,-r^3+r^2 i],
+  $
+  whose form is $[1+r^2,2r^3,r^4]$. One integral shift by $-r$, followed by
+  the proper swap, gives
+  $
+    [1+r^2,2r^3,r^4]
+    tilde.equiv [1+r^2,-2r,r^2]
+    tilde.equiv [r^2,2r,r^2+1].
+  $
+  The last form is primitive and reduced. More generally,
+  $(1+r a i)(1+r b i) equiv 1+r(a+b)i mod r^2$, so these residues form an
+  additive $FF_r$ line and their logarithm is $1+r a i mapsto a$. The effective
+  conductor inverse @castagnoslaguillaumie2009 recovers that coordinate from
+  a form in the subgroup. All displayed integers have $O(log r)$ bits.
+]
+
+#tag("CITED") The conductor sequence, contraction, effective inverse, and wild
+principal-unit filtration are classical; their existence is not a new
+ingredient. #tag("PROVED") The repository-original contribution here is the
+extraction of the closed reduced family, exact-order certificate, and
+$Theta(log r)$ SG-25 bit audit. This theorem closes SG-30 positively and
+unconditionally. It does not construct a source point-to-class evaluator and
+therefore is not a fourth Q004 transfer mechanism.
 
 = Conclusion
 
@@ -785,21 +1092,40 @@ structural description, a candidate table, and a restricted classification. We
 delivered all of these in their honest form. The two elementary transfers are one
 character construction (#ref(<tab:frame>)); Weil descent counts as a known third
 geometric family; and the candidate table (#ref(<fig:tax>)) has a proof, a
-citation, or an isolated open cell behind every verdict. The structural core is a
+citation, or an explicit construction behind every verdict. The structural core is a
 chain of exclusions — algebraic-group rigidity, generic-source impossibility,
 rational degree/branch/depth bounds, and proper/mixed rigidity — that together
 rule out every generic and rational construction and force any nontrivial global
-image back onto the elliptic side. The empirical layer validates both transfers
-end to end and confirms each negative probe at toy scale.
+image back onto the elliptic side. The empirical layer validates both elementary
+transfers, the ring-class composition, the maximal Kummer character, and each
+negative probe at toy scale.
 
-What we did *not* do is solve the unrestricted problem, and we are explicit about
-why. The evaluator sandwich shows the last surviving candidate — a direct
-cross-characteristic evaluator into an ordinary number-field class group inside
-the window $2 n - O(log n) <= B = o(n^2 \/ log n)$ — cannot be excluded by
-class-number size, and no checked construction supplies or forbids it. That
-single object is the entire distance between our restricted classification and a
-full one. Naming it exactly, with the models in which it is ruled out and the one
-in which it is not, is the contribution.
+A025 is a complete control theorem. On the Linnik-succinct trace-zero family,
+the conductor quotient turns every pairing value into a canonical reduced form
+of discriminant $-4p^2$, injectively on the source subgroup, and Gaussian ideal
+extension reduces its target logarithm to the accepted finite-field DLP. The
+construction also settles its own classification: it factors through the known
+pairing and efficiently returns to the same torus, so it is an ordinary
+ring-class presentation rather than a new attack mechanism.
+
+A028 supplies the genuinely broader conclusion. Every prime-order subgroup of
+an explicit imaginary-quadratic Picard target has an injective post-character
+in a conductor residue group or a maximal Kummer power-residue group. The
+proof is independent of the source evaluator and therefore includes direct
+form synthesis, external conductor support, and unrelated maximal quadratic
+fields. Algebraic separation and compact evaluation are unconditional; the
+uniform short separator uses the standing ERH/GRH convention. Novelty-grade
+Q004 is resolved at that convention: the ordinary class presentation is never
+an independent fourth endpoint.
+
+The target-only problem is now closed independently and unconditionally.
+For every odd prime $r$, the wild conductor element $1+r i$ in the order
+$ZZ+r^2ZZ[i]$ contracts and reduces to $[r^2,2r,r^2+1]$, an exact-order-$r$
+class with only $Theta(log r)$ discriminant bits and an exposed additive
+target logarithm. The hidden obstruction in the earlier search was an
+unnecessary maximal-order requirement. What remains open is the unrestricted
+classification over other target categories and, in particular, the
+construction or exclusion of source evaluators outside the classified models.
 
 #v(1em)
 #line(length: 100%, stroke: 0.6pt + rule-col)
@@ -809,13 +1135,20 @@ in which it is not, is the contribution.
 
 #text(size: 9.3pt)[
 All computations use toy parameters under the repository's 60-bit ceiling. The
-two transfer demonstrations and their timing matrices are produced by
-`run_transfers.py` (raw and scaling CSVs dated `20260722`); the CM/annihilator,
+two elementary transfer demonstrations and their timing matrices are produced by
+`run_transfers.py` (raw and scaling CSVs dated `20260626`); the CM/annihilator,
 ray-class and principal-unit probes by `probe_cm_class_targets.py`; the Buell
 residue-coordinate experiment by `probe_buell_reduction.py`; the exact-order
-census by `probe_exact_order_targets.py`; and the finite piecewise-overlap
-falsification certificate by `audit_rational_tradeoffs.py`. Each writes a seeded
-CSV named in the captions and figures above. The three figures are regenerated
+census by `probe_exact_order_targets.py`; the pairing-to-ring-class validation
+by `probe_ring_class_transfer.py`; the maximal Kummer-character checks by
+`probe_kummer_class_character.py`; and the finite piecewise-overlap
+falsification certificate by `audit_rational_tradeoffs.py`. The all-conductor,
+wild-layer, and intrinsic trace-two checks are produced by
+`probe_conductor_universality.py`. The uniform prescribed-order theorem and
+its closed reduction certificate are checked by
+`construct_sg30_ring_class_target.py`, with a permanent 15-prime CSV. Each
+writes a seeded CSV named in
+the captions and figures above. The four figures are regenerated
 by `figures/P1.5/make.py` directly from those CSVs. Every mathematical claim
 carries one of the epistemic tags #tag("PROVED"), #tag("CITED"),
 #tag("EMPIRICAL", detail: "range"), #tag("CONDITIONAL", detail: "hypothesis"),

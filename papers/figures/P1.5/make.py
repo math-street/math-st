@@ -62,8 +62,8 @@ def fig_taxonomy():
         "Other elliptic curves / AVs",
         "Separately built number-field class group",
     ]
-    cols = ["Excluded", "Known\nmechanism", "Conditional /\nneutral", "Open\n(Q004)"]
-    # 1 = excluded (proved), 2 = known mechanism (cited), 3 = conditional, 4 = open
+    cols = ["Excluded", "Known\nmechanism", "Conditional /\nneutral", "Residue-\nfactorized"]
+    # 1 = excluded, 2 = known mechanism, 3 = conditional, 4 = residue-factorized
     M = np.zeros((len(targets), 4), dtype=int)
     M[0, 0] = 1; M[0, 1] = 2       # formal groups: excluded r!=p, known r=p (Semaev)
     M[1, 0] = 1                    # Drinfeld
@@ -74,9 +74,9 @@ def fig_taxonomy():
     M[6, 1] = 2; M[6, 2] = 3       # covers / descent: known + EGT-conditional
     M[7, 2] = 3                    # Weil restriction: neutral until composed
     M[8, 0] = 1                    # other EC/AV: no new mechanism (SG-07)
-    M[9, 0] = 1; M[9, 3] = 4       # number-field Cl: natural branches dead, Q004 open
+    M[9, 0] = 1; M[9, 3] = 4       # natural branches dead; A028 factors every explicit quadratic target
     cmap = {0: F.SURFACE, 1: F.PALETTE[7], 2: F.PALETTE[0], 3: F.PALETTE[3], 4: F.PALETTE[6]}
-    letter = {1: "E", 2: "K", 3: "C", 4: "O"}
+    letter = {1: "E", 2: "K", 3: "C", 4: "R"}
     fig, ax = plt.subplots(figsize=(6.8, 4.1))
     for i in range(M.shape[0]):
         for j in range(M.shape[1]):
@@ -102,7 +102,7 @@ def fig_taxonomy():
     leg = [Patch(facecolor=F.PALETTE[7], label="E — excluded (proved)"),
            Patch(facecolor=F.PALETTE[0], label="K — known mechanism (cited)"),
            Patch(facecolor=F.PALETTE[3], label="C — conditional / neutral"),
-           Patch(facecolor=F.PALETTE[6], label="O — open residual")]
+           Patch(facecolor=F.PALETTE[6], label="R — residue-factorized (A028)")]
     ax.legend(handles=leg, loc="upper left", bbox_to_anchor=(0, -0.02),
               ncol=2, fontsize=8.5)
     F.finish(fig, os.path.join(OUT, "taxonomy.svg"))
