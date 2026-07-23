@@ -1,0 +1,42 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+  shape-rendering="crispEdges"
+>
+  <title id="title">MathST modular mark</title>
+  <desc id="desc">
+    A rising chain of square modules surrounding a coordinate-shaped opening,
+    with one detached point.
+  </desc>
+  <g fill="currentColor">
+    <!-- Detached point / next research step -->
+    <rect x="386" y="48" width="52" height="52" />
+
+    <!-- Rising modular curve -->
+    <rect x="178" y="100" width="52" height="52" />
+    <rect x="230" y="100" width="52" height="52" />
+    <rect x="282" y="100" width="52" height="52" />
+
+    <rect x="126" y="152" width="52" height="52" />
+    <rect x="178" y="152" width="52" height="52" />
+    <rect x="282" y="152" width="52" height="52" />
+    <rect x="334" y="152" width="52" height="52" />
+
+    <rect x="126" y="204" width="52" height="52" />
+    <rect x="334" y="204" width="52" height="52" />
+
+    <rect x="74" y="256" width="52" height="52" />
+    <rect x="126" y="256" width="52" height="52" />
+    <rect x="282" y="256" width="52" height="52" />
+    <rect x="334" y="256" width="52" height="52" />
+
+    <rect x="126" y="308" width="52" height="52" />
+    <rect x="178" y="308" width="52" height="52" />
+    <rect x="230" y="308" width="52" height="52" />
+    <rect x="282" y="308" width="52" height="52" />
+
+    <rect x="178" y="360" width="52" height="52" />
+  </g>
+</svg>

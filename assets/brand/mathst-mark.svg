@@ -1,0 +1,28 @@
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 512 512"
+  role="img"
+  aria-labelledby="title desc"
+>
+  <title id="title">MathST mark</title>
+  <desc id="desc">
+    A rising mathematical curve with a circular point and a sharp peak.
+  </desc>
+  <path
+    fill="currentColor"
+    fill-rule="evenodd"
+    d="
+      M 112 408
+      L 112 366
+      C 186 360 245 323 288 273
+      C 335 218 362 154 384 80
+      L 384 408
+      L 248 408
+      C 276 373 301 335 319 306
+      A 28 28 0 1 0 294 310
+      C 258 350 218 381 174 397
+      C 151 406 131 410 112 408
+      Z
+    "
+  />
+</svg>
