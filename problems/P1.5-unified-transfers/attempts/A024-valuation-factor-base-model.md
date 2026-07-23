@@ -9,7 +9,7 @@ status: folded-into-A001
 - [PROVED] This attempt addresses SG-32 only. Setup is given an imaginary
   quadratic order $\mathcal O_\Delta$ and target data containing an order-$r$
   class. It does not construct that data; the uniform prescribed-order task
-  remains SG-30.
+  remains SG-30 within this attempt. A029 later closes that independent task.
 - [PROVED] Write $n=\lceil\log_2r\rceil$ and
   $B_\Delta=\log_2|\Delta|$. The target is required to lie in the SG-25
   window
@@ -52,7 +52,7 @@ Setup supplies $p,E,P,r,\Delta$, a finite list of rational primes
 $L=(\ell_1,\ldots,\ell_s)$, and a finite list of canonical reduced target
 forms $F_1,\ldots,F_m$. All are independent of the source input point $Q$.
 The forms may include a certified order-$r$ class, but finding one is outside
-this model and remains SG-30.
+this model. It was SG-30 and is subsequently solved by A029.
 
 ### Raw integer instructions
 
@@ -202,7 +202,8 @@ Taking base-two logarithms proves (A024.1) and (A024.2). $\square$
   not excluded. Producing and proving a nonzero homomorphism with such a
   program would refute the negative assessment while respecting this theorem.
 - [PROVED] An order-$r$ target constructor is not a falsifier for A024 and
-  does not complete the evaluator; that remains the separate SG-30 task.
+  does not complete the evaluator. The separate target-construction task was
+  SG-30 and is later completed by A029; source evaluation remains distinct.
 
 ## Outcome
 

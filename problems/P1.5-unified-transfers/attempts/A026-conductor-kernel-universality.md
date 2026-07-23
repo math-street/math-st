@@ -175,3 +175,8 @@ A026 as novelty.
 A026 takes the target order and its order-$r$ image as supplied setup. It does
 not construct a prescribed-order target from arbitrary $r$ and does not work
 SG-30.
+
+A029 later observes that A026's own wild formula at \(p=r\), parameter
+\(a=1\), is already the missing target constructor once source compatibility
+is dropped. Its reduction is \([r^2,2r,r^2+1]\). Thus A026's Q004 novelty
+verdict remains unchanged, while SG-30 is subsequently closed.

@@ -1,6 +1,6 @@
 # P1.5 rational-transfer theorem package and proof audit
 
-**Audit date:** 2026-07-20
+**Audit date:** 2026-07-23
 
 **Scope:** attempts A008--A013 and their circuit consequences
 
@@ -586,7 +586,7 @@ and the integer constants used in Theorem 4.1. Its tests are a falsification
 guard for the combinatorial reduction, not a proof of the
 algebraic-geometric theorem.
 
-The theorem package leaves open:
+The rational theorem package by itself leaves open:
 
 - polynomial-length valuation/factor-base programs beyond A024's transcript
   lower bound, and direct raw-coordinate-to-form operations outside VFB;
@@ -597,6 +597,11 @@ The theorem package leaves open:
 - mixed-target maps failing the explicit fibrewise degree bounds; and
 - the connection between any such evaluator and a genuinely subexponential
   target DLP algorithm.
+
+The formerly open target-only prescribed-order construction is no longer on
+this list. A029 gives, for every odd prime \(r\), the exact order-\(r\)
+reduced form \([r^2,2r,r^2+1]\) in discriminant \(-4r^4\). This does not
+address any rational evaluator residual above.
 
 ## 12. Final classification status
 
@@ -610,3 +615,44 @@ consequences.
 
 It is not a solution of the unrestricted P1.5 problem and makes no certified
 claim of literature novelty, priority, or publishability.
+
+After this rational audit, A025 supplies a control construction for the former
+literal Q004 checklist by composing the known degree-two pairing with an
+ordinary ring-class presentation. It does not close novelty-grade Q004. A026
+then tested the conductor-kernel route, but its hoped-for effective inverse is
+prior art: Hühnlein--Takagi (1999) reduce the totally nonmaximal
+class-number-one case to finite-field DLP, and
+Castagnos--Laguillaumie (2009) give the effective conductor-kernel isomorphism
+for general conductor.
+
+A027 contributes a source-side theorem outside the rational models above. For
+an ordinary large-prime subgroup, a target order in the same CM field whose
+conductor is supported on \(p,r\) either gives an explicit
+\(\mathbb F_r\)-linearizer or forces \(r\mid p-1\), whence Hasse forces trace
+two and embedding degree one. It permits arbitrary coordinate, lift,
+valuation, branching, and direct form construction.
+
+A028 subsequently closes A027's two target residuals under the standing
+ERH/GRH convention. The conductor exact sequence puts every prime-order image
+either in the known effective local residue quotient or injectively in the
+maximal class group. In the latter case
+\(\mathfrak a^r=(\alpha)\) gives a canonical virtual unit, and a separating
+split prime gives the Kummer character
+\[
+[\mathfrak a]\longmapsto
+\alpha^{(q-1)/r}\bmod\mathfrak q\in\mu_r(\mathbb F_q).
+\]
+Compact relative-generator tracking makes evaluation polynomial, while
+effective Chebotarev makes short-prime setup expected-polynomial under GRH.
+Thus arbitrary ordinary quadratic-class evaluators factor through
+finite/local residue characters even when they lie outside every rational
+model in this review. This later target theorem does not change any proof in
+Sections 3--8 and does not promote their individual ingredients beyond
+repository-original synthesis.
+
+A029 then closes the independent SG-30 target-construction question
+unconditionally: conductor \(r^2\) in \(\mathbb Q(i)\) gives the
+\(\Theta(\log r)\)-bit discriminant \(-4r^4\) and exact order-\(r\) reduced
+form \([r^2,2r,r^2+1]\). Its explicit additive conductor logarithm places it
+inside A028's known residue branch; it does not supply or classify a source
+evaluator.

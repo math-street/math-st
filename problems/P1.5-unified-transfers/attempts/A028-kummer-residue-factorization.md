@@ -390,6 +390,9 @@ At the A028 stage, SG-30 remained separate: A028 starts from a supplied order
 and order-\(r\) target class. It neither constructs a succinct prescribed-order
 target nor uses such a construction.
 
+A029 subsequently closes that separate target-only problem by taking the
+Gaussian order of conductor \(r^2\). This does not alter any A028 proof.
+
 ## 9. Infinite-family and computation check
 
 - [CITED] Lim proves that, for every squarefree odd integer \(n>1\), there
@@ -432,7 +435,9 @@ full CSV is
 A025 independently supplies an infinite succinct conductor-branch family.
 Lim supplies the maximal-branch infinitude theorem, while A019 supplies the
 explicit regression fixtures. Together they exercise both sides of the
-dichotomy.
+dichotomy. A029 later gives a uniform succinct conductor-branch target for
+every odd prime \(r\); the harder maximal-order constructor is not part of
+SG-30 as stated.
 
 ## 10. Prior-art and novelty verdict
 

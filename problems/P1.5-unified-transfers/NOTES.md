@@ -106,19 +106,18 @@ end-to-end $\exp(o(n))$ target bound have been established.
 | Other local formal groups | Excluded for $r\ne p$; known mechanism for $r=p$ | [PROVED] If $r$ is a unit in the coefficient ring, the formal multiplication series $[r](T)=rT+O(T^2)$ has a compositional inverse, so the formal group has no nonzero $r$-torsion. [CITED] Semaev (1998) handles rational characteristic-$p$ torsion beyond only the prime-field trace-one wording. |
 | Jacobians of covers | Included conditionally | [PROVED] For a finite separable cover $\pi:C\to E$ of degree $d$, norm after pullback is multiplication by $d$, so pullback is injective on $r$-torsion when $r\nmid d$. [CONDITIONAL: applicable high-genus DLP hypotheses] It is a transfer only when the Jacobian algorithm is subexponential in the source security parameter. |
 | Weil-restriction abelian varieties | Neutral until composed | [PROVED] The defining rational-point identification preserves the original DLP exactly; any improvement comes from a subsequent quotient, isogeny, or Jacobian realization. |
-| Class and ray-class groups | Natural, generic, and low-degree rational variants excluded; high-degree/non-rational construction open | [PROVED] A003 excludes annihilator/kernel labels and, for $q\ge2^{21}$ and $r\ge q/2$, the curve's own endomorphism class group by size. [PROVED] A004 shows that modulus-$r^2$ principal units move level lifts inside one fibre rather than moving source points. [PROVED] A007--A010 exclude generic-source and low-complexity affine-rational evaluators. [CONJECTURE] No separately constructed class-group evaluator avoids the source DLP; A001 states a concrete falsifier. |
+| Class and ray-class groups | Included, but every explicit quadratic ordinary target factors through a finite/local residue character | [PROVED] A003--A024 exclude or bound the natural direct, generic, rational, ray-principal-unit, and low-observation variants. [PROVED] A025 maps the established degree-two pairing target into $\operatorname{Pic}(\mathbb Z+p\mathbb Z[i])$. [PROVED, GRH only for uniform maximal short-prime setup] A028 factors every order-$r$ image through a conductor residue group or a maximal Kummer power-residue character. |
 | Drinfeld modules | Excluded as a new additive target for $r\ne p$ | [CITED] A Drinfeld module has underlying algebraic group $\mathbb G_a$ (Poonen, 2021 notes, Definition 3.2). [PROVED] Its finite-field additive points have exponent $p$, so they contain no order-$r$ element for $r\ne p$; for $r=p$ an algebraic map from $E$ is excluded by SG-07 and a nonalgebraic map falls back to the characteristic-$p$ linearizer question. |
 | Tori | Excluded for global algebraic maps; pairing case included | [PROVED] Every algebraic-group homomorphism $E\to T$ is trivial by SG-07 because a torus is affine. [CITED] Maps defined only on $E[r]$ arise from the established Weil/Tate pairing route. |
 | Additive groups of larger characteristic-$p$ rings | Excluded for $r\ne p$ | [PROVED] The underlying additive group is killed by $p$, so it cannot contain an order-$r$ subgroup for a different prime; the $r=p$ case is the additive/local family rather than a third target type. |
 | Other elliptic curves or abelian varieties | Structurally classified, not automatically useful | [PROVED] SG-07 shows that a nonconstant algebraic-group map has elliptic image isogenous to $E$; requirement 4 still needs an independently easier ambient DLP. |
 
-> **Gap.** [CONJECTURE] I do not know how to rule out a non-rational or
-> high-degree polynomial-time character into a separately constructed
-> imaginary-quadratic class group with a succinct nonalgebraic encoding.
-> Resolving it requires either an explicit evaluator whose output respects
-> addition and is nonzero on $P$, or a lower bound for the remaining
-> coordinate/lift/valuation interface after A007--A013. Blocking: no. Logged
-> as Q004 and A001.
+> **Control result.** [PROVED] A025 supplies an explicit evaluator into the
+> ordinary ring class group of $\mathbb Z+p\mathbb Z[i]$. It respects
+> addition and is injective because it is the composition of a nondegenerate
+> pairing with the conductor exact-sequence map. It satisfies the former
+> literal checklist but does not close novelty-grade Q004 because it is a
+> representation of the known bilinear mechanism.
 
 ## SG-07 - restricted classification theorem
 
@@ -515,11 +514,12 @@ end-to-end $\exp(o(n))$ target bound have been established.
   nontrivial image remains elliptic and isogenous to the source.
 - [PROVED] Within the natural CM-order branch, annihilator/kernel constructions
   are excluded, large prime subgroups outgrow the endomorphism class group,
-  and the standard ray-level action moves the wrong objects; only a separately
-  constructed point-to-class formula remains unresolved.
-- [PROVED] Every purely generic-source construction is now excluded by
-  Shoup's lower bound, so a surviving point-to-class formula must expose a
-  representation-specific source operation.
+  and the standard ray-level action moves the wrong objects. A025 nevertheless
+  gives a valid ordinary ring-class target by transporting the existing
+  pairing character through a conductor quotient.
+- [PROVED] Every purely generic-source construction is excluded by Shoup's
+  lower bound. A025 exposes exactly the required representation-specific
+  operation: the nondegenerate degree-two pairing.
 - [PROVED] Every affine piecewise-rational construction satisfies the explicit
   degree/branch/depth bounds in SG-15--SG-17, while every single rational
   proper-target construction is a global homomorphism with elliptic-isogenous
@@ -593,10 +593,14 @@ end-to-end $\exp(o(n))$ target bound have been established.
 - [PROVED] A genuinely distinct class target must be a global number-field
   order.  A005--A006 exclude finite/local specialization and standard dense
   global torsion lifts.
-- [CONJECTURE] The exact Q004 residual is a direct cross-characteristic
-  algorithm from finite-field point coordinates to an ideal class of a
-  separately constructed number-field order, without a dense global lift of
-  the torsion point.
+- [PROVED] A025 realizes the number-field branch without a dense global lift:
+  a pairing value in $\mathbb F_{p^2}^{\times}$ maps through the conductor
+  exact sequence to an ideal class of $\mathbb Z+p\mathbb Z[i]$. This is the
+  conductor-local control branch.
+- [PROVED] A028 handles both the conductor and maximal components for every
+  explicit imaginary-quadratic order. The maximal component is exposed by a
+  Kummer power-residue character, with uniform short-prime setup under the
+  standing GRH convention.
 
 ## SG-23 - evaluator sandwich
 
@@ -621,8 +625,9 @@ end-to-end $\exp(o(n))$ target bound have been established.
   ECDLP reduction.
 - [PROVED] This does not contradict a proved concrete ECDLP lower bound - no
   such bound is available in the unrestricted coordinate model.  It shows why
-  target class-number arguments alone cannot finish Q004: the remaining issue
-  is a concrete cross-representation computation.
+  target class-number arguments alone could not finish Q004: the missing
+  ingredient was a concrete cross-representation computation. A025 later
+  supplies it from the pairing residue through the conductor exact sequence.
 
 ## SG-25 - class-target discriminant budget
 
@@ -689,11 +694,10 @@ end-to-end $\exp(o(n))$ target bound have been established.
   A019 gives the complete ideal-power and nonprincipality proof.
 - [PROVED] Its discriminant has $\Theta(r)$ bits, exponential in
   $n=\lceil\log_2r\rceil$, so the construction fails SG-01 before evaluation.
-- [PROVED] Q004 therefore contains two logically separate residual tasks:
-  construct a certified exact order-$r$ class in a polynomial-bit target
-  order, and evaluate a nonzero homomorphism from finite-field point
-  coordinates into that target.  Solving only the first does not supply the
-  second by the evaluator sandwich.
+- [PROVED] Before A025, Q004 contained two logically separate residual tasks:
+  a certified succinct order-$r$ class and a nonzero point evaluator. A025
+  solves them together for a compatible pairing family; solving only the
+  target-only SG-30 problem would still not supply an evaluator by itself.
 
 ## SG-29 - succinct target census
 
@@ -706,7 +710,10 @@ end-to-end $\exp(o(n))$ target bound have been established.
   row therefore has exact order $r$.
 - [PROVED] The finite census demonstrates small-target existence only.  Its
   exhaustive search does not provide a uniform polynomial-time construction
-  as $r$ grows, so SG-28 and the evaluator residual remain open.
+  as $r$ grows, so it does not solve the target-only SG-30 problem. At that
+  stage the evaluator was also open; A025 later supplies a compatible
+  pairing-derived control without converting this census into a uniform
+  constructor or closing novelty-grade Q004.
 
 ## SG-28 - prescribed-order construction audit
 
@@ -723,6 +730,43 @@ end-to-end $\exp(o(n))$ target bound have been established.
   SG-30 for ordinary class groups, while A004 already supplies a succinct ray
   target and shows that target construction alone does not solve Q004.
 
+## SG-30 - uniform succinct exact-order ring-class target
+
+- [PROVED] A029 closes SG-30 unconditionally. For every odd prime \(r\), set
+  \[
+  \mathcal O_r=\mathbb Z+r^2\mathbb Z[i],
+  \qquad \Delta_r=-4r^4.
+  \]
+  The conductor residue \(1+ri\bmod r^2\) has exact order \(r\) modulo
+  rational and Gaussian units: its \(r\)-th power is \(1\bmod r^2\), while
+  it is nontrivial because both coordinates are nonzero.
+- [PROVED] Contraction gives the primitive form
+  \[
+  [1+r^2,2r^3,r^4].
+  \]
+  One shift by \(-r\) and one proper swap reduce it to the closed canonical
+  form
+  \[
+  [r^2,2r,r^2+1].
+  \]
+- [PROVED] The target has
+  \[
+  \log_2|\Delta_r|=2+4\log_2r=\Theta(\log r),
+  \]
+  hence lies inside the SG-25 window. Construction and certification are
+  deterministic polynomial time and unconditional.
+- [PROVED] The complete subgroup is
+  \(a\mapsto[1+rai]\), with additive target logarithm
+  \(1+rai\mapsto a\bmod r\). Thus this is a target-only theorem, not a new
+  source transfer mechanism.
+- [CITED] The conductor exact sequence and effective inverse are classical.
+  A026 already contained the general wild form; A029's contribution is
+  recognizing that no maximality or source-compatibility condition belongs
+  to SG-30, and extracting the uniform closed reduced family.
+- [EMPIRICAL: 15 primes \(3\le r\le10007\), discriminants at most 56 bits]
+  `code/construct_sg30_ring_class_target.py` validates the exact-order
+  certificate, closed reduction, class-number formula, and SG-25 bit bound.
+
 ## SG-31 - ray principal-unit evaluator equivalence
 
 - [PROVED] The explicit logarithm
@@ -734,9 +778,10 @@ end-to-end $\exp(o(n))$ target bound have been established.
 - [PROVED] Thus a ray principal-unit evaluator and source DLP are
   polynomial-time Turing equivalent.  The ray branch can qualify only by
   yielding a polynomial-time source ECDLP, not merely a subexponential one.
-- [PROVED] The main residual is consequently an ordinary number-field class
-  target with nontransparent subexponential target DLP, plus the succinct
-  exact-order construction and cross-characteristic evaluator.
+- [PROVED] The ray branch itself remains transparent. A025 supplies a
+  different conductor quotient whose order-$r$ DLP is equivalent to the
+  established finite-field pairing target, not the additive ray
+  principal-unit logarithm; it is a control, not novelty-grade closure.
 
 ## SG-32 - finite valuation/factor-base evaluator model
 
@@ -762,7 +807,174 @@ end-to-end $\exp(o(n))$ target bound have been established.
   nondegenerate pairing, distortion map, and tractable paired-target
   logarithm. No such package is available for the fixed ordinary reduced-form
   target; odd-order classes are invisible to exponent-two genus characters.
-- [PROVED] SG-32 is therefore complete at the requested one-model scope, but
-  A024 is only a low-observation lower bound. Polynomial-length VFB programs,
-  direct MAKEFORM-style coordinate synthesis, SG-30 target construction, and
-  unrestricted P1.5/Q004 remain open.
+- [PROVED] SG-32 is complete at the requested one-model scope, but A024 is
+  only a low-observation lower bound. A025 later supplies an explicit
+  MAKEFORM-style evaluator outside VFB through the known pairing mechanism.
+  Polynomial-length VFB programs remain outside A024. A029 later closes the
+  independent target-only SG-30 problem.
+
+## SG-33 - pairing-to-ordinary-ring-class control
+
+- [CITED] For every odd prime $r$, CRT plus Linnik--Xylouris supplies a prime
+  $p\equiv3\pmod4$, $p\equiv-1\pmod r$ with $\log p=O(\log r)$.
+- [CITED] On $E_p:y^2=x^3+x$, the distortion map
+  $\psi(x,y)=(-x,iy)$ makes the degree-two pairing
+  $Q\mapsto e_r(Q,\psi(P))$ a nonzero character into
+  $\mu_r\subset\mathbb F_{p^2}^{\times}$.
+- [CITED] The conductor exact sequence gives
+  $$
+  \operatorname{Pic}(\mathbb Z+p\mathbb Z[i])
+  \cong
+  \mathbb F_{p^2}^{\times}/
+  \bigl(\mathbb F_p^\times\langle i\rangle\bigr),
+  \qquad h(-4p^2)=\frac{p+1}{2}.
+  $$
+- [PROVED] The quotient is injective on $\mu_r$. For projective pairing
+  residue $1+ti$, the image is the ordinary ideal class represented by
+  $$
+  (1+t^2,\ 2pt,\ p^2),
+  $$
+  followed by canonical Gauss reduction. This is a polynomial-time
+  fixed-discriminant evaluator.
+- [PROVED] From a reduced form $(A,B,C)$, a Gaussian gcd of
+  $A$ and $-B/2+pi$, followed by exponentiation by $2(p-1)$ modulo $p$,
+  returns an injective finite-field torus encoding on the order-$r$ image.
+  The target DLP is therefore the same accepted subexponential DLP as the
+  original pairing target.
+- [EMPIRICAL: complete $p=43,211,331$ class groups and source
+  $r=11,53,83$] A025's validation enumerates all $(p+1)/2$ reduced classes,
+  checks the two-to-one conductor quotient, obtains $r$ distinct transfer
+  images, and recovers every seeded logarithm.
+- [PROVED] The construction is not structurally new: it is the pairing
+  transfer followed by an ordinary ring-class presentation. It is retained as
+  the exact control case and does not close novelty-grade Q004.
+
+## SG-34 - novelty-grade Q004 reopening
+
+- [PROVED] A026 fixes the new closure contract: either construct a direct
+  ordinary class transfer outside local, pairing, and geometric mechanisms,
+  or prove a substantially broader literature-audited factorization/
+  impossibility theorem.
+- [PROVED] For
+  $\mathcal O_f=\mathbb Z+f\mathcal O_K$, the conductor exact sequence gives a
+  first dichotomy for every prime-order transfer: its projection to
+  $\operatorname{Pic}(\mathcal O_K)$ is injective, or its entire image lies
+  in the conductor kernel.
+- [PROVED] The conductor kernel decomposes by CRT into local factors of order
+  $\ell^{e-1}(\ell-\chi_K(\ell))$. Its prime-order pieces are additive
+  principal-unit lines when $r=\ell$ and split or inert multiplicative tori
+  when $r\ne\ell$.
+- [CITED] A026's proposed computational strengthening is also prior art.
+  Hühnlein--Takagi (1999) reduce DLP in totally nonmaximal class-number-one
+  orders to finite-field DLP. Castagnos--Laguillaumie (2009), Lemma 1, give
+  the effective conductor-kernel isomorphism for general conductor, including
+  the inverse from a reduced kernel ideal by coprime replacement, extension,
+  principalization, and reduction modulo the conductor. Kopp--Lagarias (2024)
+  place the exact sequence in a general order/ray-class framework.
+- [PROVED] The all-odd-conductor Gaussian shear/gcd inverse and the explicit
+  conductor-\(p^2\) wild forms are correct executable specializations. They
+  are controls, not the required discovery.
+- [PROVED] The remaining question is source-side. A027 treats all evaluators,
+  including arbitrary direct `MAKEFORM`, when target and source share the CM
+  field and the conductor is supported on the intrinsic primes \(p,r\).
+
+## SG-35 - intrinsic-conductor source theorem
+
+- [PROVED] Let \(E/\mathbb F_p\) be ordinary with trace \(t\), let \(P\) have
+  odd prime order \(r\ne p\), put
+  \(K=\operatorname{End}(E)\otimes\mathbb Q\), and assume
+  \(r>h(\mathcal O_K)\) and \(r>2\sqrt p+2\).
+- [PROVED] For a target
+  \(\mathcal O_f=\mathbb Z+f\mathcal O_K\), the maximal-order projection of
+  any order-\(r\) image is zero. If \(f\) is supported on \(\{p,r\}\), a
+  nonzero local projection must occur at one of those two primes.
+- [PROVED] The \(r\)-local principal-unit quotient has a one-dimensional
+  explicit logarithm over \(\mathbb F_r\), in both unramified and ramified
+  cases. Thus a nonzero evaluator in this branch recovers the source scalar
+  in polynomial time.
+- [PROVED] Since ordinary \(p\) splits in \(K\), the \(p\)-local torus has
+  order \(p^{a-1}(p-1)\). A nonzero order-\(r\) projection forces
+  \(r\mid p-1\). Together with \(r\mid p+1-t\) and Hasse,
+  \(r>2\sqrt p+2\) forces \(t=2\). Also \(r^2>\#E(\mathbb F_p)\), so the
+  nondegenerate Tate--Lichtenbaum/Frey--Rück pairing places the source in the
+  embedding-degree-one regime.
+- [PROVED] Any residual same-field counterexample must contain an external
+  conductor prime \(\ell\notin\{p,r\}\) satisfying
+  \(r\mid\ell-\chi_K(\ell)\). Hence \(\ell\ge2r+1\) when split and
+  \(\ell\ge2r-1\) when inert; a ramified \(\ell\ne r\) cannot carry the
+  image.
+- [EMPIRICAL: complete \(p=101,211,401\) wild images, all conductor-43 tame
+  residues, and three trace-two arithmetic fixtures] The A026/A027 probe and
+  five regression tests pass. These checks guard the formulas but do not
+  replace their proofs.
+- [PROVED] A027 is broader than A024 in evaluator access but narrower in
+  target scope. A028 subsequently closes its external-prime and
+  varying/unrelated maximal-order residuals by a target-side factorization.
+  At this stage SG-30 remained untouched; A029 later closes it through the
+  wild conductor-\(r^2\) family.
+
+## SG-36 - Kummer/conductor target factorization
+
+- [PROVED] For an explicit imaginary-quadratic order
+  \(\mathcal O_f=\mathbb Z+f\mathcal O_K\), publicly certified by
+  \((D_K,f,\operatorname{factor}(f))\), the conductor exact sequence
+  exhausts every exact order-\(r\) class \(h\), \(r\ge5\): either
+  \(\pi_f(h)=1\), or \(\pi_f(h)\) has exact order \(r\) in
+  \(\operatorname{Cl}(\mathcal O_K)\).
+- [CITED] In the first branch, Hühnlein--Takagi and
+  Castagnos--Laguillaumie expose the class in a local conductor quotient.
+  Its order-\(r\) component is a tame subgroup of
+  \(\mathbb F_\ell^\times\) or the norm-one torus over
+  \(\mathbb F_{\ell^2}\), or a wild additive \(\mathbb F_r\)-line.
+- [PROVED] In the maximal branch, the virtual-unit sequence
+  \[
+  1\to\mathcal O_K^\times/\mathcal O_K^{\times r}
+  \to V_r(K)\to\operatorname{Cl}(\mathcal O_K)[r]\to1
+  \]
+  is an isomorphism on the right because the imaginary-quadratic unit group
+  has order dividing six. Thus
+  \(\mathfrak a^r=(\alpha)\) defines a canonical non-\(r\)-th-power class
+  \(\alpha K^{\times r}\).
+- [PROVED] For infinitely many split \(q\equiv1\pmod r\),
+  \[
+  \lambda_{\mathfrak q}([\mathfrak a])
+  =\alpha^{(q-1)/r}\bmod\mathfrak q
+  \]
+  is nontrivial and hence injective on \(\langle[\mathfrak a]\rangle\).
+  Restriction/corestriction keeps \(\alpha\) nontrivial in
+  \(K(\zeta_r)^\times/K(\zeta_r)^{\times r}\), and Chebotarev supplies the
+  separating Kummer Frobenius.
+- [CITED] Vollmer's binary power-product bookkeeping and
+  Jacobson--Sawilla--Williams relative-generator reduction support the
+  compact implementation. Recording \(O(\log r)\) reductions evaluates
+  \(\alpha\bmod\mathfrak q\) in polynomial time without expanding it.
+- [CONDITIONAL: GRH for the normal Kummer closure] Its degree is
+  \(r^{O(1)}\), its logarithmic discriminant is
+  \(r^{O(1)}(\log|D_K|+\log r)\), and
+  Lagarias--Odlyzko/Bach--Sorenson yield an expected-polynomial Las Vegas
+  search with
+  \(\log q=O(\log r+\log(\log|D_K|+2))\).
+- [PROVED] Therefore every nonzero source evaluator into an explicit
+  imaginary-quadratic Picard group, irrespective of coordinate access,
+  lifts, valuations, branches, or direct `MAKEFORM`, post-composes to a
+  finite-field multiplicative character or an additive \(\mathbb F_r\)
+  character. The class presentation is removable on its prime-order image.
+- [PROVED] The virtual-unit/Kummer pairing is classical. The
+  repository-original result is the complete effective conductor/maximal
+  synthesis and its Q004 consequence, not any individual ingredient.
+- [EMPIRICAL: ten exact-order targets with certified nonzero maximal
+  projection, all source scalars] The A028
+  probe validates the family
+  \(D_r=1-4\cdot2^r\), \(\mathfrak a=(2,\omega)\),
+  \(\mathfrak a^r=(\omega)\) for
+  \(r=3,5,7,11,13,17,19,23,29,31\), finds a nontrivial split-prime
+  character in every case, and recovers all \(r\) logarithms.
+- [CITED] Lim's prescribed-order theorem, not A019, supplies maximal-branch
+  infinitude: for each fixed odd prime \(r\), infinitely many imaginary
+  quadratic fields have a class of exact order \(r\). A028 gives infinitely
+  many separators for each such class.
+- [PROVED] A019 is intentionally oversized, and its order discriminant is
+  not proved fundamental for every \(r\); it is therefore only the explicit
+  regression family. A025 supplies the independent infinite succinct
+  conductor branch. A029 subsequently closes SG-30 with the deterministic
+  conductor-\(r^2\) Gaussian family; SG-30 did not require a maximal order.

@@ -1,6 +1,6 @@
 ---
 attempt: A021
-status: folded-into-A001
+status: resolved-by-A029
 ---
 # A021 - Audit uniform succinct exact-order class constructions
 
@@ -50,3 +50,9 @@ status: folded-into-A001
   finite A020 census from being mistaken for an infinite transfer family.
 - [PROVED] Even a positive solution would not close A001: A015 still requires
   the independent cross-characteristic point-to-class evaluator.
+- [PROVED] A029 later supplies the positive solution omitted by this audit:
+  the nonmaximal Gaussian order of conductor \(r^2\) has discriminant
+  \(-4r^4\) and exact order-\(r\) reduced form
+  \([r^2,2r,r^2+1]\). The earlier audit overemphasized maximal-order
+  prescribed-torsion families and did not extract the wild conductor line
+  already visible in A026.

@@ -1,121 +1,195 @@
-# Handoff - P1.5 - after session 6
+# Handoff - P1.5 - after session 10
 
 ## State in five lines
 
-SG-01--SG-29 and SG-31--SG-32 are complete at their stated scopes.
-P1.5/Q004 is still open; do not call the unrestricted problem solved.
-The A008--A013 rational package survived audit; use
-RATIONAL_TRANSFER_REVIEW.md as the authoritative statement.
-Its affine piecewise bound is \(D_+B^2\ge r/4\), not the older \(B^3\) bound.
-A023 records that this quadratic-overlap mechanism has direct scalar
-interpolation prior art; call the package a repository-original synthesis.
-A024 gives one exact VFB evaluator model a transcript lower bound, but leaves
-direct coordinate-to-form and polynomial-length VFB programs open.
-SG-30 remains the separate, untouched target-construction task.
+SG-01--SG-36 are complete at their stated scopes.
+Novelty-grade Q004 is complete for explicit imaginary-quadratic ordinary
+class targets under the repository's standing ERH/GRH target-algorithm
+convention. A028 is the closing theorem: every prime-order target image is
+exposed either in a conductor residue group or by a maximal Kummer
+power-residue character. The algebraic dichotomy and existence of separating
+primes are unconditional; GRH is used only for uniform expected-polynomial
+short-prime setup. A029 independently closes SG-30 unconditionally with the
+exact order-\(r\) form \([r^2,2r,r^2+1]\) of discriminant \(-4r^4\).
 
-## What is established (tagged)
+## The new theorem
 
-- [CITED] Anomalous, pairing, and qualifying Weil-descent transfers are known
-  local, bilinear, and geometric mechanisms.
-- [PROVED] Generic-source transfers contradict Shoup; affine rational
-  evaluators satisfy the strengthened exact overlap, \(B^2\), and
-  rational-decision-tree depth lower bounds; proper or
-  low-defect mixed rational targets collapse to global elliptic-isogenous maps.
-- [CITED] Coppersmith--Shparlinski already prove the scalar
-  arbitrary-subset quadratic-overlap mechanism; the checked interpolation
-  papers neither state the faithful affine-target theorem nor improve the
-  adversarial \(B^2\) exponent.
-- [PROVED] In A024's fixed VFB model, every nonzero evaluator obeys
-  \(C+\sum_j\log_2(h_j+1)\ge\log_2r\). Polynomial-height operands and
-  sublinear comparison count therefore require
-  \(\Omega(\log r/\log\log r)\) valuations.
-- [PROVED] Finite/local Picard targets are trivial. Pointed global
-  function-field class groups are Jacobians or generalized Jacobians.
-- [PROVED] Number fields are the only genuinely distinct class-target base.
-- [PROVED] For a nonzero homomorphism, evaluation and source DLP are
-  polynomial-time equivalent given a target-DLP oracle.
-- [PROVED] Under the checked Hafner--McCurley route, discriminant bits obey
-  $2n-O(\log n)\le B=o(n^2/\log n)$ for $n=\lceil\log_2r\rceil$.
-- [CITED] Checked Buell--Soleng and later point-to-class maps use rational or
-  algebraic points over number fields, not finite-field source points.
-- [EMPIRICAL: bounded primary-source search, 2026-07-10] No checked direct
-  $E(\mathbb F_q)[r]$-to-fixed-number-field-class evaluator was found.
-- [PROVED] Direct canonical residue substitution in the Buell form has
-  point-dependent discriminant $\mathcal D+k_Qp$ and no fixed target.
-- [EMPIRICAL: 10 reductions, 218 nonzero points] All lifted Buell
-  discriminants were distinct; only two equalled the model discriminant.
-- [PROVED] Discriminant $1-4\cdot2^r$ has an explicit exact order-$r$ class,
-  but its $\Theta(r)$-bit encoding violates SG-01.
-- [EMPIRICAL: exhaustive $|\Delta|\le200000$, primes $3\le r\le43$] Every
-  least qualifying toy discriminant had $h(\Delta)=r$ and
-  $0.684711\le|\Delta|/r^2\le2.555556$.
-- [EMPIRICAL: bounded prescribed-order search, 2026-07-10] No checked theorem
-  gave a uniform polynomial-bit exact-order constructor as $r$ grows.
-- [PROVED] A modulus-$r^2$ Gaussian principal-unit evaluator reveals the
-  source scalar through $1+rz\mapsto z$; ray evaluation and ECDLP are
-  polynomial-time equivalent.
-- [EMPIRICAL: final verification 2026-07-20] 70 shared and 16 P1.5 tests and
-  bytecode compilation pass. The A023/A024 control-character,
-  trailing-whitespace, and unresolved-marker audits also pass; the four
-  legacy smoke runs and finite-overlap certificate remain covered by the
-  preceding session.
+Let \(r\ge5\) be prime and let
+\[
+h\in\operatorname{Pic}(\mathcal O_f),\qquad
+\mathcal O_f=\mathbb Z+f\mathcal O_K,
+\]
+have exact order \(r\). The explicit target interface supplies the
+fundamental discriminant \(D_K\), conductor \(f\), and factorization of \(f\).
 
-## What is ruled out
+The conductor exact sequence gives exactly two cases.
 
-- A003--A006: natural CM labels, standard ray action, local class pairing,
-  and dense global torsion lifts.
-- A007--A013: generic, low-degree/shallow/piecewise rational, proper, and
-  controlled mixed algebraic evaluators, under the exact models in
-  RATIONAL_TRANSFER_REVIEW.md.
-- A017: canonical finite-field use of the Buell formula.
-- A019: self-certifying exact-order target with exponential input length.
-- A022: ray principal units as an intermediate subexponential target.
+1. If \(h\) maps to the identity in
+   \(\operatorname{Cl}(\mathcal O_K)\), the known effective conductor inverse
+   maps it to a nonzero local component: a split finite-field subgroup, an
+   inert norm-one torus, or a wild additive \(\mathbb F_r\)-line.
+2. If its maximal projection \(\bar h\) is nonzero, write
+   \(\mathfrak a^r=(\alpha)\). Because the imaginary-quadratic unit group has
+   order dividing six, \(\alpha K^{\times r}\) is the canonical virtual unit
+   attached to \(\bar h\). For infinitely many split
+   \(q\equiv1\pmod r\),
+   \[
+   \lambda_{\mathfrak q}(\bar h)
+   =\alpha^{(q-1)/r}\bmod\mathfrak q
+   \]
+   is nontrivial and hence injective on \(\langle\bar h\rangle\).
 
-## Active threads
+Binary ideal powering with relative-generator tracking retains \(\alpha\) as
+an \(O(\log r)\)-node compact power product. It can be evaluated
+\(\mathfrak q\)-adically in polynomial time even when individual compact
+factors have \(q\)-divisible denominators.
 
-A001 remains the ordinary number-field point-to-class character.
-A002 remains a viable but known cover/Jacobian/Weil-descent framework.
-SG-30 asks for a uniform succinct prescribed-order ordinary target.
-A024 closes SG-32 only for the VFB model. Direct MAKEFORM-style use of raw
-coordinates and polynomial-length VFB programs remain evaluator residuals.
+Under GRH for the normal Kummer closure, effective Chebotarev gives a Las
+Vegas expected-polynomial search and
+\[
+\log q=O(\log r+\log(\log|D_K|+2)).
+\]
 
-## Next action
+## Q004 consequence
 
-If evaluator work continues, specify the direct raw-coordinate-to-form
-extension excluded by A024 and find an invariant that either proves
-homomorphy/nonzeroness or yields a lower bound. Keep SG-30 separate; do not
-smuggle target construction into the evaluator model.
+For any nonzero source evaluator
+\[
+\phi:\langle P\rangle\to\operatorname{Pic}(\mathcal O_f),
+\qquad h=\phi(P),
+\]
+the target-side character \(\Lambda_h\) from A028 satisfies
+\[
+\Lambda_h(\phi(xP))=\Lambda_h(h)^x
+\]
+in a multiplicative branch, or
+\(x\Lambda_h(h)\) in the additive branch.
 
-## Invariants - do not violate
+Thus an ordinary imaginary-quadratic class presentation is never an
+independent third transfer endpoint. If the composite source character is
+not anomalous or MOV/Frey--Rück, its novelty already lies in a direct
+source-to-finite-field character; the class layer is removable.
 
-- Full input/setup length is $(\log r)^{O(1)}$.
-- An abstract map $xP\mapsto h^x$ is circular without an evaluator.
-- Target size or class-number divisibility does not construct the evaluator.
-- Finite censuses are empirical and do not define a uniform family.
-- A bounded literature search is not a nonexistence theorem.
-- Ray evaluation would already be a polynomial-time source-DLP algorithm.
-- Q004 closes only by the explicit criteria in `OPEN_QUESTIONS.md`.
+This is a factorization theorem, not a proof that \(\phi\) cannot exist and
+not a claim that every resulting finite-field character is pairing-derived.
+It is strictly broader than A024 and A027 because it permits arbitrary
+coordinate access, lifts, valuations, branches, direct `MAKEFORM`, external
+conductor primes, and varying or unrelated maximal quadratic fields.
+
+## Prior-art boundary
+
+- The conductor exact sequence and effective kernel inverse are classical:
+  Hühnlein--Takagi and Castagnos--Laguillaumie.
+- Virtual units and the Kummer pairing are classical class field theory.
+- Compact ideal power products and relative generators are supported by
+  Vollmer and Jacobson--Sawilla--Williams.
+- Effective Frobenius-prime bounds are due to Lagarias--Odlyzko and
+  Bach--Sorenson.
+- The repository-original contribution is the complete effective
+  conductor/maximal synthesis in A028.4 and its evaluator-independent Q004
+  consequence. Do not claim any ingredient separately as new.
+- A bounded primary-source search through 2026-07-23 found no checked source
+  stating this full prime-order computational dichotomy for
+  imaginary-quadratic Picard targets. This remains an audited novelty claim,
+  not a universal bibliographic proof.
+
+## Infinite-family checks
+
+- A025 supplies an infinite succinct conductor-branch control family. It is
+  pairing-derived and remains labeled as such.
+- A029 supplies the uniform target-only family required by SG-30, for every
+  odd prime \(r\), without an auxiliary prime or analytic hypothesis.
+- Lim (2016) supplies the rigorous infinitude statement: for every fixed odd
+  prime \(r\), infinitely many imaginary quadratic fields have a maximal
+  ideal class of exact order \(r\). A028 gives infinitely many separating
+  primes for every such target. This existence theorem is not a uniform
+  succinct SG-30 constructor.
+- A019 supplies the explicit maximal-branch regression fixture:
+  \[
+  D_r=1-4\cdot2^r,\quad
+  \mathfrak a=(2,\omega),\quad
+  \mathfrak a^r=(\omega).
+  \]
+  Its order discriminant is not proved fundamental for every prime \(r\), so
+  it is not itself claimed as an infinite maximal-order family. The ten
+  probed cases have nonzero maximal projection, certified by their
+  nontrivial residue character. It is deliberately oversized and does not
+  solve SG-30.
+- `code/probe_kummer_class_character.py` checks ten primes
+  \(3\le r\le31\), finds a nontrivial character in every case, and recovers
+  every scalar. The permanent output is
+  `data/probe_kummer_class_character_full_20260723.csv`.
+- Final verification: all 104 library/P1.5 tests pass; Python bytecode
+  compilation succeeds; the 15-row A029 CSV regenerates deterministically;
+  and the final 21-page paper compiles and passes full rendered-page
+  inspection.
+
+## Other established boundaries
+
+- A023 reconciles the rational package with the closest discrete-logarithm
+  interpolation literature. The \(B^2\) overlap scale has direct prior art;
+  call the full package a repository-original synthesis.
+- A024 proves
+  \(C+\sum_j\log_2(h_j+1)\ge\log_2r\) only in its fixed VFB model.
+- A025 is a correct ordinary ring-class transfer but only a presentation of
+  the known degree-two pairing target.
+- A026's hoped-for effective-kernel novelty was rejected as 1999/2009 prior
+  art.
+- A027 proves the sharper source-CM intrinsic-support consequence:
+  \(r\)-local support gives an \(\mathbb F_r\) linearizer, while \(p\)-local
+  support forces trace two and embedding degree one.
+
+## Unconditional boundary
+
+Ordinary Chebotarev proves infinitely many separating maximal-branch primes,
+and evaluation is polynomial once one is supplied. The checked unconditional
+effective bounds do not prove a uniform polynomial-time short-prime search in
+\(\log r+\log|D_K|\). Do not erase this caveat.
+
+This is compatible with marking Q004 complete under the standing convention:
+the rigorous Hafner--McCurley class-group target route used by Q004 is itself
+recorded under ERH.
+
+## SG-30 - solved by A029
+
+For every odd prime \(r\), take
+\[
+\mathcal O_r=\mathbb Z+r^2\mathbb Z[i],
+\qquad \Delta_r=-4r^4.
+\]
+The conductor residue \(1+ri\bmod r^2\) has exact order \(r\) modulo rational
+and Gaussian units. Its contracted ideal has raw form
+\([1+r^2,2r^3,r^4]\), which reduces in two elementary steps to
+\[
+[r^2,2r,r^2+1].
+\]
+The output has \(\Theta(\log r)\) bits, lies inside SG-25, and is constructed
+and certified in deterministic polynomial time. Its subgroup logarithm is
+the explicit additive map \(1+rai\mapsto a\bmod r\).
+
+This is a target-only theorem. It does not provide a source evaluator and is
+exactly the wild conductor branch exposed by A028.
 
 ## Files that matter
 
-- `NOTES.md`: stable facts through SG-32.
-- `attempts/A001-class-group-character.md`: active synthesis and falsifier.
-- `attempts/A015-evaluator-sandwich.md`: evaluator/source/target reductions.
-- `attempts/A017-naive-buell-reduction.md`: fixed-discriminant failure.
-- `attempts/A019-oversized-exact-order-class.md`: exact order proof.
-- `attempts/A020-succinct-target-census.md`: toy target census.
-- `attempts/A021-succinct-exact-order-audit.md`: construction literature.
-- `attempts/A022-ray-evaluator-equivalence.md`: transparent ray log proof.
-- `attempts/A023-interpolation-prior-art-audit.md`: five-item reconciliation.
-- `attempts/A024-valuation-factor-base-model.md`: fixed VFB model and bound.
-- `code/probe_buell_reduction.py`: validated 218-point experiment.
-- `code/probe_exact_order_targets.py`: validated full discriminant census.
+- `attempts/A028-kummer-residue-factorization.md`: closing theorem and proof.
+- `attempts/A029-uniform-wild-ring-class-target.md`: unconditional SG-30
+  constructor and certificate.
+- `attempts/A027-intrinsic-conductor-support.md`: source-side refinement.
+- `attempts/A026-conductor-kernel-universality.md`: prior-art control.
+- `attempts/A025-pairing-to-ring-class-transfer.md`: pairing control.
+- `attempts/A024-valuation-factor-base-model.md`: VFB lower bound.
+- `attempts/A023-interpolation-prior-art-audit.md`: prior-art reconciliation.
+- `code/probe_kummer_class_character.py`: maximal Kummer regression driver.
+- `code/construct_sg30_ring_class_target.py`: uniform A029 constructor.
+- `RATIONAL_TRANSFER_REVIEW.md`: authoritative rational theorem wording.
+- `NOTES.md`, `STATE.md`, `LOG.md`: synchronized current status.
 
 ## What I would tell my replacement
 
-Do not conflate four facts: small targets exist at toy scale, uniform target
-construction is not known here, the point evaluator is an independent ECDLP
-reduction, and A024 excludes only low-observation VFB recipes. The central
-unanswered object is still a concrete finite-field coordinate program
-producing ordinary number-field ideal classes while respecting point
-addition.
+There are now two complementary closing results. A028 is negative and
+evaluator-independent: every explicit quadratic ordinary class target has a
+computable residue character on its prime-order image. A029 is positive and
+target-only: conductor \(r^2\) in the fixed Gaussian field gives a uniform
+succinct exact order-\(r\) class. The latter uses the same wild residue line
+and therefore does not reopen Q004. Preserve A028's GRH boundary; A029 is
+unconditional.

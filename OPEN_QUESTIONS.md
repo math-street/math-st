@@ -14,7 +14,7 @@ different.
 | P1.2/Q004 | Open only for corrected Variant S |
 | P1.3/Q022, P1.3/Q023 | Open |
 | P1.4/Q002, P1.4/Q003 | Open |
-| P1.5/Q004 | Open |
+| P1.5/Q004 | Resolved by A028 under the standing ERH/GRH convention |
 | P1.6/Q008, P1.6/Q018 | Open |
 | P2.1/Q005 | Open and blocking the full reduction |
 | P2.2/Q003 | Open residual branch |
@@ -511,6 +511,8 @@ within a five-second SymPy limit. This does not establish a lower bound.
 
 ## P1.5/Q004 - Can a CM point subgroup map computably into a class group?
 
+**Status:** resolved by P1.5/A028 under the standing ERH/GRH convention.
+
 [CONDITIONAL: ERH and factor-base decomposition of represented inputs]
 Imaginary-quadratic class-group relations give a subexponential target route.
 
@@ -608,25 +610,131 @@ $j$-th valuation operand. This rules out low-observation polynomial-height
 recipes, but remains compatible with polynomial-length valuation programs and
 does not cover direct raw-coordinate form construction.
 
-> **Gap.** [CONJECTURE] I do not know a uniform polynomial-time nonzero
-> evaluator from a prime-order elliptic point subgroup into a succinct
-> ordinary number-field class target that avoids first solving the
-> source DLP. Outside A024's VFB lower bound, it may still use a
-> polynomial-length valuation transcript, direct raw-coordinate form
-> synthesis, or another non-generic operation and cross the proved
-> degree/branch bounds. For an ordinary class group it must additionally
-> provide a uniform certified order-$r$ target inside the size window. The
-> ray option is isolated separately by A022 as polynomially equivalent to
-> source DLP. Blocking:
-> no. Logged as P1.5/Q004 and P1.5/A001.
+[PROVED] P1.5/A025 supplies the missing positive package. For each odd prime
+$r$, Linnik's theorem supplies a prime
+$p\equiv3\pmod4$, $p\equiv-1\pmod r$ with
+$\log p=O(\log r)$. On
+$E_p:y^2=x^3+x$, the nondegenerate distorted pairing maps the order-$r$
+subgroup into $\mu_r\subset\mathbb F_{p^2}^{\times}$.
 
-> **Closure criterion.** Close P1.5/Q004 positively only with one infinite
-> uniform family, polynomial-size setup, a polynomial-time evaluator on
-> ordinary finite-field point encodings, a complete homomorphism and
-> nonzero-image proof, and an end-to-end $\exp(o(\log r))$ target DLP bound.
-> Close it negatively only with a lower bound covering the remaining
-> coordinate/lift/valuation programs, not merely generic groups or rational
-> maps of bounded degree. The present record does not meet either criterion.
+[PROVED] The conductor exact sequence for
+$\mathcal O_p=\mathbb Z+p\mathbb Z[i]$ gives
+$$
+\operatorname{Pic}(\mathcal O_p)
+\cong
+\mathbb F_{p^2}^{\times}/
+\bigl(\mathbb F_p^\times\langle i\rangle\bigr),
+\qquad
+h(-4p^2)=\frac{p+1}{2}.
+$$
+The quotient map is injective on $\mu_r$. If a pairing value is projectively
+$1+ti$, its ordinary ideal class is represented by the explicit form
+$$
+(1+t^2,\ 2pt,\ p^2)
+$$
+of fixed discriminant $-4p^2$, followed by ordinary Gauss reduction.
+
+[PROVED] A reduced output form can be returned to the finite-field torus in
+polynomial time: extend its ideal to $\mathbb Z[i]$, compute a Gaussian gcd
+$\gamma$, and use $(\gamma\bmod p)^{2(p-1)}$. On the order-$r$ image this is
+exponentiation by $-4\bmod r$, so it preserves discrete logarithms. The
+target therefore has the same accepted subexponential DLP route as the
+degree-two MOV/Frey--Ruck target, and the discriminant has
+$\Theta(\log r)$ bits.
+
+> **Control result, not resolution.** A025 meets the former literal existence
+> checklist: an infinite polynomial-length family, a polynomial-time
+> ordinary-point evaluator, complete homomorphism and injectivity proofs, and
+> an end-to-end $\exp(o(\log r))$ target route under the same finite-field-DLP
+> convention already used for the pairing transfer. It does not resolve the
+> genuine Q004 task because both the nonzero character and the target-DLP
+> advantage factor through the known pairing mechanism. A026 requires either
+> a direct transfer outside the known local/pairing/geometric mechanisms or a
+> substantially broader factorization/impossibility theorem with audited
+> novelty.
+
+[CITED] The first A026 candidate did not survive that audit.
+Hühnlein--Takagi (1999) already reduce DLP in totally nonmaximal
+class-number-one imaginary quadratic orders to finite-field DLP, and
+Castagnos--Laguillaumie (2009), Lemma 1, give the effective isomorphism between
+the conductor residue quotient and the kernel of
+\(\operatorname{Pic}(\mathcal O_f)\to\operatorname{Pic}(\mathcal O_K)\) for
+general conductor. The Gaussian inverse implemented in A026 is a correct
+specialization, not the required discovery.
+
+[PROVED] P1.5/A027 proves a source-side theorem not present in those kernel
+algorithms. Let \(E/\mathbb F_p\) be ordinary, let \(P\) have prime order
+\(r\ne p\), assume
+\[
+r>h(\mathcal O_K),\qquad r>2\sqrt p+2,
+\quad K=\operatorname{End}(E)\otimes\mathbb Q,
+\]
+and let the target be an order in \(K\) whose conductor is supported only at
+\(\{p,r\}\). Every nonzero point-to-class homomorphism then has one of two
+outcomes:
+
+1. its \(r\)-local projection has an explicit \(\mathbb F_r\) logarithm, so
+   one evaluator call recovers the source scalar in polynomial time; or
+2. its \(p\)-local projection is nonzero, forcing \(r\mid p-1\). Since also
+   \(r\mid p+1-t\), Hasse gives \(t=2\), and the source already has embedding
+   degree one.
+
+[PROVED] Consequently every still-genuine same-CM-field counterexample must
+use an external conductor prime \(\ell\notin\{p,r\}\) satisfying
+\[
+r\mid\ell-\chi_K(\ell).
+\]
+It has \(\ell\ge2r+1\) in the split case and \(\ell\ge2r-1\) in the inert
+case. The other residual is a nonzero varying/unrelated maximal-order image.
+
+[PROVED] P1.5/A028 closes both A027 residuals for every explicit
+imaginary-quadratic order target. If an exact order-\(r\) image dies in the
+maximal class group, the known effective conductor inverse exposes it in a
+tame finite-field torus or a wild additive \(\mathbb F_r\)-line. Otherwise,
+for
+\[
+\mathfrak a^r=(\alpha),
+\]
+the virtual unit \(\alpha K^{\times r}\) is canonical and nontrivial, and
+infinitely many split \(q\equiv1\pmod r\) give the injective Kummer character
+\[
+[\mathfrak a]\longmapsto
+\alpha^{(q-1)/r}\bmod\mathfrak q\in\mu_r(\mathbb F_q).
+\]
+
+[PROVED] Binary ideal powering with compact relative-generator tracking
+evaluates this character in polynomial time without expanding \(\alpha\).
+
+[CONDITIONAL: GRH for the normal Kummer closure] Effective Chebotarev gives a
+Las Vegas expected-polynomial search for a separator with
+\[
+\log q=O(\log r+\log(\log|D_K|+2)).
+\]
+This is the same ERH/GRH convention already attached to the rigorous
+Hafner--McCurley target route.
+
+> **Resolution.** Every nonzero source evaluator into an explicit ordinary
+> imaginary-quadratic class target post-composes to a finite/local residue
+> character, regardless of coordinate access, lifts, valuations, branching,
+> direct form synthesis, external conductor support, or an unrelated maximal
+> field. The class presentation is therefore not an independent third
+> transfer endpoint. This does not prove that the source evaluator cannot
+> exist and does not claim that its resulting finite-field character is
+> pairing-derived.
+
+[PROVED] The separate P1.5/SG-30 target-construction problem is subsequently
+resolved by A029. For every odd prime \(r\), the order
+\[
+\mathbb Z+r^2\mathbb Z[i]
+\]
+has discriminant \(-4r^4\), and the reduced primitive form
+\[
+[r^2,2r,r^2+1]
+\]
+has exact class order \(r\). This is an unconditional deterministic
+\(\mathrm{poly}(\log r)\) construction inside the SG-25 window. It supplies
+no source evaluator and is the explicit wild conductor branch already
+compatible with A028.
 
 ## P1.4/Q002 — How can the explicit basic-GHS cover be built without SageMath or Magma?
 

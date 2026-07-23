@@ -257,7 +257,8 @@ degree-two finite-field DLP used by the original pairing transfer.
 | Injectivity | nondegenerate pairing and $\mu_r\cap\mathbb F_p^\times\langle i\rangle=1$ |
 | Subexponential target DLP | polynomial conversion (A025.7) followed by the accepted finite-field DLP route |
 
-Every item in the former literal positive checklist is met.
+Every item in the former literal positive checklist is met. A026 explains why
+this is a control result rather than novelty-grade Q004 closure.
 
 ## 7. Computational falsification certificate
 
@@ -297,6 +298,11 @@ Every item in the former literal positive checklist is met.
   arbitrary supplied $r$ without using a compatible source field. A025
   supplies the target required by its transfer family but does not claim that
   stronger target-only constructor.
+- [PROVED] A029 subsequently answers that separate question: conductor
+  \(r^2\) in the fixed field \(\mathbb Q(i)\) gives the exact order-\(r\)
+  reduced form \([r^2,2r,r^2+1]\), without a compatible source field or an
+  auxiliary prime.
 - [PROVED] A025 does not resolve novelty-grade Q004. Its nonzero source
   character is the known degree-two pairing, and its target logarithm returns
-  efficiently to the same pairing torus.
+  efficiently to the same pairing torus. A026 treats A025 as the conductor-
+  local control case.

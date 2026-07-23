@@ -783,3 +783,63 @@ rigorous class-group target route.
 **Next:** Preserve A028 and its explicit GRH boundary. Keep SG-30 unchecked;
 it remains a stronger target-only prescribed-order construction problem and
 is not needed for the Q004 factorization.
+
+## Session 10 - 2026-07-23
+
+**Goal:** Solve the separate SG-30 uniform succinct prescribed-order target
+problem.
+
+**Prediction:** The maximal-order prescribed-torsion literature might be
+unnecessarily restrictive because SG-30 permits nonmaximal imaginary
+quadratic orders. The conductor-\(r^2\) wild principal-unit line isolated in
+A026 was the first candidate to test.
+
+**Did:**
+
+- Fixed the field \(K=\mathbb Q(i)\) and order
+  \(\mathcal O_r=\mathbb Z+r^2\mathbb Z[i]\) for arbitrary odd prime \(r\).
+- Proved that \(1+ri\bmod r^2\) has exact order \(r\) in the conductor
+  quotient modulo rational and Gaussian units.
+- Contracted its principal Gaussian ideal to obtain the primitive form
+  \([1+r^2,2r^3,r^4]\).
+- Found and proved the two-step closed reduction
+  \[
+  [1+r^2,2r^3,r^4]\sim[r^2,2r,r^2+1].
+  \]
+- Audited the discriminant \(-4r^4\) against SG-25 and obtained
+  \(2+4\log_2r=\Theta(\log r)\) bits.
+- Implemented the deterministic constructor, exact Gaussian residue
+  certificate, and five dedicated regression tests.
+
+**Found:**
+
+- [PROVED] SG-30 has an unconditional positive solution for every odd prime
+  \(r\).
+- [PROVED] Construction and certification are deterministic polynomial time
+  in \(\log r\); no auxiliary-prime search, class-number computation,
+  factorization, or ERH/GRH assumption is used.
+- [PROVED] The whole subgroup is
+  \(a\mapsto[1+rai]\), and its target logarithm is the explicit additive map
+  \(1+rai\mapsto a\bmod r\).
+- [CITED] The conductor exact sequence, effective inverse, and wild
+  principal-unit filtration are classical. The result is not a new Q004
+  mechanism; the repository contribution is extracting their previously
+  missed SG-30 consequence and giving the closed reduced form and complexity
+  certificate.
+- [EMPIRICAL: 15 primes \(3\le r\le10007\), discriminants at most 56 bits]
+  Every target passes the exact-order, reduction, class-number, and SG-25
+  checks. Complete class-group enumeration independently confirms
+  \(r=3,5,7\).
+- [EMPIRICAL: final verification] All 104 library and P1.5 tests pass, Python
+  bytecode compilation succeeds, the 15-row A029 full CSV regenerates
+  deterministically, and the final 21-page paper compiles and passes
+  full rendered-page inspection.
+
+**Prediction vs. outcome:** Matched. The hard-looking maximal prescribed
+torsion problem was not the interface SG-30 actually stated. Once maximality
+and source compatibility were removed, A026's wild conductor line gave a
+uniform constructor immediately.
+
+**Next:** Preserve the distinction: A029 closes target construction
+unconditionally, while it supplies no source evaluator and therefore does
+not alter A028's residue-factorization resolution of Q004.

@@ -549,6 +549,74 @@ checked against a primary source.
   predecessor for P1.5/SG-14's distinction between generic handles and
   concrete coordinate/implementation features.
   <https://eprint.iacr.org/2006/230>
+- [CITED] Keith Conrad, "The Conductor Ideal of an Order," expository notes,
+  accessed 2026-07-23. Relevance: proves the conductor exact sequence and
+  computes $h(\mathbb Z+p\mathbb Z[i])$, providing the ordinary ring-class
+  realization used in P1.5/A025 and the contraction map underlying A029's
+  uniform wild exact-order family.
+  <https://kconrad.math.uconn.edu/blurbs/gradnumthy/conductor.pdf>
+- [CITED] Detlef Hühnlein and Tsuyoshi Takagi, "Reducing Logarithms in
+  Totally Non-Maximal Imaginary Quadratic Orders to Logarithms in Finite
+  Fields," ASIACRYPT 1999, LNCS 1716, 219--231,
+  doi:10.1007/978-3-540-48000-6_18. Relevance: prior finite-field DLP
+  reduction for the class-number-one conductor kernel; it falsifies A026's
+  first novelty candidate.
+  <https://doi.org/10.1007/978-3-540-48000-6_18>
+- [CITED] Guilhem Castagnos and Fabien Laguillaumie, "On the Security of
+  Cryptosystems with Quadratic Decryption: The Nicest Cryptanalysis,"
+  EUROCRYPT 2009, LNCS 5479, 260--277,
+  doi:10.1007/978-3-642-01001-9_15. Relevance: Lemma 1 gives the effective
+  conductor-kernel isomorphism for general conductor and the inverse from a
+  reduced kernel ideal used in the A026 prior-art correction and A029's
+  polynomial-time subgroup logarithm.
+  <https://www.lirmm.fr/~laguillaum/NicestCryptanalysisEC09.pdf>
+- [CITED] Gene S. Kopp and Jeffrey C. Lagarias, "Ray Class Groups and Ray
+  Class Fields for Orders of Number Fields," arXiv:2212.09177, revised 2024.
+  Relevance: general change-of-order/change-of-modulus exact sequences that
+  place the P1.5 conductor analysis in its modern order/ray-class framework.
+  <https://arxiv.org/abs/2212.09177>
+- [CITED] Triantafyllos Xylouris, "On the Least Prime in an Arithmetic
+  Progression and Estimates for the Zeros of Dirichlet L-Functions,"
+  *Acta Arithmetica* 150(1), 65--91, 2011; arXiv:0906.2749. Relevance: the
+  admissible Linnik exponent $5.2$ supplies the infinite polynomial-bit
+  congruence-prime family in P1.5/A025.
+  <https://arxiv.org/abs/0906.2749>
+- [CITED] Oliver Schirokauer, "The Impact of the Number Field Sieve on the
+  Discrete Logarithm Problem in Finite Fields," in *Algorithmic Number
+  Theory*, MSRI Publications 44, 397--420, 2008. Relevance: the standard
+  fixed-degree finite-field target algorithm reached from A025's polynomial
+  Gaussian-gcd conversion.
+  <https://library.slmath.org/books/Book44/files/12oliver.pdf>
+- [CITED] Ulrich Vollmer, *Rigorously Analyzed Algorithms for the Discrete
+  Logarithm Problem in Quadratic Number Fields*, doctoral dissertation,
+  Technische Universität Darmstadt, 2003,
+  doi:10.26083/tuprints-00000494. Relevance: binary reduced-ideal power
+  products and compact relative-generator bookkeeping used in A028.
+  <https://doi.org/10.26083/tuprints-00000494>
+- [CITED] Michael J. Jacobson, Jr., Reginald E. Sawilla, and Hugh C.
+  Williams, "Efficient Ideal Reduction in Quadratic Fields,"
+  *International Journal of Mathematics and Computer Science* 1, 83--116,
+  2006. Relevance: relative-generator reduction for positive and negative
+  quadratic discriminants, supporting A028's compact principal-power
+  generator. <https://future-in-tech.net/R-Williams.pdf>
+- [CITED] Jeffrey C. Lagarias and Andrew M. Odlyzko, "Effective Versions of
+  the Chebotarev Density Theorem," in *Algebraic Number Fields*, Academic
+  Press, 409--464, 1977. Relevance: the GRH-effective Frobenius count behind
+  A028's Las Vegas separating-prime search.
+  <https://websites.umich.edu/~lagarias/PUBLICATIONS/papers.html>
+- [CITED] Eric Bach and Jonathan Sorenson, "Explicit Bounds for Primes in
+  Residue Classes," *Mathematics of Computation* 65(216), 1717--1735, 1996,
+  doi:10.1090/S0025-5718-96-00763-6. Relevance: a GRH bound for a
+  degree-one prime with prescribed Artin symbol, giving A028's
+  \(O(\log r+\log\log|D_K|)\)-bit separator.
+  <https://doi.org/10.1090/S0025-5718-96-00763-6>
+- [CITED] Benjamin Breen, Ila Varma, and John Voight, with an appendix by
+  Noam Elkies, "On Unit Signatures and Narrow Class Groups of Odd Degree
+  Abelian Number Fields," *Transactions of the American Mathematical
+  Society, Series B* 10, 86--128, 2023, doi:10.1090/btran/90. Relevance:
+  modern explicit number-field Selmer exact sequences and Kummer pairings;
+  direct conceptual prior art for A028's classical virtual-unit ingredient.
+  <https://doi.org/10.1090/btran/90>
 
 ## P2.2 — q-type assumptions
 
