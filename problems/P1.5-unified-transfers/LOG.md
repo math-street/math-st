@@ -644,3 +644,69 @@ but it does so only after the known pairing has exposed the projective residue.
 a prescribed-order ordinary target from arbitrary \(r\), which A025 neither
 needs nor supplies. Any future unrestricted-classification work must also keep
 the pairing-derived A025 family distinct from a genuinely new mechanism.
+
+## Session 8 - 2026-07-23
+
+**Goal:** Reopen Q004 at the user's novelty standard, reject any result that
+is only a repackaging or a known conductor exact sequence, and seek a theorem
+that applies beyond A024's VFB evaluator model. Keep SG-30 untouched.
+
+**Prediction:** The effective inverse from ordinary reduced forms to a
+conductor residue might turn the kernel/maximal-order dichotomy into a broad
+new factorization theorem. If that computation was already in the
+nonmaximal-order cryptography literature, novelty would have to come from a
+source-side restriction rather than the target exact sequence.
+
+**Did:**
+
+- Implemented the all-odd-conductor Gaussian inverse: random conductor-coprime
+  shearing, Gaussian extension gcd, the conductor-\(p^2\) wild
+  principal-unit forms, and exact scalar recovery.
+- Tested every wild source scalar at \(p=101,211,401\), all 44 tame
+  projective residues at conductor 43, small complete class-number fixtures,
+  and the Hasse trace-two arithmetic implication.
+- Audited Kopp--Lagarias, Hühnlein--Takagi, and
+  Castagnos--Laguillaumie against the exact candidate theorem.
+- Rejected A026's computational novelty claim after locating the general
+  effective conductor-kernel isomorphism and finite-field DLP reduction in
+  prior art.
+- Proved A027's intrinsic-conductor source theorem for arbitrary evaluators,
+  with no restriction on coordinate access, lifts, valuations, branches, or
+  direct form synthesis.
+
+**Found:**
+
+- [CITED] Hühnlein--Takagi (ASIACRYPT 1999) already reduce DLP in totally
+  nonmaximal class-number-one imaginary quadratic orders to DLP in
+  \(\mathbb F_\ell^\times\) or \(\mathbb F_{\ell^2}^\times\).
+- [CITED] Castagnos--Laguillaumie (EUROCRYPT 2009), Lemma 1, give the
+  effective conductor-kernel isomorphism for general conductor and describe
+  its inverse from a reduced kernel ideal. A026 is therefore a control.
+- [PROVED] Let \(E/\mathbb F_p\) be ordinary, let \(P\) have prime order
+  \(r\ne p\), let \(K=\operatorname{End}(E)\otimes\mathbb Q\), and assume
+  \(r>h(\mathcal O_K)\) and \(r>2\sqrt p+2\). For any target order in \(K\)
+  with conductor supported on \(\{p,r\}\), a nonzero transfer either has an
+  \(r\)-local image with an explicit \(\mathbb F_r\) logarithm or a
+  \(p\)-local image.
+- [PROVED] In the second branch, ordinary splitting gives \(r\mid p-1\).
+  Since \(r\mid p+1-t\), Hasse forces \(t=2\). Also
+  \(r^2>\#E(\mathbb F_p)\), so Frey--Rück gives the known embedding-degree-one
+  multiplicative reduction.
+- [PROVED] A still-genuine same-CM-field counterexample needs an external
+  conductor prime \(\ell\) with
+  \(r\mid\ell-\chi_K(\ell)\): \(\ell\ge2r+1\) when split and
+  \(\ell\ge2r-1\) when inert. A varying/unrelated maximal-order image is the
+  other residual.
+- [EMPIRICAL: final A026/A027 verification] All 25 P1.5 tests pass; the new
+  driver has five dedicated tests and its smoke/full profiles recover every
+  recorded scalar.
+
+**Prediction vs. outcome:** The first prediction was falsified by direct
+prior art, and the falsification was productive. The surviving theorem is not
+the known target-kernel isomorphism but a source-side Hasse collapse that
+applies to all evaluator implementations in the intrinsic-conductor scope.
+
+**Next:** Do not claim unrestricted Q004 complete. Attack the exact A027
+residual: either construct or exclude the external-prime
+cross-characteristic character, or control the varying/unrelated
+maximal-order component. Do not start SG-30.
