@@ -710,3 +710,76 @@ applies to all evaluator implementations in the intrinsic-conductor scope.
 residual: either construct or exclude the external-prime
 cross-characteristic character, or control the varying/unrelated
 maximal-order component. Do not start SG-30.
+
+## Session 9 - 2026-07-23
+
+**Goal:** Complete novelty-grade Q004 with a genuinely broader theorem, not
+another positive repackaging, while leaving SG-30 untouched.
+
+**Prediction:** The external-conductor and maximal-order residuals might both
+be characters of classical residue objects. The dangerous points were
+whether maximal class torsion admits an efficiently evaluable separating
+power-residue character, whether its principal generator can be retained
+compactly, and whether a short separating prime can be found at the accepted
+ERH/GRH complexity.
+
+**Did:**
+
+- Identified the maximal projection
+  \([\mathfrak a]\mapsto\alpha K^{\times r}\),
+  \(\mathfrak a^r=(\alpha)\), as the classical virtual-unit/Kummer map.
+- Proved it is canonical for imaginary quadratic \(K\) and prime \(r\ge5\)
+  because the unit group has order dividing six.
+- Proved unconditional separation by a split-prime power-residue character
+  using restriction/corestriction and Chebotarev.
+- Combined binary ideal powering, relative-generator reduction, and a compact
+  straight-line product to evaluate the character without expanding
+  \(\alpha\).
+- Bounded the normal Kummer closure and used effective Chebotarev to obtain
+  expected-polynomial short-prime setup under GRH.
+- Combined this maximal branch with the known effective conductor inverse to
+  prove the evaluator-independent target factorization A028.4.
+- Added five primary-source audit records, the A028 probe, four regression
+  tests, and an infinite-family full CSV.
+
+**Found:**
+
+- [PROVED] Every exact order-\(r\) class in an explicit
+  imaginary-quadratic order is exposed either in a conductor residue factor
+  or by an injective maximal Kummer character
+  \(\alpha^{(q-1)/r}\bmod\mathfrak q\).
+- [PROVED] Once \(q\) is supplied, character evaluation is deterministic
+  polynomial time for arbitrary reduced-form outputs.
+- [CONDITIONAL: GRH] A separating \(q\) has
+  \(O(\log r+\log(\log|D_K|+2))\) bits and is found by a Las Vegas
+  expected-polynomial search.
+- [PROVED] Thus an ordinary quadratic class target cannot be an independent
+  third transfer endpoint: every source evaluator post-composes to a
+  finite/local residue character. The theorem does not assert that the
+  source evaluator cannot exist or that the resulting source character is
+  MOV/Frey--Rück.
+- [CITED] Virtual units, Kummer pairing, effective Chebotarev, and compact
+  ideal arithmetic are prior art. The complete conductor/maximal
+  computational dichotomy and Q004 application are the
+  repository-original synthesis.
+- [EMPIRICAL: \(r=3,\ldots,31\), ten primes] The A019 exact-order family
+  produced a nontrivial character in every tested case and recovered every
+  scalar.
+- [CITED] Lim (2016) supplies the rigorous maximal-branch infinitude:
+  infinitely many imaginary quadratic fields have an exact order-\(r\)
+  maximal ideal class for every fixed odd prime \(r\). A019 is retained only
+  as the explicit ten-case regression family because its order discriminant
+  is not proved fundamental for every \(r\).
+- [EMPIRICAL: final verification] All 99 library and P1.5 tests pass, the
+  ten-row full Kummer probe regenerates deterministically, Python bytecode
+  compilation succeeds, and the final 20-page paper compiles and passes
+  rendered-page inspection.
+
+**Prediction vs. outcome:** Matched. The decisive discovery is negative and
+structural: the class-group layer always has a removable residue character.
+The only analytic caveat is the same ERH/GRH convention already used for the
+rigorous class-group target route.
+
+**Next:** Preserve A028 and its explicit GRH boundary. Keep SG-30 unchecked;
+it remains a stronger target-only prescribed-order construction problem and
+is not needed for the Q004 factorization.

@@ -1,0 +1,11 @@
+r,discriminant,discriminant_bits,form_a,form_b,form_c,auxiliary_prime,auxiliary_multiplier,auxiliary_bits,omega_mod_q,character_base,character_order,all_logs_recovered,q_exceeds_sqrt_abs_delta
+3,-31,5,2,1,4,7,2,3,5,4,3,True,True
+5,-127,7,2,1,16,11,2,4,8,9,5,True,False
+7,-511,9,2,1,64,71,10,7,13,20,7,True,True
+11,-8191,13,2,1,1024,331,30,9,25,293,11,True,True
+13,-32767,15,2,1,4096,53,4,6,14,44,13,True,False
+17,-524287,19,2,1,65536,307,18,9,110,304,17,True,False
+19,-2097151,21,2,1,262144,419,22,9,260,306,19,True,False
+23,-33554431,25,2,1,4194304,139,6,8,7,55,23,True,False
+29,-2147483647,31,2,1,268435456,59,2,6,26,27,29,True,False
+31,-8589934591,33,2,1,1073741824,311,10,9,229,105,31,True,False
